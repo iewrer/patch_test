@@ -257,9 +257,9 @@ public class AnalyzeIntraProceduralDiff {
 	private void genControlDependentWriteIns(Integer dPos,
 												 ArrayList<Integer> dependentWriteIns) {
 		 InstructionContext ic = insContext.get(dPos);
-//		 if (ic == null) {
-//			return;
-//		}
+		 if (ic == null) {
+			return;
+		}
 		 InstructionHandle inhl = ic.getInstruction();
 		 Instruction insn = inhl.getInstruction();
 		 if(isWriteInstruction(insn)) {
@@ -271,9 +271,9 @@ public class AnalyzeIntraProceduralDiff {
 			ArrayList<Integer> dependentSecondaryIns) {
 
 		InstructionContext ic = insContext.get(dPos);
-//		if (ic == null) {
-//			return;
-//		}
+		if (ic == null) {
+			return;
+		}
 		Instruction insn = ic.getInstruction().getInstruction();
 		if(!isWriteInstruction(insn)) {
 			dependentSecondaryIns.add(dPos);
@@ -1544,9 +1544,9 @@ public class AnalyzeIntraProceduralDiff {
 			Integer pos = modItr.next();
 			InstructionContext ic = inContext.get(pos);
 			//如果得到的context为空
-//			if (ic == null) {
-//				continue;
-//			}
+			if (ic == null) {
+				continue;
+			}
 			String writeVarName = getWriteVariableName(ic.getInstruction().
 					getInstruction(), ic);
 			if(writeVarName == null) continue; //its not a write insn

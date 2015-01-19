@@ -1,0 +1,3962 @@
+Manifest-Version: 1.0
+Bundle-Vendor: %providerName
+Ant-Version: Apache Ant 1.8.4
+Eclipse-SourceBundle: org.eclipse.jdt.core;version="3.9.2.xx-20140320-
+ 0100-e43-SNAPSHOT";roots:=".,jdtCompilerAdaptersrc"
+Bundle-Version: 3.9.2.xx-20140320-0100-e43-SNAPSHOT
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
+Created-By: 1.6.0_45-b06 (Sun Microsystems Inc.)
+Bundle-SymbolicName: org.eclipse.jdt.core.source
+
+Name: org/eclipse/jdt/internal/core/RenameResourceElementsOperation.ja
+ va
+SHA1-Digest: 9kneno8VI7wASPlaOMSM7s8Yk5w=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/LocalVariableBinding.ja
+ va
+SHA1-Digest: H3gsTkycRd4Zo2fdPc1Bq9Q2zWM=
+
+Name: org/eclipse/jdt/core/dom/TypeLiteral.java
+SHA1-Digest: S1SV+ay0aJWkzpwO0mDiWMTeiI0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/LocalDeclaration.java
+SHA1-Digest: +L+0rdDXsxGd5WgtEfvNb1BVbL0=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnExplici
+ tConstructorCall.java
+SHA1-Digest: 56VNb8PMHvmPVqNowBAsSao5WSo=
+
+Name: org/eclipse/jdt/core/dom/CompilationUnit.java
+SHA1-Digest: W56hYeglj3GAU7X2A39WO2j8B1A=
+
+Name: org/eclipse/jdt/internal/core/SourceRefElementInfo.java
+SHA1-Digest: 90Fd0pbVKacu5zBTBPZ5poZrzIU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocSingleNameReference
+ .java
+SHA1-Digest: Ac78i2K3GSc4TguRntTr5OnZ0i4=
+
+Name: org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+SHA1-Digest: upJJlqnSKrl9k0Gmlz80wau9lYw=
+
+Name: org/eclipse/jdt/internal/core/util/CodeAttribute.java
+SHA1-Digest: ChvtIiY6b+Oe2utPUgmUt5ZKaKU=
+
+Name: org/eclipse/jdt/internal/compiler/problem/ShouldNotImplement.jav
+ a
+SHA1-Digest: fIHq+uGMkBSvPpg65S6dFKJLiOE=
+
+Name: org/eclipse/jdt/internal/core/search/matching/FieldLocator.java
+SHA1-Digest: NlyLVU8tqWLsIfGD0HYeW2cn/bs=
+
+Name: org/eclipse/jdt/internal/core/util/LocalVariableAttribute.java
+SHA1-Digest: iQVQSvv1LN3RZi2iFHat2t82BoU=
+
+Name: org/eclipse/jdt/internal/core/builder/IncrementalImageBuilder.ja
+ va
+SHA1-Digest: 8Rw4r7VTQL7Qr+0zWu78C/d8rtE=
+
+Name: org/eclipse/jdt/internal/compiler/batch/ClasspathLocation.java
+SHA1-Digest: /IWbIoo+EePGwkhYDvmzCaAj+Z0=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/Substitution.java
+SHA1-Digest: n9+soxII7vMb44qJgwPQLVB0rYc=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IndexRequest.java
+SHA1-Digest: a2EA9GE/voZ4tyuGjpSyPrwzC6I=
+
+Name: org/eclipse/jdt/internal/core/ResolvedSourceMethod.java
+SHA1-Digest: jb9r75ogFIN3qvVKD3GAuwQHwCg=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ExtendedStringLiteral.java
+SHA1-Digest: ZZByfCcEPuyZoPOAg2xaJy1TMlU=
+
+Name: org/eclipse/jdt/internal/core/JavaModelCache.java
+SHA1-Digest: 67CHZroIq3+l6vEu+6No2E7KhSw=
+
+Name: org/eclipse/jdt/core/dom/PrimitiveType.java
+SHA1-Digest: x+K32P6TUkptxi8/UaIU564KdeM=
+
+Name: org/eclipse/jdt/internal/core/ClasspathValidation.java
+SHA1-Digest: 564q9Rsb1XfkQJu4JysRK6A1Qv0=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/Opcodes.java
+SHA1-Digest: TBP3y5eaRzplb8zE19iG6vK0LzY=
+
+Name: org/eclipse/jdt/internal/core/util/EnclosingMethodAttribute.java
+SHA1-Digest: Ym3et5DHobGdz+2ImkcrCwEXOIA=
+
+Name: org/eclipse/jdt/internal/compiler/impl/ShortConstant.java
+SHA1-Digest: 3OEmZAY/QeKlTruVVW4/J7wyCYY=
+
+Name: org/eclipse/jdt/internal/compiler/impl/StringConstant.java
+SHA1-Digest: Ym/pTN7fbZiUsIXiaWkSk0HoXBo=
+
+Name: org/eclipse/jdt/internal/core/CreateTypeOperation.java
+SHA1-Digest: OP3Gu99Z46c39W6aaBNOkcYeW3k=
+
+Name: org/eclipse/jdt/core/dom/IVariableBinding.java
+SHA1-Digest: hcRihBhRXFfJJA20SKjWO7ChwY4=
+
+Name: org/eclipse/jdt/core/ISourceRange.java
+SHA1-Digest: V/qpMcQNwriMeDCYfaD29rv6lB8=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/CatchParameterBinding.j
+ ava
+SHA1-Digest: AqwKH0gXH/1tpYAUB3SjxADyT/I=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocMessageSend.java
+SHA1-Digest: yF+BZ92K1uJB3nmOGbZGMgLOEUY=
+
+Name: org/eclipse/jdt/core/dom/rewrite/ListRewrite.java
+SHA1-Digest: tDkaR2hpaQQ7ZgihvXDJtoOyT+k=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMPackage.java
+SHA1-Digest: XdxWsKDxdHnGvW6Hc/5WvAojJao=
+
+Name: org/eclipse/jdt/internal/codeassist/InternalExtendedCompletionCo
+ ntext.java
+SHA1-Digest: N9tL+Shp7jAKFWFAFctQS1GMIyg=
+
+Name: org/eclipse/jdt/internal/core/builder/AbstractImageBuilder.java
+SHA1-Digest: bBz71O2XOL2ClMZPQM5R2a8VTIk=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetTypeDeclaration.java
+SHA1-Digest: o1ZDdvd5za3a+jzCcC8SD7i6+Qk=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Argument.java
+SHA1-Digest: L76MVKwqTImwvz5XanULuH5XQ3g=
+
+Name: org/eclipse/jdt/core/dom/ASTNode.java
+SHA1-Digest: qwwl6de+9eTR7C51ytwuvHhFebc=
+
+Name: org/eclipse/jdt/internal/core/JavaElementDelta.java
+SHA1-Digest: cfqEXkC7noS2HR+sYEZa+/fsQRY=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ConditionalExpression.java
+SHA1-Digest: 4PBWeG3dLOeBhQmSfygHcmsut/o=
+
+Name: org/eclipse/jdt/internal/core/Initializer.java
+SHA1-Digest: WMTXdn8waMijqjvnEhwOcQLhHc0=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemPackageBinding.j
+ ava
+SHA1-Digest: FJ0mLMIuI8qllqyLXUHS0/5WfyU=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/LocalTypeBinding.java
+SHA1-Digest: fSjAemNdqLIDHHSQetjjtMe9NKM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/NormalAnnotation.java
+SHA1-Digest: GhWB+KXijrBDoCN7q56d9Mf7fo4=
+
+Name: org/eclipse/jdt/core/compiler/CategorizedProblem.java
+SHA1-Digest: jbR8/9S3EBpihI5WBrHHSKCcAfE=
+
+Name: org/codehaus/jdt/groovy/integration/LanguageSupportFactory.java
+SHA1-Digest: vZ5RRo0R3pmSWaukq2iCE6YucNE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocAllocationExpressio
+ n.java
+SHA1-Digest: JKCCEtO/xoE4XX/m/An8y0siDd4=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/ClassFileConstants.ja
+ va
+SHA1-Digest: jEK1LfczoEjZucK9ZrPchQJ2Ao8=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/HierarchyBuilder.java
+SHA1-Digest: fsqj1eRU76R7UBnW6H+Ac/W+Roo=
+
+Name: org/eclipse/jdt/core/IPackageFragment.java
+SHA1-Digest: jFj+TDv06TM5nUjxd/8rYhZYxAw=
+
+Name: org/eclipse/jdt/internal/core/OpenableElementInfo.java
+SHA1-Digest: lipQLJKPwkYstcQGjfYFMFCUQdU=
+
+Name: org/eclipse/jdt/core/search/LocalVariableDeclarationMatch.java
+SHA1-Digest: Es3aV3UOtHlfxOhMZdUgyvQj07U=
+
+Name: org/eclipse/jdt/internal/core/search/IndexQueryRequestor.java
+SHA1-Digest: j0/nMLBHZyvSL8PtGnUv6/R1ilk=
+
+Name: org/eclipse/jdt/internal/core/InternalNamingConventions.java
+SHA1-Digest: +XUyUDk1Z5PYy4F6O8meRx0qpTI=
+
+Name: org/eclipse/jdt/core/IRegion.java
+SHA1-Digest: VaR4UroWO1BKZ4F5neJUW6lSd5Y=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnSingleN
+ ameReference.java
+SHA1-Digest: L4b2HSaVNL8bH+Xj9nz3qys+mUA=
+
+Name: org/eclipse/jdt/internal/compiler/DefaultErrorHandlingPolicies.j
+ ava
+SHA1-Digest: oP0xbYIOfUqZhYDNt37HHGaUqa4=
+
+Name: org/codehaus/jdt/groovy/integration/EventHandler.java
+SHA1-Digest: U98Rd1rEccy7o5So9Al/HVv8jCY=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryElementValuePair.ja
+ va
+SHA1-Digest: XNpDlO2gEs0zEmNzJSQkNSaX5gY=
+
+Name: org/eclipse/jdt/internal/eval/EvaluationContext.java
+SHA1-Digest: VmlQPbE340jFUhJLHfYYalkAgkc=
+
+Name: org/eclipse/jdt/core/util/IClassFileAttribute.java
+SHA1-Digest: nwBIWTtRK6H8aw3sRT/1a0sGAoU=
+
+Name: org/eclipse/jdt/internal/core/index/Index.java
+SHA1-Digest: VfSkeL3+i/bZZKUlJUvziHfOI5o=
+
+Name: org/eclipse/jdt/core/dom/DefaultBindingResolver.java
+SHA1-Digest: icW/qvzSeoFVjzos1O7x4RegGjU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Literal.java
+SHA1-Digest: h/3Kdys5yrqWSe0VJ8a+ZBueTC4=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/VerificationTypeInfo.j
+ ava
+SHA1-Digest: KhYA9r1jhgsMOz+45R8agIG6P9c=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MatchLocator.java
+SHA1-Digest: LyV5w3eYTgrqcQqbRu44cLwltGI=
+
+Name: org/eclipse/jdt/internal/core/util/WeakHashSet.java
+SHA1-Digest: JUEV779kQDJ49WG4AnATV+mUrbk=
+
+Name: org/eclipse/jdt/core/CompletionRequestorAdapter.java
+SHA1-Digest: Crr5lVfmqHAQ6MXN/ulkwNGGQpE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/TypeParameter.java
+SHA1-Digest: hnvhzmxVRKz+kUxhXRJzzP7hFmQ=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnQualifi
+ edNameReference.java
+SHA1-Digest: GfwmLaN8vlqDtrLkq2DcPPRlG+0=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/ClassFileStruct.java
+SHA1-Digest: NVnppbykjtQ5f+OTYIZWzWHJjbA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/BlockScope.java
+SHA1-Digest: 3wcNKSFEUjLBvPj4cfVj41L732E=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnArgumentNa
+ me.java
+SHA1-Digest: Ixe8+R9qV/ieyhEjo9Oaa01tj3g=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMMember.java
+SHA1-Digest: dzZPw+bvAPfASR1xe4DHmGpEHf8=
+
+Name: org/eclipse/jdt/internal/core/SourceRefElement.java
+SHA1-Digest: l45jb4c4HXNL/RZ/PBSB1CStO40=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/NestedTypeBinding.java
+SHA1-Digest: I3yt7aShXqFbXL+pPeb0u06zwaY=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/UnresolvedReferenceBind
+ ing.java
+SHA1-Digest: Ks3Jh5o1MOhCgbwwlaGi5zTQD/s=
+
+Name: org/eclipse/jdt/internal/compiler/problem/DefaultProblem.java
+SHA1-Digest: GkkPceGO167XfEqZ+HjQ2pPSqNs=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetQualifiedNameReference.
+ java
+SHA1-Digest: 7+Rf2VN9IqfpVWkQ5+5nPq3fZZ0=
+
+Name: org/eclipse/jdt/internal/core/BecomeWorkingCopyOperation.java
+SHA1-Digest: M72wpFYk0NrYeHlUZQbuWzG97Ng=
+
+Name: org/eclipse/jdt/core/dom/TryStatement.java
+SHA1-Digest: HGsEf3OWbNjtVgtmFVqYuM19O10=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ForStatement.java
+SHA1-Digest: PRlXEw0hczjEoOkXHljRdGWa3gM=
+
+Name: org/eclipse/jdt/internal/formatter/old/CodeFormatter.java
+SHA1-Digest: 19UVL02M3Jg0WTWU88ByciT75jc=
+
+Name: org/eclipse/jdt/internal/core/PackageFragmentRootInfo.java
+SHA1-Digest: Ne2nA4epXusnUCluV2VO9EAH+dA=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionParser.ja
+ va
+SHA1-Digest: UiIueuey6Evw2I0930y8hSP7/dE=
+
+Name: org/eclipse/jdt/internal/compiler/impl/CompilerOptions.java
+SHA1-Digest: i+k2rIfU1ahBbiVPN/b1vazCsCc=
+
+Name: org/eclipse/jdt/internal/compiler/impl/ByteConstant.java
+SHA1-Digest: 7QHukVIZa7dNaYRag54UxWc/EPM=
+
+Name: org/eclipse/jdt/core/IClasspathAttribute.java
+SHA1-Digest: zG+sPEDVlQWZDAQixSS60oDjCmI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionJavadoc.j
+ ava
+SHA1-Digest: 5VM7ooYo/3B2kZS6gBpheDOT+F4=
+
+Name: org.eclipse.jdt.core_3.9.0.v20130604-2000-sources.zip
+SHA1-Digest: 7P3DAD/K7QoCXucFfhpcKRcGOkE=
+
+Name: plugin.properties
+SHA1-Digest: xE2I3pC/9h9EbTrTOIebT1n7t4M=
+
+Name: org/eclipse/jdt/internal/core/SingleTypeRequestor.java
+SHA1-Digest: WGg6QgF5G9fzY+6dafYo+qpHSWg=
+
+Name: org/eclipse/jdt/core/dom/SynchronizedStatement.java
+SHA1-Digest: AB88B9K82le0+83aw2ffm2ycA1M=
+
+Name: org/eclipse/jdt/internal/core/builder/NameEnvironment.java
+SHA1-Digest: 2Ez3tVPH1BvkVh9l9LA1eSkKuqk=
+
+Name: org/eclipse/jdt/internal/core/SourceMethodElementInfo.java
+SHA1-Digest: 4zIctQz+V1Q7N8KIJ4toNXCO9pI=
+
+Name: org/eclipse/jdt/internal/core/util/WeakHashSetOfCharArray.java
+SHA1-Digest: VREamaON1kLcAYqmSXifKOm19zI=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/FieldInfoWithAnnotati
+ on.java
+SHA1-Digest: pB0HWPeGWluMGHcAeprSxtj2ASg=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistSourceMethod.java
+SHA1-Digest: +RHQnPS0mbA+NAYxsrQzLoxQo10=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/CaseLabel.java
+SHA1-Digest: e5aSBgVyeWk2lEGTmh6yr1XJr1w=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/AnnotationInfo.java
+SHA1-Digest: /A3VdhRRGsLo6gcXhpsOhDcEUO0=
+
+Name: org/eclipse/jdt/internal/eval/EvaluationConstants.java
+SHA1-Digest: kWyyrVV52U5i6TAZY/SkozlVKTg=
+
+Name: org/eclipse/jdt/internal/core/ImportDeclaration.java
+SHA1-Digest: rJkYSYRn0od4HapJylKcxySQP9I=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMField.java
+SHA1-Digest: vrtRgnPuejImx72DbMAF6PfI3os=
+
+Name: org/eclipse/jdt/core/search/SearchParticipant.java
+SHA1-Digest: uoD1/JYpzXyFfic6PlCjiB827sM=
+
+Name: org/eclipse/jdt/core/dom/MarkerAnnotation.java
+SHA1-Digest: W9U/rooh7vVQaUNny3Z6EDQV/Mo=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetToCuMapper.java
+SHA1-Digest: 8UhFjsAVdi4sFvGKAMWnvWT/aAA=
+
+Name: org/eclipse/jdt/internal/core/SourceType.java
+SHA1-Digest: JqGSnCNUNZQvnn9ew1KYqhk2yuI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMethodN
+ ame.java
+SHA1-Digest: f7Dnc4DLR7r+1sL7HNHDXkqoBxE=
+
+Name: org/eclipse/jdt/core/IJarEntryResource.java
+SHA1-Digest: hg7XLJhVw0YsiSEXKGEdcwlnEJI=
+
+Name: org/eclipse/jdt/internal/compiler/ast/BranchStatement.java
+SHA1-Digest: a0xGi+kWzQ58PQ7GSSLa6qysM7k=
+
+Name: org/eclipse/jdt/internal/compiler/ast/IfStatement.java
+SHA1-Digest: 2aBVVJHoidM04pQ5GzJuqWB2ZSg=
+
+Name: org/eclipse/jdt/core/dom/NodeSearcher.java
+SHA1-Digest: xgys8td2ZpwikTVh/q8eQIi3piI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionJavadocPa
+ rser.java
+SHA1-Digest: yrXJ9aEn6fvvF+k5+LUZBJlUau0=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/AnnotationMethodInfo.
+ java
+SHA1-Digest: e+9KzzakcqZs0rL1AEfLFZAVH8w=
+
+Name: org/eclipse/jdt/core/dom/ContinueStatement.java
+SHA1-Digest: jolV7wBSgAbA1xkIhxFhTkrHc1A=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ParameterizedTypeBindin
+ g.java
+SHA1-Digest: U67CaOownFfQ6qN2mqcWVJu3LR8=
+
+Name: org/eclipse/jdt/core/jdom/IDOMFactory.java
+SHA1-Digest: ZJmI9iHXDlfFuLERbcyDDZB5CLM=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MultiTypeDeclarati
+ onPattern.java
+SHA1-Digest: CxtAcxsgIKpMCFBxcE17xA5u/Ro=
+
+Name: org/eclipse/jdt/internal/core/SetClasspathOperation.java
+SHA1-Digest: fWIQhxhr75LNMqhZP2CBB36ZCY8=
+
+Name: org/eclipse/jdt/internal/core/IPathRequestor.java
+SHA1-Digest: 17uHDI4682oZtebpAMosFXlo1Fc=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/HierarchyBinaryType.java
+SHA1-Digest: KNMoWYaQJWyrKNEfkckSiryOPUg=
+
+Name: org/eclipse/jdt/internal/compiler/IDebugRequestor.java
+SHA1-Digest: UywaQBAsUcanu5uoCGuGmFonH28=
+
+Name: org/eclipse/jdt/core/dom/InfixExpression.java
+SHA1-Digest: o4fML5uHQXF1FnMzoO6POH4acpk=
+
+Name: org/eclipse/jdt/internal/compiler/problem/AbortMethod.java
+SHA1-Digest: USnpZogT7KTqWym1Z//At96v6/A=
+
+Name: org/eclipse/jdt/internal/core/util/ResourceCompilationUnit.java
+SHA1-Digest: 8JVNe40dZHhwlFY7rFAH2To+T3I=
+
+Name: org/eclipse/jdt/core/dom/SingleVariableDeclaration.java
+SHA1-Digest: TUoLg5eyIvLoVvtPh2lso4q5/gI=
+
+Name: org/eclipse/jdt/core/dom/IPackageBinding.java
+SHA1-Digest: tWMRBfkjoT4Gr+PgWcf0ZOvyqic=
+
+Name: org/eclipse/jdt/internal/core/NonJavaResource.java
+SHA1-Digest: AK13igeBnaAr7bkFCTmRPVRE5PU=
+
+Name: org/eclipse/jdt/internal/compiler/parser/JavadocParser.java
+SHA1-Digest: mQ3/i1TDO6cmyjFWZE3am1fGQ08=
+
+Name: org/eclipse/jdt/core/eval/ICodeSnippetRequestor.java
+SHA1-Digest: 5r09INEyNpL03YQdaAjCGi1JPIg=
+
+Name: org/eclipse/jdt/internal/core/CompilationUnitStructureRequestor.
+ java
+SHA1-Digest: o9T3jCvGkTKYMUgcGokdoffP0ow=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistCompilationUnit.j
+ ava
+SHA1-Digest: aXG38b5zNiCqVY0kimmGMRMoKU8=
+
+Name: org/eclipse/jdt/internal/core/util/ICacheEnumeration.java
+SHA1-Digest: xPPFk2JeO65WQGXLnAwirCElX2k=
+
+Name: org/eclipse/jdt/internal/core/BufferFactoryWrapper.java
+SHA1-Digest: MBLfa02p3P37bmtBi0XbOaUU5K4=
+
+Name: org/eclipse/jdt/core/util/CompilerUtils.java
+SHA1-Digest: URRFFAWPQKWlBzexz3S2RbT3QkM=
+
+Name: org/eclipse/jdt/core/BufferChangedEvent.java
+SHA1-Digest: 1hDaX9ss3O3p5NyRJ2S3dxEL/Ss=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Initializer.java
+SHA1-Digest: iM3YlsoSWcf6gIfIB+x+S/1o9l0=
+
+Name: org/codehaus/jdt/groovy/integration/ISupplementalIndexer.java
+SHA1-Digest: nD8BKvHCvdRzABOPPhSSwJXu35E=
+
+Name: org/eclipse/jdt/internal/core/search/matching/DeclarationOfRefer
+ encedMethodsPattern.java
+SHA1-Digest: ZQGpBgwWDJJTSK3dmCukvCiv88w=
+
+Name: org/eclipse/jdt/core/IPackageDeclaration.java
+SHA1-Digest: iiOlefcnu3uQWbhHRXl/uCM9Rp4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/PrefixExpression.java
+SHA1-Digest: 2IqGDlElx8UbpGbQTrwKqHKzEqY=
+
+Name: org/eclipse/jdt/internal/compiler/SourceElementParser.java
+SHA1-Digest: FmZ31PG8Tr90G+Ojq7KLXDroLKs=
+
+Name: org/eclipse/jdt/internal/compiler/batch/ClasspathJar.java
+SHA1-Digest: BC0rIUb1K5qwo0SUrO5EOxg/H+I=
+
+Name: org/eclipse/jdt/internal/core/index/FileIndexLocation.java
+SHA1-Digest: CluagQIiskTMnIS0T1fyhHIf2Cw=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ClassScope.java
+SHA1-Digest: 0jFnjVWt2TE8qtfXSV8fC7BHWDs=
+
+Name: org/eclipse/jdt/core/CompletionContext.java
+SHA1-Digest: 0Dl9qZwgvIDeiMpINOTdT0QAEg4=
+
+Name: org/eclipse/jdt/internal/core/builder/SourceFile.java
+SHA1-Digest: kbQUIBpNn4n44Ew5WYc5DSySoM0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/DoubleLiteral.java
+SHA1-Digest: Hn/GK01mWuUemwohfIWSgOVQs6o=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/LookupEnvironment.java
+SHA1-Digest: KtTsiKovUyctIypi0PFSvud1tYI=
+
+Name: org/eclipse/jdt/internal/compiler/ReadManager.java
+SHA1-Digest: 5KWQS8h2pXnYLC+REN7/FUg3oSY=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ImportMatchLocator
+ Parser.java
+SHA1-Digest: 5uU1cbnSMpOQD7EnraAF0aB7O7U=
+
+Name: org/eclipse/jdt/internal/core/CreateElementInCUOperation.java
+SHA1-Digest: AMdfnO+DmL/JjCQW6Ftf7hem6PQ=
+
+Name: org/eclipse/jdt/core/jdom/IDOMField.java
+SHA1-Digest: NLqfdedegkKEV+53fuKifciCSIg=
+
+Name: org/eclipse/jdt/internal/codeassist/SelectionEngine.java
+SHA1-Digest: lTfTg9jbMKvscJPL6Q8BqjeOMTM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/BreakStatement.java
+SHA1-Digest: TBCiwDVGrUTaQ8PTLeeWs54opfY=
+
+Name: org/eclipse/jdt/internal/core/search/matching/AndPattern.java
+SHA1-Digest: xz4NCM4ybOV/1Z0+x/WrTPGFspM=
+
+Name: org/eclipse/jdt/core/compiler/InvalidInputException.java
+SHA1-Digest: 9zAeMHIjmC4cc4ah51vCVX+blJU=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/ElementValuePairInfo.
+ java
+SHA1-Digest: nnDadBOcCBERVIbVLCazV4nKrnQ=
+
+Name: org/eclipse/jdt/internal/core/util/Util.java
+SHA1-Digest: vPDuNmkXL1CxordDiUDo7wwmsSc=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredBlock.java
+SHA1-Digest: Ry6gqEK/7y0s0RwLenguWirtL0M=
+
+Name: org/eclipse/jdt/internal/core/NameLookup.java
+SHA1-Digest: VizS/XS6GQDPxulIqQUD5Bbpigc=
+
+Name: org/eclipse/jdt/core/dom/VariableDeclarationStatement.java
+SHA1-Digest: +PLrl4FoyJTt1w7uCWppOWVlRqI=
+
+Name: org/eclipse/jdt/internal/compiler/problem/AbortType.java
+SHA1-Digest: drVOgPhhNT4YvNH3p8hRxZ6PJFg=
+
+Name: org/eclipse/jdt/internal/compiler/CompilationResult.java
+SHA1-Digest: M5UGDecJW7JbMZfJR2P3ko/7ef0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ArrayAllocationExpression.
+ java
+SHA1-Digest: MSXhOVCbMr5q8GYb7zNgN7mXxAc=
+
+Name: org/eclipse/jdt/internal/compiler/problem/ProblemReporter.java
+SHA1-Digest: zzAK+VJO8CDIvNDDN6XEIBkdYJ8=
+
+Name: org/eclipse/jdt/core/dom/DoStatement.java
+SHA1-Digest: tkWx4v+nmlMIhUW9MbCjD02k2Dw=
+
+Name: org/eclipse/jdt/internal/core/jdom/AbstractDOMBuilder.java
+SHA1-Digest: llwzzfdNAvSpjzLDnAddwX80kwg=
+
+Name: org/eclipse/jdt/internal/core/jdom/SimpleDOMBuilder.java
+SHA1-Digest: G/63tVKK4d+qZobZ90WrNeuPSkE=
+
+Name: org/eclipse/jdt/internal/core/JavaModel.java
+SHA1-Digest: 1IegA2JPQf7w5vCB9UtAtQrh07M=
+
+Name: org/eclipse/jdt/internal/core/search/TypeNameMatchRequestorWrapp
+ er.java
+SHA1-Digest: KBY6/RnfwDauwdO3wbwSEQW/aMM=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnSuperRefer
+ ence.java
+SHA1-Digest: 0b28uR3ncF7UOYd/vCgrn02cpgg=
+
+Name: org/eclipse/jdt/core/dom/EmptyStatement.java
+SHA1-Digest: +a0ERfONFiSJhduc4kUGff6+qVo=
+
+Name: org/eclipse/jdt/core/jdom/IDOMInitializer.java
+SHA1-Digest: Pd+86fMen8S9pyPiazuIBk9U1AI=
+
+Name: org/eclipse/jdt/core/dom/rewrite/TargetSourceRangeComputer.java
+SHA1-Digest: eXjpTyD5BmFbU1XD+ybzZ2US2Ro=
+
+Name: org/eclipse/jdt/core/util/IMethodInfo.java
+SHA1-Digest: 1LefGOlDAo68kcgxPkev5aEWg9c=
+
+Name: org/eclipse/jdt/core/util/ILocalVariableTypeTableEntry.java
+SHA1-Digest: FBS3jF0N28pxrPVjsRG5KPN90Ig=
+
+Name: org/eclipse/jdt/internal/core/search/IRestrictedAccessConstructo
+ rRequestor.java
+SHA1-Digest: DJI+Sy+gOxtszbL2Su8OIJNy2fU=
+
+Name: org/eclipse/jdt/core/dom/Initializer.java
+SHA1-Digest: dicFSKHrPEnT5k3SrXnNjnufEFQ=
+
+Name: org/eclipse/jdt/core/dom/ThrowStatement.java
+SHA1-Digest: WljFau9dis9Cvv6LNn1ZdSUYIsU=
+
+Name: org/eclipse/jdt/core/formatter/CodeFormatterApplication.java
+SHA1-Digest: d2Tz8IzErYgTY7b59woR610BW98=
+
+Name: org/eclipse/jdt/internal/compiler/ast/TypeReference.java
+SHA1-Digest: 8wX+KVXwGJkHSNnaFLKAT6N7vWs=
+
+Name: org/eclipse/jdt/internal/core/SimpleDelta.java
+SHA1-Digest: 8VbRDyuInqNWz3RpJPez5sMwXqo=
+
+Name: org/eclipse/jdt/internal/core/SetContainerOperation.java
+SHA1-Digest: XOATyF6q7bntXx9tWNqFV4frDCE=
+
+Name: org/eclipse/jdt/internal/core/CompilationUnitElementInfo.java
+SHA1-Digest: Or5NR+sQAz0euwTvIyEbNvwyw64=
+
+Name: org/eclipse/jdt/internal/compiler/parser/SourceTypeConverter.jav
+ a
+SHA1-Digest: Vt2CaV4R/PI/6MrPHwdd9i5TIuc=
+
+Name: org/eclipse/jdt/core/jdom/IDOMMethod.java
+SHA1-Digest: r7z8DRoWhJaOKQNlWsbt87WPhg4=
+
+Name: org/eclipse/jdt/internal/core/BatchOperation.java
+SHA1-Digest: OUeyEkX/zaqpEljrBYUd9yHE0wI=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MemberTypeBinding.java
+SHA1-Digest: U83WX8kDfli3+TEj9ie7NvwOUhE=
+
+Name: org/eclipse/jdt/internal/core/JavadocContents.java
+SHA1-Digest: 3WY5kcfls5KxDn0SiW8b1bwdP1k=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ArrayQualifiedTypeReferenc
+ e.java
+SHA1-Digest: JpABh0bziUMNrMNb/Xik6sy0SQY=
+
+Name: org/eclipse/jdt/core/CorrectionEngine.java
+SHA1-Digest: N2xSRgGxwwNyVXYn7VvY6SGN204=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionParser.java
+SHA1-Digest: SfuVJU2TYnLEXzmP+qac0OrfnPE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/StringLiteral.java
+SHA1-Digest: rfpgKK6ZIGirO4t+lLrGSLcbLzA=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ TypeParamReference.java
+SHA1-Digest: I9nSVigI5EFmnTQ6e4NBtme6fcY=
+
+Name: org/eclipse/jdt/internal/formatter/Scribe.java
+SHA1-Digest: Ie1bkHwkGyS43gQ2FwFJzODVrHE=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfPackage.java
+SHA1-Digest: wwutGXsNREiPPp5g6HIJsZFhxyc=
+
+Name: org/eclipse/jdt/core/util/ILocalVariableTypeTableAttribute.java
+SHA1-Digest: MjC2gcByPz4lOAKTH0Rp3F3kOlU=
+
+Name: org/eclipse/jdt/core/dom/rewrite/ASTRewrite.java
+SHA1-Digest: 7NpX6KCC/rbgqc1p88DuKCPYYPc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ForeachStatement.java
+SHA1-Digest: 8wXA9nEKSDVLErRZzsW9K0GXY70=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/RewriteEventStore.java
+SHA1-Digest: Tlz98d2NbTrk47B36DV2jUQeiyI=
+
+Name: org/eclipse/jdt/core/dom/FieldAccess.java
+SHA1-Digest: k/vt2pNVl+eSUN90y2PcMOHR3Gc=
+
+Name: org/eclipse/jdt/core/dom/MethodDeclaration.java
+SHA1-Digest: ip3koVY1SvYUvdsvSfqzX9MwqtQ=
+
+Name: org/eclipse/jdt/internal/compiler/ast/MarkerAnnotation.java
+SHA1-Digest: EjSkOLuLEHls8gFpGJ4srtMMylk=
+
+Name: org/eclipse/jdt/internal/core/util/BootstrapMethodsAttribute.jav
+ a
+SHA1-Digest: 7wnVn5ebMrAteo8KIRbl3ZDfQ0E=
+
+Name: org/eclipse/jdt/internal/compiler/parser/NLSTag.java
+SHA1-Digest: 0vG48ahd/fh5oH9XtUhYxJA9/1s=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/ClassFileReader.java
+SHA1-Digest: Pld85tb7s3HZLuTuguooKP3PnG0=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/BranchLabel.java
+SHA1-Digest: 1EGXK0nMlZZWoOBMlgxQPHFyXMM=
+
+Name: org/eclipse/jdt/core/util/IAnnotationComponentValue.java
+SHA1-Digest: sQdcDjPgAfJqFRc47z+ZEt8MhjM=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredField.java
+SHA1-Digest: sGIdMG591YQlUtVfchR/Er+DI6I=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredMethod.java
+SHA1-Digest: mZRxXENjomuSMs912FjbbLtc0ZI=
+
+Name: org/eclipse/jdt/internal/formatter/FormatJavadocBlock.java
+SHA1-Digest: GJZjQCWDFO6NtwLoGrAfF7L4954=
+
+Name: org/eclipse/jdt/internal/compiler/ast/FieldReference.java
+SHA1-Digest: LBoQLcRDcPggFjUCibyd/mdVENc=
+
+Name: org/eclipse/jdt/internal/core/INameEnvironmentWithProgress.java
+SHA1-Digest: vS4xF2ujHI2L/XagxWQhJ1290Xk=
+
+Name: org/eclipse/jdt/core/IClasspathContainer.java
+SHA1-Digest: vPye/YEgftp+I6NYN11eGAT3d00=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Expression.java
+SHA1-Digest: OkcvVMl1GoD+N4cdEyT3fkW6HBc=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMType.java
+SHA1-Digest: 2UNk+cQQYoou8xPTSsbEOqwfrDs=
+
+Name: org/eclipse/jdt/internal/core/search/JavaSearchScope.java
+SHA1-Digest: 9c2tx+N4M0tYExpe+Cgxrxg/32s=
+
+Name: org/eclipse/jdt/internal/compiler/ast/LongLiteral.java
+SHA1-Digest: wOuDw+apQou2eUWP7NS9ewb+vRs=
+
+Name: org/eclipse/jdt/internal/core/ClasspathEntry.java
+SHA1-Digest: 96MKuvX6BK+iicp1FIk6d6LIs5c=
+
+Name: org/eclipse/jdt/core/jdom/DOMException.java
+SHA1-Digest: W3Z/BzQ0EkTIbuK3q5eOGi50heA=
+
+Name: org/eclipse/jdt/internal/core/builder/ClasspathMultiDirectory.ja
+ va
+SHA1-Digest: Y+/kc3nbHPvSY+3S+aNwfnnZF/Y=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ SingleTypeReference.java
+SHA1-Digest: E3XcuXraeFstPBo6HgKJWgZHDWE=
+
+Name: org/eclipse/jdt/internal/core/util/RuntimeInvisibleParameterAnno
+ tationsAttribute.java
+SHA1-Digest: I4DTeX83H38hoKis/BFxE1CXK/0=
+
+Name: org/eclipse/jdt/core/util/IRuntimeVisibleAnnotationsAttribute.ja
+ va
+SHA1-Digest: hRF2RbGrODsWxCSHUBrVmjTJHw0=
+
+Name: org/eclipse/jdt/internal/compiler/parser/diagnose/LexStream.java
+SHA1-Digest: MB6wSmC6DCLDOuJlWxJP/V4cp+U=
+
+Name: schema/annotationProcessorManager.exsd
+SHA1-Digest: lZC3XSqfFNl62EwCdrl73RDPFEc=
+
+Name: org/eclipse/jdt/internal/core/ImportContainerInfo.java
+SHA1-Digest: m9VWfqHXcVJluueX/bigRfqvTZU=
+
+Name: org/eclipse/jdt/internal/core/util/LocalVariableTypeTableEntry.j
+ ava
+SHA1-Digest: g8+kC4FQdlDi7aAaGGmpo9JPOcg=
+
+Name: org/eclipse/jdt/core/ICodeAssist.java
+SHA1-Digest: gHz8TyI5IZwhQjGpO0ygxDdjqX8=
+
+Name: org/eclipse/jdt/core/dom/TypeDeclaration.java
+SHA1-Digest: zhX7BGNofd+uNfWZRiTPTdnAYsQ=
+
+Name: org/eclipse/jdt/core/IJavaModelStatus.java
+SHA1-Digest: iVWTzgx6oFqxBrJBJ8cdy1V24K8=
+
+Name: org/eclipse/jdt/core/dom/ArrayAccess.java
+SHA1-Digest: 0vy+LkDZYCSOmwxvTgX7lk5yGew=
+
+Name: org/eclipse/jdt/core/util/IAnnotation.java
+SHA1-Digest: hZkYZubayTj4MuQ6RSQpZgmxMHE=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMCompilationUnit.java
+SHA1-Digest: URZrjWMtHvufNq1b1+u7hhLjslc=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/IQualifiedTypeResolutio
+ nListener.java
+SHA1-Digest: iYtqRoBa7bITTdSl5Q2d/yyZgwE=
+
+Name: org/eclipse/jdt/core/util/IEnclosingMethodAttribute.java
+SHA1-Digest: mEhfjB+gkEbfKNkZY+ojf4RsiIM=
+
+Name: org/eclipse/jdt/internal/core/search/matching/SecondaryTypeDecla
+ rationPattern.java
+SHA1-Digest: ok8GukaqmeoIqlv7EW4JT4GkZms=
+
+Name: org/eclipse/jdt/internal/core/util/HashtableOfArrayToObject.java
+SHA1-Digest: djxxuvSnu43dEBxkoc3ro2z8fZ0=
+
+Name: org/eclipse/jdt/internal/core/ClasspathAttribute.java
+SHA1-Digest: qNDrI/Wgi3rkOUG94ozKx/nXPWc=
+
+Name: org/eclipse/jdt/internal/codeassist/IExtendedCompletionRequestor
+ .java
+SHA1-Digest: 6D2f0dJdWZ4LUT2f+x1DtSd71+8=
+
+Name: org/eclipse/jdt/internal/compiler/env/AccessRuleSet.java
+SHA1-Digest: 7Ivi1ELQkNuKZEsk3kisQrU1xac=
+
+Name: org/eclipse/jdt/core/jdom/IDOMNode.java
+SHA1-Digest: Zhf2jEOGJYUDA+Bzjvmb6zSCjJU=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/LongCache.java
+SHA1-Digest: TQOcesfbs/5BOAgOZXOVtbGgXzI=
+
+Name: org/eclipse/jdt/internal/compiler/env/ISourceMethod.java
+SHA1-Digest: Cbxi7nD2O8FfHvpFEXBw6cmB+aA=
+
+Name: org/eclipse/jdt/internal/codeassist/CompletionUnitStructureReque
+ stor.java
+SHA1-Digest: HJBjfy8t/gJjz6oSpERYuH6NlOk=
+
+Name: org/eclipse/jdt/internal/compiler/ast/FieldDeclaration.java
+SHA1-Digest: T8P2VK+ct9I8OE2wC5mve03bkVc=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ReferenceBinding.java
+SHA1-Digest: zuxXfrr2+XX6ZCyUpledpAwGTvE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocArrayQualifiedTypeR
+ eference.java
+SHA1-Digest: j3jLaFdy9ER/qy59+UEmKssdy7E=
+
+Name: org/eclipse/jdt/internal/core/dom/SourceRangeVerifier.java
+SHA1-Digest: M5T8y4RoUZYxNau6YyJO0vj8a6g=
+
+Name: org/eclipse/jdt/internal/core/util/ToStringSorter.java
+SHA1-Digest: IZmNiJzig/Vi6qc7kmFiaMoDSPs=
+
+Name: org/eclipse/jdt/internal/core/util/InnerClassesAttribute.java
+SHA1-Digest: tsOXLRTu3XmZwHbMTpe3i6DDoRA=
+
+Name: org/eclipse/jdt/internal/core/util/CodeSnippetParsingUtil.java
+SHA1-Digest: mz0J6nK2ZnDsggcalKeid9vLJlA=
+
+Name: org/eclipse/jdt/core/dom/BindingResolver.java
+SHA1-Digest: GwtCqbKwwI+lZig56rbz6aZSObs=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnQualifiedA
+ llocationExpression.java
+SHA1-Digest: 3NI6zWrsyZiy+gxzEaVY0jumUjo=
+
+Name: org/eclipse/jdt/core/dom/NumberLiteral.java
+SHA1-Digest: v3yHge+0cEZXLFRZoSU5woERSbs=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/InnerClassInfo.java
+SHA1-Digest: foXDPjDP+7zrwk6BLBbi8HcboPE=
+
+Name: org/eclipse/jdt/internal/core/SourceMethodInfo.java
+SHA1-Digest: GgF3YcLu2me9JlrjYMtiNPZqROw=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnParameteri
+ zedQualifiedTypeReference.java
+SHA1-Digest: lvB7kQpREAaYZsuele9HTf3KK50=
+
+Name: org/eclipse/jdt/core/util/IParameterAnnotation.java
+SHA1-Digest: m7c5u7dtAyXD8f/MSQXQ8BHhkJs=
+
+Name: org/eclipse/jdt/internal/formatter/FormatterCommentParser.java
+SHA1-Digest: ejT9nG2HI57Qjo89lsjDKS6xFlg=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetMessageSend.java
+SHA1-Digest: XoWExGFfVx2yaMk6+CxY7j7qOtg=
+
+Name: org/eclipse/jdt/internal/core/search/matching/IntersectingPatter
+ n.java
+SHA1-Digest: HS4CzB6NuBCUobBxGoHB/ctb/e0=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ImportBinding.java
+SHA1-Digest: kQ5pDIv6Y7WkPpZuxP/8V7kklsI=
+
+Name: org/eclipse/jdt/core/util/IOpcodeMnemonics.java
+SHA1-Digest: sUf+8uO/RKtlQ7s8Soc2hbFqTyM=
+
+Name: org/eclipse/jdt/core/jdom/IDOMPackage.java
+SHA1-Digest: 1cliiIjaL6TOpDfM/f38m3l/n5o=
+
+Name: org/eclipse/jdt/internal/core/JavaProjectElementInfo.java
+SHA1-Digest: PDGda6Q/HsjpmU6jr918s98KSh8=
+
+Name: org/eclipse/jdt/internal/compiler/IProblemFactory.java
+SHA1-Digest: M+5CpRXrGRxbC1w1vcZs+EdgV/E=
+
+Name: org/eclipse/jdt/internal/core/search/matching/SuperTypeReference
+ Locator.java
+SHA1-Digest: mmRhfHTI4seiGgHRdpEAphXSZks=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ThisReference.java
+SHA1-Digest: PVjRUmiAYTFS1lhGRi95B+pGVuI=
+
+Name: org/eclipse/jdt/internal/codeassist/RelevanceConstants.java
+SHA1-Digest: ZqAaGPulg+HgrtNYGAUD5IEktr0=
+
+Name: org/eclipse/jdt/core/dom/DocCommentParser.java
+SHA1-Digest: uzXk4jR9pf/qgSQ2sHwRebYwJ5k=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocReturnStatement.jav
+ a
+SHA1-Digest: XEmLRZJFL/W87IMDSw09c4zgufA=
+
+Name: org/eclipse/jdt/core/dom/ArrayCreation.java
+SHA1-Digest: fEYWBC2SlYK7/53wFuCj4SYagV4=
+
+Name: org/eclipse/jdt/internal/core/search/matching/JavaSearchPattern.
+ java
+SHA1-Digest: 276YgjO5hn3bBQa0gAeRc1dF1D8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/QualifiedThisReference.jav
+ a
+SHA1-Digest: FUEoVv6EmnevmdB6nD0pPBK76Ps=
+
+Name: org/eclipse/jdt/internal/compiler/batch/FileSystem.java
+SHA1-Digest: rvXnQ1pJYIw8YKpeVrp6p24fdXc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/IntLiteral.java
+SHA1-Digest: W38NCGu20gXESXY3pHN7wWog+1g=
+
+Name: org/eclipse/jdt/internal/core/util/ExceptionTableEntry.java
+SHA1-Digest: 1INm82xuhipjys4p572mW+gCjyg=
+
+Name: org/eclipse/jdt/internal/core/JarEntryResource.java
+SHA1-Digest: JYnQQOjjdjauJtlh45RumsukSno=
+
+Name: org/eclipse/jdt/core/search/FieldReferenceMatch.java
+SHA1-Digest: 33ArCjWOjcf/crdaurkwH2wdW7M=
+
+Name: org/eclipse/jdt/internal/compiler/ast/WhileStatement.java
+SHA1-Digest: 37a1Mx95D4wIVc10Ny1eTo2Nr98=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SubRoutineStatement.java
+SHA1-Digest: ZO4/0ssS95C3XqDNjqi83KPiHxA=
+
+Name: org/eclipse/jdt/internal/core/SelectionRequestor.java
+SHA1-Digest: N0at+FT7mowlStOvNJnQ4uKhuAU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AbstractVariableDeclaratio
+ n.java
+SHA1-Digest: cuFcVC+RNci/6KQEt4ZeIE5J444=
+
+Name: org/eclipse/jdt/internal/eval/VariablesInfo.java
+SHA1-Digest: YSGiW37KPJKPxqXoOTjI5scNc14=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeParameterPatte
+ rn.java
+SHA1-Digest: TXdOefA5aMgquR1i/EIfHNbb5qM=
+
+Name: org/eclipse/jdt/core/search/ReferenceMatch.java
+SHA1-Digest: i4NePlIBN0Gkp2e0WCIsIv21LA4=
+
+Name: org/eclipse/jdt/internal/core/util/RuntimeVisibleAnnotationsAttr
+ ibute.java
+SHA1-Digest: MAnHtfahcq+cRvogg2t54Y5PFcE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/TypeDeclaration.java
+SHA1-Digest: wOy48DUhZGIAoQlf8OBx3P/ESTg=
+
+Name: org/eclipse/jdt/internal/core/search/matching/SuperTypeNamesColl
+ ector.java
+SHA1-Digest: 6SmdEJNx4S7BXWxxsuHG7oqHj/c=
+
+Name: org/eclipse/jdt/internal/core/builder/ClasspathLocation.java
+SHA1-Digest: t3Myz3fp7CZkJX+EdCWJ/Sb50eU=
+
+Name: org/eclipse/jdt/core/dom/DefaultASTVisitor.java
+SHA1-Digest: wtWQI+wnEVKKkJ5jU9VvqCyZw/4=
+
+Name: org/eclipse/jdt/core/dom/ReturnStatement.java
+SHA1-Digest: iE7DVRKei7OIIAkyNG6vVmjBu6Q=
+
+Name: org/eclipse/jdt/internal/compiler/ast/OperatorIds.java
+SHA1-Digest: pzkBYiyCTuzKqaGG2goi5N3UO58=
+
+Name: org/eclipse/jdt/internal/core/PackageFragmentInfo.java
+SHA1-Digest: 30yQqO+GMw/R9SGSRAUS747pQVY=
+
+Name: org/eclipse/jdt/internal/core/DeleteResourceElementsOperation.ja
+ va
+SHA1-Digest: 4jIkGtAm2Q5kDuXlh7LUl9H3WoA=
+
+Name: org/eclipse/jdt/internal/core/BinaryType.java
+SHA1-Digest: 49k8mR6+qIBnvKCe5DB67XKodMk=
+
+Name: org/eclipse/jdt/core/dom/MemberValuePairBinding.java
+SHA1-Digest: kpnW1gR/8bwEHBEgDnfXBRMxbDg=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMessage
+ Send.java
+SHA1-Digest: OqmQmhohEm0ZdLklPAWzr1lcD0E=
+
+Name: org/eclipse/jdt/internal/formatter/FormatJavadocNode.java
+SHA1-Digest: ELi0WO9GrD3vYBdawhnsQSD8mxY=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryMethod.java
+SHA1-Digest: 50sZI0Sc/hRFPfzeSRTZfq/yZBY=
+
+Name: org/eclipse/jdt/internal/compiler/env/ISourceImport.java
+SHA1-Digest: oKlhoT1uTJTzbTPuLhaUMah/67Y=
+
+Name: org/eclipse/jdt/internal/compiler/flow/InitializationFlowContext
+ .java
+SHA1-Digest: Y5n7SAJ7sm9CVYleYvA9VkUFCqI=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnFieldRefer
+ ence.java
+SHA1-Digest: WZMEHvRQVSXRGIvQqo9WIq1pxvA=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/FieldInfo.java
+SHA1-Digest: t8kDjNrytdRjH43Oe9FFruZGAGs=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ImportConflictBinding.j
+ ava
+SHA1-Digest: SN+o+jP4sg911wkatnc0RTQQDxY=
+
+Name: org/eclipse/jdt/core/formatter/IndentManipulation.java
+SHA1-Digest: W74WLh6eC8O3wIs2ONy6O3vyPlI=
+
+Name: org/eclipse/jdt/core/eval/IEvaluationContext.java
+SHA1-Digest: zCcweWhCQMQUK7qV8oLHg5aqPrI=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/ReadWriteMonitor.j
+ ava
+SHA1-Digest: 5yQWZmHuMpG6jpKMwRHwIRrw4Dk=
+
+Name: org/eclipse/jdt/internal/compiler/problem/DefaultProblemFactory.
+ java
+SHA1-Digest: U6U1m2G3jgsTezQxFUhXMTt2KJk=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/InferenceContext.java
+SHA1-Digest: LpMv84fMEOAWc7pTKGZznx5toFQ=
+
+Name: org/eclipse/jdt/internal/core/XMLWriter.java
+SHA1-Digest: LP/viujhKUa4foeTRdhcOKi7caU=
+
+Name: org/eclipse/jdt/core/dom/NullLiteral.java
+SHA1-Digest: 21dVLdtB/r5CSlHRr75ldayiNbM=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/ObjectCache.java
+SHA1-Digest: uDYw7fClTaHc06arGMhRwXdAndM=
+
+Name: org/eclipse/jdt/core/JavaConventions.java
+SHA1-Digest: Er8irYkvZAG18x3soP/0yQ/T49s=
+
+Name: org/eclipse/jdt/internal/core/util/DefaultBytecodeVisitor.java
+SHA1-Digest: FV8SSJUsE0MEaoNg2nPWFsT2zvs=
+
+Name: org/eclipse/jdt/internal/core/search/IRestrictedAccessTypeReques
+ tor.java
+SHA1-Digest: I6oujxxFBE++EhjimI3erHDwTm4=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ Tag.java
+SHA1-Digest: L2nkELFKoSrZgQS9x0jsEz7sdtA=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MatchingNodeSet.ja
+ va
+SHA1-Digest: G+U+vikVYiFsGyJXnZoWATb9/vc=
+
+Name: org/eclipse/jdt/core/search/TypeNameRequestor.java
+SHA1-Digest: k9zX0fxdBcxM15TSwKdwUiOii0s=
+
+Name: org/eclipse/jdt/internal/core/search/matching/SuperTypeReference
+ Pattern.java
+SHA1-Digest: CBMDC/vdUOD6cisNDpGmmUaf4A4=
+
+Name: org/eclipse/jdt/core/dom/TypeParameter.java
+SHA1-Digest: RXNz8zkpQ/t5RfdQ4DUBUvZTidQ=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredType.java
+SHA1-Digest: vJ8SaFciZq7Qsaujh99PTu0Xt1U=
+
+Name: org/eclipse/jdt/internal/compiler/problem/AbortCompilationUnit.j
+ ava
+SHA1-Digest: bJkYpBYPBm7thWN8qgebghG9oRM=
+
+Name: org/eclipse/jdt/internal/core/BinaryMethod.java
+SHA1-Digest: 0I17o5UuFrl5wCDUXt3e8mwB9ZA=
+
+Name: org/eclipse/jdt/internal/core/util/StackMapTableAttribute.java
+SHA1-Digest: 0JpI4GPaLrzQpOFUIXOK0OWOk1U=
+
+Name: org/eclipse/jdt/internal/core/index/JarIndexLocation.java
+SHA1-Digest: BJ+Lc3ITffqxZ+OmWZUAckUrp20=
+
+Name: org/eclipse/jdt/internal/compiler/impl/Constant.java
+SHA1-Digest: o91zJ0fD4dC806qf5BEvxbVlPCY=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetSuperReference.java
+SHA1-Digest: K5iWLnjXZx64J5mJSlBBMdxjtNA=
+
+Name: schema/compiler.dtd
+SHA1-Digest: rqWxtR6Zp5HW+edHcuIstVQIf+w=
+
+Name: org/eclipse/jdt/core/ITypeParameter.java
+SHA1-Digest: hBrqcJZHz6um6xBRpzSseciGOOE=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryType.java
+SHA1-Digest: vJWpDVBAVNVz+AUH1IKh/4TgCg0=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeReferencePatte
+ rn.java
+SHA1-Digest: +WaKa/PY09Kf3giCE5+9d029ENE=
+
+Name: org/eclipse/jdt/internal/core/JarEntryDirectory.java
+SHA1-Digest: DMIjsV2ikN+RRDfNivSrGTP69lc=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistAnnotation.java
+SHA1-Digest: gsYb1KamLW6n1ldx/DLG8fZ0iiU=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeDeclarationLoc
+ ator.java
+SHA1-Digest: zFnurpjSYCUcKPD372hhtJ+DhZg=
+
+Name: org/eclipse/jdt/core/ICodeCompletionRequestor.java
+SHA1-Digest: YRjhmDEWn4Eonuf0ljBScouXHpE=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetParser.java
+SHA1-Digest: yMIdjrTtZjiqUrYcNF0cdJMU+/k=
+
+Name: org/eclipse/jdt/internal/core/UserLibraryManager.java
+SHA1-Digest: svU9we+3Cun+rYpjveLtWkE0gVc=
+
+Name: org/eclipse/jdt/core/IJavaElementDelta.java
+SHA1-Digest: iLfpupWGr+AIvJnHAH7s4cVyHtc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/EmptyStatement.java
+SHA1-Digest: jkCLcH847JtbsLtO6l6uBR/zQno=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistImportDeclaration
+ .java
+SHA1-Digest: 14VIDi3eszej8Zgmava8OSE3T2k=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/LazilyResolvedMethodBin
+ ding.java
+SHA1-Digest: IhLON/o6p01VOSvj1qRfqIrVLS4=
+
+Name: org/eclipse/jdt/core/IPackageFragmentRoot.java
+SHA1-Digest: pvtXu7gIZ88E79gD+HdT2PU3zAc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SingleTypeReference.java
+SHA1-Digest: J3ztj1n2Kfz4WIekxiWnAGA1uKc=
+
+Name: org/eclipse/jdt/core/util/IAttributeNamesConstants.java
+SHA1-Digest: avYC7ZBHRQ4fJVyO8XQkrtu/kpY=
+
+Name: org/eclipse/jdt/core/dom/StructuralPropertyDescriptor.java
+SHA1-Digest: pFx7XmtB9ZnkfK6hXlETsYYcQI0=
+
+Name: org/eclipse/jdt/internal/core/ResolvedBinaryType.java
+SHA1-Digest: UbRuD0hoUKbLvgc5884WmbbrmDk=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMInitializer.java
+SHA1-Digest: qoS1S99dBJ3Y90tT51AydJZjCgY=
+
+Name: org/eclipse/jdt/core/ICodeFormatter.java
+SHA1-Digest: 5xbForkTLm410dyUjkLHJTCf2gc=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MissingTypeBinding.java
+SHA1-Digest: xd4AHyuWHUB+DFLCSG0d6EKXUlw=
+
+Name: schema/classpathVariableInitializer.exsd
+SHA1-Digest: 0I76RmNZU+DNt6NtHA6l9HHsAwA=
+
+Name: org/eclipse/jdt/internal/core/util/RuntimeInvisibleAnnotationsAt
+ tribute.java
+SHA1-Digest: cmDg5Wmqff7T3Qgamyl9Rg/DXks=
+
+Name: org/eclipse/jdt/internal/compiler/impl/FloatConstant.java
+SHA1-Digest: Jp++XXwMUTuuBrtOULLu6yuT6Ak=
+
+Name: org/eclipse/jdt/internal/core/CopyResourceElementsOperation.java
+SHA1-Digest: 81yCmoIJzBjCof+hwOEX8Z926bs=
+
+Name: org/eclipse/jdt/internal/core/builder/ReferenceCollection.java
+SHA1-Digest: dSPV2xDlYgItVWzkFq+u6CjDTuQ=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PossibleMatch.java
+SHA1-Digest: 3gc4DSVExvKy0C+bOT7FYyDcBjw=
+
+Name: org/eclipse/jdt/core/dom/RecoveredVariableBinding.java
+SHA1-Digest: AROs/685zswhq79yW4pMwiOv52I=
+
+Name: org/eclipse/jdt/internal/compiler/problem/ProblemSeverities.java
+SHA1-Digest: Na8JYxCWxRt3koO/vjvShLpiui0=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnQualifiedS
+ uperReference.java
+SHA1-Digest: 5F5QUkmIZGhSo5sFO2uM716/rJs=
+
+Name: org/eclipse/jdt/internal/core/BasicCompilationUnit.java
+SHA1-Digest: eujUliZiRRNgTKj0ujbdK6732L4=
+
+Name: org/eclipse/jdt/core/util/IConstantPoolConstant.java
+SHA1-Digest: MlW8eHXmrrqsLYtZBZFJW8djt1U=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IndexAllProject.ja
+ va
+SHA1-Digest: yBGIkXy9w9+C0hVWg4AKOQvtk0A=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MostSpecificExceptionMe
+ thodBinding.java
+SHA1-Digest: 1wM16TOSdM6O1oiKzRAOWNr68Fk=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnAnnotat
+ ionOfType.java
+SHA1-Digest: c8WzskFZ2aLLzKW+o7wcXEjtrV4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/MessageSend.java
+SHA1-Digest: JGi71OowI3sHluOIm6CwmT28AXM=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfType.java
+SHA1-Digest: Vu3F3aex625VX9mNmE8GRAPJdcI=
+
+Name: org/eclipse/jdt/core/IJavaElement.java
+SHA1-Digest: HaP0DkNCIRFkraBsShWSHq2pEgM=
+
+Name: org/eclipse/jdt/core/dom/Comment.java
+SHA1-Digest: HXbeozGSW7VLVrH2XyDhnh3wqSY=
+
+Name: org/eclipse/jdt/core/dom/SwitchStatement.java
+SHA1-Digest: zMIuGkYc0rtTmQ4FahRxHFTnzlM=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/DoubleCache.java
+SHA1-Digest: YY8jF5QCJ0iAE1+M57BuIHvNR5M=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryAnnotation.java
+SHA1-Digest: EqP6CHtaUeewxTdfUaBasRZd7ZM=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MethodVerifier15.java
+SHA1-Digest: JRwb2adaDcMkMTgMwkhoSnt39HA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/AnnotationHolder.java
+SHA1-Digest: wDEtQ1bq06PXG7imbU2NuyPPAAQ=
+
+Name: org/eclipse/jdt/core/util/ByteCodeVisitorAdapter.java
+SHA1-Digest: z1G0VnGXB2JHBu1pSmzw8ADH1oY=
+
+Name: org/eclipse/jdt/core/CompletionFlags.java
+SHA1-Digest: qTUgsfu367Sv1JM0gW4IW9OuCeQ=
+
+Name: org/eclipse/jdt/internal/core/search/matching/LocalVariablePatte
+ rn.java
+SHA1-Digest: 1Bs85z1f228VqhLBFH/PEi+7T1o=
+
+Name: org/eclipse/jdt/core/dom/Modifier.java
+SHA1-Digest: n2blB7lZ96HtafROsrYzu4hbVTY=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnNameOfMemb
+ erValuePair.java
+SHA1-Digest: mIzA4fGBo0PsznObMf0GESRpnKA=
+
+Name: org/eclipse/jdt/core/index/JavaIndexer.java
+SHA1-Digest: WdoNX9ziHWtND7KzziLiX7Na/Fk=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/LineInformation.java
+SHA1-Digest: vZPguOxVN0RWSvMj2V48XYc9qas=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredUnit.java
+SHA1-Digest: 5hOv50EAKTtSeyhU+lqXqn+GcIU=
+
+Name: org/eclipse/jdt/core/dom/TagElement.java
+SHA1-Digest: iJTBq+ZzaHkw90Wud5SQ6eB7HSk=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeParameterLocat
+ or.java
+SHA1-Digest: 6QNPmJTCSMQHJXogcyS9Q4o8f04=
+
+Name: org/eclipse/jdt/internal/core/SourceMethodWithChildrenInfo.java
+SHA1-Digest: MJPVLtevzBi/Pbos9wnS+9EMoNI=
+
+Name: org/eclipse/jdt/internal/core/CreateTypeHierarchyOperation.java
+SHA1-Digest: Dz+6zSwuCjD3p1R8ohakY1xIFbE=
+
+Name: org/eclipse/jdt/core/dom/SuperFieldAccess.java
+SHA1-Digest: DJlwFrg+E37gA6L2FAXGXhtO/tw=
+
+Name: org/eclipse/jdt/core/IBufferFactory.java
+SHA1-Digest: GpXmFtK479p0ybevKNZT7WpcTWI=
+
+Name: org/eclipse/jdt/core/search/SearchPattern.java
+SHA1-Digest: hRz393kmHG2y3gQgfy3GbCe1PfU=
+
+Name: org/eclipse/jdt/internal/core/builder/StringSet.java
+SHA1-Digest: Kv2x2ne2Y3a6PLeDp55uUR+UHj8=
+
+Name: org/eclipse/jdt/core/dom/rewrite/ImportRewrite.java
+SHA1-Digest: xrwXFQnGT35VUffTAqqouoxC2CI=
+
+Name: org/eclipse/jdt/core/dom/LineComment.java
+SHA1-Digest: IGVzjguknVIruZDllkVH2K9cpjU=
+
+Name: org/eclipse/jdt/internal/core/JavaElement.java
+SHA1-Digest: /u6L50U7fVVJ2lngX3hiN/ymDYY=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocSingleTypeReference
+ .java
+SHA1-Digest: 5ejYNWnhot1Nz9qWzcC+7bEbwLA=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/ClassFormatException.
+ java
+SHA1-Digest: yjGM9Hpk8c15tQPVuEYM5OESYEQ=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashSetOfInt.java
+SHA1-Digest: aK38/c07EEi/XshSlTmLEwPnS0s=
+
+Name: org/eclipse/jdt/core/IField.java
+SHA1-Digest: 3Z+4jq/AOqSbtnCSN5yJv7oswP0=
+
+Name: org/eclipse/jdt/internal/compiler/util/Messages.java
+SHA1-Digest: kbgqjrTkbQJVZfjwG/xUWG4w37A=
+
+Name: org/eclipse/jdt/core/util/IBootstrapMethodsAttribute.java
+SHA1-Digest: mA/1vpH9D2sgIJoO5Ps4sdGDe24=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnQualifi
+ edTypeReference.java
+SHA1-Digest: LccHk1XjYE+N0iU/I8VBPPQ7WmY=
+
+Name: org/eclipse/jdt/internal/core/BinaryField.java
+SHA1-Digest: hujCZ7eFsLMhiCKUZtHZw387a9Q=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMImport.java
+SHA1-Digest: uitFX8VpbSvQDqTisUHHK3JrNbs=
+
+Name: org/eclipse/jdt/core/IMemberValuePair.java
+SHA1-Digest: E3sr7vhQpOTXLFsvz1zPRCsYTuc=
+
+Name: org/eclipse/jdt/internal/core/util/ILRUCacheable.java
+SHA1-Digest: h7Ir06TItYYuEiWQZLgBX2d0J38=
+
+Name: org/eclipse/jdt/internal/core/JarPackageFragment.java
+SHA1-Digest: f8Ew62QbikqVK3B6FKEz668sq50=
+
+Name: org/eclipse/jdt/core/IImportContainer.java
+SHA1-Digest: iXYjbDoNTLhwqWxa1zqtXoGrq8E=
+
+Name: org/eclipse/jdt/core/dom/IfStatement.java
+SHA1-Digest: YhrnMd6qy7cTLS5S0hRQltLGSco=
+
+Name: org/eclipse/jdt/core/IAnnotatable.java
+SHA1-Digest: vXFPq4LL7pj+fZF7kUri7cawG8A=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SyntheticFieldBinding.j
+ ava
+SHA1-Digest: eb7uD4o/5PXH4iOMcBMd4deISIo=
+
+Name: org/eclipse/jdt/internal/core/builder/BatchImageBuilder.java
+SHA1-Digest: KtXoDhfgkX5q5dssF8G0bdU6RMg=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/InvalidCursorLocati
+ on.java
+SHA1-Digest: iqfyL9XFwcLGsz00dwbMw2IKsf8=
+
+Name: org/eclipse/jdt/internal/compiler/env/AccessRule.java
+SHA1-Digest: wrCQA/X2bc3SCxAHTHxLMovFPJc=
+
+Name: org/eclipse/jdt/internal/core/search/PatternSearchJob.java
+SHA1-Digest: Vgk2kvsJbup0tpx4A3tGglWkjX8=
+
+Name: org/eclipse/jdt/internal/compiler/ASTVisitor.java
+SHA1-Digest: LPWo88KLR6/ixmFBbLSvFvPgfiI=
+
+Name: org/eclipse/jdt/core/dom/BlockComment.java
+SHA1-Digest: /FTC/Uiw3SJMH9yN8Hfyzs6/Xto=
+
+Name: org/eclipse/jdt/core/util/IModifierConstants.java
+SHA1-Digest: cs5HTMrBWUGyA+S3y0G065iaFBM=
+
+Name: org/eclipse/jdt/internal/core/JavaElementDeltaBuilder.java
+SHA1-Digest: 8Rx5GKELzNBSeJZvjhl7FN7YioQ=
+
+Name: org/eclipse/jdt/internal/core/UserLibraryClasspathContainerIniti
+ alizer.java
+SHA1-Digest: 6HSJQlSbwmzedVYpE8CUrUNFKTY=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/BaseTypeBinding.java
+SHA1-Digest: 3eTzL66J+xBPRw/8jd1BM3933gE=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/PolymorphicMethodBindin
+ g.java
+SHA1-Digest: DsRoHpjV0BAfAY9IeIQXXByTrwI=
+
+Name: org/eclipse/jdt/core/dom/QualifiedType.java
+SHA1-Digest: 43dB9iuEiFw4yovE8tLUilP1JWI=
+
+Name: org/eclipse/jdt/core/dom/CompilationUnitResolver.java
+SHA1-Digest: taSfnTKxwq9k+ygIN+MtVxEg9uQ=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CombinedBinaryExpression.j
+ ava
+SHA1-Digest: tTgpP0lyt/VwVOABTvFERRcL/EI=
+
+Name: org/eclipse/jdt/core/dom/PostfixExpression.java
+SHA1-Digest: 6uMmZ2XZU/scFoOGlEKR4bwM+Fw=
+
+Name: org/eclipse/jdt/internal/core/CompilationUnitProblemFinder.java
+SHA1-Digest: t0s6qnH2WkSV4n9OYmwZs6lf04M=
+
+Name: org/eclipse/jdt/core/search/MethodDeclarationMatch.java
+SHA1-Digest: 4ulQndnOBzrf7zTGC+U2U3lp2m0=
+
+Name: org/eclipse/jdt/core/dom/LabeledStatement.java
+SHA1-Digest: eJUE8qKdzDLvD4GGAGU8K+h0Qu0=
+
+Name: org/eclipse/jdt/internal/core/jdom/ILineStartFinder.java
+SHA1-Digest: cStqi1SSNr7wWdVnyb+3RYQwo3Y=
+
+Name: org/eclipse/jdt/internal/core/util/InnerClassesAttributeEntry.ja
+ va
+SHA1-Digest: a3CMu1+EaQegcY6dr/PWuOjzWSg=
+
+Name: org/eclipse/jdt/internal/core/search/BasicSearchEngine.java
+SHA1-Digest: uuZe64lkFlWiJI98gGu/7F1RU74=
+
+Name: org/eclipse/jdt/core/dom/InstanceofExpression.java
+SHA1-Digest: 52IFAgcdRQWn3roBkjWXYvWoQ2w=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CaseStatement.java
+SHA1-Digest: cap8BFxHhP944b6NSZu6Od0nvfU=
+
+Name: org/eclipse/jdt/internal/compiler/env/IGenericMethod.java
+SHA1-Digest: 9GuKKI2aOSaTYdUtCFGwepxI6vM=
+
+Name: org/eclipse/jdt/internal/compiler/util/SimpleSet.java
+SHA1-Digest: iB1Tm554SO1yX9tMk1upq1OsTCo=
+
+Name: org/eclipse/jdt/internal/codeassist/ISelectionRequestor.java
+SHA1-Digest: FgkIE25qRQNOHsbZxzreKt9PfHw=
+
+Name: org/eclipse/jdt/core/dom/MethodBinding.java
+SHA1-Digest: hGST9b8jBQxWsvbo053Yg6UfF/E=
+
+Name: org/eclipse/jdt/core/dom/ArrayType.java
+SHA1-Digest: VSKXPdGGIKooCGaDbYSfVqTje0w=
+
+Name: org/eclipse/jdt/internal/core/util/SimpleWordSet.java
+SHA1-Digest: RKrB1oMUenGgOfj8e+xeanTv2/w=
+
+Name: org/eclipse/jdt/core/BindingKey.java
+SHA1-Digest: rvNzTjEeEHBH3oeSVlHu/d8LAFQ=
+
+Name: org/eclipse/jdt/internal/core/util/ReferenceInfoAdapter.java
+SHA1-Digest: R2SUNTJ3tcvoJ/iTK7+9yMIW1eM=
+
+Name: org/eclipse/jdt/core/search/IJavaSearchScope.java
+SHA1-Digest: 5dwd2B21IQ2HP+u9/Wo6jj7+JHA=
+
+Name: org/eclipse/jdt/core/eval/IGlobalVariable.java
+SHA1-Digest: OmtFpfe8X1loOAZdj6SP0lX2t7Q=
+
+Name: org/eclipse/jdt/internal/core/ElementCache.java
+SHA1-Digest: 0StHOi0Ry5hDOl8knH5iuA80Isw=
+
+Name: schema/codeFormatter.exsd
+SHA1-Digest: XaozFPseUSPkcLbGyL69xD+IdZE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/QualifiedTypeReference.jav
+ a
+SHA1-Digest: NeaH1bAsx4zRzjy43nwGe0IZnr8=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnExplicitCo
+ nstructorCall.java
+SHA1-Digest: qWGo7sF+ROQbRITEjoqf1MakE6c=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetReturnStatement.java
+SHA1-Digest: WYu3N+BBH277u6WYG/uVqtwG3Vc=
+
+Name: org/eclipse/jdt/internal/core/builder/MissingSourceFileException
+ .java
+SHA1-Digest: C6xsRTKLk/y5HDb5KlkawSm+/5M=
+
+Name: org/eclipse/jdt/internal/core/PackageFragment.java
+SHA1-Digest: dEEFhPb9UpOjKAXAAgTNw6ZbGdU=
+
+Name: org/eclipse/jdt/internal/codeassist/InternalCompletionProposal.j
+ ava
+SHA1-Digest: CV2mkeBkrLkgVKSicl5R0W7qLdo=
+
+Name: org/eclipse/jdt/core/util/IConstantPool.java
+SHA1-Digest: WvdxYbxCkegUV5byPCYA6NNQEDk=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ElementValuePair.java
+SHA1-Digest: 0EjSlTIZqe2NxgxBqOc4e4IVIto=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfObject.java
+SHA1-Digest: 6g5L7lgtwplPjilrxrUan7kCZr0=
+
+Name: org/eclipse/jdt/internal/core/ExternalFoldersManager.java
+SHA1-Digest: oDvXxFlFPuKIOBXYKg2gB9YfewI=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ContinueStatement.java
+SHA1-Digest: VH24Fkx2Xbru/QltJaBDivCFGP8=
+
+Name: org/eclipse/jdt/internal/core/INamingRequestor.java
+SHA1-Digest: lDf94nobnuinEOlRZxkmOqS0pxQ=
+
+Name: org/eclipse/jdt/core/compiler/IProblem.java
+SHA1-Digest: yuEV5seMIwAF1c9YMsZL3JpuIU0=
+
+Name: org/eclipse/jdt/internal/core/Member.java
+SHA1-Digest: qB+n1vyLU82roGjBoqAIRv96IC8=
+
+Name: org/eclipse/jdt/internal/core/MemberElementInfo.java
+SHA1-Digest: K0j4bAncVEXRESFGRgn/mTXA0mg=
+
+Name: org/eclipse/jdt/core/util/IVerificationTypeInfo.java
+SHA1-Digest: S06EIWl81PxumzIUbiAugYuBczQ=
+
+Name: org/eclipse/jdt/core/IMethod.java
+SHA1-Digest: FOYb5Qoruvdq7gQJG/2Ea0ZUyZs=
+
+Name: org/eclipse/jdt/internal/core/util/ClassFileAttribute.java
+SHA1-Digest: Y2loUax+weJSpemTaiVGBSCHqo4=
+
+Name: org/eclipse/jdt/internal/compiler/flow/LoopingFlowContext.java
+SHA1-Digest: w1dJXgB0mxxmSMRqUUbULW+Pup8=
+
+Name: org/eclipse/jdt/internal/compiler/impl/ReferenceContext.java
+SHA1-Digest: VHtuI4O4WVVkXNQJbdDt7CNXzF4=
+
+Name: org/eclipse/jdt/core/dom/AssertStatement.java
+SHA1-Digest: WO1/2TXCrlUrc0DmiB7hrp17EsA=
+
+Name: org/eclipse/jdt/core/search/FieldDeclarationMatch.java
+SHA1-Digest: hutyo2QXLqOAUZIFCXXhh7e3O9s=
+
+Name: org/eclipse/jdt/core/dom/SimpleName.java
+SHA1-Digest: BAFVh2TTpLQtU0TE3Fof8hbKlkM=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MethodBinding.java
+SHA1-Digest: 14h9TBPlwB3+OVlSiOynsCe6AIM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/MagicLiteral.java
+SHA1-Digest: XBU4jjPHZq98zBd/nccVgf2fodk=
+
+Name: org/eclipse/jdt/internal/core/util/ASTNodeFinder.java
+SHA1-Digest: /3ErSMKPL258mbyD//iBkOvIEb0=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword
+ 1.java
+SHA1-Digest: OI8ZxCNA6jtiGTWAKbZnkpkMM8Q=
+
+Name: org/eclipse/jdt/internal/core/IJavaElementRequestor.java
+SHA1-Digest: hAhtKXhEuROtyJskdU1joW7SKdY=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ConstructorLocator
+ .java
+SHA1-Digest: 8/exI6sRK5b0NwGoIhpiEeTNsbE=
+
+Name: org/eclipse/jdt/core/IParent.java
+SHA1-Digest: kLfCQ6oB++zNdEgikp8e4Dxm3Zs=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/BinaryTypeBinding.java
+SHA1-Digest: fXnd5X68+/N2zY350J6wJFt+IKE=
+
+Name: org/eclipse/jdt/internal/core/SourceField.java
+SHA1-Digest: cD2d00TqBDWxHbVtIizwfV0I/tc=
+
+Name: org/eclipse/jdt/core/util/ISourceAttribute.java
+SHA1-Digest: HWBqrb0H8tuowAnntAeMZugmnIs=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfLong.java
+SHA1-Digest: 1tkNHEYQC8N+zRt7DBp/Tz8Mpxs=
+
+Name: org/eclipse/jdt/core/ITypeRoot.java
+SHA1-Digest: /j5zKHfybbDJ3kpnN0373ffJ9q4=
+
+Name: org/eclipse/jdt/core/dom/BreakStatement.java
+SHA1-Digest: /WbVpdvrMAfgUrncWwP8tWssYMA=
+
+Name: org/eclipse/jdt/internal/compiler/problem/AbortCompilation.java
+SHA1-Digest: 8tUnhuq0PVqp0zcqjJXDMS00l7M=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/RemoveFolderFromIn
+ dex.java
+SHA1-Digest: zk0EY2n4cpYueZ60sF2mgPhF80k=
+
+Name: org/eclipse/jdt/core/dom/IMethodBinding.java
+SHA1-Digest: QdW8oALZe/6iHZg7bhBGYgen5L0=
+
+Name: org/eclipse/jdt/core/dom/CastExpression.java
+SHA1-Digest: e4WXyFx/4tXoL09elruW5fKSw44=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/ChangeCollector.java
+SHA1-Digest: VFWMDVf2dnda8hORt5TBcS/9kFc=
+
+Name: org/eclipse/jdt/internal/core/ClassFileInfo.java
+SHA1-Digest: aK7dpVyxmFmslu7Xs4WPxX8bp94=
+
+Name: org/eclipse/jdt/core/util/IConstantPoolEntry.java
+SHA1-Digest: Tqd7sZnBW0wDbOYZDzOHiE1pSw0=
+
+Name: org/eclipse/jdt/internal/core/ImportDeclarationElementInfo.java
+SHA1-Digest: py8lHArC2hI1QLynGs9CMDOoxrE=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/RemoveFromIndex.ja
+ va
+SHA1-Digest: UaJhd4QvJVz4E0Q1Rlh5IgOy/q0=
+
+Name: org/eclipse/jdt/internal/compiler/ClassFilePool.java
+SHA1-Digest: 2ZP0rYnsAt1qQYKSoF+9jAG4B2I=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocFieldReference.java
+SHA1-Digest: ueiCaqSXMOobryip2nAs+bOF1rU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/InstanceOfExpression.java
+SHA1-Digest: 7CxgZqI97QwZoFr6S7HUFlels/o=
+
+Name: org/eclipse/jdt/internal/core/jdom/CompilationUnit.java
+SHA1-Digest: OjGiItaH+87QLrwH7+MEQ44Q/l8=
+
+Name: org/eclipse/jdt/internal/core/JavaCorePreferenceInitializer.java
+SHA1-Digest: QHihEjQHwcA+lJ/DHt+q9mXS12o=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/ConstantPool.java
+SHA1-Digest: cgNarXfDrbWlTipGD9gxGLp8WTQ=
+
+Name: org/eclipse/jdt/internal/core/search/JavaSearchTypeNameMatch.jav
+ a
+SHA1-Digest: 0+6ZPbqEe9JOdZ5J4a48L6yDY6Y=
+
+Name: org/eclipse/jdt/internal/compiler/ast/UnaryExpression.java
+SHA1-Digest: EZgmmL8vXl4WtRu+htNrbJe8RQA=
+
+Name: org/eclipse/jdt/internal/core/SearchableEnvironment.java
+SHA1-Digest: PYrFIJyUgdRJi1roSzk3yLFNjp4=
+
+Name: org/eclipse/jdt/core/search/SearchEngine.java
+SHA1-Digest: zxGTuXV+JUM4eeYiNPaDvyZGFGs=
+
+Name: org/eclipse/jdt/core/IProblemRequestor.java
+SHA1-Digest: 2RqD397T1V79pfEsAxBgGRruRZ8=
+
+Name: org/eclipse/jdt/core/dom/ASTSyntaxErrorPropagator.java
+SHA1-Digest: xHd8eDmuo6rV0Rnvsj3ACDBR9rY=
+
+Name: org/eclipse/jdt/internal/core/search/matching/DeclarationOfAcces
+ sedFieldsPattern.java
+SHA1-Digest: wKGSsXGOYkR4v08MFtj0OeruEFA=
+
+Name: org/eclipse/jdt/core/dom/TextElement.java
+SHA1-Digest: dbpc00VXJ5Qb8jlKeQKFxknM8Tk=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/CharArrayCache.java
+SHA1-Digest: c3GWsJ4twd+m/7qyzciBbKQZv9Y=
+
+Name: org/eclipse/jdt/internal/core/search/AbstractSearchScope.java
+SHA1-Digest: HpXwVJOhfiQU8MDUGx1HIVqPCDI=
+
+Name: org/eclipse/jdt/core/search/IJavaSearchResultCollector.java
+SHA1-Digest: xJ8SuDzr+fSJKa3Kh6HNfgIXX38=
+
+Name: org/eclipse/jdt/internal/compiler/DocumentElementParser.java
+SHA1-Digest: 8MesNVQ6+Vkpon2LM/IymIqhOXA=
+
+Name: org/eclipse/jdt/internal/core/util/HashSetOfArray.java
+SHA1-Digest: 27InDLeYNRcbn2e55VcN1RpaP4Q=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/TagBits.java
+SHA1-Digest: 1DSYVVuESWxRUExG+Kxi8Jqj2q8=
+
+Name: org/eclipse/jdt/internal/core/util/ExceptionAttribute.java
+SHA1-Digest: 0LY9kTuL3nDN8bhI3QW1UWi1pX8=
+
+Name: org/eclipse/jdt/core/dom/SwitchCase.java
+SHA1-Digest: 0J+nGYdMl4Wkxrln8dttPV1F3uE=
+
+Name: org/eclipse/jdt/internal/core/PackageDeclaration.java
+SHA1-Digest: AsxU4b/54cSVnRkfOamYhqW9OzI=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveryScanner.java
+SHA1-Digest: 9yCHpdzbtEEHkMEvNMPXu922/+4=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ConstructorPattern
+ .java
+SHA1-Digest: D9Ure8Jae5hFcW6WdOyxu8wbOto=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveryScannerData.jav
+ a
+SHA1-Digest: 3Z8RgruBqCcS4FtQyXVhPcEemPg=
+
+Name: org/eclipse/jdt/core/dom/ASTParser.java
+SHA1-Digest: Nok0gWNtxoQKnZIe0uZ+1VXER9U=
+
+Name: org/eclipse/jdt/internal/compiler/SourceElementNotifier.java
+SHA1-Digest: 33qihJPYL3JuMqGJCupV+wrWSys=
+
+Name: org/eclipse/jdt/core/dom/NameEnvironmentWithProgress.java
+SHA1-Digest: aKIu6jpX7uQfsv/lVHRN7uNeHws=
+
+Name: org/eclipse/jdt/internal/core/builder/ProblemFactory.java
+SHA1-Digest: izWpV0dW6lYg2vDrC4QWMKjGSrU=
+
+Name: org/eclipse/jdt/internal/core/util/JavaElementFinder.java
+SHA1-Digest: G+I4KS6WmwthJiQXVTz0TybMi4U=
+
+Name: org/eclipse/jdt/internal/core/util/AnnotationComponentValue.java
+SHA1-Digest: q1oOmexLHzzqlEf2D7xH+4aodXc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AllocationExpression.java
+SHA1-Digest: Gmolv4D20ZMj1syHcNPzlSJSV28=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/RewriteEvent.java
+SHA1-Digest: mjpDNAfafdnz2Hst+JsSm0RnOGc=
+
+Name: org/eclipse/jdt/core/dom/BodyDeclaration.java
+SHA1-Digest: W/qM89MpClJHqiHu9F06mgfda0M=
+
+Name: org/eclipse/jdt/core/search/MethodReferenceMatch.java
+SHA1-Digest: bb/260qr+mVJ61YlOhaq4uMHCoU=
+
+Name: org/eclipse/jdt/internal/core/NullBuffer.java
+SHA1-Digest: Zhkz86oKFCyHSmcP9n480GvFjIA=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetScope.java
+SHA1-Digest: wx8V4aJ81DpXGUNFIb8cyyKkOlY=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ClassLiteralAccess.java
+SHA1-Digest: 8d7FlbG0aSlT0IowvKd+ZPJCpEI=
+
+Name: org/eclipse/jdt/internal/core/SourceMethod.java
+SHA1-Digest: ZZYMrTQGxvjkp09cg8BrtyWVUmw=
+
+Name: org/eclipse/jdt/core/ClasspathContainerInitializer.java
+SHA1-Digest: bemdC2nTRMJIVoLX89h5V29p6lo=
+
+Name: org/eclipse/jdt/internal/compiler/ast/LabeledStatement.java
+SHA1-Digest: nsFyN+SysyZuIyWsut/RmrfWBM0=
+
+Name: org/eclipse/jdt/internal/compiler/env/IDependent.java
+SHA1-Digest: UYUd8nQiCKpAaB+zoWriVsdZ36s=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredInitializer.ja
+ va
+SHA1-Digest: pBeqxBXZnTljGAacQv+513g0MDU=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/StackMapFrame.java
+SHA1-Digest: 8dWq/zYlaanwQ3bTiYguK/A+tuU=
+
+Name: org/eclipse/jdt/internal/core/SourceTypeElementInfo.java
+SHA1-Digest: 9umwTKjWtpcww1IQsGZ3Gzgmvy0=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnParameteri
+ zedSingleTypeReference.java
+SHA1-Digest: 0waVFDAtWryAef1NyFidm1hmars=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryNestedType.java
+SHA1-Digest: P3Ziy9myP8Rb077b/5ttEsPFJ5c=
+
+Name: org/eclipse/jdt/internal/core/util/DefaultStackMapFrame.java
+SHA1-Digest: hvou04enVBa8s/54rGJnHcRvbTU=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/SourceIndexer.java
+SHA1-Digest: JGTFn0K3FmR7Xh/Zs0X7w+/YTy0=
+
+Name: org/eclipse/jdt/internal/core/builder/AdditionalTypeCollection.j
+ ava
+SHA1-Digest: wFfKID26yfsWoeRI8nARZaFyZoM=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PatternLocator.jav
+ a
+SHA1-Digest: q59fdHHRQWgaDYnZBt4nsA9rtok=
+
+Name: org/eclipse/jdt/internal/core/OverflowingLRUCache.java
+SHA1-Digest: iOSu5EVlQ3o1j9sQsXScGajYnI0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AND_AND_Expression.java
+SHA1-Digest: vU9zgTJXPFCH4WExNBnox+klLBo=
+
+Name: org/eclipse/jdt/internal/core/CreateMethodOperation.java
+SHA1-Digest: AA9FqpihLDVj3V6PWdx6Ja7TIUA=
+
+Name: org/eclipse/jdt/internal/core/CopyElementsOperation.java
+SHA1-Digest: izp+mKQSN4AjFzQRHoYJOsGdQ5A=
+
+Name: org/eclipse/jdt/internal/core/util/Messages.java
+SHA1-Digest: F1eIk3f9gsd2jjXYZT4I6y83K5Q=
+
+Name: org/eclipse/jdt/internal/compiler/util/Util.java
+SHA1-Digest: rQnSgX+TKiZxBlZChhrGwDBxZN4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SingleMemberAnnotation.jav
+ a
+SHA1-Digest: f0qOU15xKIH63j4pHDbCzgGQGwc=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/MethodInfoWithAnnotat
+ ions.java
+SHA1-Digest: R3DtJ7QFMRrKWyb05sqYJMGWJ7o=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/ImportRewriteAnalyzer.
+ java
+SHA1-Digest: DZ7iZzTTffem3e90xBz1fCs2ffM=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/TrackedNodePosition.ja
+ va
+SHA1-Digest: MqNEVVgD1eRsbK3mgDV8LayithQ=
+
+Name: org/eclipse/jdt/core/dom/AST.java
+SHA1-Digest: +0JvbXhcPOosD7FftgWBAR9kKR0=
+
+Name: org/eclipse/jdt/internal/core/search/matching/QualifiedTypeDecla
+ rationPattern.java
+SHA1-Digest: hxFk7/pMlyeFjTE3R3qBjlZd9Cs=
+
+Name: org/eclipse/jdt/core/IClassFile.java
+SHA1-Digest: Vrq0SeUVpkHOdEZc4AZjTH3yykc=
+
+Name: org/eclipse/jdt/internal/core/util/ConstantValueAttribute.java
+SHA1-Digest: d6VQjlL09Ub+xuUhEcC6XEcqJus=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMNode.java
+SHA1-Digest: vCEJRsuF6B1GNOKTcGNbmWw+UVE=
+
+Name: org/eclipse/jdt/internal/core/ExternalJavaProject.java
+SHA1-Digest: c9yjAiRcPvMfSzXlX1JVRVmLQqU=
+
+Name: org/eclipse/jdt/core/dom/ConstructorInvocation.java
+SHA1-Digest: XWj+BoAQrSahwqH1AMTidNXaEHU=
+
+Name: org/eclipse/jdt/internal/core/util/RuntimeVisibleParameterAnnota
+ tionsAttribute.java
+SHA1-Digest: IvSVTw2wBsiUI+CefhbHEwdJ2bM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/DoStatement.java
+SHA1-Digest: 48uA3FqxWBLuLYYANg4HAqasMsw=
+
+Name: org/eclipse/jdt/internal/eval/IRequestor.java
+SHA1-Digest: BIWKQTKO3PsCxHUupP0kEeI8hA4=
+
+Name: org/eclipse/jdt/internal/core/search/matching/VariableLocator.ja
+ va
+SHA1-Digest: RNA1zdv4DQqHWD153zISVDjGUAs=
+
+Name: org/eclipse/jdt/core/dom/ConditionalExpression.java
+SHA1-Digest: moCCATTGhzE+KKLhSjGkXm00gLc=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnImportRefe
+ rence.java
+SHA1-Digest: oAO5gvFdm0SjEreehTMxIAW/tPM=
+
+Name: org/eclipse/jdt/internal/compiler/parser/TerminalTokens.java
+SHA1-Digest: C2JYemOa4kv45Ax6gLYSsjwbq8M=
+
+Name: org/eclipse/jdt/internal/core/RenameElementsOperation.java
+SHA1-Digest: PkP9rNQl6CzFsT1dfiEf8YBCx5o=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MatchLocatorParser
+ .java
+SHA1-Digest: J8Fg93eooQ3OdoG9tSQkUn7cWPg=
+
+Name: org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+SHA1-Digest: RwxyhpiriOhHU/GeCVmymbanoE4=
+
+Name: org/eclipse/jdt/core/jdom/IDOMType.java
+SHA1-Digest: L4tijCenL4VkdLVUD4vWJt0PTr8=
+
+Name: org/eclipse/jdt/internal/formatter/BinaryExpressionFragmentBuild
+ er.java
+SHA1-Digest: fgy/NxLlPSMWmVGoql3CJTUhnb0=
+
+Name: org/eclipse/jdt/core/dom/Statement.java
+SHA1-Digest: eY00pMnqMAqBf9A6jfGCsHl1xHk=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Clinit.java
+SHA1-Digest: 2hxbNldl2T+OIyZ/X4GKI4HtBKU=
+
+Name: org/eclipse/jdt/core/CompletionProposal.java
+SHA1-Digest: VdHnspdlA89gkBFBGjRrc02tYyQ=
+
+Name: org/eclipse/jdt/internal/core/Annotation.java
+SHA1-Digest: ydIbhuQZ9knCv5qATM+zRMfDD6c=
+
+Name: org/eclipse/jdt/internal/core/DeltaProcessingState.java
+SHA1-Digest: gtsQhKvbNYFP28TiDtpvaTbO/zQ=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SynchronizedStatement.java
+SHA1-Digest: 57QW5tPdSvM5axEtQG3subxHf1o=
+
+Name: org/eclipse/jdt/core/util/ISignatureAttribute.java
+SHA1-Digest: gDJvMf4i+EFRBhdm1w6nTV/1d50=
+
+Name: org/eclipse/jdt/core/dom/VariableDeclarationFragment.java
+SHA1-Digest: L5oaJMgzVHDfF0yfO5oX6j5IMA0=
+
+Name: org/eclipse/jdt/internal/core/util/Annotation.java
+SHA1-Digest: /7vLjAWYSpfDG4vfQg2fSl2EQSE=
+
+Name: org/eclipse/jdt/internal/compiler/env/IGenericField.java
+SHA1-Digest: FGDuWs+exDOVj07zmDhmFiKy3WA=
+
+Name: org/eclipse/jdt/internal/core/BatchInitializationMonitor.java
+SHA1-Digest: bZdO1LFiB0LXBV1hLWnJ3hJ4wsk=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnPackage
+ Reference.java
+SHA1-Digest: xZTv7Nbha6BFy3ZogVvQ/oWDekc=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnPackageRef
+ erence.java
+SHA1-Digest: gEKg7o19oxIL4ps54H9Q+j7vCxo=
+
+Name: org/eclipse/jdt/core/compiler/CompilationProgress.java
+SHA1-Digest: wz0CsRmddPO0rG3EALj4O8NqTy8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/MemberValuePair.java
+SHA1-Digest: Uho5EJD9LMVQ0y9kYYRRzc62UTI=
+
+Name: org/eclipse/jdt/internal/codeassist/CompletionEngine.java
+SHA1-Digest: aFkzvqXjunIxY/uh4aZRrIY9hl0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ThrowStatement.java
+SHA1-Digest: DJH21deJ2Ze7zy1QELAvz8eOXkY=
+
+Name: org/eclipse/jdt/internal/core/dom/NaiveASTFlattener.java
+SHA1-Digest: vZPwzQfEJepaEG851Y67UjjNCuY=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AnnotationMethodDeclaratio
+ n.java
+SHA1-Digest: HEpvH4bBeGQwZVEIkcgBVWEUkd4=
+
+Name: org/eclipse/jdt/core/IBuffer.java
+SHA1-Digest: JIvaxqecPz9PKq9QUnSIk7T91gk=
+
+Name: org/eclipse/jdt/internal/formatter/FormatJavadocReference.java
+SHA1-Digest: tr9uDAGlDuRLgdTsmrtrusHBvnI=
+
+Name: org/eclipse/jdt/internal/compiler/ast/OperatorExpression.java
+SHA1-Digest: j1iPxc9vKjhTExxXMFVQUyCp6Io=
+
+Name: org/eclipse/jdt/internal/codeassist/InternalCompletionContext.ja
+ va
+SHA1-Digest: 2M9QVrdDA+QFeDbHZ5Sz5NfovrY=
+
+Name: org/eclipse/jdt/core/dom/StringLiteral.java
+SHA1-Digest: OKB3XhmDcrRv9F+elZfxlvSTOm4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/StringLiteralConcatenation
+ .java
+SHA1-Digest: ixUJhTgDu2G1zriUAYbgaeqfOvc=
+
+Name: org/eclipse/jdt/core/dom/SimpleType.java
+SHA1-Digest: HG85/CwDM29iI2tSwRv8bD3kyEY=
+
+Name: org/eclipse/jdt/core/JavaModelException.java
+SHA1-Digest: Zla2lB5cLy2YfSa3hzpITIEKOwA=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/FloatCache.java
+SHA1-Digest: MiRAZbMpgyO8Iz3QeiRy6P6KWGE=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword
+ .java
+SHA1-Digest: R42pfzk08LEYIJj0GL4VKfF7zDI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ AllocationExpression.java
+SHA1-Digest: poVcyC/TYEY5AUh/eEhs/S1NAsw=
+
+Name: org/eclipse/jdt/core/dom/SimplePropertyDescriptor.java
+SHA1-Digest: xLjZRaA86OuCVa/m8mQizHtDa1w=
+
+Name: org/eclipse/jdt/core/dom/UnionType.java
+SHA1-Digest: Zg1I29l2W8dI1ni25+cjrEHYtG8=
+
+Name: org/eclipse/jdt/core/IImportDeclaration.java
+SHA1-Digest: R5FabU4NClmm/JlcfRU2sI5Vhl0=
+
+Name: org/eclipse/jdt/core/util/IAnnotationDefaultAttribute.java
+SHA1-Digest: c3XEs5m/N7P2erUMFtW4he13AQc=
+
+Name: org/eclipse/jdt/internal/core/JavaModelStatus.java
+SHA1-Digest: gdQwIGMzQR/MhWCHyTFx7P0f7tI=
+
+Name: org/eclipse/jdt/internal/core/UserLibrary.java
+SHA1-Digest: 1uVSg3FnLrWaCowNHDywlzF3v0s=
+
+Name: org/eclipse/jdt/internal/compiler/ast/FakedTrackingVariable.java
+SHA1-Digest: vZIzOA58Pi0pNit1LucH0dQLYPk=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMMethod.java
+SHA1-Digest: hXfw1uUKK/kZSDGsux1vqS1I+/M=
+
+Name: org/eclipse/jdt/internal/compiler/util/Sorting.java
+SHA1-Digest: FaSQomaM8a8Id3/0Z35pSkw/dN8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/EqualExpression.java
+SHA1-Digest: eZcORNP1YqfEmIkRMUz8FzqG5yo=
+
+Name: org/eclipse/jdt/internal/compiler/ast/NullLiteral.java
+SHA1-Digest: q+XfikaBKsyZnv6GyiW/ODjuN1Y=
+
+Name: org/eclipse/jdt/internal/core/InitializerElementInfo.java
+SHA1-Digest: /JgXGFkMwh55bjCDEJbANb0zeYU=
+
+Name: org/eclipse/jdt/internal/compiler/env/NameEnvironmentAnswer.java
+SHA1-Digest: qzX+kL/M+zEBf9lW5plgVv85HRM=
+
+Name: org/eclipse/jdt/internal/core/search/IndexSelector.java
+SHA1-Digest: U1asfiSQNBhxfpDz15pAF5yyq70=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Annotation.java
+SHA1-Digest: BiOEwYU7KW7Pi0jcwWPiROWjv3Y=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredImport.java
+SHA1-Digest: Bp57FseUU4UVylhMbiOER6Ljo10=
+
+Name: org/eclipse/jdt/internal/compiler/IErrorHandlingPolicy.java
+SHA1-Digest: b/3uCyISpEGc9VhjXEEe+7OEzyc=
+
+Name: org/eclipse/jdt/internal/compiler/env/AccessRestriction.java
+SHA1-Digest: l1RLKVO4TJ5vfyq5j+vhBeoFqMc=
+
+Name: org/eclipse/jdt/internal/compiler/impl/BooleanConstant.java
+SHA1-Digest: Wm3jiq98ihnknQoXn/rzbIKZPTo=
+
+Name: org/eclipse/jdt/internal/compiler/parser/ParserBasicInformation.
+ java
+SHA1-Digest: jvDwrvzlVx4RrK0bdIa0Ammr3bE=
+
+Name: org/eclipse/jdt/internal/core/ModelUpdater.java
+SHA1-Digest: myhYTNZhYdH5FpH+Li8AnStMcIg=
+
+Name: org/eclipse/jdt/internal/compiler/impl/IntConstant.java
+SHA1-Digest: AvsDKn/vOd+m8H4+ePyLALf9FqM=
+
+Name: org/eclipse/jdt/core/IJavaModelMarker.java
+SHA1-Digest: 6/4LDvxQB2A76tvWji21Kleylsg=
+
+Name: org/eclipse/jdt/internal/core/search/matching/JavaSearchNameEnvi
+ ronment.java
+SHA1-Digest: WHdTli5vXKj99MFlg0C5AH3Cfdg=
+
+Name: org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+SHA1-Digest: QCIPXpTmmDgvS7nBFWIOwWU3ifk=
+
+Name: org/eclipse/jdt/internal/core/util/PublicScanner.java
+SHA1-Digest: ilrHP5oPFt01bxpD6dMyveeJXX4=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetThisReference.java
+SHA1-Digest: ydTsC3uIYsDQ41EsEnw+rnD6O6I=
+
+Name: org/eclipse/jdt/internal/core/Openable.java
+SHA1-Digest: d2W0Y781ahxQOjj28qL6s/tCa4k=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SyntheticArgumentBindin
+ g.java
+SHA1-Digest: YAyfTClVtREYMS9ZuiEz27+Bfdc=
+
+Name: org/eclipse/jdt/core/dom/ASTRequestor.java
+SHA1-Digest: mvOVi5BFtkdBUKDGuU/4HIuV61E=
+
+Name: org/eclipse/jdt/core/util/IExceptionTableEntry.java
+SHA1-Digest: bByY/BDoresvDHam3d9+cPAAYOo=
+
+Name: org/eclipse/jdt/core/SourceRange.java
+SHA1-Digest: lbdK2uXI8OEzabmOeGkG4tgNmW8=
+
+Name: org/eclipse/jdt/internal/compiler/SourceJavadocParser.java
+SHA1-Digest: Ueo/DP0yQMBEOPXyIVxmM6kTmuc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocQualifiedTypeRefere
+ nce.java
+SHA1-Digest: oArr12iSETTl4Bmi/5eOHNYtVNA=
+
+Name: org/eclipse/jdt/internal/core/JavaModelManager.java
+SHA1-Digest: lj6t1NYjQDuBPTg7SGkCz/uIKVo=
+
+Name: org/eclipse/jdt/internal/compiler/util/FloatUtil.java
+SHA1-Digest: tahT0Pokcndr5eeYJUJcsbnZscA=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionJavadocParse
+ r.java
+SHA1-Digest: p2Rw24pIcs84zHkWrybAeLFE91w=
+
+Name: org/eclipse/jdt/core/dom/AnnotationBinding.java
+SHA1-Digest: Rs8klWvb52vYZ9vqfxRRMKGc5lo=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistSourceType.java
+SHA1-Digest: XL5uY9h5ZxtZYgN3+5keV2ABpao=
+
+Name: org/eclipse/jdt/core/compiler/IScanner.java
+SHA1-Digest: Q81k4o30BgJGjx81xVt/AuhaI+c=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ExtraCompilerModifiers.
+ java
+SHA1-Digest: 8GGAbLApBarAtl5bfsGLUFrPh20=
+
+Name: schema/compilationParticipant.exsd
+SHA1-Digest: OA9rsLn4RGRJWZXyickrcJHZl+Q=
+
+Name: org/eclipse/jdt/internal/compiler/ast/IntLiteralMinValue.java
+SHA1-Digest: DGQ+fQg3vb/RcgM2axA5Wl2BkA4=
+
+Name: org/eclipse/jdt/internal/core/util/ConstantPool.java
+SHA1-Digest: lS6NvsViI04pYht5X3/VjmfTFQU=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemReasons.java
+SHA1-Digest: /hqgJlWJ7fbpCL6UKkxAtWuEKZ4=
+
+Name: org/eclipse/jdt/internal/core/util/KeyToSignature.java
+SHA1-Digest: 02KDTSwScZACcF11gb3HBMZiFIg=
+
+Name: org/eclipse/jdt/internal/core/SourceFieldElementInfo.java
+SHA1-Digest: Wi3JwU48ceN7Gm0mUskYCjLXNH4=
+
+Name: org/eclipse/jdt/internal/core/util/RecordedParsingInformation.ja
+ va
+SHA1-Digest: PxI4Uap1xJ/uoSVOkAtkmidzFZI=
+
+Name: org/eclipse/jdt/internal/formatter/align/Alignment.java
+SHA1-Digest: RJwcX03dGPEwJf/k/PCLSfxNztM=
+
+Name: org/eclipse/jdt/core/util/ILocalVariableAttribute.java
+SHA1-Digest: ma8Ay01JpQyDUXg7aRyFBo+eG5k=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionNodeFound
+ .java
+SHA1-Digest: n3c+BDwR9PlcrltlxCRBnyBSTKw=
+
+Name: org/eclipse/jdt/core/IBufferChangedListener.java
+SHA1-Digest: +ivzPJCAA8sEkr4lCMNzDpVwvVc=
+
+Name: org/eclipse/jdt/core/ICompilationUnit.java
+SHA1-Digest: ydtsx+GxBXHixo2hDpzXq4J9kn8=
+
+Name: org/eclipse/jdt/core/index/JavaIndexerApplication.java
+SHA1-Digest: uPvA/t0s0wlIYHj+JbtDlLwRkw4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ArrayTypeReference.java
+SHA1-Digest: Tc6YxHhNAz00YxrOmh36BnKpihE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CharLiteral.java
+SHA1-Digest: YSB8Nqa/DUqgndQwNE+kdMCtJPE=
+
+Name: org/eclipse/jdt/internal/compiler/flow/InsideSubRoutineFlowConte
+ xt.java
+SHA1-Digest: +QR77BfaAIVJEfQVH0RAOquhWMw=
+
+Name: org/eclipse/jdt/internal/compiler/impl/DoubleConstant.java
+SHA1-Digest: 9mzhfCViS7vEItbFgRiRphI0nbw=
+
+Name: org/eclipse/jdt/internal/formatter/comment/SubstitutionTextReade
+ r.java
+SHA1-Digest: s2XWvvRHZokh8O3hNW7MSNp/vVc=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMarkerA
+ nnotationName.java
+SHA1-Digest: gJOO+DiODlSbHnu0ybZ5wtP6Ujo=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/CachedIndexEntry.java
+SHA1-Digest: KmK6kThtq0A3h8hPNZzT3+p/Db4=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.java
+SHA1-Digest: U1c3XLoOsyiPa8SuYvR0JGj28wQ=
+
+Name: org/eclipse/jdt/internal/core/ResolvedSourceField.java
+SHA1-Digest: u3s8F2KvS7JDrGB18pVdZJp083I=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ArrayReference.java
+SHA1-Digest: eOS6ZN/mE/bio88xjQYNBUTA6iM=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ImplicitNullAnnotationV
+ erifier.java
+SHA1-Digest: ze7agL3aLuf+BBk5WutCN4a5B48=
+
+Name: org/eclipse/jdt/core/dom/PackageDeclaration.java
+SHA1-Digest: CFzwC9rhYqiIRPIgOUcrzhRp6Gk=
+
+Name: org/eclipse/jdt/internal/core/CopyPackageFragmentRootOperation.j
+ ava
+SHA1-Digest: ndrK6Q6KYHP5OcobJpMLms7VoCk=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ClasspathSourceDir
+ ectory.java
+SHA1-Digest: UqDcAEV7NgrRJbtD9E5qBOpeusc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/OR_OR_Expression.java
+SHA1-Digest: JI1RG3YEXKxT5k3nVtLDgg4EECg=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfIntValues.java
+SHA1-Digest: bzIwCpD4bWLWXCLKJQp70IqkfJo=
+
+Name: org/eclipse/jdt/core/search/LocalVariableReferenceMatch.java
+SHA1-Digest: lBjpaK/yt5jbgyNquO6uKyT/qlg=
+
+Name: org/eclipse/jdt/internal/core/SearchableEnvironmentRequestor.jav
+ a
+SHA1-Digest: o7/n9wyxEGQta53vVlD2Ais9kYQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/PackageBinding.java
+SHA1-Digest: iLFyXqTXoJ0aoSdb+c2uwDFUeSE=
+
+Name: org/eclipse/jdt/internal/core/util/VerificationInfo.java
+SHA1-Digest: FYWexNVZaSxydN832lSNQoA99UM=
+
+Name: org/eclipse/jdt/internal/core/util/HashSetOfCharArrayArray.java
+SHA1-Digest: Goa7DzoUjyLcenwo9EtvIwyy+eg=
+
+Name: org/eclipse/jdt/core/dom/ASTVisitor.java
+SHA1-Digest: pPzcR95+f7saeQRKXN2U74WF4Wc=
+
+Name: org/eclipse/jdt/core/util/ClassFormatException.java
+SHA1-Digest: ErKsBxEgrcLyHvuF/tgNS9TA3Kw=
+
+Name: org/eclipse/jdt/core/dom/Annotation.java
+SHA1-Digest: fYqAxtrV6CeKE3AlP/KpE65sMFU=
+
+Name: org/eclipse/jdt/internal/compiler/impl/CompilerStats.java
+SHA1-Digest: SegEPOSP9kPBEEJcLIozl8DsiK8=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetSkeleton.java
+SHA1-Digest: TBzcxtU5whYHN3lWXmcaVoI/cYQ=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/BinaryIndexer.java
+SHA1-Digest: BMwoNL/IqffSCk2zdnTTDAttJ5c=
+
+Name: schema/classpathContainerInitializer.exsd
+SHA1-Digest: IdwKJS1PpYHaoUxu6COe7gXEmfI=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Assignment.java
+SHA1-Digest: 7U9qIhB4Hkej5+Nvxi6oSSCJSfk=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ReturnStatement.java
+SHA1-Digest: VB/TftuNnzicLQHyiXsN2OgF/qk=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnAnnotat
+ ionMemberValuePair.java
+SHA1-Digest: OAWTK+un1GYTRhrzV0SUnY+cyaw=
+
+Name: org/eclipse/jdt/internal/compiler/ExtraFlags.java
+SHA1-Digest: kPgU6pV6iwJCuPMBZpOhrKk9XJA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/TypeIds.java
+SHA1-Digest: 6oNP3o4by1Ij/jvhz8NKqJo3NLc=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnMessageSen
+ d.java
+SHA1-Digest: 2cYtAFd228wpLkEaZPTZYQcOx3k=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnBranchS
+ tatementLabel.java
+SHA1-Digest: ZJI3LjvA2hqDzrTEe7Au/dWZK3E=
+
+Name: org/eclipse/jdt/internal/compiler/env/ISourceType.java
+SHA1-Digest: TIhwsluk2m8u5rVta4poOvueuJg=
+
+Name: org/eclipse/jdt/internal/core/util/FieldInfo.java
+SHA1-Digest: ctPXdyFSCHdoXRTYQUgIyJS9bIM=
+
+Name: org/eclipse/jdt/core/dom/CatchClause.java
+SHA1-Digest: 7TJFTPtukrqyI+j9ycmjWI0SqnM=
+
+Name: org/eclipse/jdt/core/WorkingCopyOwner.java
+SHA1-Digest: ilfdqX7CrDX5j1K9CUb1Y/POAJw=
+
+Name: org/eclipse/jdt/internal/core/index/EntryResult.java
+SHA1-Digest: 3mOPMXTuzaexfCXIIM7LGo9cjec=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ FieldReference.java
+SHA1-Digest: TNXg58tpv6BJXcR8ZAz9UE1JvYQ=
+
+Name: org/eclipse/jdt/core/ICompletionRequestor.java
+SHA1-Digest: zRRUT/qXikM+UIJlM8/J+fN00UA=
+
+Name: org/eclipse/jdt/internal/core/search/matching/AndLocator.java
+SHA1-Digest: 15235V8W0QXQyk/0/Ea1K63Q8lI=
+
+Name: org/eclipse/jdt/internal/compiler/util/SimpleLookupTable.java
+SHA1-Digest: ltIE8WcRjCRFthGlLboa3ZYe71I=
+
+Name: org/eclipse/jdt/core/CompletionRequestor.java
+SHA1-Digest: 0TtJKjw6NobObeXcZXm+imHKQFY=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ParameterizedMethodBind
+ ing.java
+SHA1-Digest: WjS4r1tHQ6QEJCrhZe+CSifeOow=
+
+Name: org/eclipse/jdt/internal/core/util/StackMapAttribute.java
+SHA1-Digest: J9JAk/TFWHQ95POBFmqRGUce9zs=
+
+Name: org/eclipse/jdt/core/dom/ITypeBinding.java
+SHA1-Digest: bday5cxSAYVtCxjD31E/2bEnUks=
+
+Name: org/eclipse/jdt/core/search/ITypeNameRequestor.java
+SHA1-Digest: RYq2XwQ69kLSB52xUXtAmM06nFw=
+
+Name: org/eclipse/jdt/internal/eval/VariablesEvaluator.java
+SHA1-Digest: 8rdxA480fBFbka25dfH9otZn+14=
+
+Name: org/eclipse/jdt/internal/compiler/parser/JavadocTagConstants.jav
+ a
+SHA1-Digest: peoIT4FAs/4FG1Z65PtQwNTHU44=
+
+Name: org/eclipse/jdt/internal/formatter/comment/Java2HTMLEntityReader
+ .java
+SHA1-Digest: NskkbH4UwEGba2zaj8a4CeunDhc=
+
+Name: org/eclipse/jdt/internal/core/MemberValuePair.java
+SHA1-Digest: p47E/95SdFDrn2h/Hgg8XFhy6zY=
+
+Name: org/eclipse/jdt/core/util/IClassFileDisassembler.java
+SHA1-Digest: jrhjtmv1QkflkzR2iLxacc4zJDM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ConstructorDeclaration.jav
+ a
+SHA1-Digest: /q4Nzh65LVNXWMXf1Vrqz1ADRnI=
+
+Name: org/eclipse/jdt/internal/core/search/SubTypeSearchJob.java
+SHA1-Digest: r28gnyToKudg31yDi1tvkypSwlM=
+
+Name: org/eclipse/jdt/core/ElementChangedEvent.java
+SHA1-Digest: wSSRknz1daVmdlAYmdgyNhzFpyI=
+
+Name: org/eclipse/jdt/core/dom/IAnnotationBinding.java
+SHA1-Digest: m1VQpdSSjjtxHaqqCuNIopzLFJQ=
+
+Name: org/eclipse/jdt/internal/compiler/ast/QualifiedAllocationExpress
+ ion.java
+SHA1-Digest: Q/SdiOR+XaKCVBGdlXKOpqhv688=
+
+Name: org/eclipse/jdt/internal/compiler/ast/BinaryExpression.java
+SHA1-Digest: vwxGEFaVxLRpLGLmU3XKO8Eh8Xs=
+
+Name: org/eclipse/jdt/internal/codeassist/ThrownExceptionFinder.java
+SHA1-Digest: x/uOU7qLRWnsWcM2e00frrzNBoI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnSingleT
+ ypeReference.java
+SHA1-Digest: EAEJfbPuoukCtlGu+//LCy5w8GQ=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IndexBinaryFolder.
+ java
+SHA1-Digest: GJlIMQTe2BIhVgj2L07h8/RR8nA=
+
+Name: org/eclipse/jdt/core/dom/VariableDeclaration.java
+SHA1-Digest: 0ctNf4NWKM6+ct8gNe8xMb33nRQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/InnerEmulationDependenc
+ y.java
+SHA1-Digest: PQqcxQ9a0VZd1AnGhGHfqsWBt7E=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Wildcard.java
+SHA1-Digest: FfIvMSbD/ZgjU/cbwioo4l6Knas=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/AnnotationBinding.java
+SHA1-Digest: +sq71Z9g404IO48Re2l9Xgex6QM=
+
+Name: org/eclipse/jdt/internal/eval/EvaluationResult.java
+SHA1-Digest: 6w5VhtcUgUdZMbwXcSzgVa7RsMM=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnImportR
+ eference.java
+SHA1-Digest: ILrPVwA4ld3JSTUh/3Ef1IsaRWE=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteFormatter.ja
+ va
+SHA1-Digest: 4nZMhiDyO6pT+UxUXSLYuj9oiAQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SourceTypeCollisionExce
+ ption.java
+SHA1-Digest: 80w92y7m1s2IMzyQh8W5KSDLfp0=
+
+Name: org/eclipse/jdt/core/dom/rewrite/ITrackedNodePosition.java
+SHA1-Digest: FSyDBsuc0eHjFvzRvt6CQTqwEVE=
+
+Name: org/eclipse/jdt/internal/core/LRUCacheEnumerator.java
+SHA1-Digest: FP3biTn/b7kPNTa+HHni/VUn49w=
+
+Name: org/eclipse/jdt/internal/compiler/ast/NumberLiteral.java
+SHA1-Digest: es2Wqd4em+DAI8Xpg6Q6NvOn7ro=
+
+Name: org/eclipse/jdt/internal/core/eval/RequestorWrapper.java
+SHA1-Digest: seDzVkUToE7DESoJbCQ+f9Kf/C4=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ QualifiedTypeReference.java
+SHA1-Digest: ohbigkwfS5Syl46r+QViHJp4oMg=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ConstructorDeclara
+ tionPattern.java
+SHA1-Digest: QmLj9y9B9pAJ+7SKGmB16pcPE+8=
+
+Name: org/eclipse/jdt/internal/core/util/CommentRecorderParser.java
+SHA1-Digest: g1LNcmFgSz9q6zPtfAvTbdS8RUA=
+
+Name: org/eclipse/jdt/internal/compiler/ast/NameReference.java
+SHA1-Digest: CEWb8arzrSnBYEqoFMNSxxJd1Dc=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IIndexConstants.ja
+ va
+SHA1-Digest: 7rcKHWRBaIc8D3yZ0qRAwNa76Rk=
+
+Name: org/eclipse/jdt/internal/core/search/HierarchyScope.java
+SHA1-Digest: IFrHkxFtzsO17j3bgYt0y7IFGRs=
+
+Name: org/eclipse/jdt/internal/compiler/ast/LongLiteralMinValue.java
+SHA1-Digest: xSkyvIbBdtHG7ve9zBUvxnMug2M=
+
+Name: org/eclipse/jdt/core/util/ClassFileBytesDisassembler.java
+SHA1-Digest: mB6g4ThLx3J2g6H62JPuYKgJon8=
+
+Name: org/eclipse/jdt/internal/core/eval/EvaluationContextWrapper.java
+SHA1-Digest: lFHOTFvQCdJ8uJadihTlhp6wbag=
+
+Name: org/eclipse/jdt/internal/formatter/DefaultCodeFormatterOptions.j
+ ava
+SHA1-Digest: by4OiG56kHJtwoVUnt0Zxu9PIZU=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/CodeStream.java
+SHA1-Digest: G26uWz6uAhi1rsvyJjE199FEBlE=
+
+Name: org/eclipse/jdt/internal/core/util/HandleFactory.java
+SHA1-Digest: S3c0dAAW0Tp2UUhFI+u0VhFlZuQ=
+
+Name: org/eclipse/jdt/internal/core/DeleteElementsOperation.java
+SHA1-Digest: P61Haq0cilj7D7LyNx1Tv2J+qgY=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfObjectToInt.ja
+ va
+SHA1-Digest: zP9ZyvHQAP1Tpy3o0WJQK4QMZHU=
+
+Name: org/eclipse/jdt/core/dom/ImportDeclaration.java
+SHA1-Digest: u3Ll2J0IjXW49yF5M8aETMr0Sys=
+
+Name: org/eclipse/jdt/internal/core/jdom/DOMBuilder.java
+SHA1-Digest: OXR5cq8GNGr8Jhgj4HylN5pykbs=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/SourceModifier.java
+SHA1-Digest: 52xW0RWsJGkfYkialnT8Lp31GpM=
+
+Name: jdtCompilerAdaptersrc/org/eclipse/jdt/core/JDTCompilerAdapter.ja
+ va
+SHA1-Digest: zKydtea1WmzBfdCbMs9F/84rzBQ=
+
+Name: org/eclipse/jdt/core/dom/NodeEventHandler.java
+SHA1-Digest: +MvUH7LkGcW8XyejNYdRbOpyrX4=
+
+Name: org/eclipse/jdt/core/IClasspathEntry.java
+SHA1-Digest: 3jQoZntmyUoC6op9NkxRMDsG83E=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/ListRewriteEvent.java
+SHA1-Digest: K7ISWU+jNaJrwTYp+tHuKyRBDz8=
+
+Name: org/eclipse/jdt/core/IAccessRule.java
+SHA1-Digest: HGKCVgG9RZBem31g6tUjFLzIo4Y=
+
+Name: org/eclipse/jdt/internal/core/util/DOMFinder.java
+SHA1-Digest: lTzBafSeSMqvTK3UD44dYREH7jE=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredLocalVariable.
+ java
+SHA1-Digest: ksiMLyxQmsxnoBIQXjR0V7E6z/Q=
+
+Name: org/eclipse/jdt/core/IInitializer.java
+SHA1-Digest: DsBYzSOyUEGGiyZYgI0PDXxm31I=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeDeclarationPat
+ tern.java
+SHA1-Digest: SI8pvtjOUHV7ALBgAg/A6g/q1GM=
+
+Name: org/eclipse/jdt/core/dom/Type.java
+SHA1-Digest: CxOJGpl3QiitWiGZSDf1bVCR3AY=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistParser.java
+SHA1-Digest: +MK+KR4fFVB8Aut8fo7BkU2mWYg=
+
+Name: org/eclipse/jdt/internal/core/TypeVector.java
+SHA1-Digest: phwR8CtcmGNkTJB+5hZS6VpJ40U=
+
+Name: org/eclipse/jdt/internal/compiler/ast/TryStatement.java
+SHA1-Digest: qG0oMIbQKtwv96WLXCFbR5C9SGk=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfObjectToIntArr
+ ay.java
+SHA1-Digest: MK9NGZUGO/fsjfiTRRh4XFE17yg=
+
+Name: org/eclipse/jdt/core/dom/SingleMemberAnnotation.java
+SHA1-Digest: usrbePdmIhqWzeIK0Vf6OO+WYlk=
+
+Name: org/eclipse/jdt/core/Flags.java
+SHA1-Digest: ryVPdveoH2yljW8KsYboqX0Uc+0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Statement.java
+SHA1-Digest: WNHULoqNaVNKP7VYHzytdBNPqxM=
+
+Name: org/eclipse/jdt/internal/compiler/util/HashtableOfInt.java
+SHA1-Digest: ajn1WeoSXJ05tY5TDd7o2LSHecY=
+
+Name: org/eclipse/jdt/internal/compiler/ast/QualifiedSuperReference.ja
+ va
+SHA1-Digest: qOQeXlBOJL3T8aaDyJYyWixxydk=
+
+Name: org/eclipse/jdt/internal/compiler/env/ISourceField.java
+SHA1-Digest: gwLqHC0Egb6YhKgMFn/Vxgnro6M=
+
+Name: org/eclipse/jdt/internal/core/SourceFieldWithChildrenInfo.java
+SHA1-Digest: I9s9f8M+IhS9UXtiche0wVTX2Gg=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetEvaluator.java
+SHA1-Digest: rd+xBidm/YCWrKR4RESaVSx9c/Y=
+
+Name: org/eclipse/jdt/internal/core/JavaCorePreferenceModifyListener.j
+ ava
+SHA1-Digest: JiNj8zqxbhDsSDMQkgwOHMDeoU4=
+
+Name: org/eclipse/jdt/core/util/ICodeAttribute.java
+SHA1-Digest: cty2DknqV/7KvIZdc22JJBzvUnI=
+
+Name: org/eclipse/jdt/internal/formatter/comment/CommentFormatterUtil.
+ java
+SHA1-Digest: LqFo+mCodBVefdX47Yw39Y5ApWg=
+
+Name: org/eclipse/jdt/core/search/PackageDeclarationMatch.java
+SHA1-Digest: YQjbT5CdsC5S252e/3BmVP0+LEw=
+
+Name: org/eclipse/jdt/internal/core/UserLibraryClasspathContainer.java
+SHA1-Digest: Xv6IYpToF9P1lPd6O9uoCg1ctYQ=
+
+Name: org/eclipse/jdt/core/util/ILineNumberAttribute.java
+SHA1-Digest: Riq6yfg5IEituMwWWD/uqZpKhTk=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/AddJarFileToIndex.
+ java
+SHA1-Digest: yvamsI3C5mXrP4j6u8J0b56nawA=
+
+Name: org/eclipse/jdt/internal/compiler/ast/FalseLiteral.java
+SHA1-Digest: 5P7aDisuGblS+suuKbf/iGn0/As=
+
+Name: org/eclipse/jdt/internal/core/CreateInitializerOperation.java
+SHA1-Digest: UF6c13okLifMrrYOvG8xXog8d6E=
+
+Name: org/eclipse/jdt/internal/formatter/OptimizedReplaceEdit.java
+SHA1-Digest: 6w20b1fvutExHzpa/qIDf6R6AmA=
+
+Name: org/eclipse/jdt/internal/core/TypeParameterElementInfo.java
+SHA1-Digest: O1BuTolEfB9m/9GySxlxl1pSCVg=
+
+Name: org/eclipse/jdt/core/dom/ChildPropertyDescriptor.java
+SHA1-Digest: J+cmhoVhzOwkv6FfZZ7i22jZqs8=
+
+Name: org/eclipse/jdt/internal/formatter/CascadingMethodInvocationFrag
+ mentBuilder.java
+SHA1-Digest: DL+hmvrCKCGFFbkrxFZE2dMiHYQ=
+
+Name: org/eclipse/jdt/core/compiler/ReconcileContext.java
+SHA1-Digest: cHtEyHHRHAeimx/CmIGgmKy4L9w=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/TypeConstants.java
+SHA1-Digest: j5Qc+ubXYI7dEERgo1/n7X8XZII=
+
+Name: org/eclipse/jdt/internal/core/SourceAnnotationMethodInfo.java
+SHA1-Digest: Pbl/2bBCOI9uqTgT9XErJmjgF68=
+
+Name: org/eclipse/jdt/internal/eval/InstallException.java
+SHA1-Digest: TFiXx9dAC7viC4sbwXsJ6mEOtb4=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/IndexBasedHierarchyBuild
+ er.java
+SHA1-Digest: w76AAooEh8/aQvLdhruU+s/OQxM=
+
+Name: org/eclipse/jdt/internal/core/ExternalFolderChange.java
+SHA1-Digest: U0g89lnzKIS3/WZWijjveHnW3lE=
+
+Name: org/eclipse/jdt/core/util/IClassFileReader.java
+SHA1-Digest: M/56ab4Wcu8q5rJbOpihpYcuL4k=
+
+Name: org/eclipse/jdt/core/dom/ArrayInitializer.java
+SHA1-Digest: DIShP3hnOnc3CgM+9U8lL8CyzD8=
+
+Name: org/eclipse/jdt/internal/core/builder/WorkQueue.java
+SHA1-Digest: rD5Tvn2Fj3nwCByAS57AzDCd47g=
+
+Name: org/eclipse/jdt/core/dom/MemberValuePair.java
+SHA1-Digest: ISZADEwaeC5EY+MyET2rnVnd7UU=
+
+Name: org/eclipse/jdt/core/dom/PrefixExpression.java
+SHA1-Digest: GoGqGx/KYvtLdlzOgnzirU3ypWg=
+
+Name: org/eclipse/jdt/internal/compiler/problem/ProblemHandler.java
+SHA1-Digest: 8PFXAtYI/4DCN465Z8h+YSlGWAc=
+
+Name: org/eclipse/jdt/internal/compiler/ISourceElementRequestor.java
+SHA1-Digest: HVgs2I0sb1+cB44WwdHH/u+sciQ=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/ExceptionLabel.java
+SHA1-Digest: fvMRn9Mw4NNAlSh3K+RRo+GsQTE=
+
+Name: org/eclipse/jdt/internal/core/index/MemoryIndex.java
+SHA1-Digest: l9A0X5qZb33a92R7+Ce2kHYgAhI=
+
+Name: org/eclipse/jdt/core/ISourceManipulation.java
+SHA1-Digest: zJxvi4Q7jPUuWTqVS/D+JG4SW04=
+
+Name: org/eclipse/jdt/internal/compiler/ast/MethodDeclaration.java
+SHA1-Digest: 2PSMue05tDhHqISqp+TjLeHp9zw=
+
+Name: org/eclipse/jdt/internal/compiler/batch/ClasspathDirectory.java
+SHA1-Digest: JYw+7F5ff5HlAK+y+fsrzqa5ELc=
+
+Name: org/eclipse/jdt/internal/core/search/matching/LocalVariableLocat
+ or.java
+SHA1-Digest: 77VNy5n9QtOvz2r7sWU2SqigKvg=
+
+Name: org/eclipse/jdt/internal/core/ExternalPackageFragmentRoot.java
+SHA1-Digest: kME+yZ11emMuhk2E1uvxu2JGp0o=
+
+Name: org/eclipse/jdt/internal/eval/Evaluator.java
+SHA1-Digest: nq0jmXzAdMJlvOvDAYwlyG4gZy4=
+
+Name: org/eclipse/jdt/internal/core/CancelableNameEnvironment.java
+SHA1-Digest: Wh7f2RCn/MgtbgK8DTjvsd4vn3o=
+
+Name: org/eclipse/jdt/internal/compiler/parser/Parser.java
+SHA1-Digest: /g1rcnPJBI6e2ty5sC5LppM8eWY=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetCompiler.java
+SHA1-Digest: K+ZyCR8dBErNehgKuvWCwFm3n8E=
+
+Name: org/eclipse/jdt/core/compiler/CompilationParticipant.java
+SHA1-Digest: Yy6K+9khpDi4YfVNVp3iNA8EwSw=
+
+Name: org/eclipse/jdt/core/util/OpcodeStringValues.java
+SHA1-Digest: RV2M3d7xaI2Uoz/p6AHbmpv6LkE=
+
+Name: org/eclipse/jdt/internal/compiler/Compiler.java
+SHA1-Digest: JzDOzWexuN0/1sshcyP9u0g+P7I=
+
+Name: org/eclipse/jdt/internal/core/util/CharArrayBuffer.java
+SHA1-Digest: FhnDT875Qb18LpKVb9BxlOWY50w=
+
+Name: org/eclipse/jdt/core/dom/ExpressionStatement.java
+SHA1-Digest: SRuIr0ybpHxWPta8WwrlVt995es=
+
+Name: org/eclipse/jdt/core/dom/BooleanLiteral.java
+SHA1-Digest: YeayI1YqESzpYGpwShiilpmvtYM=
+
+Name: org/eclipse/jdt/internal/core/search/StringOperation.java
+SHA1-Digest: uAoopcinOI1RCBQ/g2J5+VvnGaQ=
+
+Name: org/eclipse/jdt/core/dom/WildcardType.java
+SHA1-Digest: MLYfyh//zZpWkDvhtX2QIpNlx5k=
+
+Name: org/eclipse/jdt/internal/formatter/CodeFormatterVisitor.java
+SHA1-Digest: j/MAbqmg2eW+p07c0eJxMRm3ux0=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnArgumen
+ tName.java
+SHA1-Digest: 8FwsZ0kR6BJjdNcdtRdhMZYx8SM=
+
+Name: org/eclipse/jdt/core/search/TypeNameMatch.java
+SHA1-Digest: 8buXIwldIGEXrZMVEGuuVfChGuI=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnParamet
+ erizedQualifiedTypeReference.java
+SHA1-Digest: OTTQCRtSZ7MDnutSexez4kQSoDY=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistPackageDeclaratio
+ n.java
+SHA1-Digest: 12XyBeifTCAGRYRPb2CVSOFcyt0=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/NodeInfoStore.java
+SHA1-Digest: zLELO1IcASV9d6Uvm6a7hA/Zkfo=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PackageReferencePa
+ ttern.java
+SHA1-Digest: 4557MIfwNHIAmCnNxbMcNdNXAKw=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MemberDeclarationV
+ isitor.java
+SHA1-Digest: aigChuCJv0lZWJj7zqxPC4oiLkk=
+
+Name: org/eclipse/jdt/internal/core/builder/ImageBuilderInternalExcept
+ ion.java
+SHA1-Digest: hC4b9usADL3DKqTEZawgb6DE3lU=
+
+Name: org/eclipse/jdt/core/dom/IDocElement.java
+SHA1-Digest: oi8rBvqZwPsGszcOr5brDfcjzYk=
+
+Name: org/eclipse/jdt/internal/formatter/comment/HTMLEntity2JavaReader
+ .java
+SHA1-Digest: 6r4nC4vvYxRl+8nxDUPvIRVlg68=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMemberA
+ ccess.java
+SHA1-Digest: wpUKQG+qNJpI3lYs2vum04s0jIY=
+
+Name: org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+SHA1-Digest: EoFbu2CKEaHC6WUatxLtbmhH+hU=
+
+Name: org/eclipse/jdt/core/dom/VariableDeclarationExpression.java
+SHA1-Digest: M8WSzozD0Thq6XeFZyHIpG+qGVM=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnQualifiedT
+ ypeReference.java
+SHA1-Digest: ADHXYDeOyyMjaNTX00Z+5zVsaHc=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MethodVerifier.java
+SHA1-Digest: I/o5e84akaqA2tTx0CTsbv+/vWg=
+
+Name: org/eclipse/jdt/internal/core/util/SimpleDocument.java
+SHA1-Digest: PZd0B0PBvKCf9HpWRblpGSYYyGQ=
+
+Name: org/eclipse/jdt/internal/codeassist/ISearchRequestor.java
+SHA1-Digest: ccFI/zhkaAerpOCaEjhLqMttNtI=
+
+Name: org/eclipse/jdt/core/search/TypeDeclarationMatch.java
+SHA1-Digest: FnGYMJoEeWoII+UV6nLouxSe8IM=
+
+Name: org/eclipse/jdt/internal/compiler/parser/Scanner.java
+SHA1-Digest: ulakD4MozO25qDughwb27G/4UyU=
+
+Name: org/eclipse/jdt/core/dom/ClassInstanceCreation.java
+SHA1-Digest: ALwMdHFeH695mn0TChWdu4EqfbE=
+
+Name: org/eclipse/jdt/internal/core/util/ParameterAnnotation.java
+SHA1-Digest: Tsp8OVfe+dMkHjqepep3ARhV48U=
+
+Name: org/eclipse/jdt/internal/core/builder/ClasspathDirectory.java
+SHA1-Digest: w87rgi9jZpw2DuPzwLX7rF/nrn4=
+
+Name: org/eclipse/jdt/core/util/IFieldInfo.java
+SHA1-Digest: 8ajRT0Pv+q+kNock9lj7w6EggYE=
+
+Name: org/eclipse/jdt/core/search/IJavaSearchConstants.java
+SHA1-Digest: 1rzKOToDpP0Y+m5xvti6G5A1Z7g=
+
+Name: org/eclipse/jdt/core/IAnnotation.java
+SHA1-Digest: CuQRwWAP1JBBroGVFaAMz2dSeNU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Block.java
+SHA1-Digest: KGqOjrupVDGvZ8jul+3ot1/km8Q=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ExplicitConstructorCall.ja
+ va
+SHA1-Digest: dpKykV1yNouQuwssrRoxTZ2RYdc=
+
+Name: org/eclipse/jdt/internal/core/util/Disassembler.java
+SHA1-Digest: 9OoUL4LkJ1FzzMUQJxZsa6GJCj4=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/FieldBinding.java
+SHA1-Digest: 6wthLCWp5GlKO+AFx1cXhJiIIg4=
+
+Name: org/eclipse/jdt/core/dom/RecoveredTypeBinding.java
+SHA1-Digest: uQvgR2rjghsHrRAb4stdNLrRMkg=
+
+Name: org/eclipse/jdt/core/IMember.java
+SHA1-Digest: 6SKoNzJtgnBdTmfK47b2YOkjoCg=
+
+Name: org/eclipse/jdt/internal/compiler/ast/FloatLiteral.java
+SHA1-Digest: xX5gCfLEliZwKL49+msgdcAqYCk=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistOptions.java
+SHA1-Digest: gn/8d4X5S7W/CSbn8yf9gYX0s7c=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocArraySingleTypeRefe
+ rence.java
+SHA1-Digest: XjBwJDXkTGhNe7Giu5zl3397FE4=
+
+Name: org/eclipse/jdt/core/dom/NormalAnnotation.java
+SHA1-Digest: hd3zMHCKFr/V8ahl/D7UennZZY4=
+
+Name: org/eclipse/jdt/core/dom/MethodRef.java
+SHA1-Digest: K7XfzrksfWAtV/ZhSoyehNdc7HM=
+
+Name: org/eclipse/jdt/core/util/IStackMapAttribute.java
+SHA1-Digest: 1URXF0A3KAJtp7308vq+4Y+BeW4=
+
+Name: org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+SHA1-Digest: baWwvYurq0Sxjxe5rjDniSv4F7k=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/AnnotationMethodInfoW
+ ithAnnotations.java
+SHA1-Digest: w/gzRcqdw8X1uEukSSyaQn3gj3s=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ParameterizedGenericMet
+ hodBinding.java
+SHA1-Digest: FaofvSEA2+Ix7IK5TUMZnj6EXfQ=
+
+Name: org/eclipse/jdt/internal/compiler/flow/ExceptionHandlingFlowCont
+ ext.java
+SHA1-Digest: 69Ma8hqfCQc0F6/aU6jPM2a9Qx0=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/AbstractIndexer.ja
+ va
+SHA1-Digest: nBktXCoSlH6Lp7gcwkHF1XOlVzE=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/Label.java
+SHA1-Digest: 04jfUXrv03ns6/+K7+FuRVwxuo0=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetClassFile.java
+SHA1-Digest: y05+fFAi6+99zK0W7Ool7BD5BO0=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/SourceIndexerReque
+ stor.java
+SHA1-Digest: IcsXXmYFchTStnhyRpaCR/FFEP8=
+
+Name: org/eclipse/jdt/internal/core/SetVariablesOperation.java
+SHA1-Digest: vqMTiyw85UDU4fcMgJd53b72Cm8=
+
+Name: org/eclipse/jdt/internal/formatter/comment/IJavaDocTagConstants.
+ java
+SHA1-Digest: hWYQgb2ObkkxHcG++/AHML4hJFU=
+
+Name: org/eclipse/jdt/core/dom/MethodRefParameter.java
+SHA1-Digest: Mvevb7K8KSNY3Q1DZJZX8vEptgw=
+
+Name: org/eclipse/jdt/core/dom/QualifiedName.java
+SHA1-Digest: W1SPFujimWLgTVflEup2FWvxrZA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/CompilationUnitScope.ja
+ va
+SHA1-Digest: x1VBZs358HSmjYi4LWn3+iMZySw=
+
+Name: org/eclipse/jdt/internal/core/BufferManager.java
+SHA1-Digest: l+jb2KbN7/Vt8Kf+2mU1qFZOMrw=
+
+Name: org/eclipse/jdt/internal/core/Buffer.java
+SHA1-Digest: BiO1S85gs1M0S+BcMiAHJJT59zQ=
+
+Name: org/eclipse/jdt/core/dom/MemberRef.java
+SHA1-Digest: lynNyVVO9GBtKnsCsQSM73oljN4=
+
+Name: org/eclipse/jdt/internal/compiler/flow/FinallyFlowContext.java
+SHA1-Digest: GOGWCGQT/zbUNGc1EnWT82PJyd0=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/SaveIndex.java
+SHA1-Digest: hst5YBrAvKPt10/GTJL4nkiH5rQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemReferenceBinding
+ .java
+SHA1-Digest: BEEKgCCJU3FR0xQHNY+KJIU8xo8=
+
+Name: org/eclipse/jdt/internal/core/DeletePackageFragmentRootOperation
+ .java
+SHA1-Digest: +VYCR51dM7XhwvT/GLTR6idRWcU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocImplicitTypeReferen
+ ce.java
+SHA1-Digest: 0A5usVTWlxVvMQmMNhYNY+cVpoo=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/Scope.java
+SHA1-Digest: soPXX4iSzblzJqs1w9QJMnX7Yp8=
+
+Name: org/eclipse/jdt/core/dom/BindingComparator.java
+SHA1-Digest: N6CVvy/FTisK+rCEm3WISGST284=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ ParamNameReference.java
+SHA1-Digest: lAhbDdi6LTjLe9oFxsST55D2kZE=
+
+Name: org/eclipse/jdt/core/dom/TypeBinding.java
+SHA1-Digest: 3RjPvIPOSrdSjgP+4GJUxwCVR6o=
+
+Name: org/eclipse/jdt/internal/compiler/util/SuffixConstants.java
+SHA1-Digest: bi90tdsOW/jkeafn3ujkGt7Nv4c=
+
+Name: org/eclipse/jdt/internal/eval/GlobalVariable.java
+SHA1-Digest: /Gm+3AD2JhNo4TUyxOhCGLWZHRM=
+
+Name: org/eclipse/jdt/core/util/ILocalVariableTableEntry.java
+SHA1-Digest: w2SpGVnPn7eONfZt9Cem/EnUFRk=
+
+Name: org/eclipse/jdt/core/search/TypeParameterDeclarationMatch.java
+SHA1-Digest: g2iaki7PlUkElcQ9ZmG5pxTAGAo=
+
+Name: org/eclipse/jdt/internal/core/search/JavaWorkspaceScope.java
+SHA1-Digest: kdMQ8p4ejHC7e0QlNhkI/FCTBdQ=
+
+Name: org/eclipse/jdt/internal/core/eval/GlobalVariableWrapper.java
+SHA1-Digest: 5ZFXTyFQTGzu+CcVXFQYWH1lU0w=
+
+Name: org/eclipse/jdt/internal/core/builder/State.java
+SHA1-Digest: He0C8zcl4vfZmH+dtdIoRTaHvsk=
+
+Name: org/eclipse/jdt/internal/core/SourceConstructorWithChildrenInfo.
+ java
+SHA1-Digest: qGMYJEX+L6PVIW6w8iccSE6sXoM=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredAnnotation.jav
+ a
+SHA1-Digest: ud5wxpPWaMTFRXCC0Yc9sDjZ08s=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetEnvironment.java
+SHA1-Digest: iIQPfFKLLCz6t4YSVnO91e+stQ4=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistInitializer.java
+SHA1-Digest: FrcA0WkyRIIzBBesU01vspMduR4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CompoundAssignment.java
+SHA1-Digest: ueChUe7xX6drZCm4f10E5/joA8g=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMethodT
+ ypeParameter.java
+SHA1-Digest: phCnXLvQwyEhZP8cbbzbhcJY/Kk=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/StackMapFrameCodeStrea
+ m.java
+SHA1-Digest: baL9eO3Jrl1AkDH/kCFm195avS4=
+
+Name: org/eclipse/jdt/core/util/IRuntimeInvisibleParameterAnnotationsA
+ ttribute.java
+SHA1-Digest: wHc9hrE7FneGdjpuzG4JfetsaAY=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/HierarchyResolver.java
+SHA1-Digest: M8OHcKu8jHcTg5UZYyqP+1pR8fQ=
+
+Name: org/eclipse/jdt/internal/core/search/AbstractJavaSearchScope.jav
+ a
+SHA1-Digest: JZhfavD3ciY1obtlNm9qFOtguRI=
+
+Name: org/eclipse/jdt/core/util/IInnerClassesAttribute.java
+SHA1-Digest: H/jaoEAZA1lw1TlRDqEsfKKx1ns=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredElement.java
+SHA1-Digest: OuOt1K3UZwipsdYFYlakvZd2YUQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SyntheticMethodBinding.
+ java
+SHA1-Digest: ChKTNy0aDFIYNzVqDWjlFgfoqg4=
+
+Name: org/eclipse/jdt/core/Signature.java
+SHA1-Digest: tnTj5WiPXD24y4urEfzR4erfg/U=
+
+Name: org/eclipse/jdt/internal/codeassist/UnresolvedReferenceNameFinde
+ r.java
+SHA1-Digest: t7YCacbE2nZldukdQ5lLJ5AbVBc=
+
+Name: org/eclipse/jdt/internal/compiler/env/ClassSignature.java
+SHA1-Digest: 2Kms4Tn0aOvhc6vigZlb4LvG2ns=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/IntegerCache.java
+SHA1-Digest: BKi35JR7oFCT8Z4dVYpTAjuysCs=
+
+Name: org/eclipse/jdt/internal/compiler/util/SimpleSetOfCharArray.java
+SHA1-Digest: lPDYI8tmLmgUonzAwDp6okJkmDU=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemFieldBinding.jav
+ a
+SHA1-Digest: ggKCIkTVcoER64crW5/EXO5zr9I=
+
+Name: org/eclipse/jdt/internal/codeassist/CompletionElementNotifier.ja
+ va
+SHA1-Digest: aagbvvxWEAg7T3mx5Y8MmLXY08A=
+
+Name: org/eclipse/jdt/core/ILocalVariable.java
+SHA1-Digest: /HZ4NQ6wlNBdVDtVGGvA1WtJjYE=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ArrayInitializer.java
+SHA1-Digest: DMPUtUCdXFa9iXlC7yZO0b2bmvw=
+
+Name: org/eclipse/jdt/internal/compiler/impl/ITypeRequestor.java
+SHA1-Digest: I3NCJXqu6JUatdwKjbG2EAQOiRQ=
+
+Name: org/eclipse/jdt/internal/core/CreatePackageFragmentOperation.jav
+ a
+SHA1-Digest: eQZ8/fAwE+iwjiUxmAg1mpk6jEY=
+
+Name: org/eclipse/jdt/internal/core/builder/NameSet.java
+SHA1-Digest: ajwIWi4nchIgZTi6pKt8gq7B354=
+
+Name: org/eclipse/jdt/core/search/SearchRequestor.java
+SHA1-Digest: Tu5OTZZj2sKWCsXLu7cZi3RCtZY=
+
+Name: org/eclipse/jdt/internal/core/util/StackMapFrame.java
+SHA1-Digest: SvSHkdfdqm9VEjtWcyzkC7o5hi0=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PackageDeclaration
+ Pattern.java
+SHA1-Digest: /eXi4H8pS8t+rSZ8YSkC8QIdKw0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/PostfixExpression.java
+SHA1-Digest: ioc65uXzce4SPD7YNCVj8MnmODg=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IndexingParser.jav
+ a
+SHA1-Digest: oeYzxqPdJBodt3TtHtsIHKAuDmg=
+
+Name: org/eclipse/jdt/internal/core/builder/BuildNotifier.java
+SHA1-Digest: tKCCC2YvKhyb7Tj9McZ+syQLPbg=
+
+Name: org/eclipse/jdt/core/util/IExceptionAttribute.java
+SHA1-Digest: 8Kv2f7GYGqi5oYgx/LUPhxW9aQw=
+
+Name: org/eclipse/jdt/core/IWorkingCopy.java
+SHA1-Digest: 6odSTVutdQtrm2RO+02Vsb2lJPk=
+
+Name: org/eclipse/jdt/core/search/SearchMatch.java
+SHA1-Digest: ixjK721YOWHpYi4Z+XIZFP/8Vf8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ParameterizedQualifiedType
+ Reference.java
+SHA1-Digest: OBzd/buIDkYmu5xTrSWdycylYfU=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/MultiCatchExceptionLab
+ el.java
+SHA1-Digest: zUSmPH4LseKIwG74g9VuQKkdspw=
+
+Name: org/eclipse/jdt/internal/core/util/LocalVariableTableEntry.java
+SHA1-Digest: sGNjYP1pr0bpjwEA6i4U48c8eeM=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/AddFolderToIndex.j
+ ava
+SHA1-Digest: SwAY4pPFAJWSSvnIlV5Iu0BewCw=
+
+Name: org/eclipse/jdt/core/dom/IExtendedModifier.java
+SHA1-Digest: mREht5lN8zfxUZnkS5FG4cEgI/w=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetFieldReference.java
+SHA1-Digest: y+Lt/LNC2twJKimLNHmBAhbVBGE=
+
+Name: org/eclipse/jdt/internal/core/DiscardWorkingCopyOperation.java
+SHA1-Digest: BCjcK3+uxvzwcAKY2WMOIOMptxE=
+
+Name: org/eclipse/jdt/internal/core/util/KeyKind.java
+SHA1-Digest: 1MEPfpnTcBJUk4rbwM5IVsUOYWE=
+
+Name: org/eclipse/jdt/core/dom/ForStatement.java
+SHA1-Digest: vdmjhtSD612MsHU3cUSUjfcFvBM=
+
+Name: org/eclipse/jdt/internal/compiler/ICompilerRequestor.java
+SHA1-Digest: KTw2NCt7bwu2orHTkSKmEmQwHvw=
+
+Name: org/eclipse/jdt/core/dom/ParenthesizedExpression.java
+SHA1-Digest: OFhBOQWBXNFr3616EJRSEL1YQPM=
+
+Name: org/eclipse/jdt/internal/core/search/matching/VariablePattern.ja
+ va
+SHA1-Digest: ePIE/gskYEdCA3sQpH7tf+2Idjs=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Javadoc.java
+SHA1-Digest: S1ADvT6vWf19qd+FMXxsnHfdzno=
+
+Name: org/eclipse/jdt/internal/core/search/processing/JobManager.java
+SHA1-Digest: VAdtRPQpakM02/PxAtz2OU/joRQ=
+
+Name: org/eclipse/jdt/internal/core/util/ClassFileStruct.java
+SHA1-Digest: um4b+gcQPFwjZx4vHsxIHd/8wiw=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MethodLocator.java
+SHA1-Digest: 4Nge1ogyfKRQ4Ei0yD6Th24Rq8I=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteFlattener.ja
+ va
+SHA1-Digest: /m9R3yE5dcxAv/sPaNjzEpCf0Lw=
+
+Name: org/eclipse/jdt/internal/core/ProjectReferenceChange.java
+SHA1-Digest: GtM8dnCxJrRkhyn4PnIkrUGakMg=
+
+Name: org/eclipse/jdt/internal/core/MoveResourceElementsOperation.java
+SHA1-Digest: AhuR0DLoyS0GMmKV4a8VgynH4Bk=
+
+Name: org/eclipse/jdt/internal/core/JavaElementInfo.java
+SHA1-Digest: kozyy3icA2Q88wcpGWuhWaJ+AQ0=
+
+Name: org/eclipse/jdt/core/util/IRuntimeInvisibleAnnotationsAttribute.
+ java
+SHA1-Digest: b65Zm7AK5y191miuO6p6QjD+lJQ=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ .java
+SHA1-Digest: vZBd8/y6I9zFxNsQmcgYtVyFNSA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SourceTypeBinding.java
+SHA1-Digest: 2OvfQNFO9nHIu+sN0+MQ4GsgsZU=
+
+Name: org/eclipse/jdt/internal/core/ClassFileWorkingCopy.java
+SHA1-Digest: Ix1NJ2hSJI1mafHMVjkRbhSHaIY=
+
+Name: org/eclipse/jdt/core/dom/ChildListPropertyDescriptor.java
+SHA1-Digest: uxdABOqrivVKAgDTxS4mcQ0SE90=
+
+Name: org/eclipse/jdt/core/dom/EnumDeclaration.java
+SHA1-Digest: gqB8jV1kUXAlRDExGn3k3H3STaQ=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration.
+ java
+SHA1-Digest: KGD6hHvcXlPeR6++mLth+vxziHk=
+
+Name: org/eclipse/jdt/internal/core/JarEntryFile.java
+SHA1-Digest: OfSzif47KAMozBcNLSf8F+1jJ+c=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword
+ 3.java
+SHA1-Digest: EV1URQPI8nE4EkKtkcN+MSaZyDk=
+
+Name: about.html
+SHA1-Digest: 8xVBfJAByMP4Il0AgtOlR3znl/U=
+
+Name: org/eclipse/jdt/internal/core/search/TypeNameRequestorWrapper.ja
+ va
+SHA1-Digest: PkY3SDDIZ6huKHZdhMHmySyrVwM=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionJavadoc.java
+SHA1-Digest: ympilyn00HW3bWVykXP2eMod6ec=
+
+Name: org/eclipse/jdt/internal/core/util/LocalVariableTypeAttribute.ja
+ va
+SHA1-Digest: eLnCFFdoofDKgBUg9JMKIFovJJA=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/Engine.java
+SHA1-Digest: c2o5YHoezsi+/I+4pFT+vhOrXNk=
+
+Name: org/eclipse/jdt/internal/core/search/matching/FieldPattern.java
+SHA1-Digest: QKnwTR/XlD8VBA2sR0+NYn3yVzg=
+
+Name: org/eclipse/jdt/internal/compiler/batch/CompilationUnit.java
+SHA1-Digest: /mF3/dfRXJX83w85UWjYVxcv4nk=
+
+Name: org/eclipse/jdt/internal/core/builder/CompilationParticipantResu
+ lt.java
+SHA1-Digest: sDqwJdu9ckz3O8o0lr+aUpp/+ik=
+
+Name: org/eclipse/jdt/internal/compiler/util/ObjectVector.java
+SHA1-Digest: dYZ8mY5G1XaNYnp1FKnhyi1EPpM=
+
+Name: org/eclipse/jdt/internal/core/builder/ICompilationUnitLocator.ja
+ va
+SHA1-Digest: gr/ydApEvAOlUKYjJRY3U/r11Iw=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ParameterizedSingleTypeRef
+ erence.java
+SHA1-Digest: Q7oDhmoSjR6bLCTjp0YTC59A+yA=
+
+Name: org/eclipse/jdt/internal/compiler/flow/TryFlowContext.java
+SHA1-Digest: p9WpAv3/K6WDd2QHXj70N4CXPRc=
+
+Name: org/eclipse/jdt/internal/compiler/env/IGenericType.java
+SHA1-Digest: DN2LoIM+DVoo9Q6svfERTwNzqIo=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/WildcardBinding.java
+SHA1-Digest: PnIOa4VfsC00bY1ESSvYPcGxp1o=
+
+Name: org/eclipse/jdt/internal/core/CompilationUnit.java
+SHA1-Digest: RVQLRCmQob8T40BcYnq+y3Eby2A=
+
+Name: org/eclipse/jdt/internal/core/JavaModelInfo.java
+SHA1-Digest: 2GcpJnjaP9Wz0UG5W5F81MLLwnM=
+
+Name: org/eclipse/jdt/internal/formatter/align/AlignmentException.java
+SHA1-Digest: /ovUXIUgisljM4FP9Ra1vIGpknw=
+
+Name: org/eclipse/jdt/core/dom/ASTConverter.java
+SHA1-Digest: +EPsubN5z31GTNq84sl5wJYfWKQ=
+
+Name: org/codehaus/jdt/groovy/integration/NoopIndexer.java
+SHA1-Digest: Zm18T0/yMgAvjAyQ3ghJM1E08cU=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistSourceField.java
+SHA1-Digest: 6J9bUcgObXoS8HLAD9d4M/4WUBo=
+
+Name: org/eclipse/jdt/internal/core/util/ClassFileReader.java
+SHA1-Digest: T96Q8sDNRIUTBWg6ShL7MKdpM3k=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteAnalyzer.jav
+ a
+SHA1-Digest: vFRigi3b/t3HsMnYJtOG3bfIc+s=
+
+Name: org/eclipse/jdt/core/dom/EnhancedForStatement.java
+SHA1-Digest: Lxj8Orrgz/jHDinqZPtoJAWzxMM=
+
+Name: org/eclipse/jdt/internal/core/builder/JavaBuilder.java
+SHA1-Digest: Z9kuC1b0F2+97XwpCyS1jZdPunM=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CastExpression.java
+SHA1-Digest: 3bwtnRCRhdiH8LP1n0gMun63n5w=
+
+Name: org/codehaus/jdt/groovy/internal/SimplifiedExtendedCompletionCon
+ text.java
+SHA1-Digest: ZCFM8QoW0iE+Dp8k1Y2JkACJrfg=
+
+Name: org/eclipse/jdt/core/ITypeHierarchy.java
+SHA1-Digest: Ld+YDY6MIoMtmUQ0CrWs3/Df/+c=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PackageReferenceLo
+ cator.java
+SHA1-Digest: 3Kn0NHJk9lZVpyTrnvyhyrv2rdY=
+
+Name: org/eclipse/jdt/internal/core/search/matching/DeclarationOfRefer
+ encedTypesPattern.java
+SHA1-Digest: U5Y1vFoQXEuB1nNmfiqjGOiFEgY=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/RegionBasedTypeHierarchy
+ .java
+SHA1-Digest: Db1rEvEGWCMAk0TQdDRR8szE48s=
+
+Name: org/eclipse/jdt/internal/core/ResolvedBinaryField.java
+SHA1-Digest: FMXzG86fWFNi0Wn5Fps67u2WYgw=
+
+Name: org/eclipse/jdt/core/ICorrectionRequestor.java
+SHA1-Digest: PfqR9MTBNc9lIz2QzZX85GybGeU=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ASTNode.java
+SHA1-Digest: D3LBLXab2Di0ESgbzg02ZNMp3IM=
+
+Name: org/eclipse/jdt/internal/compiler/env/EnumConstantSignature.java
+SHA1-Digest: 61imWUOFr3tTAnDRYAzsQJSicso=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ParameterizedFieldBindi
+ ng.java
+SHA1-Digest: WL2s7t7cr7IvEBouTavOszjz6Kg=
+
+Name: org/eclipse/jdt/core/formatter/DefaultCodeFormatterConstants.jav
+ a
+SHA1-Digest: HMWnrSVbLZ0/dFQEDXjUc6CZ7vA=
+
+Name: org/eclipse/jdt/internal/compiler/impl/LongConstant.java
+SHA1-Digest: HikBBdn5u/oSMo5JPfu0bLl3rhU=
+
+Name: org/eclipse/jdt/internal/core/CreateTypeMemberOperation.java
+SHA1-Digest: /a/z72Gfhs205ICuU8plgfx4MWE=
+
+Name: org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+SHA1-Digest: YSUEhrfTQZz0zucarDduGwVhIj0=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/MethodInfo.java
+SHA1-Digest: 6CQfcnnESLm3oVu93E0d0TlNjvE=
+
+Name: org/eclipse/jdt/internal/compiler/flow/FlowContext.java
+SHA1-Digest: 5SdReNX3bfp0nn3feHRqMrvos/8=
+
+Name: org/eclipse/jdt/internal/core/util/LRUCache.java
+SHA1-Digest: KWIZ+6doClHN6B+wA1GgEHOv3Ro=
+
+Name: org/eclipse/jdt/internal/core/ClassFile.java
+SHA1-Digest: eep+AWEfNslG3WL5qDy3aQjNbcY=
+
+Name: org/eclipse/jdt/internal/compiler/util/SimpleNameVector.java
+SHA1-Digest: oHWSrmIbh/rYeVSiGdbm8KOIT8Q=
+
+Name: org/eclipse/jdt/internal/core/ClasspathChange.java
+SHA1-Digest: x5hgRitUFDGHu6w6madRaTLgtY4=
+
+Name: org/eclipse/jdt/core/dom/Message.java
+SHA1-Digest: qypO5c7S4ghyBuF8F7OMEK1/PV8=
+
+Name: org/eclipse/jdt/internal/core/BufferCache.java
+SHA1-Digest: WMChnFHYMrEykBtq+/Ci8LcVHlM=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionScanner.j
+ ava
+SHA1-Digest: KgedKW2d4LgFR1fx2cF10La8ehU=
+
+Name: org/eclipse/jdt/internal/core/ASTHolderCUInfo.java
+SHA1-Digest: JY0rKEOt+1SdkIDST1KTIhMaVWM=
+
+Name: org/eclipse/jdt/core/dom/InternalASTRewrite.java
+SHA1-Digest: kUakYN7t9aX9oVCml9/H0msgzuM=
+
+Name: org/eclipse/jdt/internal/core/DocumentAdapter.java
+SHA1-Digest: lCVW/X2Vl6GTO2LmBp/1LXurYu4=
+
+Name: org/eclipse/jdt/internal/core/BinaryTypeConverter.java
+SHA1-Digest: mnbqn9BaDPLiqbV3ToBL5lB9mco=
+
+Name: org/eclipse/jdt/core/search/TypeParameterReferenceMatch.java
+SHA1-Digest: rB5LZHOkc81vb2os1uRprxQGCmg=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistTypeParameter.jav
+ a
+SHA1-Digest: 0AL11S2aIgpA77pPfLA3d80rPbg=
+
+Name: org/eclipse/jdt/internal/core/util/ConstantPoolEntry2.java
+SHA1-Digest: xzE0mAnguUmwgYAzmvqsvb7wpZQ=
+
+Name: org/eclipse/jdt/internal/compiler/flow/SwitchFlowContext.java
+SHA1-Digest: N6+Dnp0ZzrPs1QGdGaDnNvVGP1A=
+
+Name: org/eclipse/jdt/core/util/CompilationUnitSorter.java
+SHA1-Digest: q3XUh9qjpZfwA9/Zv6hhO65muCs=
+
+Name: org/eclipse/jdt/internal/compiler/parser/diagnose/DiagnoseParser
+ .java
+SHA1-Digest: 3ILb7rfuA2xtP8BqUIKj1atewLA=
+
+Name: org/eclipse/jdt/internal/core/util/SourceFileAttribute.java
+SHA1-Digest: 8105o/IXTtC2xExtdZjaOtaYdvc=
+
+Name: org/eclipse/jdt/internal/compiler/ast/ImportReference.java
+SHA1-Digest: GPlJgoXeKMUhYwnSAi48vZ6hBpM=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ArrayBinding.java
+SHA1-Digest: ruXW1VYeoSIpWbnidaorZzF/lbU=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMethodR
+ eturnType.java
+SHA1-Digest: cd0jx26X3+jHJbGsWebN9SmoNX8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/QualifiedNameReference.jav
+ a
+SHA1-Digest: /2lAPfjKg02ZFIe++BKs5RTV6IY=
+
+Name: org/eclipse/jdt/core/dom/ParameterizedType.java
+SHA1-Digest: emxN5NVYSCFGqQR4YmRgCmnVlh8=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/InvocationSite.java
+SHA1-Digest: Gj6NfBJU7lI5JPp18EwAn8wvQxk=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SwitchStatement.java
+SHA1-Digest: YzBucDU986sgRUQYOZOIFmBOEZY=
+
+Name: org/eclipse/jdt/internal/compiler/util/ManifestAnalyzer.java
+SHA1-Digest: 8Ne7rcyr1NvcFKv8aSKiXwkXHQ4=
+
+Name: org/eclipse/jdt/internal/core/ReconcileWorkingCopyOperation.java
+SHA1-Digest: CJG7PHOjmjnCW9yDyX/iftprXrE=
+
+Name: org/eclipse/jdt/internal/compiler/env/INameEnvironment.java
+SHA1-Digest: TxgVOulHP4D7hlYrkAwPdCvwx7w=
+
+Name: org/eclipse/jdt/core/dom/Name.java
+SHA1-Digest: J4wXMP0AsZxJ54B7CmjvabuhfAg=
+
+Name: org/eclipse/jdt/internal/codeassist/MissingTypesGuesser.java
+SHA1-Digest: 4Ld8imJupD0mSkJkzA8AixLe+Y4=
+
+Name: org/eclipse/jdt/core/dom/TypeDeclarationStatement.java
+SHA1-Digest: puhH2U07cVHykw+r9omoKAWFJ58=
+
+Name: org/eclipse/jdt/core/dom/VariableBinding.java
+SHA1-Digest: fdGpojc7ndO/SDb8o+qizsHKKeQ=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnSingleType
+ Reference.java
+SHA1-Digest: zvUCM0k2LYE0QmYUwU9GRqQSku0=
+
+Name: org/eclipse/jdt/internal/compiler/ast/AssertStatement.java
+SHA1-Digest: eNEM0nmHwgmWyKIpD29Ot5vybLs=
+
+Name: org/eclipse/jdt/internal/core/ChangeClasspathOperation.java
+SHA1-Digest: /+MLHt9uqzNy5W+Nv2CzhRBXDDc=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnLocalName.
+ java
+SHA1-Digest: mlConCbmUZO8qRXF+rhDp3zpYL0=
+
+Name: org/eclipse/jdt/internal/core/util/MementoTokenizer.java
+SHA1-Digest: 0996DjG8eVbnNDqY7p8lNo26H/M=
+
+Name: org/eclipse/jdt/internal/core/search/matching/OrPattern.java
+SHA1-Digest: 703+WkpfKWRQK5Wa6DQ5keOKfm8=
+
+Name: org/eclipse/jdt/internal/core/search/matching/ClassFileMatchLoca
+ tor.java
+SHA1-Digest: DAzX/58//TPP4Kg2BDk4P9RZT5g=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/TypeBinding.java
+SHA1-Digest: +8G7xljLsgrJcjM4JjI9ZHDLbV8=
+
+Name: org/eclipse/jdt/internal/core/util/AnnotationComponent.java
+SHA1-Digest: 2Oh8S2pasLT3JErCjF057+QbCe8=
+
+Name: org/eclipse/jdt/internal/core/util/MethodInfo.java
+SHA1-Digest: /YohD4EDIDqtFdnKw99hvQxaFQY=
+
+Name: org/eclipse/jdt/core/jdom/IDOMImport.java
+SHA1-Digest: ulRYuzH3guyNom5j5IUgZ6qvZhg=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/AssistImportContainer.j
+ ava
+SHA1-Digest: TW6TqkQ3cHqbMrqgj11pojkRnpo=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMemberV
+ alueName.java
+SHA1-Digest: mJDvdL0B6KYoDowvjHw+Vl5Y4So=
+
+Name: org/eclipse/jdt/core/util/IInnerClassesAttributeEntry.java
+SHA1-Digest: 0sHVAnkkMbDhhRhJapWhO5fDUfk=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnQualifi
+ edAllocationExpression.java
+SHA1-Digest: ThhQIEoQIIjEeZ1kdtvp6VCHu3E=
+
+Name: org/eclipse/jdt/core/dom/FieldDeclaration.java
+SHA1-Digest: pONygmzxyvhwO15JcrnX1R2d4fU=
+
+Name: org/eclipse/jdt/internal/core/InitializerWithChildrenInfo.java
+SHA1-Digest: sRHwG6ro0u/VaUx+HQ/AzBVbS6o=
+
+Name: org/eclipse/jdt/internal/compiler/parser/RecoveredStatement.java
+SHA1-Digest: tcMKDEv40h4Nm966Ge/CXsI099E=
+
+Name: org/eclipse/jdt/internal/core/util/SignatureAttribute.java
+SHA1-Digest: PhO6T8WwJlxp/Bx+K6YBZSESfVo=
+
+Name: org/eclipse/jdt/core/dom/IBinding.java
+SHA1-Digest: z4i3PBfSaa+5jeWXrHjB/nffxGU=
+
+Name: org/eclipse/jdt/internal/core/JavaModelOperation.java
+SHA1-Digest: DBO79pZMgrduiCb+ol++225HT7Q=
+
+Name: org/codehaus/jdt/groovy/integration/LanguageSupport.java
+SHA1-Digest: rreUlxUcqtDjZC3VTfStd2dryyM=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/DefaultJavaIndexer
+ .java
+SHA1-Digest: Hjklwu9DYqghixFGk2Poho3qBxM=
+
+Name: org/eclipse/jdt/internal/core/CreateImportOperation.java
+SHA1-Digest: yJRclZG44hLQDnDbZwVXaMye0Kw=
+
+Name: org/eclipse/jdt/internal/compiler/util/CompoundNameVector.java
+SHA1-Digest: GdWtW/QsBYJ5oOzrrc1axNUcOkI=
+
+Name: org/eclipse/jdt/internal/compiler/ClassFile.java
+SHA1-Digest: dc3wxkTm9pysytUqkxdUzz96CQg=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/NodeRewriteEvent.java
+SHA1-Digest: peS+3cWHlXiby9uTvFFhRstAS4s=
+
+Name: org/eclipse/jdt/core/dom/PackageBinding.java
+SHA1-Digest: dSEJZXmT+YpmePiuXU9DaEEOMEk=
+
+Name: org/eclipse/jdt/core/dom/MethodInvocation.java
+SHA1-Digest: OlcJfxlkeJLBuJiMdCTxHJrxQdw=
+
+Name: org/eclipse/jdt/internal/core/MultiOperation.java
+SHA1-Digest: AzJ6mp4E1VYL+hrFVKSlz/BlL+0=
+
+Name: org/eclipse/jdt/core/util/IRuntimeVisibleParameterAnnotationsAtt
+ ribute.java
+SHA1-Digest: 9TLP6ITu8XriEqRex8u5NaKMhmU=
+
+Name: org/eclipse/jdt/core/IType.java
+SHA1-Digest: Dy1u9JRfeqqvz0yCl01pIqgPZLs=
+
+Name: org/eclipse/jdt/internal/core/JavadocConstants.java
+SHA1-Digest: dTN4M+EjXSYAyxP0bwUSauEc67s=
+
+Name: org/eclipse/jdt/core/ClasspathVariableInitializer.java
+SHA1-Digest: JI1pWcAfjqqgnjF6044C1da1Lgk=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/TypeVariableBinding.jav
+ a
+SHA1-Digest: 8gbi0wVYyiqZCicyde7GAwvNyt8=
+
+Name: org/eclipse/jdt/internal/core/dom/rewrite/LineCommentEndOffsets.
+ java
+SHA1-Digest: uJe0vFQi1zGOMsN78CmfgPOyqgI=
+
+Name: org/eclipse/jdt/internal/core/util/ConstantPoolEntry.java
+SHA1-Digest: XIdeXAsWWyfPkB4SVmD9NKw+Otg=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/HierarchyType.java
+SHA1-Digest: DJufsRSObK/6cksNb0WkkkKAV84=
+
+Name: org/eclipse/jdt/core/IJavaProject.java
+SHA1-Digest: n/PL5geDMWKmSR4O/FSINtuvNMM=
+
+Name: org/eclipse/jdt/core/dom/FileASTRequestor.java
+SHA1-Digest: qvdXM7+YC+H7N7GWr7O5BHPbymQ=
+
+Name: org/eclipse/jdt/internal/core/builder/ClasspathJar.java
+SHA1-Digest: KHp0GzzaYcbKrCcKS3WWP1sD6oo=
+
+Name: org/eclipse/jdt/core/util/IAnnotationComponent.java
+SHA1-Digest: WQyD1hRGjQPUHc08Eg2+sbrTiEI=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/TypeHierarchy.java
+SHA1-Digest: Dy7yKVrmNskBtM8IsIwHMMHDIVs=
+
+Name: org/eclipse/jdt/internal/core/BinaryMember.java
+SHA1-Digest: rde5dnzvKkoFiCo7QtHMsOPomqk=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnFieldNa
+ me.java
+SHA1-Digest: eGQmQ1KARUckn6fhFTlKW/s8jUM=
+
+Name: org/eclipse/jdt/internal/compiler/flow/LabelFlowContext.java
+SHA1-Digest: jVrB9+t/eT0LF6sN6XbvYMCPFPg=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetAllocationExpression.ja
+ va
+SHA1-Digest: XeJFE3w2+SRJGRLvtILGea0TaKI=
+
+Name: org/eclipse/jdt/internal/core/hierarchy/RegionBasedHierarchyBuil
+ der.java
+SHA1-Digest: AT/ks89ePktDs4DUtNJtch7xpmM=
+
+Name: org/eclipse/jdt/internal/core/util/AnnotationDefaultAttribute.ja
+ va
+SHA1-Digest: CpzK+I+29gjW8OInR6LBeI3Hx9U=
+
+Name: org/eclipse/jdt/internal/core/search/matching/TypeReferenceLocat
+ or.java
+SHA1-Digest: +HYwd1xPZsjvctTsA8JuThi1byE=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/VariableBinding.java
+SHA1-Digest: UB8EO295UoBmfDsr25Rc8DS9IzA=
+
+Name: org/eclipse/jdt/core/search/TypeNameMatchRequestor.java
+SHA1-Digest: 77L7ymS1+vOd/O3vneMUwwFZdA4=
+
+Name: jdtCompilerAdaptersrc/org/eclipse/jdt/internal/antadapter/AntAda
+ pterMessages.java
+SHA1-Digest: 0tr6AQtQ/KPieEn2LcsheVxwRS8=
+
+Name: org/eclipse/jdt/internal/compiler/batch/ClasspathSourceJar.java
+SHA1-Digest: HgSjN7zkh9btldBD1gpGwGygSx8=
+
+Name: org/eclipse/jdt/internal/core/index/DiskIndex.java
+SHA1-Digest: mc2NiVxw900lLGcz2lRAd/JBDPE=
+
+Name: org/eclipse/jdt/internal/core/JarPackageFragmentInfo.java
+SHA1-Digest: BiGh1ZWH4S7m2rrHpEyWEJatORc=
+
+Name: org/eclipse/jdt/core/NamingConventions.java
+SHA1-Digest: uP+LFBPAzfOb3biaXtQqxdNIFXc=
+
+Name: org/eclipse/jdt/internal/codeassist/CompletionRequestorWrapper.j
+ ava
+SHA1-Digest: jjDcCrFKE4rHQqrSulk8J9b2Imc=
+
+Name: org/eclipse/jdt/internal/compiler/flow/UnconditionalFlowInfo.jav
+ a
+SHA1-Digest: aI6fSPd65kLNItCsZz/vWdnkd8c=
+
+Name: org/eclipse/jdt/internal/core/JavaProject.java
+SHA1-Digest: 80Jj4oSKDQLFBWKqMvpEl/zt7dk=
+
+Name: org/eclipse/jdt/internal/compiler/flow/ConditionalFlowInfo.java
+SHA1-Digest: qjDAWAWMzBAzDgzzIWq/SniRJBQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/UnresolvedAnnotationBin
+ ding.java
+SHA1-Digest: fm4lhPMPU6L1KP9hRObb+JSpTuw=
+
+Name: org/eclipse/jdt/core/util/IBytecodeVisitor.java
+SHA1-Digest: LRJvofWdhn4oPjfHFqUjJVD++Ns=
+
+Name: org/eclipse/jdt/core/search/PackageReferenceMatch.java
+SHA1-Digest: 3jkukjY+C6GA58qIxsPBZuH2KUU=
+
+Name: org/eclipse/jdt/internal/core/util/BindingKeyParser.java
+SHA1-Digest: RSZ4zZOdXYBol4E1tWe1LYfSFxY=
+
+Name: org/eclipse/jdt/internal/compiler/IDocumentElementRequestor.java
+SHA1-Digest: cKc3WGKZp/gacP0ozAGDJ0paFok=
+
+Name: org/eclipse/jdt/internal/formatter/AbortFormatting.java
+SHA1-Digest: V0HqaXeQVzclANyJ3Mb/oS7KYiM=
+
+Name: org/eclipse/jdt/internal/core/MoveElementsOperation.java
+SHA1-Digest: ShlmbPBu9o7uz3kbaLIorjhXdk8=
+
+Name: org/eclipse/jdt/internal/compiler/SourceElementRequestorAdapter.
+ java
+SHA1-Digest: grfk4SDGUX+jqvfUODldRXAsZBI=
+
+Name: org/eclipse/jdt/internal/core/LocalVariable.java
+SHA1-Digest: th1Fd/VpmsUIfC4Sg7+wKkwCTcM=
+
+Name: org/eclipse/jdt/internal/compiler/batch/FileFinder.java
+SHA1-Digest: BGtDcRbpQu3PqFkIVp7+LDTOAKU=
+
+Name: org/eclipse/jdt/internal/core/MovePackageFragmentRootOperation.j
+ ava
+SHA1-Digest: Dzr8DQUvR5dDKSdSDP6yF4F3jwY=
+
+Name: org/eclipse/jdt/internal/compiler/parser/ScannerHelper.java
+SHA1-Digest: f+3fhLs6Njp4FHdouczNa9plWUg=
+
+Name: org/eclipse/jdt/core/jdom/IDOMCompilationUnit.java
+SHA1-Digest: 4Sqqj0+iUGG8VnM10P0iYWavMH4=
+
+Name: org/eclipse/jdt/internal/core/search/matching/MethodPattern.java
+SHA1-Digest: /NbTGj3RpXseIHng8cCiSJx9Z1k=
+
+Name: org/eclipse/jdt/internal/core/jdom/SiblingEnumeration.java
+SHA1-Digest: 4Y5hXSyxhrjCsHm4Fex7MbeuLUU=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnFieldType.
+ java
+SHA1-Digest: Kf2wOgajv81QVKWEaTnLm6i/IJE=
+
+Name: org/eclipse/jdt/internal/core/SortElementsOperation.java
+SHA1-Digest: GVGsUW6S69IerE+ZBQbju9Wv4w4=
+
+Name: org/eclipse/jdt/internal/core/search/PathCollector.java
+SHA1-Digest: tz+4X4989CA4rwBzVbNAHVPnyN4=
+
+Name: org/eclipse/jdt/internal/core/ResolvedSourceType.java
+SHA1-Digest: olupn8dnBafL4KS8Ij15w5piLFg=
+
+Name: org/eclipse/jdt/internal/compiler/AbstractAnnotationProcessorMan
+ ager.java
+SHA1-Digest: jWS6rQiVP0QX12WnlNPqPllKHaw=
+
+Name: org/eclipse/jdt/internal/core/search/matching/OrLocator.java
+SHA1-Digest: y1BfYPA3AKiKnjJTsK6HT6Pw8Ow=
+
+Name: org/eclipse/jdt/internal/compiler/flow/FlowInfo.java
+SHA1-Digest: 8nMn1KckKlOnF164/dBxa5QZcHA=
+
+Name: org/eclipse/jdt/internal/core/JarPackageFragmentRootInfo.java
+SHA1-Digest: TN/EMN7UD/3ZXajzs9/xSta4n5k=
+
+Name: org/eclipse/jdt/core/ITypeHierarchyChangedListener.java
+SHA1-Digest: Xfu8FsudlP+pY2TbWchjgfJsxRI=
+
+Name: org/eclipse/jdt/core/IElementChangedListener.java
+SHA1-Digest: 92a2i5PonpztGQYIZrgcF87pCkk=
+
+Name: org/eclipse/jdt/core/dom/WhileStatement.java
+SHA1-Digest: ZMuhhyOq4CDSIQ5UxImnnUGZdlQ=
+
+Name: org/eclipse/jdt/core/search/TypeReferenceMatch.java
+SHA1-Digest: tulI4a2mLF75qvfDPo+HGbhqA1E=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionNodeFound.ja
+ va
+SHA1-Digest: il7X9i/TZqjePksi+93GwSVwBm8=
+
+Name: org/eclipse/jdt/internal/core/VerboseElementCache.java
+SHA1-Digest: Hmn4ljNYL8794HVJTG0kOAh6pME=
+
+Name: org/eclipse/jdt/core/JavaCore.java
+SHA1-Digest: 2/fZYC4TwUNKM+bbZTCFdzTEGMI=
+
+Name: org/eclipse/jdt/internal/core/CreatePackageDeclarationOperation.
+ java
+SHA1-Digest: U6JiT9LvTakNf1ZlQAXcXDyJkaM=
+
+Name: org/eclipse/jdt/core/IJavaModel.java
+SHA1-Digest: UPCnbF04/kjHn0dHI4bS5V28ITg=
+
+Name: org/eclipse/jdt/internal/core/DefaultWorkingCopyOwner.java
+SHA1-Digest: iWSrsASSSt/TGm4HFxAkJkIsqXQ=
+
+Name: org/eclipse/jdt/internal/core/util/BindingKeyResolver.java
+SHA1-Digest: 8s9hC7fnoDhGjv4JiLoFCkwKDIU=
+
+Name: org/eclipse/jdt/core/dom/EnumConstantDeclaration.java
+SHA1-Digest: FwUay32P3rVJ5HDDjkFFaR9TauM=
+
+Name: org/eclipse/jdt/internal/formatter/DefaultCodeFormatter.java
+SHA1-Digest: KOL7GuR0ERmE0A8cQihSUlCpzZI=
+
+Name: org/eclipse/jdt/internal/eval/CodeSnippetSingleNameReference.jav
+ a
+SHA1-Digest: J5I+HqUiHxdA7Ih5AV+LqQda0w0=
+
+Name: org/eclipse/jdt/internal/compiler/parser/TypeConverter.java
+SHA1-Digest: m84Uv/uzKvXjBYuUY/D2QvJ9R8A=
+
+Name: org/eclipse/jdt/internal/core/TypeParameter.java
+SHA1-Digest: Lbh+ggMrDXikJiA2e6+TuuK+ym8=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnLocalNa
+ me.java
+SHA1-Digest: /Sg0yiJvzB06/qh+naPxa3Ou8Rk=
+
+Name: org/eclipse/jdt/internal/core/CreateCompilationUnitOperation.jav
+ a
+SHA1-Digest: PJmTUtC1JDmZIh0KvdkJBEvSIDY=
+
+Name: org/eclipse/jdt/core/search/ISearchPattern.java
+SHA1-Digest: UE5/xkG9XTw0RQYKpLHkqWEhggM=
+
+Name: org/eclipse/jdt/internal/core/PackageFragmentRoot.java
+SHA1-Digest: vCaGGUU1anMfqUbzBRGPWonBvRY=
+
+Name: org/eclipse/jdt/internal/core/CommitWorkingCopyOperation.java
+SHA1-Digest: WABcbzItj+94V7kdZdd+5nrV5Qo=
+
+Name: org/eclipse/jdt/core/util/IConstantPoolEntry2.java
+SHA1-Digest: 0/zsR4wZcETynTRNloawaZwxp6g=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemBinding.java
+SHA1-Digest: RfEM9thzuQ+IxwYHdXd1FXR43io=
+
+Name: org/eclipse/jdt/internal/core/CreateFieldOperation.java
+SHA1-Digest: 02CIdmQ+BHAOhYlfYXdkpwjmXKI=
+
+Name: org/eclipse/jdt/core/compiler/CharOperation.java
+SHA1-Digest: DJy0Gcuo+kF6GeMOcg0TK6fbktg=
+
+Name: org/eclipse/jdt/internal/core/AnnotatableInfo.java
+SHA1-Digest: YyFNgtXbRFhWlQSrGY3HdSeq7ME=
+
+Name: org/eclipse/jdt/internal/core/CancelableProblemFactory.java
+SHA1-Digest: uaW/ir30Ld84byJQcaL3nZtdC+w=
+
+Name: org/eclipse/jdt/internal/core/search/processing/IJob.java
+SHA1-Digest: cBx5SfigOZOl1QIqMoTGe4Ph3LI=
+
+Name: org/eclipse/jdt/internal/core/search/JavaSearchDocument.java
+SHA1-Digest: vmgr08zzlmgaMYibc8eORDhQTx4=
+
+Name: org/eclipse/jdt/internal/formatter/FormatJavadoc.java
+SHA1-Digest: I/EhIs0daZPQIl3DvGJgqe+bcAA=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/MethodScope.java
+SHA1-Digest: Ci/byIVXPwJaY+hfcx5/9tKy8b0=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnClassLi
+ teralAccess.java
+SHA1-Digest: YmSF+GEweUV8wqlkWAVuM116+QE=
+
+Name: org/eclipse/jdt/internal/formatter/ICodeFormatterConstants.java
+SHA1-Digest: xQ/oZv3z/X+ak2wSJpxPQg7tQPI=
+
+Name: org/eclipse/jdt/core/ToolFactory.java
+SHA1-Digest: YJkkKgz+yxLKqwsmPaisElXaK8w=
+
+Name: jdtCompilerAdaptersrc/org/eclipse/jdt/core/BuildJarIndex.java
+SHA1-Digest: hETDwgFIxN5/DRPpOw99IeVLbxY=
+
+Name: org/eclipse/jdt/internal/core/util/LineNumberAttribute.java
+SHA1-Digest: Kpj+bLmOddVoVqH2Scb1RULuYqA=
+
+Name: org/eclipse/jdt/core/dom/DefaultCommentMapper.java
+SHA1-Digest: FkWyfhMWjz0qTuKQ0YQiUtokcdc=
+
+Name: org/eclipse/jdt/internal/compiler/ProcessTaskManager.java
+SHA1-Digest: dxD/nD2h8DpFJTV4fB5TmJ+C2Iw=
+
+Name: org/eclipse/jdt/internal/compiler/codegen/AttributeNamesConstant
+ s.java
+SHA1-Digest: /SFYGlevJUSqO2OURSzsjDZ/Deo=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SuperReference.java
+SHA1-Digest: jJl3knFkdNlOhWHhI5uwqPqs8s4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/JavadocArgumentExpression.
+ java
+SHA1-Digest: lcO8IrOeo3eyIYLaUC4hYwnB0f8=
+
+Name: org/eclipse/jdt/core/dom/DefaultValuePairBinding.java
+SHA1-Digest: ut9XI+zqDWaxyvZw2iHc21bCX5s=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnJavadoc
+ MessageSend.java
+SHA1-Digest: QcKnojPdYA58xrp4nq0fSuillEs=
+
+Name: org/eclipse/jdt/internal/compiler/env/ICompilationUnit.java
+SHA1-Digest: VDDergtBbeL2z6H7FkjLIY6Ad04=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnMessage
+ SendName.java
+SHA1-Digest: E4/wCpLlbslW8bUvrNusn3qDL8I=
+
+Name: org/eclipse/jdt/core/dom/IMemberValuePairBinding.java
+SHA1-Digest: r34bpYeE8U2aj+hIySc6hCT8sZI=
+
+Name: org/eclipse/jdt/internal/compiler/parser/diagnose/RangeUtil.java
+SHA1-Digest: TQwldJSQC0jnjrq3RClpwbVqIXs=
+
+Name: org/eclipse/jdt/core/util/IBootstrapMethodsEntry.java
+SHA1-Digest: HhuQZOO6TkiLnWGadiQR+k3YhA8=
+
+Name: org/eclipse/jdt/core/IOpenable.java
+SHA1-Digest: gqkNZQki8n7i5a92uv2S8uqqWfI=
+
+Name: org/eclipse/jdt/internal/compiler/impl/IrritantSet.java
+SHA1-Digest: X5H7uZe0kLvnJMq8cJ9/MmnNndM=
+
+Name: org/eclipse/jdt/core/search/SearchDocument.java
+SHA1-Digest: aLC+V1gubwo+tEBRa8bsa7q4D0w=
+
+Name: org/eclipse/jdt/internal/compiler/env/IBinaryField.java
+SHA1-Digest: tU3SggFHlHx0ho3EU5LsYDDPTUQ=
+
+Name: org/eclipse/jdt/internal/core/JavaElementRequestor.java
+SHA1-Digest: 3hX8vkAImEkUjiV329xtqY3v7YM=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PossibleMatchSet.j
+ ava
+SHA1-Digest: MOEEeYlxZoUBgMp5nqelwgAap/4=
+
+Name: org/eclipse/jdt/internal/compiler/batch/Main.java
+SHA1-Digest: BygfFigCTlW48BT/EJK8n8e5ZjQ=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/RawTypeBinding.java
+SHA1-Digest: p1j98V4yXMqwFLca5kRGxYPkXX0=
+
+Name: org/eclipse/jdt/internal/formatter/FormatJavadocText.java
+SHA1-Digest: QeUUHSXidS+sN/1yIw8DHucaiXY=
+
+Name: org/eclipse/jdt/internal/core/util/BootstrapMethodsEntry.java
+SHA1-Digest: W8OCg7L5Da46p1oBID8BKGPq24U=
+
+Name: org/eclipse/jdt/internal/compiler/classfmt/MethodInfoWithParamet
+ erAnnotations.java
+SHA1-Digest: gvVCQCP0QrCXk44i3y9R1VzKvps=
+
+Name: org/eclipse/jdt/internal/core/SourceConstructorInfo.java
+SHA1-Digest: xHRaiiQAZFhpl5a45xhE8xTh/PA=
+
+Name: org/eclipse/jdt/core/formatter/CodeFormatter.java
+SHA1-Digest: 18abDKkpd/YMH2SK46FtGqK7j9k=
+
+Name: org/eclipse/jdt/core/dom/NodeFinder.java
+SHA1-Digest: 6jLDrMNBnveBErFuqORWYcM3X0w=
+
+Name: org/eclipse/jdt/internal/compiler/util/GenericXMLWriter.java
+SHA1-Digest: nhvZoXsOHFITT3uB2mrC2nDq2kE=
+
+Name: org/eclipse/jdt/internal/core/ImportContainer.java
+SHA1-Digest: 1lxMp6qxe8QuRzJyayAadO/T1oo=
+
+Name: org/eclipse/jdt/core/jdom/DOMFactory.java
+SHA1-Digest: VeauOOgEYer5u0pMYS0EB1GjJPs=
+
+Name: org/eclipse/jdt/internal/core/AnnotationInfo.java
+SHA1-Digest: BniaQ1+kxM9t0gq0KonTXfPkZSg=
+
+Name: org/codehaus/jdt/groovy/integration/DefaultLanguageSupport.java
+SHA1-Digest: mPnfhpL5BWsaj1AQECBGSWlaKg4=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnFieldTy
+ pe.java
+SHA1-Digest: lO+dKIy+T30kTnaCpPE8wOUUhQA=
+
+Name: org/eclipse/jdt/core/ISourceReference.java
+SHA1-Digest: 4KmN87FwutwBTVG5ZvTOwKzvjoY=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/CaptureBinding.java
+SHA1-Digest: 0jwJ4k3hXlcXoFsch90yURqIgzI=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/ProblemMethodBinding.ja
+ va
+SHA1-Digest: FKXwBahSzrW7dI9RRGqEZl8mvTI=
+
+Name: org/eclipse/jdt/core/dom/ASTRecoveryPropagator.java
+SHA1-Digest: psxSZi0S1/ZZjBJ1y9ADebN51do=
+
+Name: org/eclipse/jdt/internal/compiler/ast/TrueLiteral.java
+SHA1-Digest: fLPILLNERzNt9REpYiuVNMwSGOs=
+
+Name: org/eclipse/jdt/internal/core/JarPackageFragmentRoot.java
+SHA1-Digest: tg7VLwNT9VJXZKJP96VzjzVqugk=
+
+Name: jdtCompilerAdaptersrc/org/eclipse/jdt/core/CheckDebugAttributes.
+ java
+SHA1-Digest: yr6zntAJa/ijkr/0CV+RD9IFqZM=
+
+Name: org/eclipse/jdt/core/IJavaModelStatusConstants.java
+SHA1-Digest: ttmyQ+FnLyVSyEtv15ybe0R9DXU=
+
+Name: org/eclipse/jdt/internal/core/search/matching/PackageDeclaration
+ Locator.java
+SHA1-Digest: L290JCz+QejN+KHnM8YEGxcsVUI=
+
+Name: org/eclipse/jdt/core/dom/Assignment.java
+SHA1-Digest: Crhy1DHtb15AfMHctwCSt+lRrIM=
+
+Name: org/eclipse/jdt/internal/core/search/JavaSearchParticipant.java
+SHA1-Digest: C7sIUvVrNFSpjhp7botCJRzOmJ8=
+
+Name: org/eclipse/jdt/internal/compiler/ast/SingleNameReference.java
+SHA1-Digest: 373VfnqZ09D/fwg/DdxOA6USfTI=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnSingleName
+ Reference.java
+SHA1-Digest: VrEixoQCW3Lv21I1vipjFSWuRK4=
+
+Name: org/eclipse/jdt/internal/compiler/ast/CompilationUnitDeclaration
+ .java
+SHA1-Digest: 3o9aq+R15WKActfOLwlOoYzLl+g=
+
+Name: org/eclipse/jdt/internal/core/builder/QualifiedNameSet.java
+SHA1-Digest: eRSzT4bCYfgCq24i8EvVnl+muIA=
+
+Name: org/eclipse/jdt/internal/core/ClasspathAccessRule.java
+SHA1-Digest: VMomlZhZpW4tuEEAj5ChC5+CtFs=
+
+Name: org/eclipse/jdt/core/dom/Expression.java
+SHA1-Digest: /dBUtbvpllKawU2mM9zNlrnNDBY=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionScanner.java
+SHA1-Digest: 4xiKhEcb/LgqWhbhj6nKqS3YAI8=
+
+Name: org/eclipse/jdt/core/util/IStackMapTableAttribute.java
+SHA1-Digest: 86BN2AhaHGLp9mhaFVOWrz6mqhQ=
+
+Name: org/eclipse/jdt/internal/core/ResolvedBinaryMethod.java
+SHA1-Digest: ZesVT3gguYQuaSzDjHiTS5z2fDQ=
+
+Name: org/eclipse/jdt/internal/core/search/indexing/IndexManager.java
+SHA1-Digest: dMVwxmmao+jNXYlxIzQUggAEPlM=
+
+Name: org/eclipse/jdt/core/dom/ThisExpression.java
+SHA1-Digest: ENqoe7bjd33y+TbSMB2D2fQOc4Y=
+
+Name: org/eclipse/jdt/internal/core/DeltaProcessor.java
+SHA1-Digest: jN3afiioW+cSYucHaSgbZuKFmV8=
+
+Name: org/eclipse/jdt/core/compiler/BuildContext.java
+SHA1-Digest: xzWOyWcotkEKI7HPK8fCvX02W/A=
+
+Name: org/eclipse/jdt/internal/compiler/ast/UnionTypeReference.java
+SHA1-Digest: Er9vYyZFh9lkA4al5ODKD5CmRwU=
+
+Name: org/eclipse/jdt/internal/compiler/parser/AbstractCommentParser.j
+ ava
+SHA1-Digest: zqe4zNHVXIsG/D5WvytAJeYdWCM=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnStringL
+ iteral.java
+SHA1-Digest: WzyyX795kyEMIMojr9+Zm/ZBGnE=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/SignatureWrapper.java
+SHA1-Digest: bTGGjQSzVx7Ec9hWntfo0liYuqM=
+
+Name: org/eclipse/jdt/internal/formatter/Location.java
+SHA1-Digest: UVYyZY7FkCZpUu/rmHLTr3n1+po=
+
+Name: org/eclipse/jdt/internal/core/index/IndexLocation.java
+SHA1-Digest: z6O78Ows/DsivAvi4m/REybRGE8=
+
+Name: org/eclipse/jdt/internal/compiler/lookup/Binding.java
+SHA1-Digest: EjstM7JETN6dj5zbWdu41ichnXQ=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: org/eclipse/jdt/core/util/IStackMapFrame.java
+SHA1-Digest: LhQW3uJOrmNLqez6u9ymZOym6Ug=
+
+Name: org/eclipse/jdt/internal/core/NamedMember.java
+SHA1-Digest: H7Nak4kcJaEPSwbofNB9+0Gl88A=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionNodeDetec
+ tor.java
+SHA1-Digest: 1PfmuVNQDUOoB2mpffAVVtdAma0=
+
+Name: org/eclipse/jdt/core/dom/SuperMethodInvocation.java
+SHA1-Digest: MaqiiFn5/73VnxUfQBJ7ZEteIXQ=
+
+Name: org/eclipse/jdt/core/dom/SuperConstructorInvocation.java
+SHA1-Digest: x/pRwpEwOasnQqg3A5mJUe4v+68=
+
+Name: org/eclipse/jdt/internal/codeassist/select/SelectionOnQualifiedN
+ ameReference.java
+SHA1-Digest: 8s9vZ1NMlpi38QGNH+bMwktyV3M=
+
+Name: org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword
+ 2.java
+SHA1-Digest: P9f1te1CMg5VFn5CkRl0m2MA+wI=
+
+Name: org/eclipse/jdt/core/jdom/IDOMMember.java
+SHA1-Digest: Xs6rtXgzgyhcuf1DeGd8jWFpiBc=
+
+Name: org/eclipse/jdt/core/dom/Javadoc.java
+SHA1-Digest: KMbxleFVykPb3juoyQbTL8F1Qx0=
+
+Name: org/eclipse/jdt/internal/codeassist/impl/Keywords.java
+SHA1-Digest: Suysm81YjjJs3HV2+Oelk66LdGo=
+
+Name: org/eclipse/jdt/internal/compiler/ast/Reference.java
+SHA1-Digest: LYpz55XeUav0yWzxreK3Q4pvzdA=
+
+Name: org/eclipse/jdt/core/dom/CharacterLiteral.java
+SHA1-Digest: 2BXLgq8crzElEqeIJlODLD/k5OI=
+
+Name: org/eclipse/jdt/core/util/IConstantValueAttribute.java
+SHA1-Digest: mAUCmT8j0NjZkOEAnp9GoBaXkpQ=
+
+Name: org/eclipse/jdt/internal/core/SourceMapper.java
+SHA1-Digest: 6xjq6GFMiGO6NRcywblKREW5/6c=
+
+Name: org/eclipse/jdt/core/dom/ASTMatcher.java
+SHA1-Digest: Y9MG7KGarDFWek+e8Z5DlUN+894=
+
+Name: org/eclipse/jdt/core/dom/Block.java
+SHA1-Digest: 8qrlVgCmdSEajyMNMKU9clFVAKI=
+
+Name: org/eclipse/jdt/internal/core/builder/AbortIncrementalBuildExcep
+ tion.java
+SHA1-Digest: yOd61CLIz03fjzToXa6dCRJz/Q8=
+
+Name: org/eclipse/jdt/internal/core/Region.java
+SHA1-Digest: td3r6f5W3ZTK3CFAnUIsm3byn7k=
+
+Name: org/eclipse/jdt/internal/compiler/impl/CharConstant.java
+SHA1-Digest: SAED4ZCOQKvNQ0Mx2HYT1X87iUc=
+

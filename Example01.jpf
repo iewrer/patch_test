@@ -1,0 +1,9 @@
+
+target = precise.Example01
+@using = jpf-regression
+classpath = build/tests/version0
+sourcepath = ./src/tests/version0
+rse.newClass = ./build/tests/version0/precise/Example01.class
+rse.oldClass = ./old/bin/precise/Example01.class
+rse.dotFile = ./dotFiles/version0/precise/Example01.dot
+rse.ASTResults = ./diffFiles/version0/precise/Example01.xml

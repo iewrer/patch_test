@@ -23,6 +23,15 @@ public class AffectedBlocks  {
 	static HashMap<Integer, ArrayList<Integer>> branchToDependentSecondaryInsMap;
 	static String mName = "";
 
+	/**
+	 * 根据methodName，从ComputeIntraProceduralDiff中获取对应的分析结果，并存入自身的数据结构中保存起来。包括：
+	 * branchToDependentWriteInsMap、
+	 * branchToDependentSecondaryInsMap、
+	 * affectedCond、
+	 * affectedWrite、
+	 * mName等
+	 * @param methodName
+	 */
 	public static void setAffectedBlock(String methodName) {
 		AnalyzeIntraProceduralDiff semanticDiff = ComputeIntraProceduralDiff.
 									getSemanticAnalysis(methodName);
@@ -81,7 +90,12 @@ public class AffectedBlocks  {
 		}
 		return distance;
 	}
-	
+	/**
+	 * 若该位置在affectedCond中，则移除之，并放入reachedCond中。
+	 * 若该位置在affectedWrite中，则移除之，并放入reachedCond中。
+	 * @param methodName
+	 * @param pos
+	 */
 	// this is similar to the UpdateExploredSet method in the pseudo-code
 	public static void checkPos(String methodName, Integer pos) {
 
@@ -97,7 +111,11 @@ public class AffectedBlocks  {
 			reachedWrite.add(pos);
 		}
 	}
-	
+	/**
+	 * 检查methodName是否与该类中存储的类名相同
+	 * @param methodName
+	 * @return
+	 */
 	public static boolean impactedMethod(String methodName) {
 		return methodName.equals(mName);
 	}
@@ -141,11 +159,11 @@ public class AffectedBlocks  {
 		if(affectedCond.contains(pos) || 
 								reachedCond.contains(pos)) {
 		
-//			boolean trueBranchTaken = 
-//						PruningRSEListener.trueBranches.contains(pos);
-//			boolean falseBranchTaken =
-//						PruningRSEListener.falseBranhces.contains(pos);	
-//			if(!trueBranchTaken || !falseBranchTaken)
+			boolean trueBranchTaken = 
+						PruningRSEListener.trueBranches.contains(pos);
+			boolean falseBranchTaken =
+						PruningRSEListener.falseBranhces.contains(pos);	
+			if(!trueBranchTaken || !falseBranchTaken)
 				return true;
 			
 		}

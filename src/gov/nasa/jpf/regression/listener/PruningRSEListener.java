@@ -88,8 +88,8 @@ public class PruningRSEListener {
 	
 	//FIXME: tracking the branches of executed affected conditional
 	// branches. 
-//	public static Set<Integer> trueBranches = new HashSet<Integer>();
-//	public static Set<Integer> falseBranhces = new HashSet<Integer>();
+	public static Set<Integer> trueBranches = new HashSet<Integer>();
+	public static Set<Integer> falseBranhces = new HashSet<Integer>();
 
 	//the following are used for reguression testing purposes
 	protected int chgAffectedWCNodes = 0;
@@ -253,7 +253,27 @@ public class PruningRSEListener {
 				method.toString();
 			}
 			
-			if (	true
+			if (	!method.contains("init")&&
+//					!method.contains("extractInt")&&
+//					!method.contains("consumeDigits")&&
+//					!method.contains("scanEscapeCharacter")&&
+					!method.contains("checkTaskTag")&&//runanalysis erro
+					!method.contains("getNextToken")&&
+					!method.contains("internalScanIdentifierOrKeyword")&&
+					//no such method
+					!method.contains("atTypeAnnotation")&&
+					!method.contains("ungetToken")&&
+					!method.contains("disambiguatedToken")&&
+					!method.contains("hasBeenReached")&&
+					!method.contains("getIdentityComparisonLines")&&
+					!method.contains("followSetOfCast")&&
+					!method.contains("setActiveParser")&&
+					!method.contains("VanguardParser")&&
+					!method.contains("isAtAssistIdentifier")&&
+					!method.contains("maybeAtReferenceExpression")&&
+					!method.contains("maybeAtEllipsisAnnotationsStart")&&
+					!method.contains("fastForward")&&
+					!method.contains("maybeAtLambdaOrCast")
 //					!method.endsWith("accept") && 
 //					!method.endsWith("resolve") && 
 //					!method.endsWith("internalBeginToCompile") && 

@@ -223,6 +223,9 @@ public class AnalyzeIntraProceduralDiff {
 
 				 if(!condToIntMap.containsKey(dPos)) continue;
 				 Integer dPosToCounter = condToIntMap.get(dPos);
+				 if (dm == null || dPosToCounter == null || posToCounter == null) {
+					continue;
+				}
 				 dm.setValue(dPosToCounter, posToCounter, 1);
 			 }
 			 if(branchToDependentWriteInsMap.containsKey(pos)) {

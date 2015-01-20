@@ -31,17 +31,18 @@ public class RunJpf {
 		Config.enableLogging(true);
 		
 		
-//		Config conf = new Config(Path.prop[0]);
-		Config conf = Config.createConfig();
-		
-		conf.setTarget("org.eclipse.jdt.internal.compiler");
-		conf.setProperty("@using", "jpf-regression");
-		conf.setProperty("classpath","build/tests/patch/jdt");
-		conf.setProperty("sourcepath", "./src/tests/patch/jdt");
-		conf.setProperty("rse.newClass", "./build/tests/patch/jdt/org/eclipse/jdt/internal/compiler/Compiler.class");
-		conf.setProperty("rse.oldClass", "./old/bin/jdt/org/eclipse/jdt/internal/compiler/Compiler.class");
-		conf.setProperty("rse.dotFile", "./dotFiles/patch/jdt/Compiler");
-		conf.setProperty("rse.ASTResults", "./diffFiles/patch/jdt/Compiler.xml");		
+		Config conf = new Config("./script/Scanner/Scanner_patch.jpf");
+		Config conf1 = new Config("./script/Scanner/Scanner_new.jpf");
+//		Config conf = Config.createConfig();
+//		
+//		conf.setTarget("org.eclipse.jdt.internal.compiler");
+//		conf.setProperty("@using", "jpf-regression");
+//		conf.setProperty("classpath","build/tests/patch/jdt");
+//		conf.setProperty("sourcepath", "./src/tests/patch/jdt");
+//		conf.setProperty("rse.newClass", "./build/tests/patch/jdt/org/eclipse/jdt/internal/compiler/Compiler.class");
+//		conf.setProperty("rse.oldClass", "./old/bin/jdt/org/eclipse/jdt/internal/compiler/Compiler.class");
+//		conf.setProperty("rse.dotFile", "./dotFiles/patch/jdt/Compiler");
+//		conf.setProperty("rse.ASTResults", "./diffFiles/patch/jdt/Compiler.xml");		
 		
 //		try {
 //			conf.store(new FileWriter(new File(args[0])), null);
@@ -53,6 +54,8 @@ public class RunJpf {
 //		JPF jpf = new JPF(conf);
 		PruningRSEListener listener = new PruningRSEListener(conf);
 		listener.ComputeDiff();
+		PruningRSEListener listener1 = new PruningRSEListener(conf1);
+		listener1.ComputeDiff();
 //		jpf.addListener(listener);
 //		jpf.run();
 			

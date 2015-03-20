@@ -175,6 +175,15 @@ public class CFGBuilder {
     	posLineMap.put(mName, pToLMap);
     }
 
+    /***
+     * 
+     * @param methodIndex
+     * @return
+     * 
+     * 先构造节点
+     * 再构造边
+     * 最后构造从字节码指令pos到行号linenumber的映射
+     */
     private CFG buildCFG(int methodIndex) {
     	String uniqueMethodName = getUniqueMethodIndex(methodIndex);
         CFG cfg = cfgMap.get(uniqueMethodName);
@@ -300,6 +309,10 @@ public class CFGBuilder {
 		int assertLine = -1;
 		int firstAssertNodeId = -1;
 		
+		//设置每个Node的信息
+		//包括：offset、行号、pos、type等
+		//顺便设置cfg中的信息
+		//包括：removedIns、tmpMod、asserts、positionLookUp映射等
         for (int i=1; i<nodes.length-2; i++){
         	Node n = nodes[i];
         	int offset = n.getStartOffset();
@@ -310,6 +323,7 @@ public class CFGBuilder {
     		while(offset<pos[indx])
     			indx++;
     		boolean done = false;
+    		//设置node的行号
     		n.setStartLineNumber(lnt.getSourceLine(offset));
     		n.setEndLineNumber(lnt.getSourceLine(endOffset));
     		while (offset <= endOffset && !done){
@@ -317,6 +331,8 @@ public class CFGBuilder {
         		if (version.equalsIgnoreCase("original")) {
         			n.addType(pos[indx],astInfo.getOrigLineType(lineNum));
         			if(astInfo.getOrigLineType(lineNum).equals("removed")) {
+        				//如果该版本是original，且该行是removed，则添加到removedIns中
+        				//按照指令位置
         				cfg.removedIns.add(pos[indx]);
         			}
         		}
@@ -524,6 +540,9 @@ public class CFGBuilder {
      * @param cfg Control flow graph to which to add the computed nodes
      * @param il BCEL instruction list representing the method for which
      * to compute the basic blocks.
+     * 
+     * 按照字节码指令位置pos计算每个block的起始位置和结束位置
+     * 然后分配并创建每个block给每个node
      */
     private void formNodes(CFG cfg, InstructionList il) {
         InstructionHandle ih, target, prev_ih, next_ih;

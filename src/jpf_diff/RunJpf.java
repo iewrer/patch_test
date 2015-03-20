@@ -30,9 +30,11 @@ public class RunJpf {
 
 		Config.enableLogging(true);
 		
-		
-		Config conf = new Config("./script/Scanner/Scanner_patch.jpf");
-		Config conf1 = new Config("./script/Scanner/Scanner_new.jpf");
+		String file = "Scanner";
+		String old_to_new = "./script/" + file + "/" + file + "_patch.jpf";
+		String new_to_patch = "./script/" + file + "/" + file + "_new.jpf";
+		Config conf = new Config(old_to_new);
+		Config conf1 = new Config(new_to_patch);
 //		Config conf = Config.createConfig();
 //		
 //		conf.setTarget("org.eclipse.jdt.internal.compiler");

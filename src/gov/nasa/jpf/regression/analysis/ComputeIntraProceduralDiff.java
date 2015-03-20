@@ -238,7 +238,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	semanticDiff.clearTrackedCondAndUpdateGlobal();
 
     }
-
+    //如果有original block中的内容是受到影响的
+    //将其对应的modified block中的内容添加到methodASTInfo的changedModifiedLines里面
     protected void mapRemovedNode(MethodASTInfo methodASTInfo, MethodGen mg,
     		AnalyzeIntraProceduralDiff oldSemantic) {
     	Set<BigInteger> matched =  new HashSet<BigInteger>();
@@ -246,7 +247,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
     	Set<Integer> global = oldSemantic.globalTrackCond;
     	global.addAll(oldSemantic.globalTrackWrite);
-
+    	
+    	//先获得original block，对每一个block找到他的match block，如果包括globalTrackCond、globalTrackWrite，则记录之
     	Iterator<BigInteger> itrOrg = orig.keySet().iterator();
     	while(itrOrg.hasNext()) {
     		BigInteger bi = itrOrg.next();
@@ -262,7 +264,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     			}
     		}
     	}
-
+    	//遍历matched block，将match上的modified block添加到methodASTInfo的changedModifiedLines里面
     	Map<BigInteger, BlockASTInfo> modified = methodASTInfo.
     	getModifiedBlocks();
     	Iterator<BigInteger> matchItr = matched.iterator();

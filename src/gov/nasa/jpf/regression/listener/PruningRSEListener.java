@@ -63,6 +63,18 @@ import gov.nasa.jpf.regression.tasks.ClientTaskConfig;
 
 
 
+
+
+
+
+
+
+
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.SignatureSpi;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -246,34 +258,35 @@ public class PruningRSEListener {
 			MethodASTInfo info = (MethodASTInfo) entry.getValue();
 			String method = info.getClassName() + "." + info.getMethodName();
 			String signature = Utility.methodTypeToSignature(info.getReturnType(), info.getParamTypes().toArray(new String[0]));
-			System.out.println(method);
-			System.out.println(signature);
+//			System.out.println(method);
+//			System.out.println(signature);
 			methodName = method + signature;
-			if (method.endsWith("resolve")) {
-				method.toString();
-			}
+//			if (method.endsWith("resolve")) {
+//				method.toString();
+//			}
 			
-			if (	!method.contains("init")&&
-//					!method.contains("extractInt")&&
-//					!method.contains("consumeDigits")&&
-//					!method.contains("scanEscapeCharacter")&&
-					!method.contains("checkTaskTag")&&//runanalysis erro
-					!method.contains("getNextToken")&&
-					!method.contains("internalScanIdentifierOrKeyword")&&
-					//no such method
-					!method.contains("atTypeAnnotation")&&
-					!method.contains("ungetToken")&&
-					!method.contains("disambiguatedToken")&&
-					!method.contains("hasBeenReached")&&
-					!method.contains("getIdentityComparisonLines")&&
-					!method.contains("followSetOfCast")&&
-					!method.contains("setActiveParser")&&
-					!method.contains("VanguardParser")&&
-					!method.contains("isAtAssistIdentifier")&&
-					!method.contains("maybeAtReferenceExpression")&&
-					!method.contains("maybeAtEllipsisAnnotationsStart")&&
-					!method.contains("fastForward")&&
-					!method.contains("maybeAtLambdaOrCast")
+			if (	!info.getEquivalent()
+//					!method.contains("init")&&
+////					!method.contains("extractInt")&&
+////					!method.contains("consumeDigits")&&
+////					!method.contains("scanEscapeCharacter")&&
+//					!method.contains("checkTaskTag")&&//runanalysis erro
+//					!method.contains("getNextToken")&&
+//					!method.contains("internalScanIdentifierOrKeyword")&&
+//					//no such method
+//					!method.contains("atTypeAnnotation")&&
+//					!method.contains("ungetToken")&&
+//					!method.contains("disambiguatedToken")&&
+//					!method.contains("hasBeenReached")&&
+//					!method.contains("getIdentityComparisonLines")&&
+//					!method.contains("followSetOfCast")&&
+//					!method.contains("setActiveParser")&&
+//					!method.contains("VanguardParser")&&
+//					!method.contains("isAtAssistIdentifier")&&
+//					!method.contains("maybeAtReferenceExpression")&&
+//					!method.contains("maybeAtEllipsisAnnotationsStart")&&
+//					!method.contains("fastForward")&&
+//					!method.contains("maybeAtLambdaOrCast")
 //					!method.endsWith("accept") && 
 //					!method.endsWith("resolve") && 
 //					!method.endsWith("internalBeginToCompile") && 
@@ -282,7 +295,11 @@ public class PruningRSEListener {
 //				System.out.println("computing:"+ methodName);
 				ComputeIntraProceduralDiff cpd = null;
 				try {
+					/*
+					 * 变更newclass和oldclass的位置，以修正获得的受影响的代码版本
+					 */
 					cpd = new ComputeIntraProceduralDiff(newClass, oldClass);
+//					cpd = new ComputeIntraProceduralDiff(oldClass, newClass);
 					cpd.computeChangedInfo(methodName, info, filterAffMode);
 					
 					AffectedBlocks.setAffectedBlock(methodName);
@@ -303,7 +320,11 @@ public class PruningRSEListener {
 				if (!dotFile.equalsIgnoreCase("")){
 					PrintToDot dot = new PrintToDot();
 					System.out.println("printing dot...");
-					dot.printCFG(dotFile + "." + index++ + "." + info.getMethodName() + ".dot",
+					System.out.println(info.getEquivalent());
+					System.out.println(method);
+					System.out.println(signature);
+					try {
+						printImpacted(dotFile + "." + (index++) + "." + info.getMethodName() + ".txt",
 								cpd.getCFG(methodName,info),
 								ComputeIntraProceduralDiff.
 								getSemanticAnalysis(methodName).
@@ -311,8 +332,22 @@ public class PruningRSEListener {
 								ComputeIntraProceduralDiff.
 								getSemanticAnalysis(methodName).
 								getGlobalTrackWrite());
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					dot.printCFG(dotFile + "." + (index++) + "." + info.getMethodName() + ".dot",
+								cpd.getCFG(methodName,info),
+								ComputeIntraProceduralDiff.
+								getSemanticAnalysis(methodName).
+								getGlobalTrackCondition(),
+								ComputeIntraProceduralDiff.
+								getSemanticAnalysis(methodName).
+								getGlobalTrackWrite());
+					
 					setCounts(dot);
 					System.out.println("printing dot over!");
+					
 					Set<Integer> addedLines = info.getAddedLines();
 					Set<Integer> chgedLines = info.getChangedLinesMod();
 					VisualizationData.addAddededLocs(methodName, addedLines);
@@ -321,6 +356,58 @@ public class PruningRSEListener {
 				}				
 			}
 		}
+	}
+
+	private void printImpacted(String file, CFG cfg,
+			Set<Integer> trackCondLoc, Set<Integer> trackWriteLoc) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedWriter writer = new BufferedWriter(new FileWriter(new File(file)));
+		Node[] nodes = cfg.getNodes();
+		Set<Integer> cond = new HashSet<Integer>();
+		Set<Integer> write = new HashSet<Integer>();
+		Map<Integer, Node> condNode = new HashMap<>();
+		Map<Integer, Node> writeNode = new HashMap<>();
+		for (int i=0; i<nodes.length;i++) {
+			writer.write(nodes[i].getStartLineNumber() + "," + nodes[i].getEndLineNumber() + "\n");
+			if (trackCondLoc != null){
+				java.util.Iterator<Integer> it1 = trackCondLoc.iterator();
+				while (it1.hasNext()){
+					Integer loc = it1.next();
+					if (loc >= nodes[i].getStartOffset() && loc <= nodes[i].getEndOffset()) {
+						cond.add(loc);
+						condNode.put(loc, nodes[i]);
+					}
+					
+				}
+			}
+			if (trackWriteLoc != null){
+				java.util.Iterator<Integer> it2 = trackWriteLoc.iterator();
+				while (it2.hasNext()){
+					Integer loc = it2.next();
+					if (loc >= nodes[i].getStartOffset() && loc <= nodes[i].getEndOffset()) {
+						write.add(loc);
+						writeNode.put(loc, nodes[i]);
+					}
+				}
+			}			
+		}
+		if (cond != null){
+			java.util.Iterator<Integer> it1 = cond.iterator();
+			while (it1.hasNext()){
+				Integer loc = it1.next();
+				writer.write("Condition Loc:" + loc + "\n");
+				writer.write(condNode.get(loc).getStartLineNumber() + "," + condNode.get(loc).getEndLineNumber() + "\n");
+			}
+		}
+		if (write != null){
+			java.util.Iterator<Integer> it2 = write.iterator();
+			while (it2.hasNext()){
+				Integer loc = it2.next();
+				writer.write("Write Loc:" + loc + "\n");
+				writer.write(writeNode.get(loc).getStartLineNumber() + "," + writeNode.get(loc).getEndLineNumber() + "\n");
+			}
+		}		
+		writer.close();
 	}
 			
 	

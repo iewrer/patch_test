@@ -133,6 +133,7 @@ public class PrintToDot {
 				//cfgNodes.put(nodes[i].getID(),lines);
 			}else{
 				lines = nodes[i].getStartLineNumber() + "-" + nodes[i].getEndLineNumber();
+				//用cfgnodes记录从node id到其行号的映射
 				cfgNodes.put(nodes[i].getID(),lines);
 				if (nodes[i].getNodeIsChanged())
 					changedNodes.add(nodes[i].getID());
@@ -140,6 +141,8 @@ public class PrintToDot {
 					assertNodes.add(nodes[i].getID());
 				if (trackCondLoc != null){
 					Iterator<Integer> it1 = trackCondLoc.iterator();
+					//如果该condloc的位置在node对应block的offset范围内，则添加之
+					//该位置是pos还是linenumber？
 					while (it1.hasNext()){
 						Integer loc = it1.next();
 						if (loc >= nodes[i].getStartOffset() && loc <= nodes[i].getEndOffset())

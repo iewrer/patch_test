@@ -19,7 +19,7 @@ import org.apache.bcel.classfile.*;
 public class CFGBuilder {
 
     /** Name of currently loaded class. */
-    private String className;
+    public String className;
 
 //    private Map<MethodSignature, CFG> cfgMap =
 //        new HashMap<MethodSignature, CFG>();
@@ -496,7 +496,7 @@ public class CFGBuilder {
     	String methodName = uniqueMethodName.substring(className.length()+1);
     	for (int i=0; i<methods.length; i++){
     		Method m = methods[i];
-//    		System.out.println("	searched:" + className + m.getName());
+//    		System.out.println("	searched:" + className + "," + m.getName() + m.getSignature());
     		if(methodName.equals(m.getName() + m.getSignature())){
     			return i;
     		}

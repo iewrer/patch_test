@@ -14,6 +14,10 @@
 	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/jpf-guided-test.jar"/>
 	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/tools.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.jdt.core_3.9.1.v20130905-0837.jar"/>
-	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.text_3.5.300.v20130515-1451.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-guided-test"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-symbc"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/jSMTLIB.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

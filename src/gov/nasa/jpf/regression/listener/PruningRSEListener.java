@@ -256,42 +256,15 @@ public class PruningRSEListener {
 			Map.Entry entry = (Map.Entry) entries.next();
 			
 			MethodASTInfo info = (MethodASTInfo) entry.getValue();
+			String classname = info.getClassName();
 			String method = info.getClassName() + "." + info.getMethodName();
 			String signature = Utility.methodTypeToSignature(info.getReturnType(), info.getParamTypes().toArray(new String[0]));
-//			System.out.println(method);
-//			System.out.println(signature);
+			System.out.println(info.getClassName());
+			System.out.println(info.getMethodName());
+			System.out.println(signature);
 			methodName = method + signature;
-//			if (method.endsWith("resolve")) {
-//				method.toString();
-//			}
 			
-			if (	!info.getEquivalent()
-//					!method.contains("init")&&
-////					!method.contains("extractInt")&&
-////					!method.contains("consumeDigits")&&
-////					!method.contains("scanEscapeCharacter")&&
-//					!method.contains("checkTaskTag")&&//runanalysis erro
-//					!method.contains("getNextToken")&&
-//					!method.contains("internalScanIdentifierOrKeyword")&&
-//					//no such method
-//					!method.contains("atTypeAnnotation")&&
-//					!method.contains("ungetToken")&&
-//					!method.contains("disambiguatedToken")&&
-//					!method.contains("hasBeenReached")&&
-//					!method.contains("getIdentityComparisonLines")&&
-//					!method.contains("followSetOfCast")&&
-//					!method.contains("setActiveParser")&&
-//					!method.contains("VanguardParser")&&
-//					!method.contains("isAtAssistIdentifier")&&
-//					!method.contains("maybeAtReferenceExpression")&&
-//					!method.contains("maybeAtEllipsisAnnotationsStart")&&
-//					!method.contains("fastForward")&&
-//					!method.contains("maybeAtLambdaOrCast")
-//					!method.endsWith("accept") && 
-//					!method.endsWith("resolve") && 
-//					!method.endsWith("internalBeginToCompile") && 
-//					!method.endsWith("compile")
-					) {
+			if (info.getMatched()) {
 //				System.out.println("computing:"+ methodName);
 				ComputeIntraProceduralDiff cpd = null;
 				try {
@@ -300,6 +273,17 @@ public class PruningRSEListener {
 					 */
 					cpd = new ComputeIntraProceduralDiff(newClass, oldClass);
 //					cpd = new ComputeIntraProceduralDiff(oldClass, newClass);
+					
+					System.out.println(cpd.classname);
+					System.out.println(classname);
+					
+					if (cpd.classname.equals(className)) {
+						System.out.println("internal class found!");
+						continue;
+					}
+					else {
+						System.out.println("not internal class! ongoing...");
+					}
 					cpd.computeChangedInfo(methodName, info, filterAffMode);
 					
 					AffectedBlocks.setAffectedBlock(methodName);
@@ -315,7 +299,8 @@ public class PruningRSEListener {
 //					}
 				} catch (Exception e) {
 					System.err.println("Exception during computing precise differences");
-					System.exit(1);
+					continue;
+//					System.exit(1);
 				}
 				if (!dotFile.equalsIgnoreCase("")){
 					PrintToDot dot = new PrintToDot();
@@ -323,19 +308,19 @@ public class PruningRSEListener {
 					System.out.println(info.getEquivalent());
 					System.out.println(method);
 					System.out.println(signature);
-					try {
-						printImpacted(dotFile + "." + (index++) + "." + info.getMethodName() + ".txt",
-								cpd.getCFG(methodName,info),
-								ComputeIntraProceduralDiff.
-								getSemanticAnalysis(methodName).
-								getGlobalTrackCondition(),
-								ComputeIntraProceduralDiff.
-								getSemanticAnalysis(methodName).
-								getGlobalTrackWrite());
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+//					try {
+//						printImpacted(dotFile + "." + (index++) + "." + info.getMethodName() + ".txt",
+//								cpd.getCFG(methodName,info),
+//								ComputeIntraProceduralDiff.
+//								getSemanticAnalysis(methodName).
+//								getGlobalTrackCondition(),
+//								ComputeIntraProceduralDiff.
+//								getSemanticAnalysis(methodName).
+//								getGlobalTrackWrite());
+//					} catch (IOException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
 					dot.printCFG(dotFile + "." + (index++) + "." + info.getMethodName() + ".dot",
 								cpd.getCFG(methodName,info),
 								ComputeIntraProceduralDiff.

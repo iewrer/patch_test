@@ -27,6 +27,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 
     static HashMap<String, AnalyzeIntraProceduralDiff> analysis
     					= new HashMap<String, AnalyzeIntraProceduralDiff>();
+    public String classname;
 
 
     /**
@@ -46,6 +47,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	   	bsHandlerOld.readSourceFile(classNameOld);
 	   	cfgbOld = new CFGBuilder();
 	   	cfgbOld.parseClass(bsHandlerOld.classFile);
+	   	
+	   	this.classname = cfgbOld.className;
 
     }
 

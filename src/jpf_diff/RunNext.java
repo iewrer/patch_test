@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import gov.nasa.jpf.Config;
 //import gov.nasa.jpf.JPF;
-import gov.nasa.jpf.regression.listener.InterProcPruningListener;
+//import gov.nasa.jpf.regression.listener.InterProcPruningListener;
 import gov.nasa.jpf.regression.listener.PruningRSEListener;
 
 public class RunNext {

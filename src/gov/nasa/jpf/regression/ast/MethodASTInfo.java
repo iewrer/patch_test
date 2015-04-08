@@ -82,7 +82,9 @@ public class MethodASTInfo {
 	public Set<Integer> getAddedLines() {
 		return addedLines;
 	}
-
+	public void setAddedLines(Set<Integer> addedLines) {
+		this.addedLines = addedLines;
+	}
 	public String getUniqueMethodIndex(){
 		String methodArgs = new String("");
 		for(int argIndex = 0 ; argIndex <
@@ -152,7 +154,9 @@ public class MethodASTInfo {
 	public Set<Integer> getChangedLinesOrig() {
 		return changedLinesOrig;
 	}
-
+	public void setChangedLinesOrig(Set<Integer> changedLinesOrig) {
+		this.changedLinesOrig  = changedLinesOrig;
+	}
 	public int getNumberChangedLinesOrig(){
 		return changedLinesOrig.size();
 	}
@@ -163,6 +167,10 @@ public class MethodASTInfo {
 	
 	public Set<Integer> getChangedLinesMod() {
 		return changedLinesMod;
+	}
+
+	public void setChangedLinesMod(Set<Integer> changedLinesMod) {
+		this.changedLinesMod  = changedLinesMod;
 	}
 
 	public void addChangedMod(int line){
@@ -179,7 +187,9 @@ public class MethodASTInfo {
 	public Set<Integer> getRemovedLines(){
 		return removedLines;
 	}
-
+	public void setRemovedLines(Set<Integer> removedLines) {
+		this.removedLines = removedLines;
+	}
 	public Set<Integer> getAssertLinesMod(){
 		return modAssertLines;
 	}

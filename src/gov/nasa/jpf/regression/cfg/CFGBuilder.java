@@ -1,9 +1,14 @@
 package gov.nasa.jpf.regression.cfg;
 import gov.nasa.jpf.regression.analysis.DistanceMatrix;
+import gov.nasa.jpf.regression.ast.BlockASTInfo;
 import gov.nasa.jpf.regression.ast.MethodASTInfo;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.util.*;
+
+import jpf_diff.Dependency;
+import lazyinit.paramAndPoly.intNode;
 
 import org.apache.bcel.Repository;
 import org.apache.bcel.generic.*;
@@ -374,6 +379,8 @@ public class CFGBuilder {
         			}
         		}
         		n.addPosition(pos[indx]);
+        		cfg.posToID.put(pos[indx], n.getID());
+        		cfg.lineToID.put(lineNum, n.getID());
         		cfg.startOffsetLookup.put(pos[indx], n.getStartOffset());
         		indx++;
         		if (indx<pos.length)
@@ -907,4 +914,39 @@ public class CFGBuilder {
     		return retVal;
     	}
     }
+
+
+
+
+	public void addOldDepend(Map<BigInteger, Dependency> oldDepend, CFG newCfg, MethodASTInfo methodASTInfo, MethodGen mg) {
+		// TODO Auto-generated method stub
+		Map<BigInteger, BlockASTInfo> modified = methodASTInfo.getModifiedBlocks();
+		LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
+		Iterator<BigInteger> iterator = oldDepend.keySet().iterator();
+		while (iterator.hasNext()) {
+			BigInteger bi = (BigInteger) iterator.next();
+			BlockASTInfo mod = modified.get(bi);
+			Dependency oldDependency = oldDepend.get(bi);
+			BlockASTInfo dependBlock = modified.get(oldDependency.dependBlock._2);
+			if (mod == null || dependBlock == null) {
+				continue;
+			}
+    		int startLine = mod.getStartLine();
+    		int endLine = mod.getEndLine();
+    		for(int i = startLine; i <= endLine; i++) {
+    			Integer pos = newCfg.lineToID.get(i);
+    			int dstart = dependBlock.getStartLine();
+    			int dend = dependBlock.getEndLine();
+//    			if (newCfg.oldDepend.containsKey(pos)) {
+//					continue;
+//				}
+    			for (int j = dstart; j <= dend; j++) {
+					Integer dPos = newCfg.lineToID.get(j);
+					Dependency dependency = new Dependency(pos, dPos);
+					newCfg.oldDepend.put(pos, dependency);
+				}
+    			
+    		}
+		}
+	}
 }

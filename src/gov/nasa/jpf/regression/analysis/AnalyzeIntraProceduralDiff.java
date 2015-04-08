@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
+
+import jpf_diff.Control;
+import jpf_diff.Data;
+import jpf_diff.Dependency;
 
 import org.apache.bcel.generic.AASTORE;
 import org.apache.bcel.classfile.LocalVariable;
@@ -54,6 +59,8 @@ public class AnalyzeIntraProceduralDiff {
 	@SuppressWarnings("unused")
 	private static boolean debug = false;
 
+	public Map<Integer, Dependency> depend;
+	
 	AbstractMethodInfo absMethodInfo;
 	CFG cfg;
 	MethodGen mg;
@@ -146,6 +153,8 @@ public class AnalyzeIntraProceduralDiff {
 		opToOtherOp = new HashMap<Integer, ArrayList<Integer>>();
 		opToVarNames = new HashMap<Integer, ArrayList<String>>();
 		opToRetValOfCallSites = new HashMap<Integer, ArrayList<Integer>>();
+		
+		depend = new HashMap<Integer, Dependency>();
 		
 		// TODO: This name seems misleading and inconsistent, consider fixing
 		// perhaps change to something like: varNameToWritePosnMap to make it
@@ -294,7 +303,12 @@ public class AnalyzeIntraProceduralDiff {
 		return false;
 	}
 
-
+	/**
+	 * 应用规则1，如果ACN中有一个节点ni，且存在一个条件节点nj，其中nj控制依赖于ni，那么将nj加入到ACN中
+	 * @param conditionalBr
+	 * @param genTransitiveCondDep
+	 * @return
+	 */
 	public Set<Integer> generateSetOfAffectCondBranches(Set<Integer> conditionalBr,
 			boolean genTransitiveCondDep) {
 		Set<Integer> currTrackedCond = new HashSet<Integer>();
@@ -307,6 +321,11 @@ public class AnalyzeIntraProceduralDiff {
 			 if(conditionalBr.contains(condLoc)) {
 				 trackCond.add(condLoc);
 				 currTrackedCond.add(condLoc);
+				 //如果是初始的modified condLoc
+				 if (!depend.containsKey(condLoc)) {
+					Dependency dependency = new Dependency(condLoc, -1);
+					depend.put(condLoc, dependency);
+				}
 			 } else { // check if it is control dependent on a modified conditional branch
 				// TODO: this is bad bad form.... change it
 				 if(genTransitiveCondDep) {
@@ -331,6 +350,11 @@ public class AnalyzeIntraProceduralDiff {
 						dm.getValue(condPosCounter, modPosCounter) != 0) {
 					trackCond.add(condLoc);
 					currTrackedCond.add(condLoc);
+					//添加对应的控制依赖关系
+					if (!depend.containsKey(condLoc)) {
+						Dependency dependency = new Control(condLoc, modPos);
+						depend.put(condLoc, dependency);
+					}
 					break;
 				}
 			 }
@@ -1118,7 +1142,12 @@ public class AnalyzeIntraProceduralDiff {
 		}
 		writeInsToVarsMap.put(varName, positions);
 	}
-
+	/**
+	 * 通过checkreachability方法部分应用了规则4（比较使用了某变量的Write和Cond之间的可达性）
+	 * 返回的集合中，只保留了到writePostions能reachable的那些cPositions
+	 * @param writeVarsIns
+	 * @return
+	 */
 	public Set<Integer> getCondBranchesWithVars(HashMap<String,
 									ArrayList<Integer>> writeVarsIns) {
 		Set<Integer> condPositions = new HashSet<Integer>();
@@ -1132,6 +1161,7 @@ public class AnalyzeIntraProceduralDiff {
 				Set<Integer> cPositions = new HashSet<Integer>();
 				cPositions.addAll(varNameToCondBranchPosMap.get(writeVar));
 				//updates cPositions
+				//更新后，只留下到writePostions能reachable的那些cPositions
 				checkReachability(writePositions, cPositions, true);
 				condPositions.addAll(cPositions);
 			}
@@ -1243,11 +1273,25 @@ public class AnalyzeIntraProceduralDiff {
 					if(updateCond) {
 						newConditionPos.add(cPos);
 					}
+					//这是set，不怕重复
 					this.globalTrackWrite.add(wPos);
+					//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
+					//此时wPos被添加到track中
+					if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
+						Dependency dependency = new Data(wPos, cPos);
+						depend.put(wPos, dependency);
+					}
+					//如果是wPos在cPos中被使用并可达,且cPos不在ACN中、wPos在AWN中
+					//cPos在之后会被添加到track中
+					if (!depend.containsKey(cPos) && depend.containsKey(wPos)) {
+						Dependency dependency = new Data(cPos, wPos);
+						depend.put(cPos, dependency);
+					}
 				}
 			}
 
 		}
+		//若更新，则只保留到writePos能够reachable的那些conditionPos
 		if(updateCond) {
 		condPos.retainAll(newConditionPos);
 		}
@@ -1580,13 +1624,24 @@ public class AnalyzeIntraProceduralDiff {
 				for(int condIndex = 0; condIndex < condPos.size(); condIndex++) {
 					int wPosOffset = cfg.getStartOffset(pos);
 					int cPosOffset = cfg.getStartOffset(condPos.get(condIndex));
+					//如果用到该var的cond到该modifiedIns可达，添加到trackCond中
 					if(cfg.getDistanceMatrix().getValue
 							(cfg.getIndexOfPosition(wPosOffset),
 							cfg.getIndexOfPosition(cPosOffset)) < Integer.MAX_VALUE) {
 						trackCond.add(condPos.get(condIndex));
+						//追踪依赖关系
+						if (!depend.containsKey(condPos.get(condIndex))) {
+							Dependency dependency = new Data(condPos.get(condIndex), pos);
+							depend.put(condPos.get(condIndex), dependency);							
+						}
 					}
 
 				}
+			}
+			//添加初始追踪依赖关系，即Modified语句不依赖于任何语句
+			if (!depend.containsKey(pos)) {
+				Dependency dependency = new Dependency(pos, -1);
+				depend.put(pos, dependency);
 			}
 			reachableWriteLocs.add(pos);
 		}

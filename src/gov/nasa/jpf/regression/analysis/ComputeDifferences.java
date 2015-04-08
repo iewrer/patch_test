@@ -36,6 +36,7 @@ public class ComputeDifferences {
 
          //	check the conditional branches that are affected by modified write contained
 		 // in the set of modifiedWritesAndIfs
+		//	即应用了规则3
 
 		 Set<Integer> writePositions = semanticDiff.checkModifiedWriteStatement
 		 				(modifiedWritesAndIfs, new HashSet<Integer>());
@@ -43,11 +44,13 @@ public class ComputeDifferences {
 
 		 HashMap<String, ArrayList<Integer>> writeVarsMod =
 			 					new HashMap<String, ArrayList<Integer>>();
+		 //生成用到这些变量的对应写语句map，即writeVarsMod
 		 semanticDiff.genWriteInsUsingModifiedWriteVals(writePositions,
 		 												  writeVarsMod);
 
-
+		 //获取到使用了modified write中变量的写语句可达的cond语句位置
 		 Set<Integer> additionalPos = semanticDiff.getCondBranchesWithVars(writeVarsMod);
+		 //再把用了modified write中变量的写语句语句位置也添加进来
 		 additionalPos.addAll(extractWriteLocations(writeVarsMod));
 
 
@@ -59,6 +62,7 @@ public class ComputeDifferences {
 		 Set<Integer> allVals = new HashSet<Integer>();
 		 allVals.addAll(modifiedWritesAndIfs);
 		 allVals.addAll(additionalPos);
+		 //包括了write语句中用到的其他的变量相关的写位置
 		 allVals.addAll(writePositions);
 
 		 semanticDiff.globalTrackWrite.addAll(writePositions);

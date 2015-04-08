@@ -8,8 +8,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import jpf_diff.Dependency;
+
 import org.apache.bcel.classfile.LineNumberTable;
 import org.apache.bcel.generic.MethodGen;
+
 import edu.byu.cs.trace.AbstractMethodInfo;
 import gov.nasa.jpf.regression.ast.BlockASTInfo;
 import gov.nasa.jpf.regression.ast.MethodASTInfo;
@@ -17,6 +20,7 @@ import gov.nasa.jpf.regression.cfg.ByteSourceHandler;
 import gov.nasa.jpf.regression.cfg.CFG;
 import gov.nasa.jpf.regression.cfg.CFGBuilder;
 import gov.nasa.jpf.regression.analysis.SCC.Loop;
+import gov.nasa.jpf.util.Pair;
 
 public class ComputeIntraProceduralDiff extends ComputeDifferences {
 
@@ -207,21 +211,23 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	    	return false;
     }
 
-    public void computeChangedInfo(String methodName, MethodASTInfo methodASTInfo, boolean filterAffMode) {
+    public int computeChangedInfo(String methodName, MethodASTInfo methodASTInfo, boolean filterAffMode) {
     	CFG newCfg;
 		CFG oldCfg;
+		Map<BigInteger, Dependency> oldDepend = new HashMap<BigInteger, Dependency>();
 		try {
-	    	if(analysis.containsKey(methodName)) return;
+	    	if(analysis.containsKey(methodName)) return 0;
 			oldCfg = cfgbOld.getCFG(methodName,"original", methodASTInfo);
 
 			if(oldCfg.getRemovedInstructions().size() > 0) {
 				AnalyzeIntraProceduralDiff diff =
 					checkOldInformation(methodName, oldCfg, cfgbOld.getMethodGen(methodName));
 
-				mapRemovedNode(methodASTInfo, cfgbOld.getMethodGen(methodName), diff);
+				oldDepend = mapRemovedNode(methodASTInfo, cfgbOld.getMethodGen(methodName), diff);
 			}
 
 			newCfg = cfgbNew.getCFG(methodName, "modified", methodASTInfo);
+			cfgbNew.addOldDepend(oldDepend, newCfg, methodASTInfo, cfgbOld.getMethodGen(methodName));
 			//System.out.println(newCfg.modifiedWritesAndIfs.toString());
 			preciseAnalysis(methodName, newCfg, cfgbNew.getMethodGen(methodName), filterAffMode);
 
@@ -229,8 +235,10 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 		} catch (Exception e) {
 			System.err.println("exception raised in precise analysis");
 			e.printStackTrace();
-			System.exit(1);
+//			System.exit(1);
+			return -1;
 		}
+		return 0;
     }
 
     protected void addFinalControlDependentNodes(AnalyzeIntraProceduralDiff semanticDiff) {
@@ -243,13 +251,15 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     }
     //如果有original block中的内容是受到影响的
     //将其对应的modified block中的内容添加到methodASTInfo的changedModifiedLines里面
-    protected void mapRemovedNode(MethodASTInfo methodASTInfo, MethodGen mg,
+    protected Map<BigInteger, Dependency> mapRemovedNode(MethodASTInfo methodASTInfo, MethodGen mg,
     		AnalyzeIntraProceduralDiff oldSemantic) {
     	Set<BigInteger> matched =  new HashSet<BigInteger>();
     	Map<BigInteger, BlockASTInfo> orig = methodASTInfo.getOriginalBlocks();
     	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
     	Set<Integer> global = oldSemantic.globalTrackCond;
     	global.addAll(oldSemantic.globalTrackWrite);
+    	
+    	Map<Integer, BigInteger> origPosToModBlock = new HashMap<>();
     	
     	//先获得original block，对每一个block找到他的match block，如果包括globalTrackCond、globalTrackWrite，则记录之
     	Iterator<BigInteger> itrOrg = orig.keySet().iterator();
@@ -263,6 +273,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     			if(bo.getStartLine() >= lineNum &&
     					bo.getEndLine() <= lineNum) {
     				matched.add(bo.getMatchedBlock());
+    				if (!origPosToModBlock.containsKey(gPos)) {
+						origPosToModBlock.put(gPos, bo.getMatchedBlock());
+					}
     				break;
     			}
     		}
@@ -280,6 +293,15 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     			methodASTInfo.addChangedMod(lnIndex);
     		}
     	}
+		Iterator<Integer> iterator = oldSemantic.depend.keySet().iterator();
+		Map<BigInteger, Dependency> depend = new HashMap<>();
+		while (iterator.hasNext()) {
+			Integer pos = (Integer) iterator.next();
+			Dependency dependency = oldSemantic.depend.get(pos);
+			dependency.dependBlock = new Pair<BigInteger, BigInteger>(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+			depend.put(origPosToModBlock.get(pos), dependency);
+		}
+    	return depend;
     }
 
    protected AnalyzeIntraProceduralDiff checkOldInformation
@@ -297,6 +319,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 
 	   Set<Integer> allVals = new HashSet<Integer>();
 	   allVals.addAll(oldCFG.getRemovedInstructions());
+	   for (Integer integer : allVals) {
+		   semanticDiffOld.depend.put(integer, new Dependency(integer, -1));
+	   }
 	   allVals.addAll(semanticDiffOld.trackCond);
 
 	   semanticDiffOld.generateSetOfAffectCondBranches(allVals, true);
@@ -419,6 +444,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	 										genTransitiveCondDep);
 
 			writeVarsMod.clear();
+			//将Modified的write语句用到的变量名映射到对应的Instructions列表上，该map即为writeVarsMod
 			semanticDiff.genWriteInsUsingModifiedWriteVals
 										(extractWriteLocations(writeVars),writeVarsMod);
 			writeVars.putAll(writeVarsMod);
@@ -426,7 +452,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 		    //2. check whether there exists a path in the CFG from the location where the variable
 		    //being written to conditional branch position where the variable is used
 
+			//相当于通过check reachable应用了规则3，且部分应用了规则4?
 			Set<Integer> newCondPositions = semanticDiff.getCondBranchesWithVars(writeVars);
+			//将这些Modified的write语句用到的变量的具体位置做成一个Set，并加入进来
 			newCondPositions.addAll(extractWriteLocations(writeVarsMod));
 
 
@@ -435,6 +463,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 
 			//3. Get all the conditional branches that satisfy 2 and any conditional branch locations
 			// that are control dependent on ones that satisfy 2.
+			//应用了规则1
+			//也相当于应用了规则2，因为之前将Modified的write语句用到的变量位置也添加到了newCondPositions中来
 			semanticDiff.generateSetOfAffectCondBranches(newCondPositions, genTransitiveCondDep);
 
 			//System.out.println("generateSetOfAffectCondBranches only modifies trackCond");
@@ -442,7 +472,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 			if (verbose)
 				System.out.println("newCondPosns1: " + newCondPositions.toString());
 
+			//generateSetOfAffectCondBranches方法中将这些cond的位置记录到了TrackedBranches中
 			newCondPositions.addAll(semanticDiff.getTrackedBranches());
+			//因为上面已经添加过extractWriteLocations(writeVarsMod)了，这里相当于重复添加了一次，需要删除之
 			newCondPositions.removeAll(extractWriteLocations(writeVarsMod));
 			
 			if (verbose)

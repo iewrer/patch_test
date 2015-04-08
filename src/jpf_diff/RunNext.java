@@ -11,36 +11,26 @@ import gov.nasa.jpf.regression.listener.PruningRSEListener;
 
 public class RunNext {
 
+	String file = "Compiler";
+	String old_to_new = "./script/" + file + "/" + file + "_new.jpf";
+	String new_to_patch = "./script/" + file + "/" + file + "_patch.jpf";
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		Config.enableLogging(true);
 		
-//		Config conf1 = new Config(Path.prop[1]);
-		Config conf1 = Config.createConfig();
+		RunNext jpf = new RunNext();
 		
-		conf1.setTarget("Example01");
-		conf1.setProperty("@using", "jpf-regression");
-		conf1.setProperty("classpath","build/tests/patch");
-		conf1.setProperty("sourcepath", "./src/tests/patch");
-		conf1.setProperty("rse.newClass", "./build/tests/patch/precise/Example01.class");
-		conf1.setProperty("rse.oldClass", "./old/bin/precise/Example01.class");
-		conf1.setProperty("rse.dotFile", "./dotFiles/patch/precise/Example01.dot");
-		conf1.setProperty("rse.ASTResults", "./diffFiles/patch/precise/Example01.xml");
+		Config conf = new Config(jpf.old_to_new);
+		Config conf1 = new Config(jpf.new_to_patch);
+
 		
-//		try {
-//			conf1.store(new FileWriter(new File("EX01_v2.jpf")), null);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+//		PruningRSEListener listener_otn = new PruningRSEListener(conf);
+//		listener_otn.ComputeDiff();
 		
-//		JPF jpf1 = new JPF(conf1);
-//		InterProcPruningListener listener = new InterProcPruningListener(conf1, jpf1);
-		PruningRSEListener listener1 = new PruningRSEListener(conf1);
-		listener1.ComputeDiff();
-//		jpf1.addListener(listener1);
-//		jpf1.run();
+		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
+		listener_ntp.ComputeDiff();
 	}
 
 }

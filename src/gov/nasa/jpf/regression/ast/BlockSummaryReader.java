@@ -28,9 +28,12 @@ public class BlockSummaryReader {
 			BlockSummary bSum = (BlockSummary)unmarshaller.unmarshal(new File(fName));
 			return bSum;
 		}catch(Exception e){
-			e.printStackTrace();
-			throw new RuntimeException("## Error Unmarshalling XML file: " +
-					fName + "\n" + e);
+//			e.printStackTrace();
+//			throw new RuntimeException("## Error Unmarshalling XML file: " +
+//					fName + "\n" + e);
+			System.err.println("## (Error Unmarshalling XML file: " +
+				fName + "\n");
+			return null;
 		}
 	}
 

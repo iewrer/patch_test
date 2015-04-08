@@ -2,7 +2,11 @@ package gov.nasa.jpf.regression.cfg;
 
 
 import gov.nasa.jpf.regression.analysis.DistanceMatrix;
+
+import java.math.BigInteger;
 import java.util.*;
+
+import jpf_diff.Dependency;
 
 
 //import static base.SConstants.*;
@@ -40,6 +44,8 @@ public class CFG{
     /** Conditional compilation debug flag. */
     @SuppressWarnings("unused")
 	private static final boolean DEBUG = false;
+    
+    
 
 
     /**
@@ -50,8 +56,13 @@ public class CFG{
     Set<Integer> callIns = new HashSet<Integer>();
     Set<Integer> retIns = new HashSet<Integer>();
 
+    public Map<Integer, Integer> posToID = new HashMap<Integer, Integer>();
+    public Map<Integer, Integer> lineToID = new HashMap<Integer, Integer>();
+    public Map<Integer, Dependency> oldDepend = new HashMap<Integer, Dependency>();
+    
     HashMap<Integer, Integer> posToIndex = new HashMap<Integer, Integer>();
     HashMap<Integer, List<Integer>> edgesCFG = new HashMap<Integer, List<Integer>>();
+    
     DistanceMatrix dm;
 
     Set<Integer> modifiedWritesAndIfs = new HashSet<Integer>();

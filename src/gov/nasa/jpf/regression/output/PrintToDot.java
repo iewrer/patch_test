@@ -30,6 +30,7 @@ import gov.nasa.jpf.regression.cfg.Edge;
 import gov.nasa.jpf.regression.cfg.Node;
 import gov.nasa.jpf.regression.data.GlobalOperation;
 import gov.nasa.jpf.regression.listener.VisualizationData;
+import gov.nasa.jpf.util.Pair;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -42,6 +43,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
+import jpf_diff.Control;
+import jpf_diff.Data;
+import jpf_diff.Dependency;
 
 public class PrintToDot {
 
@@ -108,7 +113,7 @@ public class PrintToDot {
 	//Go through each of the nodes, if a node matches trackCondLoc then mark
 	// it as a conditional branch with color red and if a node matches
 	// a write location then mark it with color blue
-	public void printCFG(String fName, CFG cfg, Set<Integer> trackCondLoc,
+	public void printCFG(String fName, CFG cfg, AnalyzeIntraProceduralDiff analyzeIntraProceduralDiff, Set<Integer> trackCondLoc,
 			Set<Integer> trackWriteLoc) {
 		//save the impact sets for the visualization
 		String mName = cfg.getMethodName();
@@ -159,9 +164,18 @@ public class PrintToDot {
 				}
 			}
 		}
+		Map<Integer, Dependency> depend = new HashMap<>();
+		Iterator<Integer> iterator = analyzeIntraProceduralDiff.depend.keySet().iterator();
+		while (iterator.hasNext()) {
+			Integer pos = (Integer) iterator.next();
+			Dependency dependency = analyzeIntraProceduralDiff.depend.get(pos);
+			dependency.dependID = new Pair<Integer, Integer>(cfg.posToID.get(pos), cfg.posToID.get(dependency.depend._2));
+			depend.put(cfg.posToID.get(pos), dependency); 
+		}
 		edges = new Edge[cfg.getEdgeCount()];
 		edges = cfg.getEdges(edges);
-		writeToFile();
+		depend.putAll(cfg.oldDepend);
+		writeToFile(depend);
 	}
 
 	public void printCFG(String dotDir, String target, Map<String,MethodASTInfo> methodASTInfo,
@@ -718,18 +732,18 @@ public class PrintToDot {
 		}
 	}
 
-	public void printOutput(HashMap<String, Integer> dNodes,
-			HashMap<Integer, GlobalOperation> operations,
-			HashMap<Integer, ArrayList<Integer>> dEdges,
-			String fileName) {
-		this.dNodes = dNodes;
-		this.operations = operations;
-		this.dEdges = dEdges;
-		this.fileName = fileName;
-		writeToFile();
-	}
+//	public void printOutput(HashMap<String, Integer> dNodes,
+//			HashMap<Integer, GlobalOperation> operations,
+//			HashMap<Integer, ArrayList<Integer>> dEdges,
+//			String fileName) {
+//		this.dNodes = dNodes;
+//		this.operations = operations;
+//		this.dEdges = dEdges;
+//		this.fileName = fileName;
+//		writeToFile();
+//	}
 
-	public void writeToFile() {
+	public void writeToFile(Map<Integer, Dependency> depend) {
 		Writer output = null;
 		File file = new File(fileName);
 		try {
@@ -747,6 +761,7 @@ public class PrintToDot {
 			nodeIDMap = new HashMap<Integer,Integer>();
 			printCFGNodes(output);
 			printCFGEdges(output);
+			printCFGDepend(output, depend);
 			//printEdges(output);
 			output.write("}");
 		} catch (IOException e) {
@@ -761,6 +776,34 @@ public class PrintToDot {
 			e.printStackTrace();
 		}
 
+	}
+
+	private void printCFGDepend(Writer output, Map<Integer, Dependency> depend) throws IOException {
+		// TODO Auto-generated method stub
+		if(cfgNodes == null) return;
+		Iterator<Integer> nodeItr = cfgNodes.keySet().iterator();
+		while(nodeItr.hasNext()) {
+			Integer id = nodeItr.next();
+//			Integer uniqueID = new Integer(this.nodeNum);
+			Integer uniqueID = id;
+			nodeIDMap.put(id, uniqueID);
+			
+			String lineNumbers = cfgNodes.get(id);
+			if (depend.containsKey(id)) {
+				Dependency dependency = depend.get(id);
+				Integer des = dependency.dependID._2;
+				if (dependency instanceof Data) {
+					output.write(nodeIDMap.get(id) + "->" +
+							nodeIDMap.get(des) +
+						"[ color=\"red\" label=\"" + "Data Depends on" +	"\" style = dotted ];\n");
+				}
+				if (dependency instanceof Control) {
+					output.write(nodeIDMap.get(id) + "->" +
+							nodeIDMap.get(des) +
+						"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
+				}
+			}
+		}		
 	}
 
 	public void printNodes(Writer output) throws IOException {

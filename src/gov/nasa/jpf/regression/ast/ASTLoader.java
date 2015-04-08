@@ -270,6 +270,9 @@ public class ASTLoader {
 		//extract information from XML files
 		BlockSummaryReader bReader = new BlockSummaryReader();
 		BlockSummary bSum = bReader.extractBlock(ASTFile);
+		if (bSum == null) {
+			return null;
+		}
 		modFileName = bSum.getModifiedFile();
 		origFileName = bSum.getOriginalFile();
 		List<ClassSummary> classes = bSum.getClassSummary();

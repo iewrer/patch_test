@@ -25,6 +25,7 @@ package gov.nasa.jpf.regression.listener;
 //import edu.byu.cs.search.heuristic.location.ProgramLocation;
 //import edu.byu.cs.trace.sets.KeyLocation;
 import gov.nasa.jpf.Config;
+import gov.nasa.jpf.jvm.bytecode.IfInstruction;
 //import gov.nasa.jpf.JPF;
 //import gov.nasa.jpf.PropertyListenerAdapter;
 //import gov.nasa.jpf.vm.ChoiceGenerator;
@@ -71,6 +72,15 @@ import gov.nasa.jpf.regression.tasks.ClientTaskConfig;
 
 
 
+import gov.nasa.jpf.search.Search;
+import gov.nasa.jpf.symbc.numeric.PCChoiceGenerator;
+import gov.nasa.jpf.vm.ChoiceGenerator;
+import gov.nasa.jpf.vm.Instruction;
+import gov.nasa.jpf.vm.SystemState;
+import gov.nasa.jpf.vm.ThreadInfo;
+import gov.nasa.jpf.vm.VM;
+import gov.nasa.jpf.vm.choice.IntIntervalGenerator;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -87,6 +97,8 @@ import java.util.Set;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
+import jpf_diff.Dependency;
+
 import org.apache.bcel.classfile.Utility;
 import org.eclipse.jdt.core.*;;
 
@@ -95,8 +107,8 @@ import org.eclipse.jdt.core.*;;
 
 public class PruningRSEListener {
 	private static final boolean debug = false;
-//	private static HashMap<String, Integer> shortestPathInfo =
-//			new HashMap<String, Integer>();
+	private static HashMap<String, Integer> shortestPathInfo =
+			new HashMap<String, Integer>();
 	
 	//FIXME: tracking the branches of executed affected conditional
 	// branches. 
@@ -116,11 +128,11 @@ public class PruningRSEListener {
 	protected int unAffectedNodes = 0;
 	protected int totalNodes = 0;
 
-//	private boolean printCounts = false;
+	private boolean printCounts = false;
 	private boolean checkIf = false;
 	private boolean filterAffMode = true; //the filtering is turned on by default
 	
-//	private int pruningCount = 0; // keep track of pruning 
+	private int pruningCount = 0; // keep track of pruning 
 	
 	
 	
@@ -136,14 +148,16 @@ public class PruningRSEListener {
 //	String shortMethodName = "";
 	String astInfo="";
 	//key=className+methodName value=MethodASTInfo
-	Map<String,MethodASTInfo> methodASTInfo =
+	public Map<String,MethodASTInfo> methodASTInfo =
 		new HashMap<String,MethodASTInfo>();
 	String dotFile = "";
 	String statFile = "";
-//	boolean shortestPathCFG = false;
-//	boolean shortestPathBytecode = false;
-//	boolean randomChoice = false;
-//	boolean post_dominance_check = false;
+	public String oldSrc = "";
+	public String newSrc = "";
+	boolean shortestPathCFG = false;
+	boolean shortestPathBytecode = false;
+	boolean randomChoice = false;
+	boolean post_dominance_check = false;
 
 	Random random;
 	CFG cfg;
@@ -154,6 +168,10 @@ public class PruningRSEListener {
 		className = "";
 		methodName="";
 		this.conf = conf;
+		
+		oldSrc = conf.getString("rse.oldSrc");
+		newSrc = conf.getString("rse.newSrc");
+		
 //		jpf.addPublisherExtension(ConsolePublisher.class, this);
 		if (conf.containsKey("rse.ASTResults")){ //path to XML file
 			astInfo = conf.getString("rse.ASTResults");
@@ -161,37 +179,36 @@ public class PruningRSEListener {
 			ASTLoader loader = new ASTLoader();
 			methodASTInfo = loader.loadAST(astInfo);
 		}
-
 		if (conf.containsKey("rse.dotFile"))
 			dotFile = conf.getString("rse.dotFile");
 //		if (conf.containsKey("rse.printCounts"))
 //			printCounts = conf.getBoolean("rse.printCounts");
 		if (conf.containsKey("rse.statFile"))
 			statFile = conf.getString("rse.statFile");
-//		if(conf.containsKey("rse.shortest_path")) {
-//			String val = conf.getString("rse.shortest_path");
-//			if(val.equals("true")) {
-//				shortestPathCFG = true;
-//			}
-//		}
-//		if(conf.containsKey("rse.shortest_path_bytecode")) {
-//			String val = conf.getString("rse.shortest_path_bytecode");
-//			if(val.equals("true")) {
-//				shortestPathBytecode = true;
-//			}
-//		}		
-//		if(conf.containsKey("rse.random_choice")) {
-//			String val = conf.getString("rse.random_choice");
-//			if(val.equals("true")) {
-//				randomChoice = true;
-//			}
-//		}
-//		if(conf.containsKey("rse.post_dominance_check")) {
-//			String val = conf.getString("rse.post_dominance_check");
-//			if(val.equals("true")) {
-//				post_dominance_check = true;
-//			}
-//		}
+		if(conf.containsKey("rse.shortest_path")) {
+			String val = conf.getString("rse.shortest_path");
+			if(val.equals("true")) {
+				shortestPathCFG = true;
+			}
+		}
+		if(conf.containsKey("rse.shortest_path_bytecode")) {
+			String val = conf.getString("rse.shortest_path_bytecode");
+			if(val.equals("true")) {
+				shortestPathBytecode = true;
+			}
+		}		
+		if(conf.containsKey("rse.random_choice")) {
+			String val = conf.getString("rse.random_choice");
+			if(val.equals("true")) {
+				randomChoice = true;
+			}
+		}
+		if(conf.containsKey("rse.post_dominance_check")) {
+			String val = conf.getString("rse.post_dominance_check");
+			if(val.equals("true")) {
+				post_dominance_check = true;
+			}
+		}
 		if(conf.containsKey("rse.filterAffMode")) {
 			String val = conf.getString("rse.filterAffMode");
 			if(val.equals("true")) {
@@ -247,11 +264,17 @@ public class PruningRSEListener {
 	}
 
 	
-	public void ComputeDiff() {
+	public int ComputeDiff() {
 		String oldClass = conf.getString("rse.oldClass");
 		String newClass = conf.getString("rse.newClass");
+		if (methodASTInfo == null) {
+			return -1;
+		}
 		java.util.Iterator<Entry<String, MethodASTInfo>> entries = methodASTInfo.entrySet().iterator();
 		int index = 0;
+		int not_matched = 0;
+		int precise_error = 0;
+		int compute_diff_error = 0;
 		while (entries.hasNext()) {
 			Map.Entry entry = (Map.Entry) entries.next();
 			
@@ -264,7 +287,7 @@ public class PruningRSEListener {
 			System.out.println(signature);
 			methodName = method + signature;
 			
-			if (info.getMatched()) {
+			if (info.getMatched() && !signature.contains("java/util")) {
 //				System.out.println("computing:"+ methodName);
 				ComputeIntraProceduralDiff cpd = null;
 				try {
@@ -272,19 +295,23 @@ public class PruningRSEListener {
 					 * 变更newclass和oldclass的位置，以修正获得的受影响的代码版本
 					 */
 					cpd = new ComputeIntraProceduralDiff(newClass, oldClass);
-//					cpd = new ComputeIntraProceduralDiff(oldClass, newClass);
 					
-					System.out.println(cpd.classname);
-					System.out.println(classname);
+//					System.out.println(cpd.classname);
+//					System.out.println(classname);
 					
 					if (cpd.classname.equals(className)) {
-						System.out.println("internal class found!");
+						System.out.println("	internal class found!");
 						continue;
 					}
 					else {
-						System.out.println("not internal class! ongoing...");
+						System.out.println("	not internal class! ongoing...");
 					}
-					cpd.computeChangedInfo(methodName, info, filterAffMode);
+					int res = cpd.computeChangedInfo(methodName, info, filterAffMode);
+					
+					if (res < 0) {
+						precise_error++;
+						continue;
+					}
 					
 					AffectedBlocks.setAffectedBlock(methodName);
 					
@@ -299,6 +326,8 @@ public class PruningRSEListener {
 //					}
 				} catch (Exception e) {
 					System.err.println("Exception during computing precise differences");
+					compute_diff_error++;
+					e.printStackTrace();
 					continue;
 //					System.exit(1);
 				}
@@ -321,8 +350,10 @@ public class PruningRSEListener {
 //						// TODO Auto-generated catch block
 //						e.printStackTrace();
 //					}
-					dot.printCFG(dotFile + "." + (index++) + "." + info.getMethodName() + ".dot",
+					dot.printCFG(dotFile + "_" + (index++) + "_" + info.getMethodName() + ".dot",
 								cpd.getCFG(methodName,info),
+								ComputeIntraProceduralDiff.
+								getSemanticAnalysis(methodName),
 								ComputeIntraProceduralDiff.
 								getSemanticAnalysis(methodName).
 								getGlobalTrackCondition(),
@@ -340,7 +371,11 @@ public class PruningRSEListener {
 					//end of visualization code
 				}				
 			}
+			else {
+				not_matched++;
+			}
 		}
+		return compute_diff_error;
 	}
 
 	private void printImpacted(String file, CFG cfg,
@@ -547,6 +582,8 @@ public class PruningRSEListener {
 	*/
 	
 	/*
+	 * 
+	 */
 	protected void addingAdditionalInfo(Instruction lastInsn) {
 		String methodName = lastInsn.getMethodInfo().getFullName();
 		if (!AffectedBlocks.impactedMethod(methodName)) return;
@@ -559,8 +596,10 @@ public class PruningRSEListener {
 			PruningRSEListener.trueBranches.add(ifInsn.getPosition());
 		}
 	}
-	*/
+	
 /*
+ * 
+ */
 	protected void checkShortestPathCFG(Instruction insn) {
 		if(insn == null || !(insn instanceof IfInstruction))
 				return;
@@ -606,10 +645,12 @@ public class PruningRSEListener {
 		}
 
 	}
-*/
+
 
 	/*
-	@Override
+	 * 
+	 */
+//	@Override
 	public void searchFinished(Search search) {
 		if (debug)
 			System.out.println("searchFinished");
@@ -617,7 +658,7 @@ public class PruningRSEListener {
 //		System.out.println("---->Total number of infeasible paths: " + PathCondition.infeasibleCount);
 	}
 
-	@Override
+//	@Override
 	public void stateAdvanced(Search search) {
 //		System.out.println(">>> advanced");
 		
@@ -633,7 +674,7 @@ public class PruningRSEListener {
 	}
 
 
-	@Override
+//	@Override
 	public void choiceGeneratorRegistered (VM vm, ChoiceGenerator<?> nextCG, 
 			ThreadInfo currentThread, Instruction executedInstruction){
 		 ChoiceGenerator<?> cg = vm.getNextChoiceGenerator();
@@ -664,7 +705,7 @@ public class PruningRSEListener {
 		 }
 	}
 
-	@Override
+//	@Override
 	public void stateBacktracked(Search search) {
 //		System.out.println(">>> backtracked!");
 		
@@ -683,6 +724,6 @@ public class PruningRSEListener {
 	
 		}
 	}
-	*/
+	
 }
 

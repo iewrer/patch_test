@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import jpf_diff.Block;
 import jpf_diff.Dependency;
 
 import org.apache.bcel.classfile.LineNumberTable;
@@ -214,7 +215,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     public int computeChangedInfo(String methodName, MethodASTInfo methodASTInfo, boolean filterAffMode) {
     	CFG newCfg;
 		CFG oldCfg;
-		Map<BigInteger, Dependency> oldDepend = new HashMap<BigInteger, Dependency>();
+		Map<BigInteger, Set<Block>> oldDepend = new HashMap<BigInteger, Set<Block> >();
 		try {
 	    	if(analysis.containsKey(methodName)) return 0;
 			oldCfg = cfgbOld.getCFG(methodName,"original", methodASTInfo);
@@ -251,7 +252,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     }
     //如果有original block中的内容是受到影响的
     //将其对应的modified block中的内容添加到methodASTInfo的changedModifiedLines里面
-    protected Map<BigInteger, Dependency> mapRemovedNode(MethodASTInfo methodASTInfo, MethodGen mg,
+    protected Map<BigInteger, Set<Block>> mapRemovedNode(MethodASTInfo methodASTInfo, MethodGen mg,
     		AnalyzeIntraProceduralDiff oldSemantic) {
     	Set<BigInteger> matched =  new HashSet<BigInteger>();
     	Map<BigInteger, BlockASTInfo> orig = methodASTInfo.getOriginalBlocks();
@@ -294,12 +295,21 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     		}
     	}
 		Iterator<Integer> iterator = oldSemantic.depend.keySet().iterator();
-		Map<BigInteger, Dependency> depend = new HashMap<>();
+		Map<BigInteger, Set<Block> > depend = new HashMap<>();
 		while (iterator.hasNext()) {
 			Integer pos = (Integer) iterator.next();
-			Dependency dependency = oldSemantic.depend.get(pos);
-			dependency.dependBlock = new Pair<BigInteger, BigInteger>(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
-			depend.put(origPosToModBlock.get(pos), dependency);
+			Set<Dependency> dependencies = oldSemantic.depend.get(pos);
+			for (Dependency dependency : dependencies) {
+				Block dependBlock = new Block(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+				if (!depend.containsKey(origPosToModBlock.get(pos))) {
+					Set<Block> newDependencies = new HashSet<>();
+					newDependencies.add(dependBlock);
+					depend.put(origPosToModBlock.get(pos), newDependencies);
+				}
+				else {
+					depend.get(origPosToModBlock.get(pos)).add(dependBlock);
+				}				
+			}
 		}
     	return depend;
     }
@@ -320,7 +330,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	   Set<Integer> allVals = new HashSet<Integer>();
 	   allVals.addAll(oldCFG.getRemovedInstructions());
 	   for (Integer integer : allVals) {
-		   semanticDiffOld.depend.put(integer, new Dependency(integer, -1));
+		   Set<Dependency> dependencies = new HashSet<>();
+		   dependencies.add(new Dependency(integer, -1));
+		   semanticDiffOld.depend.put(integer, dependencies);
 	   }
 	   allVals.addAll(semanticDiffOld.trackCond);
 

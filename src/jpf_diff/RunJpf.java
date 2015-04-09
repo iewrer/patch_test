@@ -201,11 +201,11 @@ public class RunJpf {
 		Config conf1 = new Config(jpf.new_to_patch);
 
 		
-		PruningRSEListener listener_otn = new PruningRSEListener(conf);
-		listener_otn.ComputeDiff();
+//		PruningRSEListener listener_otn = new PruningRSEListener(conf);
+//		listener_otn.ComputeDiff();
 		
-//		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
-//		listener_ntp.ComputeDiff();
+		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
+		listener_ntp.ComputeDiff();
 
 		
 //		jpf.deleteSameChange(listener_otn, listener_ntp, "changedMod");

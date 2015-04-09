@@ -58,7 +58,7 @@ public class CFG{
 
     public Map<Integer, Integer> posToID = new HashMap<Integer, Integer>();
     public Map<Integer, Integer> lineToID = new HashMap<Integer, Integer>();
-    public Map<Integer, Dependency> oldDepend = new HashMap<Integer, Dependency>();
+    public Map<Integer, Set<Dependency> > oldDepend = new HashMap<Integer, Set<Dependency> >();
     
     HashMap<Integer, Integer> posToIndex = new HashMap<Integer, Integer>();
     HashMap<Integer, List<Integer>> edgesCFG = new HashMap<Integer, List<Integer>>();

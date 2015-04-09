@@ -7,6 +7,7 @@ import java.io.*;
 import java.math.BigInteger;
 import java.util.*;
 
+import jpf_diff.Block;
 import jpf_diff.Dependency;
 import lazyinit.paramAndPoly.intNode;
 
@@ -918,7 +919,7 @@ public class CFGBuilder {
 
 
 
-	public void addOldDepend(Map<BigInteger, Dependency> oldDepend, CFG newCfg, MethodASTInfo methodASTInfo, MethodGen mg) {
+	public void addOldDepend(Map<BigInteger, Set<Block>> oldDepend, CFG newCfg, MethodASTInfo methodASTInfo, MethodGen mg) {
 		// TODO Auto-generated method stub
 		Map<BigInteger, BlockASTInfo> modified = methodASTInfo.getModifiedBlocks();
 		LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
@@ -926,27 +927,32 @@ public class CFGBuilder {
 		while (iterator.hasNext()) {
 			BigInteger bi = (BigInteger) iterator.next();
 			BlockASTInfo mod = modified.get(bi);
-			Dependency oldDependency = oldDepend.get(bi);
-			BlockASTInfo dependBlock = modified.get(oldDependency.dependBlock._2);
-			if (mod == null || dependBlock == null) {
-				continue;
-			}
-    		int startLine = mod.getStartLine();
-    		int endLine = mod.getEndLine();
-    		for(int i = startLine; i <= endLine; i++) {
-    			Integer pos = newCfg.lineToID.get(i);
-    			int dstart = dependBlock.getStartLine();
-    			int dend = dependBlock.getEndLine();
-//    			if (newCfg.oldDepend.containsKey(pos)) {
-//					continue;
-//				}
-    			for (int j = dstart; j <= dend; j++) {
-					Integer dPos = newCfg.lineToID.get(j);
-					Dependency dependency = new Dependency(pos, dPos);
-					newCfg.oldDepend.put(pos, dependency);
+			for(Block oldDependency : oldDepend.get(bi)) {
+				BlockASTInfo dependBlock = modified.get(oldDependency.dependBlock._2);
+				if (mod == null || dependBlock == null) {
+					continue;
 				}
-    			
-    		}
+	    		int startLine = mod.getStartLine();
+	    		int endLine = mod.getEndLine();
+	    		for(int i = startLine; i <= endLine; i++) {
+	    			Integer pos = newCfg.lineToID.get(i);
+	    			int dstart = dependBlock.getStartLine();
+	    			int dend = dependBlock.getEndLine();
+	    			for (int j = dstart; j <= dend; j++) {
+						Integer dPos = newCfg.lineToID.get(j);
+						Dependency dependency = new Dependency(pos, dPos);
+						if (!newCfg.oldDepend.containsKey(pos)) {
+							Set<Dependency> newDependencies = new HashSet<>();
+							newDependencies.add(dependency);
+							newCfg.oldDepend.put(pos, newDependencies);
+						}
+						else {
+							newCfg.oldDepend.get(pos).add(dependency);
+						}
+					}
+	    			
+	    		}				
+			}
 		}
 	}
 }

@@ -59,7 +59,7 @@ public class AnalyzeIntraProceduralDiff {
 	@SuppressWarnings("unused")
 	private static boolean debug = false;
 
-	public Map<Integer, Dependency> depend;
+	public Map<Integer, Set<Dependency> > depend;
 	
 	AbstractMethodInfo absMethodInfo;
 	CFG cfg;
@@ -154,7 +154,7 @@ public class AnalyzeIntraProceduralDiff {
 		opToVarNames = new HashMap<Integer, ArrayList<String>>();
 		opToRetValOfCallSites = new HashMap<Integer, ArrayList<Integer>>();
 		
-		depend = new HashMap<Integer, Dependency>();
+		depend = new HashMap<Integer, Set<Dependency>>();
 		
 		// TODO: This name seems misleading and inconsistent, consider fixing
 		// perhaps change to something like: varNameToWritePosnMap to make it
@@ -324,7 +324,9 @@ public class AnalyzeIntraProceduralDiff {
 				 //如果是初始的modified condLoc
 				 if (!depend.containsKey(condLoc)) {
 					Dependency dependency = new Dependency(condLoc, -1);
-					depend.put(condLoc, dependency);
+					Set<Dependency> dependencies = new HashSet<>();
+					dependencies.add(dependency);
+					depend.put(condLoc, dependencies);
 				}
 			 } else { // check if it is control dependent on a modified conditional branch
 				// TODO: this is bad bad form.... change it
@@ -353,7 +355,13 @@ public class AnalyzeIntraProceduralDiff {
 					//添加对应的控制依赖关系
 					if (!depend.containsKey(condLoc)) {
 						Dependency dependency = new Control(condLoc, modPos);
-						depend.put(condLoc, dependency);
+						Set<Dependency> dependencies = new HashSet<>();
+						dependencies.add(dependency);
+						depend.put(condLoc, dependencies);
+					}
+					else {
+						Dependency dependency = new Control(condLoc, modPos);
+						depend.get(condLoc).add(dependency);
 					}
 					break;
 				}
@@ -1279,13 +1287,22 @@ public class AnalyzeIntraProceduralDiff {
 					//此时wPos被添加到track中
 					if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
 						Dependency dependency = new Data(wPos, cPos);
-						depend.put(wPos, dependency);
+						Set<Dependency> dependencies = new HashSet<>();
+						dependencies.add(dependency);
+						depend.put(wPos, dependencies);
 					}
 					//如果是wPos在cPos中被使用并可达,且cPos不在ACN中、wPos在AWN中
 					//cPos在之后会被添加到track中
 					if (!depend.containsKey(cPos) && depend.containsKey(wPos)) {
 						Dependency dependency = new Data(cPos, wPos);
-						depend.put(cPos, dependency);
+						Set<Dependency> dependencies = new HashSet<>();
+						dependencies.add(dependency);
+						depend.put(cPos, dependencies);
+					}
+					//如果是wPos在cPos中被使用并可达
+					if (depend.containsKey(cPos) && depend.containsKey(wPos)) {
+						Dependency dependency = new Data(wPos, cPos);
+						depend.get(wPos).add(dependency);						
 					}
 				}
 			}
@@ -1293,7 +1310,7 @@ public class AnalyzeIntraProceduralDiff {
 		}
 		//若更新，则只保留到writePos能够reachable的那些conditionPos
 		if(updateCond) {
-		condPos.retainAll(newConditionPos);
+			condPos.retainAll(newConditionPos);
 		}
 	}
 
@@ -1632,7 +1649,13 @@ public class AnalyzeIntraProceduralDiff {
 						//追踪依赖关系
 						if (!depend.containsKey(condPos.get(condIndex))) {
 							Dependency dependency = new Data(condPos.get(condIndex), pos);
-							depend.put(condPos.get(condIndex), dependency);							
+							Set<Dependency> dependencies = new HashSet<>();
+							dependencies.add(dependency);
+							depend.put(condPos.get(condIndex), dependencies);							
+						}
+						else {
+							Dependency dependency = new Data(condPos.get(condIndex), pos);
+							depend.get(condPos.get(condIndex)).add(dependency);
 						}
 					}
 
@@ -1641,7 +1664,9 @@ public class AnalyzeIntraProceduralDiff {
 			//添加初始追踪依赖关系，即Modified语句不依赖于任何语句
 			if (!depend.containsKey(pos)) {
 				Dependency dependency = new Dependency(pos, -1);
-				depend.put(pos, dependency);
+				Set<Dependency> dependencies = new HashSet<>();
+				dependencies.add(dependency);
+				depend.put(pos, dependencies);
 			}
 			reachableWriteLocs.add(pos);
 		}

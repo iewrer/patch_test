@@ -164,13 +164,26 @@ public class PrintToDot {
 				}
 			}
 		}
-		Map<Integer, Dependency> depend = new HashMap<>();
+		Map<Integer, Set<Dependency> > depend = new HashMap<>();
 		Iterator<Integer> iterator = analyzeIntraProceduralDiff.depend.keySet().iterator();
 		while (iterator.hasNext()) {
 			Integer pos = (Integer) iterator.next();
-			Dependency dependency = analyzeIntraProceduralDiff.depend.get(pos);
-			dependency.dependID = new Pair<Integer, Integer>(cfg.posToID.get(pos), cfg.posToID.get(dependency.depend._2));
-			depend.put(cfg.posToID.get(pos), dependency); 
+			Set<Dependency> dependencies = analyzeIntraProceduralDiff.depend.get(pos);
+			for (Dependency dependency : dependencies) {
+				if (!cfg.posToID.containsKey(pos) || !cfg.posToID.containsKey(dependency.depend._2)) {
+					System.err.println("can not find node ID for pos!");
+					continue;
+				}
+				Dependency newDependency  = new Dependency(cfg.posToID.get(pos), cfg.posToID.get(dependency.depend._2));
+				if (!depend.containsKey(cfg.posToID.get(pos))) {
+					Set<Dependency> newDependencies = new HashSet<>();
+					newDependencies.add(newDependency);
+					depend.put(cfg.posToID.get(pos), newDependencies);
+				}
+				else {
+					depend.get(cfg.posToID.get(pos)).add(newDependency);
+				}
+			}
 		}
 		edges = new Edge[cfg.getEdgeCount()];
 		edges = cfg.getEdges(edges);
@@ -743,7 +756,7 @@ public class PrintToDot {
 //		writeToFile();
 //	}
 
-	public void writeToFile(Map<Integer, Dependency> depend) {
+	public void writeToFile(Map<Integer, Set<Dependency>> depend) {
 		Writer output = null;
 		File file = new File(fileName);
 		try {
@@ -778,7 +791,7 @@ public class PrintToDot {
 
 	}
 
-	private void printCFGDepend(Writer output, Map<Integer, Dependency> depend) throws IOException {
+	private void printCFGDepend(Writer output, Map<Integer, Set<Dependency>> depend) throws IOException {
 		// TODO Auto-generated method stub
 		if(cfgNodes == null) return;
 		Iterator<Integer> nodeItr = cfgNodes.keySet().iterator();
@@ -790,17 +803,19 @@ public class PrintToDot {
 			
 			String lineNumbers = cfgNodes.get(id);
 			if (depend.containsKey(id)) {
-				Dependency dependency = depend.get(id);
-				Integer des = dependency.dependID._2;
-				if (dependency instanceof Data) {
-					output.write(nodeIDMap.get(id) + "->" +
-							nodeIDMap.get(des) +
-						"[ color=\"red\" label=\"" + "Data Depends on" +	"\" style = dotted ];\n");
-				}
-				if (dependency instanceof Control) {
-					output.write(nodeIDMap.get(id) + "->" +
-							nodeIDMap.get(des) +
-						"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
+				Set<Dependency> dependencies = depend.get(id);
+				for (Dependency dependency : dependencies) {
+					Integer des = dependency.depend._2;
+					if (dependency instanceof Data) {
+						output.write(nodeIDMap.get(id) + "->" +
+								nodeIDMap.get(des) +
+							"[ color=\"red\" label=\"" + "Data Depends on" +	"\" style = dotted ];\n");
+					}
+					if (dependency instanceof Control) {
+						output.write(nodeIDMap.get(id) + "->" +
+								nodeIDMap.get(des) +
+							"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
+					}	
 				}
 			}
 		}		

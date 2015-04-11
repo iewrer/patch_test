@@ -15,6 +15,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import jpf_diff.ErrorCount;
+
 public class ASTLoader {
 
 	//key=className+methodName value=MethodASTInfo
@@ -265,11 +267,25 @@ public class ASTLoader {
 			processClass(c, className);
 		}
 	}
-
 	public Map<String,MethodASTInfo> loadAST(String ASTFile){
 		//extract information from XML files
 		BlockSummaryReader bReader = new BlockSummaryReader();
 		BlockSummary bSum = bReader.extractBlock(ASTFile);
+		if (bSum == null) {
+			return null;
+		}
+		modFileName = bSum.getModifiedFile();
+		origFileName = bSum.getOriginalFile();
+		List<ClassSummary> classes = bSum.getClassSummary();
+		for (ClassSummary c : classes){
+			processClass(c,"");
+		}
+		return methodASTInfo;
+	}
+	public Map<String,MethodASTInfo> loadAST(String ASTFile, ErrorCount error){
+		//extract information from XML files
+		BlockSummaryReader bReader = new BlockSummaryReader();
+		BlockSummary bSum = bReader.extractBlock(ASTFile, error);
 		if (bSum == null) {
 			return null;
 		}

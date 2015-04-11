@@ -29,6 +29,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import jpf_diff.ErrorCount;
+
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.generic.Instruction;
 import org.apache.bcel.generic.InvokeInstruction;
@@ -509,15 +511,16 @@ public class InterproceduralAnalysis {
 	public CFGBuilder generateCFGsForClass
 							(String className, String fileName) {
 		ByteSourceHandler bsHandler = new ByteSourceHandler();
+		ErrorCount error = new ErrorCount(className);
 		try {
-			bsHandler.readSourceFile(fileName);
+			bsHandler.readSourceFile(fileName, error);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		CFGBuilder cfgBuilder = new CFGBuilder();
 		try {
-			cfgBuilder.parseClass(bsHandler.classFile);
+			cfgBuilder.parseClass(bsHandler.classFile, error);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

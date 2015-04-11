@@ -98,6 +98,7 @@ import java.util.Set;
 import javax.swing.text.html.HTMLDocument.Iterator;
 
 import jpf_diff.Dependency;
+import jpf_diff.ErrorCount;
 
 import org.apache.bcel.classfile.Utility;
 import org.eclipse.jdt.core.*;;
@@ -161,9 +162,10 @@ public class PruningRSEListener {
 
 	Random random;
 	CFG cfg;
+	ErrorCount error;
 	
 //	public PruningRSEListener(Config conf, JPF jpf) {
-	public PruningRSEListener(Config conf) {
+	public PruningRSEListener(Config conf, ErrorCount error) {
 		System.out.println("---------->Using PruningRSE Listener 6/3/2011");
 		className = "";
 		methodName="";
@@ -172,12 +174,14 @@ public class PruningRSEListener {
 		oldSrc = conf.getString("rse.oldSrc");
 		newSrc = conf.getString("rse.newSrc");
 		
+		this.error = error;
+		
 //		jpf.addPublisherExtension(ConsolePublisher.class, this);
 		if (conf.containsKey("rse.ASTResults")){ //path to XML file
 			astInfo = conf.getString("rse.ASTResults");
 			System.out.println("astFile: "+astInfo);
 			ASTLoader loader = new ASTLoader();
-			methodASTInfo = loader.loadAST(astInfo);
+			methodASTInfo = loader.loadAST(astInfo, error);
 		}
 		if (conf.containsKey("rse.dotFile"))
 			dotFile = conf.getString("rse.dotFile");
@@ -264,11 +268,12 @@ public class PruningRSEListener {
 	}
 
 	
-	public int ComputeDiff() {
+	public ErrorCount ComputeDiff() {
 		String oldClass = conf.getString("rse.oldClass");
 		String newClass = conf.getString("rse.newClass");
+		
 		if (methodASTInfo == null) {
-			return -1;
+			return error;
 		}
 		java.util.Iterator<Entry<String, MethodASTInfo>> entries = methodASTInfo.entrySet().iterator();
 		int index = 0;
@@ -294,7 +299,7 @@ public class PruningRSEListener {
 					/*
 					 * 变更newclass和oldclass的位置，以修正获得的受影响的代码版本
 					 */
-					cpd = new ComputeIntraProceduralDiff(newClass, oldClass);
+					cpd = new ComputeIntraProceduralDiff(newClass, oldClass, error);
 					
 //					System.out.println(cpd.classname);
 //					System.out.println(classname);
@@ -310,6 +315,7 @@ public class PruningRSEListener {
 					
 					if (res < 0) {
 						precise_error++;
+						error.precise_analysis.add(methodName);
 						continue;
 					}
 					
@@ -326,7 +332,6 @@ public class PruningRSEListener {
 //					}
 				} catch (Exception e) {
 					System.err.println("Exception during computing precise differences");
-					compute_diff_error++;
 					e.printStackTrace();
 					continue;
 //					System.exit(1);
@@ -375,7 +380,7 @@ public class PruningRSEListener {
 				not_matched++;
 			}
 		}
-		return compute_diff_error;
+		return error;
 	}
 
 	private void printImpacted(String file, CFG cfg,

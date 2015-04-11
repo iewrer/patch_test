@@ -29,8 +29,8 @@ public class RunNext {
 //		PruningRSEListener listener_otn = new PruningRSEListener(conf);
 //		listener_otn.ComputeDiff();
 		
-		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
-		listener_ntp.ComputeDiff();
+//		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
+//		listener_ntp.ComputeDiff();
 	}
 
 }

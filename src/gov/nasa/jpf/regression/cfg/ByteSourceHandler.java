@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
+import jpf_diff.ErrorCount;
+
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.Code;
@@ -47,9 +49,10 @@ public class ByteSourceHandler {
      * Parses the class.
      *
      * <p>Uses BCEL to parse the class file.</p>
+     * @param error 
      *
      */
-    protected void parseClass(String className)
+    protected void parseClass(String className, ErrorCount error)
                    throws Exception {
     	try {
     		classFile =  Repository.lookupClass(className);
@@ -58,6 +61,7 @@ public class ByteSourceHandler {
 
         	File f = new File(className);
             if (!f.exists()) {
+            	error.class_error.put(className, error.class_not_found);
             	throw new Exception("Cannot find class: " + className);
             }
             classFile = new ClassParser(className).parse();
@@ -75,13 +79,14 @@ public class ByteSourceHandler {
      *
      * @param className Name of Java class file from which bytecode source
      * data is to be read.
+     * @param error 
      *
      * @throws IOException If there is an error reading the class file.
      */
-    public void readSourceFile(String className) throws Exception {
+    public void readSourceFile(String className, ErrorCount error) throws Exception {
         methodsMap.clear();
 
-        parseClass(className);
+        parseClass(className, error);
 
         initClass();
     }

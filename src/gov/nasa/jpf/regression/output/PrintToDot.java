@@ -174,14 +174,14 @@ public class PrintToDot {
 					System.err.println("can not find node ID for pos!");
 					continue;
 				}
-				Dependency newDependency  = new Dependency(cfg.posToID.get(pos), cfg.posToID.get(dependency.depend._2));
+				dependency.depend  = new Pair<Integer, Integer>(cfg.posToID.get(pos), cfg.posToID.get(dependency.depend._2));
 				if (!depend.containsKey(cfg.posToID.get(pos))) {
 					Set<Dependency> newDependencies = new HashSet<>();
-					newDependencies.add(newDependency);
+					newDependencies.add(dependency);
 					depend.put(cfg.posToID.get(pos), newDependencies);
 				}
 				else {
-					depend.get(cfg.posToID.get(pos)).add(newDependency);
+					depend.get(cfg.posToID.get(pos)).add(dependency);
 				}
 			}
 		}
@@ -795,6 +795,7 @@ public class PrintToDot {
 		// TODO Auto-generated method stub
 		if(cfgNodes == null) return;
 		Iterator<Integer> nodeItr = cfgNodes.keySet().iterator();
+		Set<Pair<Integer, Integer>> used = new HashSet<>();
 		while(nodeItr.hasNext()) {
 			Integer id = nodeItr.next();
 //			Integer uniqueID = new Integer(this.nodeNum);
@@ -806,6 +807,10 @@ public class PrintToDot {
 				Set<Dependency> dependencies = depend.get(id);
 				for (Dependency dependency : dependencies) {
 					Integer des = dependency.depend._2;
+					Pair<Integer, Integer> now = new Pair<Integer, Integer>(id, des);
+					if (used.contains(now)) {
+						continue;
+					}
 					if (dependency instanceof Data) {
 						output.write(nodeIDMap.get(id) + "->" +
 								nodeIDMap.get(des) +
@@ -815,7 +820,8 @@ public class PrintToDot {
 						output.write(nodeIDMap.get(id) + "->" +
 								nodeIDMap.get(des) +
 							"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
-					}	
+					}
+					used.add(now);
 				}
 			}
 		}		

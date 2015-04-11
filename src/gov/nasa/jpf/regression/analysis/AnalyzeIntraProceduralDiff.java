@@ -1154,10 +1154,11 @@ public class AnalyzeIntraProceduralDiff {
 	 * 通过checkreachability方法部分应用了规则4（比较使用了某变量的Write和Cond之间的可达性）
 	 * 返回的集合中，只保留了到writePostions能reachable的那些cPositions
 	 * @param writeVarsIns
+	 * @param flag 
 	 * @return
 	 */
 	public Set<Integer> getCondBranchesWithVars(HashMap<String,
-									ArrayList<Integer>> writeVarsIns) {
+									ArrayList<Integer>> writeVarsIns, String flag) {
 		Set<Integer> condPositions = new HashSet<Integer>();
 		Iterator<String> wtrItr = writeVarsIns.keySet().iterator();
 		while(wtrItr.hasNext()) {
@@ -1170,7 +1171,7 @@ public class AnalyzeIntraProceduralDiff {
 				cPositions.addAll(varNameToCondBranchPosMap.get(writeVar));
 				//updates cPositions
 				//更新后，只留下到writePostions能reachable的那些cPositions
-				checkReachability(writePositions, cPositions, true);
+				checkReachability(writePositions, cPositions, true, flag);
 				condPositions.addAll(cPositions);
 			}
 		}
@@ -1264,7 +1265,7 @@ public class AnalyzeIntraProceduralDiff {
 	 * 			whether or not to update the given conditional set
 	 */
 	public void checkReachability(Set<Integer> writePos, Set<Integer> condPos,
-													boolean updateCond) {
+													boolean updateCond, String flag) {
 		Set<Integer> newConditionPos = null;
 		if(updateCond) {
 			newConditionPos = new HashSet<Integer>();
@@ -1283,26 +1284,39 @@ public class AnalyzeIntraProceduralDiff {
 					}
 					//这是set，不怕重复
 					this.globalTrackWrite.add(wPos);
-					//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
-					//此时wPos被添加到track中
-					if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
-						Dependency dependency = new Data(wPos, cPos);
-						Set<Dependency> dependencies = new HashSet<>();
-						dependencies.add(dependency);
-						depend.put(wPos, dependencies);
-					}
 					//如果是wPos在cPos中被使用并可达,且cPos不在ACN中、wPos在AWN中
 					//cPos在之后会被添加到track中
-					if (!depend.containsKey(cPos) && depend.containsKey(wPos)) {
-						Dependency dependency = new Data(cPos, wPos);
-						Set<Dependency> dependencies = new HashSet<>();
-						dependencies.add(dependency);
-						depend.put(cPos, dependencies);
+					if (flag.contains("modified")) {
+						if (!depend.containsKey(wPos)) {
+							Dependency dependency = new Data(wPos, -1);
+							Set<Dependency> dependencies = new HashSet<>();
+							dependencies.add(dependency);
+							depend.put(wPos, dependencies);
+						}
+						if (!depend.containsKey(cPos) && depend.containsKey(wPos)) {
+							Dependency dependency = new Data(cPos, wPos);
+							Set<Dependency> dependencies = new HashSet<>();
+							dependencies.add(dependency);
+							depend.put(cPos, dependencies);
+						}
+						else if (depend.containsKey(cPos) && depend.containsKey(wPos)){
+							Dependency dependency = new Data(cPos, wPos);
+							depend.get(cPos).add(dependency);
+						}						
 					}
-					//如果是wPos在cPos中被使用并可达
-					if (depend.containsKey(cPos) && depend.containsKey(wPos)) {
-						Dependency dependency = new Data(wPos, cPos);
-						depend.get(wPos).add(dependency);						
+					else {
+						//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
+						//此时wPos被添加到track中
+						if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
+							Dependency dependency = new Data(wPos, cPos);
+							Set<Dependency> dependencies = new HashSet<>();
+							dependencies.add(dependency);
+							depend.put(wPos, dependencies);
+						}
+						else if (depend.containsKey(wPos) && depend.containsKey(cPos)){
+							Dependency dependency = new Data(wPos, cPos);
+							depend.get(wPos).add(dependency);
+						}
 					}
 				}
 			}
@@ -1328,10 +1342,10 @@ public class AnalyzeIntraProceduralDiff {
 	 * 			whether or not to update the given conditional set
 	 */
 	public void checkReachability(ArrayList<Integer> writePos, Set<Integer> condPos,
-											boolean updateCond) {
+											boolean updateCond, String flag) {
 		Set<Integer> tmpWritePos = new HashSet<Integer>();
 		tmpWritePos.addAll(writePos);
-		checkReachability(tmpWritePos, condPos, updateCond);
+		checkReachability(tmpWritePos, condPos, updateCond, flag);
 	}
 
 	/**
@@ -1381,7 +1395,7 @@ public class AnalyzeIntraProceduralDiff {
 			String varName = varNames.get(varIndex);
 			if (!varNamesToWriteIns.containsKey(varName)) continue;
 			ArrayList<Integer> writePos = varNamesToWriteIns.get(varName);
-			checkReachability(writePos, globalTrackCond, false);
+			checkReachability(writePos, globalTrackCond, false, "check write");
 
 			for(int wIndex = 0; wIndex < writePos.size(); wIndex++) {
 				Integer wPos = writePos.get(wIndex);
@@ -1394,7 +1408,7 @@ public class AnalyzeIntraProceduralDiff {
 			String varName = newVars.get(varIndex);
 			if (!varNamesToWriteIns.containsKey(varName)) continue;
 			ArrayList<Integer> writePos = varNamesToWriteIns.get(varName);
-			checkReachability(writePos, globalTrackCond, false);
+			checkReachability(writePos, globalTrackCond, false, "check write");
 		}
 		Iterator<Integer> brItr = branchToDependentWriteInsMap.
 											keySet().iterator();

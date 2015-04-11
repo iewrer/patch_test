@@ -43,6 +43,13 @@ class impactSet {
 		assertLoc = new HashSet<Integer>();
 		this.path = path;
 	}
+	void clear() {
+		condLoc.clear();
+		writeLoc.clear();
+		changeLoc.clear();
+		assertLoc.clear();
+		allLoc.clear();
+	}
 }
 
 public class Diff {
@@ -111,6 +118,15 @@ public class Diff {
 		String newPath = "./dotFiles/new/jdt/";
 		String patchPath = "./dotFiles/patch/jdt/";
 		diff.readFileName("./script/filename.uniq");
+		
+		for (String filename : diff.filenames) {
+			String p = newPath + filename;
+			String p1 = patchPath + filename;
+			
+			diff.deleteDot(p);
+			diff.deleteDot(p1);
+
+		}
 		for (String filename : diff.filenames) {
 			String path = newPath + filename;
 			String path1 = patchPath + filename;
@@ -118,8 +134,18 @@ public class Diff {
 			impactSet s1 = new impactSet(path1);
 			
 			diff.computeImpact(s, s1);
-			
 
+		}
+	}
+	private void deleteDot(String p) {
+		// TODO Auto-generated method stub
+		File f = new File(p);
+		File[] Files = f.listFiles();
+		
+		for (File Dot : Files) {
+			if (Dot.exists() && Dot.getName().endsWith("txt")) {
+				Dot.delete();
+			}
 		}
 	}
 	private void computeImpact(impactSet s, impactSet s1) throws IOException {
@@ -135,22 +161,25 @@ public class Diff {
 					String newPath = newDot.getAbsolutePath();
 					String patchPath = patchDot.getAbsolutePath();
 					
+					s.clear();
+					s1.clear();
+					
 					analyzeDot(newPath, s);
 					System.out.println("patch complete!");
 					analyzeDot(patchPath, s1);
 					System.out.println("new complete!");
 					
 					s.allLoc.retainAll(s1.allLoc);
-					BufferedWriter writer = new BufferedWriter(new FileWriter(newDot.getAbsolutePath() + ".txt"));
+					//若没有交集，忽略之
 					if (s.allLoc.isEmpty()) {
-						writer.write("no intersections!\n");
+						continue;
 					}
-					else {
-						for (Integer integer : s.allLoc) {
-							writer.write(integer + "\n");
-						}
+					BufferedWriter writer = new BufferedWriter(new FileWriter(newDot.getAbsolutePath() + ".txt"));
+					for (Integer integer : s.allLoc) {
+						writer.write(integer + "\n");
 					}
 					writer.close();
+					break;
 				}
 			}
 		}		

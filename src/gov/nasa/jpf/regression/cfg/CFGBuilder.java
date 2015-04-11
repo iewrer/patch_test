@@ -9,6 +9,7 @@ import java.util.*;
 
 import jpf_diff.Block;
 import jpf_diff.Dependency;
+import jpf_diff.ErrorCount;
 import lazyinit.paramAndPoly.intNode;
 
 import org.apache.bcel.Repository;
@@ -117,13 +118,15 @@ public class CFGBuilder {
      * Parses the class.
      *
      * <p>Uses BCEL to parse the class file.</p>
+     * @param error 
      *
      */
-    public void parseClass(JavaClass javaClass)
+    public void parseClass(JavaClass javaClass, ErrorCount error)
                    throws Exception {
         this.javaClass = javaClass;
 
         if (javaClass.isInterface()) {
+        	error.class_error.put(className, error.interface_class);
             throw new Exception("Error loading class " + className,
                 new Exception("Cannot build graphs " + "for interface"));
         }
@@ -132,6 +135,7 @@ public class CFGBuilder {
         cpg = new ConstantPoolGen(javaClass.getConstantPool());
         methods = javaClass.getMethods();
         if (methods.length == 0) {
+        	error.class_error.put(className, error.class_not_found);
             throw new Exception("Error loading class " + className,
                new Exception("Class implements no methods"));
         }

@@ -49,7 +49,7 @@ public class ComputeDifferences {
 		 												  writeVarsMod);
 
 		 //获取到使用了modified write中变量的写语句可达的cond语句位置
-		 Set<Integer> additionalPos = semanticDiff.getCondBranchesWithVars(writeVarsMod);
+		 Set<Integer> additionalPos = semanticDiff.getCondBranchesWithVars(writeVarsMod, "modified write");
 		 //再把用了modified write中变量的写语句语句位置也添加进来
 		 additionalPos.addAll(extractWriteLocations(writeVarsMod));
 

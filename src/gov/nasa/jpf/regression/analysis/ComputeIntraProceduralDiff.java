@@ -10,6 +10,7 @@ import java.util.Set;
 
 import jpf_diff.Block;
 import jpf_diff.Dependency;
+import jpf_diff.ErrorCount;
 
 import org.apache.bcel.classfile.LineNumberTable;
 import org.apache.bcel.generic.MethodGen;
@@ -38,20 +39,21 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     /**
      * Constructor only initializes data structures for
      * the new class.
+     * @param error 
      * @param String classNameNew
      * @throws Exception
      */
     public ComputeIntraProceduralDiff(String classNameNew,
-    						String classNameOld) throws Exception {
+    						String classNameOld, ErrorCount error) throws Exception {
     	ByteSourceHandler bsHandlerNew = new ByteSourceHandler();
-        bsHandlerNew.readSourceFile(classNameNew);
+        bsHandlerNew.readSourceFile(classNameNew, error);
        	cfgbNew = new CFGBuilder();
-	   	cfgbNew.parseClass(bsHandlerNew.classFile);
+	   	cfgbNew.parseClass(bsHandlerNew.classFile, error);
 
 	   	ByteSourceHandler bsHandlerOld = new ByteSourceHandler();
-	   	bsHandlerOld.readSourceFile(classNameOld);
+	   	bsHandlerOld.readSourceFile(classNameOld, error);
 	   	cfgbOld = new CFGBuilder();
-	   	cfgbOld.parseClass(bsHandlerOld.classFile);
+	   	cfgbOld.parseClass(bsHandlerOld.classFile, error);
 	   	
 	   	this.classname = cfgbOld.className;
 
@@ -350,7 +352,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	 					getCondBranchesWithVars(extractVariableNames(writeVars));
 
 	   semanticDiffOld.checkReachability(this.extractWriteLocations(writeVars),
-			 											newCondPositions, true);
+			 											newCondPositions, true, "check write");
 
 	   semanticDiffOld.clearTrackedCondAndUpdateGlobal();
 
@@ -465,7 +467,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 		    //being written to conditional branch position where the variable is used
 
 			//相当于通过check reachable应用了规则3，且部分应用了规则4?
-			Set<Integer> newCondPositions = semanticDiff.getCondBranchesWithVars(writeVars);
+			Set<Integer> newCondPositions = semanticDiff.getCondBranchesWithVars(writeVars, "check write");
 			//将这些Modified的write语句用到的变量的具体位置做成一个Set，并加入进来
 			newCondPositions.addAll(extractWriteLocations(writeVarsMod));
 

@@ -169,23 +169,25 @@ public class RunJpf {
 			}
 		}
 	}
-	public int run_otn() {
+	public ErrorCount run_otn(String filename) {
 		Config.enableLogging(true);
 		
 		Config conf = new Config(old_to_new);
 //		Config conf1 = new Config(new_to_patch);
 
-		PruningRSEListener listener_otn = new PruningRSEListener(conf);
+		ErrorCount error = new ErrorCount(filename);
+		PruningRSEListener listener_otn = new PruningRSEListener(conf, error);
 		return listener_otn.ComputeDiff();
 		
 	}
-	public int run_ntp() {
+	public ErrorCount run_ntp(String filename) {
 		Config.enableLogging(true);
 		
 //		Config conf = new Config(old_to_new);
 		Config conf1 = new Config(new_to_patch);
 
-		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
+		ErrorCount error = new ErrorCount(filename);
+		PruningRSEListener listener_ntp = new PruningRSEListener(conf1, error);
 		return listener_ntp.ComputeDiff();
 		
 	}
@@ -197,15 +199,20 @@ public class RunJpf {
 				
 		RunJpf jpf = new RunJpf(filename);
 		
-		Config conf = new Config(jpf.old_to_new);
-		Config conf1 = new Config(jpf.new_to_patch);
+//		Config conf = new Config(jpf.old_to_new);
+//		Config conf1 = new Config(jpf.new_to_patch);
 
 		
 //		PruningRSEListener listener_otn = new PruningRSEListener(conf);
 //		listener_otn.ComputeDiff();
 		
-		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
-		listener_ntp.ComputeDiff();
+//		PruningRSEListener listener_ntp = new PruningRSEListener(conf1);
+//		listener_ntp.ComputeDiff();
+		
+//		jpf.run_otn();
+		
+		ErrorCount count = jpf.run_ntp(filename);
+		count.print();
 
 		
 //		jpf.deleteSameChange(listener_otn, listener_ntp, "changedMod");

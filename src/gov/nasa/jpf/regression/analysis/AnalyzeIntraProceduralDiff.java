@@ -353,15 +353,24 @@ public class AnalyzeIntraProceduralDiff {
 					trackCond.add(condLoc);
 					currTrackedCond.add(condLoc);
 					//添加对应的控制依赖关系
-					if (!depend.containsKey(condLoc)) {
+					if (!depend.containsKey(modPos)) {
+						Dependency dependency = new Control(modPos, -1);
+						Set<Dependency> dependencies = new HashSet<>();
+						dependencies.add(dependency);
+						depend.put(modPos, dependencies);
+					}
+					if (!depend.containsKey(condLoc) && depend.containsKey(modPos)) {
 						Dependency dependency = new Control(condLoc, modPos);
 						Set<Dependency> dependencies = new HashSet<>();
 						dependencies.add(dependency);
 						depend.put(condLoc, dependencies);
 					}
-					else {
+					else if (depend.containsKey(condLoc) && depend.containsKey(modPos)){
 						Dependency dependency = new Control(condLoc, modPos);
-						depend.get(condLoc).add(dependency);
+						Dependency former = new Control(modPos, condLoc);
+						if (!depend.get(modPos).contains(former)) {
+							depend.get(condLoc).add(dependency);
+						}
 					}
 					break;
 				}
@@ -1301,7 +1310,11 @@ public class AnalyzeIntraProceduralDiff {
 						}
 						else if (depend.containsKey(cPos) && depend.containsKey(wPos)){
 							Dependency dependency = new Data(cPos, wPos);
-							depend.get(cPos).add(dependency);
+							Dependency former = new Data(wPos, cPos);
+							//避免造成环形
+							if (!depend.get(wPos).contains(former)) {
+								depend.get(cPos).add(dependency);
+							}
 						}						
 					}
 					else {
@@ -1313,9 +1326,13 @@ public class AnalyzeIntraProceduralDiff {
 							dependencies.add(dependency);
 							depend.put(wPos, dependencies);
 						}
-						else if (depend.containsKey(wPos) && depend.containsKey(cPos)){
+						else if (depend.containsKey(wPos) && depend.containsKey(cPos) ){
 							Dependency dependency = new Data(wPos, cPos);
-							depend.get(wPos).add(dependency);
+							Dependency former = new Data(cPos, wPos);
+							//避免造成环形
+							if (!depend.get(cPos).contains(former)) {
+								depend.get(wPos).add(dependency);
+							}
 						}
 					}
 				}
@@ -1661,15 +1678,18 @@ public class AnalyzeIntraProceduralDiff {
 							cfg.getIndexOfPosition(cPosOffset)) < Integer.MAX_VALUE) {
 						trackCond.add(condPos.get(condIndex));
 						//追踪依赖关系
-						if (!depend.containsKey(condPos.get(condIndex))) {
+						if (!depend.containsKey(condPos.get(condIndex)) && depend.containsKey(pos)) {
 							Dependency dependency = new Data(condPos.get(condIndex), pos);
 							Set<Dependency> dependencies = new HashSet<>();
 							dependencies.add(dependency);
 							depend.put(condPos.get(condIndex), dependencies);							
 						}
-						else {
+						else if (depend.containsKey(condPos.get(condIndex)) && depend.containsKey(pos)){
 							Dependency dependency = new Data(condPos.get(condIndex), pos);
-							depend.get(condPos.get(condIndex)).add(dependency);
+							Dependency former = new Data(pos, condPos.get(condIndex));
+							if (!depend.get(pos).contains(former)) {
+								depend.get(condPos.get(condIndex)).add(dependency);
+							}	
 						}
 					}
 

@@ -808,7 +808,7 @@ public class PrintToDot {
 				for (Dependency dependency : dependencies) {
 					Integer des = dependency.depend._2;
 					Pair<Integer, Integer> now = new Pair<Integer, Integer>(id, des);
-					if (used.contains(now)) {
+					if (des == null || used.contains(now)) {
 						continue;
 					}
 					if (dependency instanceof Data) {

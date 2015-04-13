@@ -407,7 +407,7 @@ public class Diff {
 							edge.end +
 						"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
 				}
-//				System.out.println("	" + id + "," + edge.end);
+				System.out.println("	" + id + "," + edge.end);
 			}
 			writeEdge(next, now, writer);
 		}

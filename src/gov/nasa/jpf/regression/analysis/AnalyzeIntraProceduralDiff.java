@@ -347,6 +347,7 @@ public class AnalyzeIntraProceduralDiff {
 				Integer modPos = modItr.next();
 				if(!condToIntMap.containsKey(modPos)) continue;
 				Integer modPosCounter = condToIntMap.get(modPos);
+				//只要有一条通路就是control dependent？
 				if(dm.getValue(condPosCounter, modPosCounter) <
 						Integer.MAX_VALUE &&
 						dm.getValue(condPosCounter, modPosCounter) != 0) {
@@ -727,6 +728,7 @@ public class AnalyzeIntraProceduralDiff {
 		ArrayList<Integer> tmpVarPositions = new ArrayList<Integer>();
 
 
+		//遍历writePos，对每个位置wPos，将其对应的指令位置和变量名加入到map中
 		while(writeItr.hasNext()) {
 			Integer wPos = writeItr.next();
 			assert (insContext.containsKey(wPos));
@@ -737,7 +739,7 @@ public class AnalyzeIntraProceduralDiff {
 
 				// Maps varName to the set of instruction positions it is at.
 				addWriteInsVarToInsnPositions(varName, ic,
-						writeInsToVarsMap);
+						writeInsToVarsMap, wPos);
 				tmpVarNames.add(varName);
 				tmpVarPositions.add(ic.getInstruction().getPosition());
 			}
@@ -797,6 +799,7 @@ public class AnalyzeIntraProceduralDiff {
 									keySet().iterator();
 		while(posItr.hasNext()) {
 			Integer pos = posItr.next();
+			//寻找其他用到了该varName的指令？
 			ArrayList<String> varNames = opToVarNames.get(pos);
 			if(varNames.contains(varName)) {
 
@@ -806,9 +809,10 @@ public class AnalyzeIntraProceduralDiff {
 				Instruction insn = ic.getInstruction().getInstruction();
 				String variableN = getWriteVariableName(insn, ic);
 				if(variableN != null) {
+					//如果到varPos可达，则将pos对应的指令位置添加进来
 					if(isReachable(varPos, ic.getInstruction().getPosition())) {
 						addWriteInsVarToInsnPositions(variableN, ic,
-								writeInsToVarsMap);
+								writeInsToVarsMap, pos);
 						exploreWriteInsn(variableN, ic.getInstruction().getPosition(),
 								writeInsToVarsMap);
 					}
@@ -845,7 +849,7 @@ public class AnalyzeIntraProceduralDiff {
 				String variableN = getWriteVariableName(insn, ic);
 				if(variableN != null) {
 					addWriteInsVarToInsnPositions(variableN, ic,
-							writeInsToVarsMap);
+							writeInsToVarsMap, pos);
 					exploreWriteInsn(variableN, opOther, writeInsToVarsMap);
 				} else {
 					exploreWriteInsn(opOther, writeInsToVarsMap);
@@ -911,7 +915,7 @@ public class AnalyzeIntraProceduralDiff {
 
 			if(varName != null) {
 				addWriteInsVarToInsnPositions(varName, ic,
-											writeInsToVarsMap);
+											writeInsToVarsMap, dPos);
 			}
 		}
 	}
@@ -1143,10 +1147,11 @@ public class AnalyzeIntraProceduralDiff {
 	 * 			the InstructionContext of the instruction being mapped
 	 * @param writeInsToVarsMap
 	 * 			the map that is used for mapping these things together
+	 * @param wPos 
 	 */
 	private void addWriteInsVarToInsnPositions(String varName,
 			InstructionContext ic, HashMap<String, ArrayList<Integer>>
-														writeInsToVarsMap) {
+														writeInsToVarsMap, Integer wPos) {
 		ArrayList<Integer> positions;
 		if(!writeInsToVarsMap.containsKey(varName)) {
 			positions = new ArrayList<Integer>();
@@ -1154,8 +1159,23 @@ public class AnalyzeIntraProceduralDiff {
 			positions = writeInsToVarsMap.get(varName);
 
 		}
+		//将该条指令的位置加进来，并更新map
 		if(!positions.contains(ic.getInstruction().getPosition())) {
 			positions.add(ic.getInstruction().getPosition());
+		}
+		for (Integer i : positions) {
+			if (i != wPos) {
+				if (!depend.containsKey(i) && depend.containsKey(wPos)) {
+					Dependency dependency = new Data(i, wPos);
+					Set<Dependency> dependencies = new HashSet<>();
+					dependencies.add(dependency);
+					depend.put(i, dependencies);
+				}
+				else if (depend.containsKey(i) && depend.containsKey(wPos)) {
+					Dependency dependency = new Data(i, wPos);
+					depend.get(i).add(dependency);
+				}
+			}
 		}
 		writeInsToVarsMap.put(varName, positions);
 	}
@@ -1175,6 +1195,7 @@ public class AnalyzeIntraProceduralDiff {
 			Set<Integer> writePositions = new HashSet<Integer>();
 			writePositions.addAll(writeVarsIns.get(writeVar));
 
+			//若他们是使用了相同的var
 			if(varNameToCondBranchPosMap.containsKey(writeVar)) {
 				Set<Integer> cPositions = new HashSet<Integer>();
 				cPositions.addAll(varNameToCondBranchPosMap.get(writeVar));
@@ -1297,7 +1318,7 @@ public class AnalyzeIntraProceduralDiff {
 					//cPos在之后会被添加到track中
 					if (flag.contains("modified")) {
 						if (!depend.containsKey(wPos)) {
-							Dependency dependency = new Data(wPos, -1);
+							Dependency dependency = new Dependency(wPos, -1);
 							Set<Dependency> dependencies = new HashSet<>();
 							dependencies.add(dependency);
 							depend.put(wPos, dependencies);
@@ -1317,7 +1338,7 @@ public class AnalyzeIntraProceduralDiff {
 							}
 						}						
 					}
-					else {
+					else if (!flag.contains("last")){
 						//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
 						//此时wPos被添加到track中
 						if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
@@ -1412,20 +1433,26 @@ public class AnalyzeIntraProceduralDiff {
 			String varName = varNames.get(varIndex);
 			if (!varNamesToWriteIns.containsKey(varName)) continue;
 			ArrayList<Integer> writePos = varNamesToWriteIns.get(varName);
-			checkReachability(writePos, globalTrackCond, false, "check write");
+			//此时没有限定是针对相同的var！直接采用了globalTrackCond
+			//此时globalWrite通过checkR被更新，而globalTrackCond已不再更新
+			checkReachability(writePos, globalTrackCond, false, "last write");
 
 			for(int wIndex = 0; wIndex < writePos.size(); wIndex++) {
 				Integer wPos = writePos.get(wIndex);
 				ArrayList<String> varNamesOther = getVarsUsedInWriteAndArthInsn(wPos);
+				//获取其他在这些write语句中被使用了的vars
 				newVars.addAll(varNamesOther);
 			}
 		}
+		//获取其他在这些write语句中被使用了的vars
 		newVars.removeAll(varNames);
 		for(int varIndex = 0; varIndex < newVars.size(); varIndex++) {
 			String varName = newVars.get(varIndex);
 			if (!varNamesToWriteIns.containsKey(varName)) continue;
 			ArrayList<Integer> writePos = varNamesToWriteIns.get(varName);
-			checkReachability(writePos, globalTrackCond, false, "check write");
+			//此时没有限定是针对相同的var！直接采用了globalTrackCond
+			//此时globalWrite通过checkR被更新，而globalTrackCond已不再更新
+			checkReachability(writePos, globalTrackCond, false, "last write");
 		}
 		Iterator<Integer> brItr = branchToDependentWriteInsMap.
 											keySet().iterator();
@@ -1628,6 +1655,14 @@ public class AnalyzeIntraProceduralDiff {
 		}
 	}
 
+	/**
+	 * 将受到modifedIns影响的condPos加入到trackCond
+	 * 不断探索modifedIns中用到的其他var所涉及到的其他指令
+	 * 实际返回modifedIns
+	 * @param modifiedIns
+	 * @param visitedWPos
+	 * @return
+	 */
 	public Set<Integer> checkModifiedWriteStatement(Set<Integer> modifiedIns,
 							Set<Integer> visitedWPos) {
 		Set<Integer> reachableWriteLocs = new HashSet<Integer>();
@@ -1676,6 +1711,7 @@ public class AnalyzeIntraProceduralDiff {
 					if(cfg.getDistanceMatrix().getValue
 							(cfg.getIndexOfPosition(wPosOffset),
 							cfg.getIndexOfPosition(cPosOffset)) < Integer.MAX_VALUE) {
+						//记录下了该受影响的condPos
 						trackCond.add(condPos.get(condIndex));
 						//追踪依赖关系
 						if (!depend.containsKey(condPos.get(condIndex)) && depend.containsKey(pos)) {
@@ -1721,6 +1757,8 @@ public class AnalyzeIntraProceduralDiff {
 			} else {
 				wrtPoses.retainAll(affectedWrite);
 			}
+			//如果wrtPoses与globalTrackWrite或者affectedWrite有交集
+			//则把该wrtPoses依赖的cond的位置添加进去
 			if(!wrtPoses.isEmpty()) {
 				affectedCondPoses.add(controlPos);
 			}

@@ -38,10 +38,15 @@ public class ComputeDifferences {
 		 // in the set of modifiedWritesAndIfs
 		//	即应用了规则3
 
+		
 		 Set<Integer> writePositions = semanticDiff.checkModifiedWriteStatement
 		 				(modifiedWritesAndIfs, new HashSet<Integer>());
 
 
+		 /*
+		  * 先找用到这些变量的写语句：genWriteInsUsingModifiedWriteVals
+		  * 再找用到这些变量的cond语句，并检查这些写语句和cond语句之间是否可达，并返回可达的cond语句：getCondBranchesWithVars
+		  */
 		 HashMap<String, ArrayList<Integer>> writeVarsMod =
 			 					new HashMap<String, ArrayList<Integer>>();
 		 //生成用到这些变量的对应写语句map，即writeVarsMod

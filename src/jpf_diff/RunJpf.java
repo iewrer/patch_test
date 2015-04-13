@@ -211,6 +211,9 @@ public class RunJpf {
 		
 //		jpf.run_otn();
 		
+//		ErrorCount count = jpf.run_otn(filename);
+//		count.print();
+		
 		ErrorCount count = jpf.run_ntp(filename);
 		count.print();
 

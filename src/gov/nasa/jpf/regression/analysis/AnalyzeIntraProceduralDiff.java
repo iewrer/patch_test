@@ -739,7 +739,7 @@ public class AnalyzeIntraProceduralDiff {
 
 				// Maps varName to the set of instruction positions it is at.
 				addWriteInsVarToInsnPositions(varName, ic,
-						writeInsToVarsMap, wPos);
+						writeInsToVarsMap);
 				tmpVarNames.add(varName);
 				tmpVarPositions.add(ic.getInstruction().getPosition());
 			}
@@ -811,12 +811,24 @@ public class AnalyzeIntraProceduralDiff {
 				if(variableN != null) {
 					//如果到varPos可达，则将pos对应的指令位置添加进来
 					if(isReachable(varPos, ic.getInstruction().getPosition())) {
+						Integer now = ic.getInstruction().getPosition();
+						if (!depend.containsKey(now) && depend.containsKey(varPos)) {
+							Dependency dependency = new Data(now, varPos);
+							Set<Dependency> dependencies = new HashSet<Dependency>();
+							dependencies.add(dependency);
+							depend.put(now, dependencies);
+						}
+						else if (depend.containsKey(now) && depend.containsKey(varPos)) {
+							Dependency dependency = new Data(now, varPos);
+							depend.get(now).add(dependency);
+						}
 						addWriteInsVarToInsnPositions(variableN, ic,
-								writeInsToVarsMap, pos);
+								writeInsToVarsMap);
 						exploreWriteInsn(variableN, ic.getInstruction().getPosition(),
 								writeInsToVarsMap);
 					}
 				} else {
+					//若该位置没有varName，则换其他var继续查找？
 					 exploreWriteInsn(pos, writeInsToVarsMap);
 				}
 
@@ -848,8 +860,19 @@ public class AnalyzeIntraProceduralDiff {
 				Instruction insn = ic.getInstruction().getInstruction();
 				String variableN = getWriteVariableName(insn, ic);
 				if(variableN != null) {
+					Integer now = ic.getInstruction().getPosition();
+					if (!depend.containsKey(now) && depend.containsKey(pos)) {
+						Dependency dependency = new Data(now, pos);
+						Set<Dependency> dependencies = new HashSet<Dependency>();
+						dependencies.add(dependency);
+						depend.put(now, dependencies);
+					}
+					else if (depend.containsKey(now) && depend.containsKey(pos)) {
+						Dependency dependency = new Data(now, pos);
+						depend.get(now).add(dependency);
+					}
 					addWriteInsVarToInsnPositions(variableN, ic,
-							writeInsToVarsMap, pos);
+							writeInsToVarsMap);
 					exploreWriteInsn(variableN, opOther, writeInsToVarsMap);
 				} else {
 					exploreWriteInsn(opOther, writeInsToVarsMap);
@@ -915,7 +938,7 @@ public class AnalyzeIntraProceduralDiff {
 
 			if(varName != null) {
 				addWriteInsVarToInsnPositions(varName, ic,
-											writeInsToVarsMap, dPos);
+											writeInsToVarsMap);
 			}
 		}
 	}
@@ -1151,7 +1174,7 @@ public class AnalyzeIntraProceduralDiff {
 	 */
 	private void addWriteInsVarToInsnPositions(String varName,
 			InstructionContext ic, HashMap<String, ArrayList<Integer>>
-														writeInsToVarsMap, Integer wPos) {
+														writeInsToVarsMap) {
 		ArrayList<Integer> positions;
 		if(!writeInsToVarsMap.containsKey(varName)) {
 			positions = new ArrayList<Integer>();
@@ -1162,20 +1185,6 @@ public class AnalyzeIntraProceduralDiff {
 		//将该条指令的位置加进来，并更新map
 		if(!positions.contains(ic.getInstruction().getPosition())) {
 			positions.add(ic.getInstruction().getPosition());
-		}
-		for (Integer i : positions) {
-			if (i != wPos) {
-				if (!depend.containsKey(i) && depend.containsKey(wPos)) {
-					Dependency dependency = new Data(i, wPos);
-					Set<Dependency> dependencies = new HashSet<>();
-					dependencies.add(dependency);
-					depend.put(i, dependencies);
-				}
-				else if (depend.containsKey(i) && depend.containsKey(wPos)) {
-					Dependency dependency = new Data(i, wPos);
-					depend.get(i).add(dependency);
-				}
-			}
 		}
 		writeInsToVarsMap.put(varName, positions);
 	}
@@ -1316,7 +1325,7 @@ public class AnalyzeIntraProceduralDiff {
 					this.globalTrackWrite.add(wPos);
 					//如果是wPos在cPos中被使用并可达,且cPos不在ACN中、wPos在AWN中
 					//cPos在之后会被添加到track中
-					if (flag.contains("modified")) {
+					if (!flag.contains("last")) {
 						if (!depend.containsKey(wPos)) {
 							Dependency dependency = new Dependency(wPos, -1);
 							Set<Dependency> dependencies = new HashSet<>();
@@ -1338,24 +1347,24 @@ public class AnalyzeIntraProceduralDiff {
 							}
 						}						
 					}
-					else if (!flag.contains("last")){
-						//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
-						//此时wPos被添加到track中
-						if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
-							Dependency dependency = new Data(wPos, cPos);
-							Set<Dependency> dependencies = new HashSet<>();
-							dependencies.add(dependency);
-							depend.put(wPos, dependencies);
-						}
-						else if (depend.containsKey(wPos) && depend.containsKey(cPos) ){
-							Dependency dependency = new Data(wPos, cPos);
-							Dependency former = new Data(cPos, wPos);
-							//避免造成环形
-							if (!depend.get(cPos).contains(former)) {
-								depend.get(wPos).add(dependency);
-							}
-						}
-					}
+//					else if (!flag.contains("last")){
+//						//如果是wPos在cPos中被使用并可达,且cPos在ACN中、wPos不在AWN中
+//						//此时wPos被添加到track中
+//						if (!depend.containsKey(wPos) && depend.containsKey(cPos)) {
+//							Dependency dependency = new Data(wPos, cPos);
+//							Set<Dependency> dependencies = new HashSet<>();
+//							dependencies.add(dependency);
+//							depend.put(wPos, dependencies);
+//						}
+//						else if (depend.containsKey(wPos) && depend.containsKey(cPos) ){
+//							Dependency dependency = new Data(wPos, cPos);
+//							Dependency former = new Data(cPos, wPos);
+//							//避免造成环形
+//							if (!depend.get(cPos).contains(former)) {
+//								depend.get(wPos).add(dependency);
+//							}
+//						}
+//					}
 				}
 			}
 

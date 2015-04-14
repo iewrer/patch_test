@@ -19,7 +19,7 @@ import java.util.Set;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
-import lazyinit.paramAndPoly.intNode;
+//import lazyinit.paramAndPoly.intNode;
 
 import com.sun.tools.doclets.internal.toolkit.util.DocFinder.Output;
 

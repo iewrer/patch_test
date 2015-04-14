@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import lazyinit.paramAndPoly.intNode;
+//import lazyinit.paramAndPoly.intNode;
 import tree_diff.test_v1;
 
 //import gov.nasa.jpf.JPF;
@@ -213,6 +213,7 @@ public class RunJpf {
 		
 //		ErrorCount count = jpf.run_otn(filename);
 //		count.print();
+//		System.out.println("test");
 		
 		ErrorCount count = jpf.run_ntp(filename);
 		count.print();

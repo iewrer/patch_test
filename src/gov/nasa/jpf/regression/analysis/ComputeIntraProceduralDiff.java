@@ -9,6 +9,10 @@ import java.util.Map;
 import java.util.Set;
 
 import jpf_diff.Block;
+import jpf_diff.Control;
+import jpf_diff.ControlBlock;
+import jpf_diff.Data;
+import jpf_diff.DataBlock;
 import jpf_diff.Dependency;
 import jpf_diff.ErrorCount;
 
@@ -302,7 +306,16 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 			Integer pos = (Integer) iterator.next();
 			Set<Dependency> dependencies = oldSemantic.depend.get(pos);
 			for (Dependency dependency : dependencies) {
-				Block dependBlock = new Block(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+				Block dependBlock;
+				if (dependency instanceof Data) {
+					dependBlock = new DataBlock(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+				}
+				else if (dependency instanceof Control) {
+					dependBlock = new ControlBlock(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+				}
+				else {
+					dependBlock = new Block(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
+				}
 				if (!depend.containsKey(origPosToModBlock.get(pos))) {
 					Set<Block> newDependencies = new HashSet<>();
 					newDependencies.add(dependBlock);
@@ -458,6 +471,13 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	 										genTransitiveCondDep);
 
 			writeVarsMod.clear();
+			
+			
+			 /*
+			  * 先找用到这些变量的写语句：genWriteInsUsingModifiedWriteVals
+			  * 再找用到这些变量的cond语句，并检查这些写语句和cond语句之间是否可达，并返回可达的cond语句：getCondBranchesWithVars
+			  */
+			
 			//将Modified的write语句用到的变量名映射到对应的Instructions列表上，该map即为writeVarsMod
 			semanticDiff.genWriteInsUsingModifiedWriteVals
 										(extractWriteLocations(writeVars),writeVarsMod);

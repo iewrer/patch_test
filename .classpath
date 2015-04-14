@@ -14,9 +14,13 @@
 	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/jpf-guided-test.jar"/>
 	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/tools.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.jdt.core_3.9.1.v20130905-0837.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/jpf-symbc"/>
 	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/commons-lang-2.4.jar"/>
 	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/jSMTLIB.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf-annotations.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf-classes.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc-annotations.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc-classes.jar"/>
+	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

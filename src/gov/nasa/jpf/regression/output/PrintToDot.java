@@ -808,6 +808,7 @@ public class PrintToDot {
 				for (Dependency dependency : dependencies) {
 					Integer des = dependency.depend._2;
 					Pair<Integer, Integer> now = new Pair<Integer, Integer>(id, des);
+					System.err.println(nodeIDMap.get(id) + "->" + nodeIDMap.get(des));
 					if (des == null || used.contains(now)) {
 						continue;
 					}

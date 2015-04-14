@@ -8,9 +8,13 @@ import java.math.BigInteger;
 import java.util.*;
 
 import jpf_diff.Block;
+import jpf_diff.Control;
+import jpf_diff.ControlBlock;
+import jpf_diff.Data;
+import jpf_diff.DataBlock;
 import jpf_diff.Dependency;
 import jpf_diff.ErrorCount;
-import lazyinit.paramAndPoly.intNode;
+//import lazyinit.paramAndPoly.intNode;
 
 import org.apache.bcel.Repository;
 import org.apache.bcel.generic.*;
@@ -944,7 +948,16 @@ public class CFGBuilder {
 	    			int dend = dependBlock.getEndLine();
 	    			for (int j = dstart; j <= dend; j++) {
 						Integer dPos = newCfg.lineToID.get(j);
-						Dependency dependency = new Dependency(pos, dPos);
+						Dependency dependency;
+						if (oldDependency instanceof DataBlock) {
+							dependency = new Data(pos, dPos);
+						}
+						else if (oldDependency instanceof ControlBlock) {
+							dependency = new Control(pos, dPos);
+						}
+						else {
+							dependency = new Dependency(pos, dPos);
+						}
 						if (!newCfg.oldDepend.containsKey(pos)) {
 							Set<Dependency> newDependencies = new HashSet<>();
 							newDependencies.add(dependency);

@@ -1,6 +1,7 @@
 package jpf_diff;
 
 import gov.nasa.jpf.regression.analysis.ComputeDifferences;
+import gov.nasa.jpf.regression.cfg.Node;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -20,6 +21,9 @@ import java.util.Set;
 import javax.swing.text.html.HTMLDocument.Iterator;
 
 //import lazyinit.paramAndPoly.intNode;
+
+
+
 
 import com.sun.tools.doclets.internal.toolkit.util.DocFinder.Output;
 
@@ -70,6 +74,13 @@ class CondNode extends DotNode {
 	}
 }
 
+class AssertNode extends DotNode {
+	public AssertNode(Integer begin, Integer end, Integer id) {
+		// TODO Auto-generated constructor stub
+		super(begin, end, id);
+	}
+}
+
 class DataEdge extends DotEdge {
 	public DataEdge(Integer begin, Integer end) {
 		// TODO Auto-generated constructor stub
@@ -111,6 +122,7 @@ class impactSet {
 		
 		nodes = new HashSet<>();
 		edges = new HashSet<>();
+		
 		lineToNodeId = new HashMap<Integer, Set<Integer>>();
 		idToNode = new HashMap<>();
 		relation = new HashMap<>();
@@ -128,6 +140,7 @@ class impactSet {
 		
 		lineToNodeId.clear();
 		idToNode.clear();
+		relation.clear();
 	}
 }
 
@@ -162,6 +175,8 @@ public class Diff {
 				
 				DotNode nowNode;
 				
+				
+				
 				if (string.contains("red")) {
 					for (int i = begin; i <= end; i++) {
 						now.condLoc.add(i);
@@ -192,7 +207,7 @@ public class Diff {
 							now.lineToNodeId.get(i).add(id);
 						}
 					}	
-					nowNode = new DotNode(begin, end, id);
+					nowNode = new AssertNode(begin, end, id);
 				}
 				else if (string.contains("blue")){
 					for (int i = begin; i <= end; i++) {
@@ -230,6 +245,10 @@ public class Diff {
 				String[] contents = string.split("\\[|->");
 				Integer begin = new Integer(contents[0]);
 				Integer end = new Integer(contents[1]);
+				
+				System.err.println(string);
+				System.err.println(begin + "->" + end);
+				
 				DotEdge nowEdge;
 				if (string.contains("Data")) {
 					nowEdge = new DataEdge(begin, end);
@@ -293,7 +312,14 @@ public class Diff {
 		File[] Files = f.listFiles();
 		
 		for (File Dot : Files) {
-			if (Dot.exists() && Dot.getName().endsWith("txt")) {
+			if (Dot.isDirectory()) {
+				for (File dot : Files) {
+					if (dot.exists() && dot.getName().endsWith("_impacted.dot")) {
+						dot.delete();
+					}					
+				}
+			}
+			else if (Dot.exists() && Dot.getName().endsWith("_impacted.dot")){
 				Dot.delete();
 			}
 		}
@@ -311,14 +337,23 @@ public class Diff {
 					String newPath = newDot.getAbsolutePath();
 					String patchPath = patchDot.getAbsolutePath();
 					
+					if (newDot.isDirectory()) {
+						continue;
+					}
+					
 					//清除上个文件的内容
 					s.clear();
 					s1.clear();
+					
 					
 					analyzeDot(newPath, s);
 //					System.out.println("patch complete!");
 					analyzeDot(patchPath, s1);
 //					System.out.println("new complete!");
+					
+					if (newDot.getAbsolutePath().contains("patch/jdt/Scanner/Scanner_59_parseTags")) {
+						continue;
+					}
 					
 					s.allLoc.retainAll(s1.allLoc);
 					//若没有交集，忽略之
@@ -326,12 +361,17 @@ public class Diff {
 						continue;
 					}
 //					BufferedWriter writer = new BufferedWriter(new FileWriter(newDot.getAbsolutePath() + ".txt"));
+					
+					String newImpact = newf.getAbsolutePath() + "/impacted/" + newDot.getName()  + "_impacted.dot";
+					String patchImpact = patchf.getAbsolutePath() + "/impacted/" + patchDot.getName()  + "_impacted.dot";
+					
 					System.out.println(newDot.getAbsolutePath() + " begin!");
-					output(s.allLoc, s, newDot.getAbsolutePath() + "_impacted.dot");
+					output(s.allLoc, s, newImpact);
 					System.out.println(newDot.getAbsolutePath() + " complete!");
-					output(s.allLoc, s1,  patchDot.getAbsolutePath() + "_impacted.dot");
+					
 					System.out.println(patchDot.getAbsolutePath() + " begin!");
-					System.out.println(patchDot.getAbsolutePath() + "complete!");
+					output(s.allLoc, s1,  patchImpact);
+					System.out.println(patchDot.getAbsolutePath() + " complete!");
 //					writer.close();
 					break;
 				}
@@ -339,63 +379,103 @@ public class Diff {
 		}		
 	}
 
+	
 
 	private void output(Set<Integer> intersection, impactSet now, String path) throws IOException {
 		// TODO Auto-generated method stub
-		BufferedWriter writer = new BufferedWriter(new FileWriter(path));
+		File file = new File(path);
+		if (!file.getParentFile().exists()) {
+			file.getParentFile().mkdirs();
+			System.err.println("create dir: " + file.getParentFile());
+		}
+		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 		writer.write("digraph \"\" { \n");
 		Set<Integer> impacted = new HashSet<>();
+		Set<Integer> printedNode = new HashSet<>();
 		for (Integer i : intersection) {
 			Set<Integer> ids = now.lineToNodeId.get(i);
 			for (Integer id : ids) {
 				DotNode node = now.idToNode.get(id);
-				String lineNumbers = node.begin + "-" + node.end;
-				if (node.changed) {
-					if (node instanceof WriteNode) {
-						writer.write(id +"[ label=\"(" + id + "**)" +
-								lineNumbers + "\",color=blue,style=filled];\n");		
-					}
-					if (node instanceof CondNode) {
-						writer.write(id +"[ label=\"(" + id + "**)" +
-								lineNumbers + "\",color=red,style=filled];\n");						
-					}
-				}
-				else {
-					if (node instanceof WriteNode) {
-						writer.write(id +"[ label=\"(" + id + ")" +
-								lineNumbers + "\",color=blue,style=filled];\n");		
-					}
-					if (node instanceof CondNode) {
-						writer.write(id +"[ label=\"(" + id + ")" +
-								lineNumbers + "\",color=red,style=filled];\n");						
-					}				
-				}
-				impacted.add(id);	
+				impacted.add(id);
+				
+				printNode(writer, node, id, impacted);
+				printedNode.add(id);
 			}
 		}
-		writeEdge(impacted, now, writer);
+		Set<DotEdge> used = new HashSet<>();
+		writeEdge(impacted, impacted, now, writer, printedNode, used);
 		writer.write("}");
 		writer.close();
 	}
 
 
-	private void writeEdge(Set<Integer> impacted, impactSet now,
-			BufferedWriter writer) throws IOException {
+	private void printNode(BufferedWriter writer, DotNode node, Integer id, Set<Integer> impacted) throws IOException {
 		// TODO Auto-generated method stub
-		if (impacted.isEmpty()) {
+
+		String lineNumbers = node.begin + "-" + node.end;
+		String filled = "";
+		if (impacted.contains(id)) {
+			filled = ",style=filled";
+		}
+		if (node.changed) {
+			if (node instanceof WriteNode) {
+				writer.write(id +"[ label=\"(" + id + "**)" +
+						lineNumbers + "\",color=blue" + filled + "];\n");		
+			}
+			if (node instanceof CondNode) {
+				writer.write(id +"[ label=\"(" + id + "**)" +
+						lineNumbers + "\",color=red" + filled + "];\n");						
+			}
+			if (node instanceof AssertNode) {
+				writer.write(id +"[ label=\"(" + id + "**)" +
+						lineNumbers + "\",color=purple" + filled + "];\n");						
+			}
+		}
+		else {
+			if (node instanceof WriteNode) {
+				writer.write(id +"[ label=\"(" + id + ")" +
+						lineNumbers + "\",color=blue" + filled + "];\n");		
+			}
+			if (node instanceof CondNode) {
+				writer.write(id +"[ label=\"(" + id + ")" +
+						lineNumbers + "\",color=red" + filled + "];\n");						
+			}
+			if (node instanceof AssertNode) {
+				writer.write(id +"[ label=\"(" + id + "**)" +
+						lineNumbers + "\",color=purple" + filled + "];\n");						
+			}
+		}		
+	}
+
+
+	private void writeEdge(Set<Integer> impacted, Set<Integer> nowNode, impactSet now,
+			BufferedWriter writer, Set<Integer> printedNode, Set<DotEdge> used) throws IOException {
+		// TODO Auto-generated method stub
+		if (nowNode.isEmpty()) {
 			return;
 		}
 		Set<Integer> next = new HashSet<>();
-		for (Integer id : impacted) {
+		for (Integer id : nowNode) {
 			Set<DotEdge> edges = now.relation.get(id);
 			//若当前节点没有下一层了，则继续
 			if (edges == null) {
 				continue;
 			}
 			for (DotEdge edge : edges) {
+				if (used.contains(edge)) {
+					continue;
+				}
+				else {
+					used.add(edge);
+				}
 				if (id.intValue() != edge.end.intValue() && now.idToNode.containsKey(edge.end) && !now.idToNode.get(edge.end).changed
 						&& !now.idToNode.get(id).changed) {
 					next.add(edge.end);
+				}
+				if (!printedNode.contains(edge.end)) {
+					DotNode node = now.idToNode.get(edge.end);
+					printNode(writer, node, edge.end, impacted);
+					printedNode.add(edge.end);
 				}
 				if (edge instanceof DataEdge) {
 					writer.write(id + "->" +
@@ -407,29 +487,9 @@ public class Diff {
 							edge.end +
 						"[ color=\"blue\" label=\"" + "Control Depends on" +	"\" style = dotted ];\n");
 				}
-				System.out.println("	" + id + "," + edge.end);
+//				System.out.println("	" + id + "," + edge.end);
 			}
-			writeEdge(next, now, writer);
-		}
-	}
-
-
-	private void printChange(String classpath, impactSet s) throws IOException {
-		// TODO Auto-generated method stub
-		System.out.println("-----print begin!------");
-		File classfile = new File(classpath);
-		BufferedReader reader = new BufferedReader(new FileReader(classfile));
-		String line;
-		String file = "";
-		while((line = reader.readLine()) != null) {
-			file += line + "\n";
-		}
-		reader.close();
-		String[] text = file.split("\n");
-		for (int i = 0; i < text.length; i++) {
-			if (s.allLoc.contains(i + 1)) {
-				System.out.println((i + 1) + " :" + text[i]);
-			}
+			writeEdge(impacted, next, now, writer, printedNode, used);
 		}
 	}
 

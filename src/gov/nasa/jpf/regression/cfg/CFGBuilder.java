@@ -958,6 +958,7 @@ public class CFGBuilder {
 						else {
 							dependency = new Dependency(pos, dPos);
 						}
+						System.err.println(pos + "->" + dPos);
 						if (!newCfg.oldDepend.containsKey(pos)) {
 							Set<Dependency> newDependencies = new HashSet<>();
 							newDependencies.add(dependency);

@@ -319,6 +319,9 @@ public class AnalyzeIntraProceduralDiff {
 			 Integer condLoc = condItr.next();
 			 //first check whether the condLoc is modified
 			 if(conditionalBr.contains(condLoc)) {
+					if (condLoc == 25) {
+						System.err.println("420-427: " + condLoc + "depends on" + -1);
+					}
 				 trackCond.add(condLoc);
 				 currTrackedCond.add(condLoc);
 				 //如果是初始的modified condLoc
@@ -351,6 +354,9 @@ public class AnalyzeIntraProceduralDiff {
 				if(dm.getValue(condPosCounter, modPosCounter) <
 						Integer.MAX_VALUE &&
 						dm.getValue(condPosCounter, modPosCounter) != 0) {
+					if (condLoc == 25) {
+						System.err.println("420-427: " + condLoc + "depends on" + modPos);
+					}
 					trackCond.add(condLoc);
 					currTrackedCond.add(condLoc);
 					//添加对应的控制依赖关系
@@ -1322,16 +1328,22 @@ public class AnalyzeIntraProceduralDiff {
 						newConditionPos.add(cPos);
 					}
 					//这是set，不怕重复
+					if (cPos == 25) {
+						System.err.println("420-427: " + cPos + "depends on" + wPos);
+					}
+					if (wPos == 25) {
+						System.err.println("420-427: " + wPos + "depends on" + cPos);
+					}
 					this.globalTrackWrite.add(wPos);
 					//如果是wPos在cPos中被使用并可达,且cPos不在ACN中、wPos在AWN中
 					//cPos在之后会被添加到track中
 					if (!flag.contains("last")) {
-						if (!depend.containsKey(wPos)) {
-							Dependency dependency = new Dependency(wPos, -1);
-							Set<Dependency> dependencies = new HashSet<>();
-							dependencies.add(dependency);
-							depend.put(wPos, dependencies);
-						}
+//						if (!depend.containsKey(wPos)) {
+//							Dependency dependency = new Dependency(wPos, -1);
+//							Set<Dependency> dependencies = new HashSet<>();
+//							dependencies.add(dependency);
+//							depend.put(wPos, dependencies);
+//						}
 						if (!depend.containsKey(cPos) && depend.containsKey(wPos)) {
 							Dependency dependency = new Data(cPos, wPos);
 							Set<Dependency> dependencies = new HashSet<>();
@@ -1690,6 +1702,7 @@ public class AnalyzeIntraProceduralDiff {
 					getInstruction(), ic);
 			if(writeVarName == null) continue; //its not a write insn
 
+			
 			// get write of all variables that it is reading
 			HashMap<String, ArrayList<Integer>> writeVars =
 							new HashMap<String, ArrayList<Integer>>();
@@ -1706,6 +1719,7 @@ public class AnalyzeIntraProceduralDiff {
 					}
 				}
 				visitedWPos.addAll(toExplore);
+				//检查用到了这里出现过变量的其他写语句
 				checkModifiedWriteStatement(toExplore, visitedWPos);
 			}
 
@@ -1721,6 +1735,9 @@ public class AnalyzeIntraProceduralDiff {
 							(cfg.getIndexOfPosition(wPosOffset),
 							cfg.getIndexOfPosition(cPosOffset)) < Integer.MAX_VALUE) {
 						//记录下了该受影响的condPos
+						if (condPos.get(condIndex) == 25) {
+							System.err.println("420-427: " + condPos.get(condIndex) + "depends on" + pos);
+						}
 						trackCond.add(condPos.get(condIndex));
 						//追踪依赖关系
 						if (!depend.containsKey(condPos.get(condIndex)) && depend.containsKey(pos)) {
@@ -1739,13 +1756,6 @@ public class AnalyzeIntraProceduralDiff {
 					}
 
 				}
-			}
-			//添加初始追踪依赖关系，即Modified语句不依赖于任何语句
-			if (!depend.containsKey(pos)) {
-				Dependency dependency = new Dependency(pos, -1);
-				Set<Dependency> dependencies = new HashSet<>();
-				dependencies.add(dependency);
-				depend.put(pos, dependencies);
 			}
 			reachableWriteLocs.add(pos);
 		}
@@ -1769,6 +1779,21 @@ public class AnalyzeIntraProceduralDiff {
 			//如果wrtPoses与globalTrackWrite或者affectedWrite有交集
 			//则把该wrtPoses依赖的cond的位置添加进去
 			if(!wrtPoses.isEmpty()) {
+				for (Integer pos : wrtPoses) {
+					if (!depend.containsKey(controlPos) && depend.containsKey(pos)) {
+						Dependency dependency = new Data(controlPos, pos);
+						Set<Dependency> dependencies = new HashSet<>();
+						dependencies.add(dependency);
+						depend.put(controlPos, dependencies);							
+					}
+					else if (depend.containsKey(controlPos) && depend.containsKey(pos)){
+						Dependency dependency = new Data(controlPos, pos);
+						Dependency former = new Data(pos, controlPos);
+						if (!depend.get(controlPos).contains(former)) {
+							depend.get(controlPos).add(dependency);
+						}	
+					}
+				}
 				affectedCondPoses.add(controlPos);
 			}
 		}

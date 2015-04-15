@@ -265,6 +265,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
     	Set<Integer> global = oldSemantic.globalTrackCond;
     	global.addAll(oldSemantic.globalTrackWrite);
+    	System.err.println("oldsemantic: " + global.size());
     	
     	Map<Integer, BigInteger> origPosToModBlock = new HashMap<>();
     	
@@ -280,6 +281,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     			if(bo.getStartLine() >= lineNum &&
     					bo.getEndLine() <= lineNum) {
     				matched.add(bo.getMatchedBlock());
+    				//输出找到的block
+    				System.err.println(lineNum);
     				if (!origPosToModBlock.containsKey(gPos)) {
 						origPosToModBlock.put(gPos, bo.getMatchedBlock());
 					}
@@ -339,16 +342,17 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	   semanticDiffOld.analyzeConditionalBranchStatements();
 		 //System.out.println("cfg.modifiedWritesAndIfs :" + cfg.modifiedWritesAndIfs);
 
+	   for (Integer integer : oldCFG.getRemovedInstructions()) {
+		   Set<Dependency> dependencies = new HashSet<>();
+		   dependencies.add(new Dependency(integer, -1));
+		   semanticDiffOld.depend.put(integer, dependencies);
+	   }
+	   
 	   semanticDiffOld.checkModifiedWriteStatement(oldCFG.getRemovedInstructions(),
 			   										new HashSet<Integer>());
 
 	   Set<Integer> allVals = new HashSet<Integer>();
 	   allVals.addAll(oldCFG.getRemovedInstructions());
-	   for (Integer integer : allVals) {
-		   Set<Dependency> dependencies = new HashSet<>();
-		   dependencies.add(new Dependency(integer, -1));
-		   semanticDiffOld.depend.put(integer, dependencies);
-	   }
 	   allVals.addAll(semanticDiffOld.trackCond);
 
 	   semanticDiffOld.generateSetOfAffectCondBranches(allVals, true);
@@ -378,8 +382,27 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	   //final mapping between hte variables
 
 	   semanticDiffOld.generateFinalMapBetweenVarsAndCond(varNames);
+	   
+	   
+	   
+	   
+	   LineNumberTable lnt = oldMg.getLineNumberTable(oldMg.getConstantPool());
 
+	   System.err.println("semanticDiffOld.globalTrackCond: "+ semanticDiffOld.globalTrackCond.size());
+	   for (Integer cond : semanticDiffOld.globalTrackCond) {
+		   Integer line = lnt.getSourceLine(cond);
+		   System.err.println("	" + line);
+	   }
+	   
+	   System.err.println("semanticDiffOld.globalTrackWrite: "+ semanticDiffOld.globalTrackWrite.size());
+	   for (Integer cond : semanticDiffOld.globalTrackWrite) {
+		   Integer line = lnt.getSourceLine(cond);
+		   System.err.println("	" + line);
+	   }
+	   
+	   
 	   semanticDiffOld.globalTrackCond.removeAll(oldCFG.getRemovedInstructions());
+
 	   semanticDiffOld.globalTrackWrite.removeAll(oldCFG.getRemovedInstructions());
 
 	   //System.out.println("final old (remove - affected) globalTrackCond :" + semanticDiffOld.globalTrackCond);
@@ -388,6 +411,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
    }
 
    protected void preciseAnalysis(String methodName, CFG cfg, MethodGen mg, boolean filterAffMode) {
+	   	if (methodName.contains("org.eclipse.jdt.internal.compiler.Compiler.compile")) {
+			System.err.println(methodName);
+		}
     	//System.out.println("methodName is :" + methodName);
     	AbstractMethodInfo absMethodInfo = new AbstractMethodInfo(mg);
     	absMethodInfo.runAnalysis(false);
@@ -415,6 +441,9 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     		System.out.println("end of the precise analysis");
     	analysis.put(methodName, semanticDiff);
     	//System.exit(1);
+    	
+    	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
+    	System.err.println(lnt.getSourceLine(43) + "depends on " + lnt.getSourceLine(25));
 
     }
 
@@ -462,6 +491,28 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 			 			setupCheckingSemanticDifferences(cfg, semanticDiff,
 			 						modifiedWritesAndIfs, genTransitiveCondDep);
 		 boolean done = false;
+		 /*
+		  * 0.先用变更语句集合计算一遍，获取到受影响的cond语句集合并存入track cond,并返回用到这些变量的写语句map
+		  * 	->setupCheckingSemanticDifferences
+		  * 
+		  * 接下来进入循环：
+		  * 1.找到用到受影响的cond语句中变量s的那些写语句
+		  * 	-->genWriteInsCDOnBranches
+		  * 2.再找用到这些变量s的写语句
+		  * 	->genWriteInsUsingModifiedWriteVals
+		  * 3.再找用到这些变量的cond语句，并检查这些写语句和cond语句之间是否可达，并返回可达的cond语句,将可达的写语句放入global track write
+		  * 	->getCondBranchesWithVars
+		  * 4.再找控制依赖于1中找到的写语句和2中找到的cond语句的那些cond语句，并放入到track cond
+		  * 	->generateSetOfAffectCondBranches
+		  * 5.若没有找到更多的语句了，则结束循环，否则继续
+		  * 总结：
+		  * 	--->最终效果即找到那些被变更写语句影响到的cond语句，并放入临时的impact set
+		  * 	--->并将变更写语句放入impact set
+		  * 	--->并将用到这些变量的，且到被变更写语句影响到的cond语句可达的那些写语句放入impact set
+		  */
+		 if (cfg.getMethodName().contains("Compile.compile")) {
+			int x = 0;
+		}
 		 while(!done) {
 
 			//1. check whether there exists conditional branch statements that use the variables
@@ -508,7 +559,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 
 			//generateSetOfAffectCondBranches方法中将这些cond的位置记录到了TrackedBranches中
 			newCondPositions.addAll(semanticDiff.getTrackedBranches());
-			//因为上面已经添加过extractWriteLocations(writeVarsMod)了，这里相当于重复添加了一次，需要删除之
+			//因为这里是
 			newCondPositions.removeAll(extractWriteLocations(writeVarsMod));
 			
 			if (verbose)

@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import jpf_diff.Dependency;
 import gov.nasa.jpf.regression.cfg.CFG;
 
 public class ComputeDifferences {
@@ -38,15 +39,34 @@ public class ComputeDifferences {
 		 // in the set of modifiedWritesAndIfs
 		//	即应用了规则3
 
-		
+		Iterator<Integer> modItr = modifiedWritesAndIfs.iterator();
+		while(modItr.hasNext()) {
+			Integer pos = modItr.next();
+			//添加初始追踪依赖关系，即Modified语句不依赖于任何语句
+			if (!semanticDiff.depend.containsKey(pos)) {
+				Dependency dependency = new Dependency(pos, -1);
+				Set<Dependency> dependencies = new HashSet<>();
+				dependencies.add(dependency);
+				semanticDiff.depend.put(pos, dependencies);
+			}
+		}
+		 /*
+		  * 0.抽取出变更语句集合中的写语句并返回之，同时找到用到这些写语句中出现过变量的所有写语句w，若有依赖于w的cond语句，放入到track cond中
+		  * 	->checkModifiedWriteStatement
+		  * 1.再找用到这些变量的写语句
+		  * 	->genWriteInsUsingModifiedWriteVals
+		  * 2.再找用到这些变量的cond语句，并检查这些写语句和cond语句之间是否可达，并返回可达的cond语句,将可达的写语句放入global track write
+		  * 	->getCondBranchesWithVars
+		  * 3.再找控制依赖于1中找到的写语句和2中找到的cond语句的那些cond语句，并放入到track cond
+		  * 	->generateSetOfAffectCondBranches
+		  * 总结：
+		  * 	--->最终效果即找到那些被变更写语句影响到的cond语句，并放入临时的impact set
+		  * 	--->并将变更写语句放入impact set
+		  * 	--->并将用到这些变量的，且到被变更写语句影响到的cond语句可达的那些写语句放入impact set
+		  */
 		 Set<Integer> writePositions = semanticDiff.checkModifiedWriteStatement
 		 				(modifiedWritesAndIfs, new HashSet<Integer>());
-
-
-		 /*
-		  * 先找用到这些变量的写语句：genWriteInsUsingModifiedWriteVals
-		  * 再找用到这些变量的cond语句，并检查这些写语句和cond语句之间是否可达，并返回可达的cond语句：getCondBranchesWithVars
-		  */
+		 
 		 HashMap<String, ArrayList<Integer>> writeVarsMod =
 			 					new HashMap<String, ArrayList<Integer>>();
 		 //生成用到这些变量的对应写语句map，即writeVarsMod

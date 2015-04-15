@@ -152,6 +152,9 @@ public class PrintToDot {
 						Integer loc = it1.next();
 						if (loc >= nodes[i].getStartOffset() && loc <= nodes[i].getEndOffset())
 							condNodes.add(nodes[i].getID());
+						if (loc >= nodes[i].getStartOffset() && loc <= nodes[i].getEndOffset() && nodes[i].getStartLineNumber() == 420
+								&& nodes[i].getEndLineNumber() == 427)
+							System.err.println("420-427: " + loc);
 					}
 				}
 				if (trackWriteLoc != null){
@@ -808,7 +811,7 @@ public class PrintToDot {
 				for (Dependency dependency : dependencies) {
 					Integer des = dependency.depend._2;
 					Pair<Integer, Integer> now = new Pair<Integer, Integer>(id, des);
-					System.err.println(nodeIDMap.get(id) + "->" + nodeIDMap.get(des));
+//					System.err.println(nodeIDMap.get(id) + "->" + nodeIDMap.get(des));
 					if (des == null || used.contains(now)) {
 						continue;
 					}

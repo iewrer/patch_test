@@ -1,0 +1,22 @@
+digraph "" { 
+1[ label="(1)root"];
+2[ label="(2**)2308-2308",color=red];
+3[ label="(3**)2309-2309"];
+4[ label="(4**)2311-2312",color=blue];
+5[ label="(5**)2313-2313",color=blue];
+6[ label="(6)2312-2312",color=red];
+7[ label="(7)2315-2315"];
+8[ label="(8)exit"];
+1->2[ label="E"];
+2->4[ label="F"];
+2->3[ label="T"];
+3->8[ label="E"];
+4->6[ label="E"];
+5->6[ label="E"];
+6->5[ label="F"];
+6->7[ label="T"];
+7->8[ label="E"];
+2->4[ color="red" label="Data Depends on" style = dotted ];
+6->5[ color="red" label="Data Depends on" style = dotted ];
+6->2[ color="blue" label="Control Depends on" style = dotted ];
+}

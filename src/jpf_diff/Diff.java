@@ -246,8 +246,8 @@ public class Diff {
 				Integer begin = new Integer(contents[0]);
 				Integer end = new Integer(contents[1]);
 				
-				System.err.println(string);
-				System.err.println(begin + "->" + end);
+//				System.err.println(string);
+//				System.err.println(begin + "->" + end);
 				
 				DotEdge nowEdge;
 				if (string.contains("Data")) {
@@ -351,9 +351,9 @@ public class Diff {
 					analyzeDot(patchPath, s1);
 //					System.out.println("new complete!");
 					
-					if (newDot.getAbsolutePath().contains("patch/jdt/Scanner/Scanner_59_parseTags")) {
-						continue;
-					}
+//					if (newDot.getAbsolutePath().contains("patch/jdt/Scanner/Scanner_59_parseTags")) {
+//						continue;
+//					}
 					
 					s.allLoc.retainAll(s1.allLoc);
 					//若没有交集，忽略之

@@ -1,5 +1,6 @@
 package gov.nasa.jpf.regression.analysis;
 
+import java.security.spec.MGF1ParameterSpec;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

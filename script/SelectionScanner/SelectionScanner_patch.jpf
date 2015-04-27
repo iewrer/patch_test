@@ -1,0 +1,9 @@
+target = org.eclipse.jdt
+classpath = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin
+sourcepath = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core
+rse.newClass = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin/org/eclipse/jdt/internal/codeassist/select/SelectionScanner.class
+rse.newSrc = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/codeassist/select/SelectionScanner.java
+rse.oldClass = /Users/barry/Documents/workspace/jdt_core_patched_from_new/bin/org/eclipse/jdt/internal/codeassist/select/SelectionScanner.class
+
+rse.dotFile = ./dotFiles/patch/jdt/SelectionScanner/SelectionScanner
+rse.ASTResults = ./diffFiles/patch/jdt/SelectionScanner.xml

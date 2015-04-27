@@ -517,6 +517,7 @@ public class CFGBuilder {
     			return i;
     		}
     	}
+    	System.err.println("method not found: " + methodName);
 		return -1;
     }
 
@@ -929,6 +930,7 @@ public class CFGBuilder {
 
 	public void addOldDepend(Map<BigInteger, Set<Block>> oldDepend, CFG newCfg, MethodASTInfo methodASTInfo, MethodGen mg) {
 		// TODO Auto-generated method stub
+		System.err.println("-------old to new begin!------");
 		Map<BigInteger, BlockASTInfo> modified = methodASTInfo.getModifiedBlocks();
 		LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
 		Iterator<BigInteger> iterator = oldDepend.keySet().iterator();
@@ -948,6 +950,9 @@ public class CFGBuilder {
 	    			int dend = dependBlock.getEndLine();
 	    			for (int j = dstart; j <= dend; j++) {
 						Integer dPos = newCfg.lineToID.get(j);
+						if (dPos == null || pos == null) {
+							continue;
+						}
 						Dependency dependency;
 						if (oldDependency instanceof DataBlock) {
 							dependency = new Data(pos, dPos);
@@ -958,7 +963,7 @@ public class CFGBuilder {
 						else {
 							dependency = new Dependency(pos, dPos);
 						}
-						System.err.println(pos + "->" + dPos);
+						System.err.println("old to new: " + pos + " -> " + dPos);
 						if (!newCfg.oldDepend.containsKey(pos)) {
 							Set<Dependency> newDependencies = new HashSet<>();
 							newDependencies.add(dependency);
@@ -972,5 +977,6 @@ public class CFGBuilder {
 	    		}				
 			}
 		}
+		System.err.println("-------old to new end!------");
 	}
 }

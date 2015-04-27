@@ -195,7 +195,8 @@ public class RunJpf {
 		// TODO Auto-generated method stub
 
 		Config.enableLogging(true);
-		String filename = "Compiler";
+		String filename = "NestedTypeBinding";
+//		String filename = "ASTRewriteAnalyzer";
 				
 		RunJpf jpf = new RunJpf(filename);
 		

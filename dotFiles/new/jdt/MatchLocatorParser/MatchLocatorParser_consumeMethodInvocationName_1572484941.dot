@@ -1,0 +1,25 @@
+digraph "" { 
+1[ label="(1)root"];
+2[ label="(2)423-425"];
+3[ label="(3)426-427"];
+4[ label="(4)428-428"];
+5[ label="(5)429-429"];
+6[ label="(6)430-432"];
+7[ label="(7)433-433"];
+8[ label="(8)434-434"];
+9[ label="(9)438-438"];
+10[ label="(10)exit"];
+1->2[ label="E"];
+2->4[ label="F"];
+2->3[ label="T"];
+3->9[ label="E"];
+4->7[ label="F"];
+4->5[ label="T"];
+5->9[ label="F"];
+5->6[ label="T"];
+6->9[ label="E"];
+7->9[ label="F"];
+7->8[ label="T"];
+8->9[ label="E"];
+9->10[ label="E"];
+}

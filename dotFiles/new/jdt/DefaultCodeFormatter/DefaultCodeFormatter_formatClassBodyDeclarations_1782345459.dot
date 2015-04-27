@@ -1,0 +1,13 @@
+digraph "" { 
+1[ label="(1)root"];
+2[ label="(2**)183-185",color=purple];
+3[ label="(3)187-187"];
+4[ label="(4)189-189"];
+5[ label="(5)exit"];
+1->2[ label="E"];
+2->4[ label="F"];
+2->3[ label="T"];
+3->5[ label="E"];
+4->5[ label="E"];
+2->2[ color="red" label="Data Depends on" style = dotted ];
+}

@@ -163,6 +163,8 @@ public class PruningRSEListener {
 	Random random;
 	CFG cfg;
 	ErrorCount error;
+	Map<String, Integer> dotName;
+	int id;
 	
 //	public PruningRSEListener(Config conf, JPF jpf) {
 	public PruningRSEListener(Config conf, ErrorCount error) {
@@ -175,6 +177,8 @@ public class PruningRSEListener {
 		newSrc = conf.getString("rse.newSrc");
 		
 		this.error = error;
+		this.dotName = new HashMap<>();
+		id = 0;
 		
 //		jpf.addPublisherExtension(ConsolePublisher.class, this);
 		if (conf.containsKey("rse.ASTResults")){ //path to XML file
@@ -292,6 +296,7 @@ public class PruningRSEListener {
 			System.out.println(signature);
 			methodName = method + signature;
 			
+			
 			if (info.getMatched() && !signature.contains("java/util")) {
 //				System.out.println("computing:"+ methodName);
 				ComputeIntraProceduralDiff cpd = null;
@@ -355,7 +360,7 @@ public class PruningRSEListener {
 //						// TODO Auto-generated catch block
 //						e.printStackTrace();
 //					}
-					dot.printCFG(dotFile + "_" + (index++) + "_" + info.getMethodName() + ".dot",
+					dot.printCFG(dotFile + "_" + info.getMethodName() + "_" + methodName.hashCode() + ".dot",
 								cpd.getCFG(methodName,info),
 								ComputeIntraProceduralDiff.
 								getSemanticAnalysis(methodName),

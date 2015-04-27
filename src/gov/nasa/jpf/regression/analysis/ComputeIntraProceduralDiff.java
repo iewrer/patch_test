@@ -226,7 +226,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 	    	if(analysis.containsKey(methodName)) return 0;
 			oldCfg = cfgbOld.getCFG(methodName,"original", methodASTInfo);
 
-			if(oldCfg.getRemovedInstructions().size() > 0) {
+			if(oldCfg !=null && oldCfg.getRemovedInstructions().size() > 0) {
 				AnalyzeIntraProceduralDiff diff =
 					checkOldInformation(methodName, oldCfg, cfgbOld.getMethodGen(methodName));
 
@@ -234,9 +234,14 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 			}
 
 			newCfg = cfgbNew.getCFG(methodName, "modified", methodASTInfo);
-			cfgbNew.addOldDepend(oldDepend, newCfg, methodASTInfo, cfgbOld.getMethodGen(methodName));
+			if (oldCfg !=null) {
+				cfgbNew.addOldDepend(oldDepend, newCfg, methodASTInfo, cfgbOld.getMethodGen(methodName));
+			}
 			//System.out.println(newCfg.modifiedWritesAndIfs.toString());
-			preciseAnalysis(methodName, newCfg, cfgbNew.getMethodGen(methodName), filterAffMode);
+			if (newCfg != null) {
+				preciseAnalysis(methodName, newCfg, cfgbNew.getMethodGen(methodName), filterAffMode);
+			}
+			
 
 
 		} catch (Exception e) {
@@ -278,16 +283,18 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     		while(gItr.hasNext()) {
     			Integer gPos = gItr.next();
     			int lineNum = lnt.getSourceLine(gPos);
-    			if(bo.getStartLine() >= lineNum &&
-    					bo.getEndLine() <= lineNum) {
-    				matched.add(bo.getMatchedBlock());
-    				//输出找到的block
-    				System.err.println(lineNum);
+    			if(bo.getStartLine() <= lineNum &&
+    					bo.getEndLine() >= lineNum) {
+    				System.err.println("old tracked: " + lineNum);
+    				matched.add(bo.getMatchedBlock());    				
     				if (!origPosToModBlock.containsKey(gPos)) {
 						origPosToModBlock.put(gPos, bo.getMatchedBlock());
 					}
     				break;
     			}
+//    			else {
+//    				System.err.println("old tracked not mapped: " + lineNum);
+//    			}
     		}
     	}
     	//遍历matched block，将match上的modified block添加到methodASTInfo的changedModifiedLines里面
@@ -297,18 +304,24 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	while(matchItr.hasNext()) {
     		BigInteger mIndex = matchItr.next();
     		BlockASTInfo mod = modified.get(mIndex);
+    		if (mod == null) {
+				continue;
+			}
     		int startLine = mod.getStartLine();
     		int endLine = mod.getEndLine();
     		for(int lnIndex = startLine; lnIndex <= endLine; lnIndex++) {
+    			System.err.println("old tracked map to : " + lnIndex);
     			methodASTInfo.addChangedMod(lnIndex);
     		}
     	}
 		Iterator<Integer> iterator = oldSemantic.depend.keySet().iterator();
 		Map<BigInteger, Set<Block> > depend = new HashMap<>();
+		System.err.println("old dependengcy begin----");
 		while (iterator.hasNext()) {
 			Integer pos = (Integer) iterator.next();
 			Set<Dependency> dependencies = oldSemantic.depend.get(pos);
 			for (Dependency dependency : dependencies) {
+				System.err.println("	" + lnt.getSourceLine(pos) + " depends on " + lnt.getSourceLine(dependency.depend._2));
 				Block dependBlock;
 				if (dependency instanceof Data) {
 					dependBlock = new DataBlock(origPosToModBlock.get(pos), origPosToModBlock.get(dependency.depend._2));
@@ -329,6 +342,7 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
 				}				
 			}
 		}
+		System.err.println("old dependengcy end----");
     	return depend;
     }
 
@@ -423,6 +437,13 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	initializeDataStructures(semanticDiff);
     	boolean genTransitiveControlDepStmts = true;
     	boolean genFinalWriteStmts = false;
+    	
+    	System.err.println("----modified instructions in modified block begin----");
+    	for (Integer integer : cfg.getModifiedWritesAndIfs()) {
+			System.err.println("modified: " + mg.getLineNumberTable(mg.getConstantPool()).getSourceLine(integer));
+		}
+    	System.err.println("----modified instructions in modified block end----");
+    	
     	computeSemanticDiff(cfg, semanticDiff, cfg.getModifiedWritesAndIfs(),
     			genTransitiveControlDepStmts, genFinalWriteStmts);
     	
@@ -442,8 +463,8 @@ public class ComputeIntraProceduralDiff extends ComputeDifferences {
     	analysis.put(methodName, semanticDiff);
     	//System.exit(1);
     	
-    	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
-    	System.err.println(lnt.getSourceLine(43) + "depends on " + lnt.getSourceLine(25));
+//    	LineNumberTable lnt = mg.getLineNumberTable(mg.getConstantPool());
+//    	System.err.println(lnt.getSourceLine(43) + " depends on " + lnt.getSourceLine(25));
 
     }
 

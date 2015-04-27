@@ -1780,6 +1780,12 @@ public class AnalyzeIntraProceduralDiff {
 			//则把该wrtPoses依赖的cond的位置添加进去
 			if(!wrtPoses.isEmpty()) {
 				for (Integer pos : wrtPoses) {
+					
+					if (controlPos == 25) {
+						System.err.println("420-427: " + mg.getLineNumberTable(mg.getConstantPool()).getSourceLine(controlPos)
+								+ " depends on " + mg.getLineNumberTable(mg.getConstantPool()).getSourceLine(pos));
+					}
+					
 					if (!depend.containsKey(controlPos) && depend.containsKey(pos)) {
 						Dependency dependency = new Data(controlPos, pos);
 						Set<Dependency> dependencies = new HashSet<>();

@@ -1,0 +1,9 @@
+target = org.eclipse.jdt
+classpath = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin
+sourcepath = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core
+rse.newClass = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin/org/eclipse/jdt/internal/compiler/lookup/FieldBinding.class
+rse.newSrc = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/lookup/FieldBinding.java
+rse.oldClass = /Users/barry/code/patch/org.eclipse.jdt.source-4.3.2/plugins/org.eclipse.jdt.core_3.9.2.v20140114-1555/org/eclipse/jdt/internal/compiler/lookup/FieldBinding.class
+
+rse.dotFile = ./dotFiles/new/jdt/FieldBinding/FieldBinding
+rse.ASTResults = ./diffFiles/new/jdt/FieldBinding.xml

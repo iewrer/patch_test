@@ -1,0 +1,7 @@
+target =
+classpath = /Users/barry/code/patch/archive-2.9.0.xx-20140320-0100-e43-SNAPSHOT/plugins/org.eclipse.jdt.core_3.9.2.xx-20140320-0100-e43-SNAPSHOT
+sourcepath = /Users/barry/code/patch/archive-2.9.0.xx-20140320-0100-e43-SNAPSHOT/plugins/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT
+rse.newClass = /Users/barry/code/patch/archive-2.9.0.xx-20140320-0100-e43-SNAPSHOT/plugins/org.eclipse.jdt.core_3.9.2.xx-20140320-0100-e43-SNAPSHOT.class
+rse.oldClass = /Users/barry/code/patch/org.eclipse.jdt.source-4.3.2/plugins/org.eclipse.jdt.core_3.9.2.v20140114-1555.class
+rse.dotFile = ./dotFiles/patch/jdt//
+rse.ASTResults = ./diffFiles/patch/jdt/.xml

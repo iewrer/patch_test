@@ -1,9 +1,6 @@
 package jpf_diff;
 
-import gov.nasa.jpf.tool.Run;
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -78,8 +75,6 @@ public class RunAll {
 		RunJpf runJpf = new RunJpf("");
 		File run = new File("./script/run.txt");
 		File error_count = new File("./script/error_count.txt");
-		int i = 0;
-//		int j = 0;
 		BufferedReader reader = new BufferedReader(new FileReader(run));
 		String line = "";
 		while((line = reader.readLine()) != null) {

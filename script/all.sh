@@ -2,17 +2,18 @@
 
 #script to make the following files ready,after running this script we can directly run the java code to finish the rest work
 #1. AST Diff XML file
-#2. dot dir
-#3. jpf files
+#2. Dot dir
+#3. Config file
 
+Now="."
 
-Old_src="/Users/barry/Documents/workspace/jdt_core/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555"
-New_src="/Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core"
-Patch_src="/Users/barry/Documents/workspace/jdt_core/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT"
+Old_src="../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555"
+New_src="../data/src/new_path_for_new_version/org.eclipse.jdt.core"
+Patch_src="../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT"
 
-Old_class="/Users/barry/code/patch/org.eclipse.jdt.source-4.3.2/plugins/org.eclipse.jdt.core_3.9.2.v20140114-1555"
-New_class="/Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin"
-Patch_class="/Users/barry/code/patch/archive-2.9.0.xx-20140320-0100-e43-SNAPSHOT/plugins/org.eclipse.jdt.core_3.9.2.xx-20140320-0100-e43-SNAPSHOT"
+Old_class=$(cd "../data/bin/old";pwd)
+New_class=$(cd "../data/bin/new";pwd)
+Patch_class=$(cd "../data/bin/patch";pwd)
 
 Src=".java"
 Class=".class"
@@ -21,19 +22,29 @@ Xml=".xml"
 
 function getName() {
 	for file in $(find $1 -name '*.java' -print);do
+		# Patch_src_ab=$(cd $Patch_src;pwd)
+		# echo $Patch_src_ab
 		Patch_src_len=${#Patch_src}
 		filename=$(basename $file)
+		# echo $filename
 		filename_len=${#filename}
 		file_len=${#file}
+		# echo $file
 		dir_len=$(expr $file_len - $Patch_src_len - $filename_len)
 		
 
 		name=$(basename $file .java)
-		echo $name >> "./filename.txt"  
-		dir=${file:$Patch_src_len:dir_len}  
+		# echo $name >> "./filename.txt"  
+		dir=${file:$Patch_src_len - 1:dir_len + 1}  
 	    # echo $dir
 
 	    FileName=$name
+
+	    if [ $FileName != "Compiler" ]
+	    then
+	    	continue
+	    fi
+
 	    Target="org.eclipse.jdt"
 	    Dir=$dir 
 
@@ -46,22 +57,24 @@ function getName() {
 
 		#the whole dir of these files
 		old_src=$Old_src$Dir$SrcFile
-		# old_class=$Old_class$Dir$ClassFile
-		old_class=$Old_src$Dir$ClassFile
+		old_class=$Old_class$Dir$ClassFile
+		# old_class=$Old_src$Dir$ClassFile
 
 		# new_src=$New_src$New_Dir$SrcFile
 		new_src=$New_src$Dir$SrcFile
-		# new_class=$New_class$Dir$ClassFile
-		new_class=$New_src$Dir$ClassFile
+		new_class=$New_class$Dir$ClassFile
+		# new_class=$New_src$Dir$ClassFile
 
 		patch_src=$Patch_src$Dir$SrcFile
-		# patch_class=$Patch_class$Dir$ClassFile
-		patch_class=$Patch_src$Dir$ClassFile
+		patch_class=$Patch_class$Dir$ClassFile
+		# patch_class=$Patch_src$Dir$ClassFile
 
 		#the classpath which will be used when AST differ runs
-		old_jar=$Old_class$Jar
-		patch_jar=$Patch_class$Jar
-		Runtime="../code/patch/jdt/bin/org.eclipse.core.runtime-3.1.0.jar:../code/patch/jdt/bin/org.eclipse.jface_3.9.1.v20130725-1141.jar:../code/patch/jdt/bin/org.eclipse.text_3.5.300.v20130515-1451.jar:../code/patch/jdt/bin/org.eclipse.core.resources_3.8.101.v20130717-0806.jar"
+		# old_jar=$Old_class$Jar
+		# patch_jar=$Patch_class$Jar
+		old_jar=$Old_class
+		patch_jar=$Patch_class
+		Runtime="../lib/org.eclipse.core.runtime-3.1.0.jar:../lib/org.eclipse.jface_3.9.1.v20130725-1141.jar:../lib/org.eclipse.text_3.5.300.v20130515-1451.jar:../lib/org.eclipse.core.resources_3.8.101.v20130717-0806.jar"
 
 
 		#the AST diff eval command
@@ -104,6 +117,9 @@ function getName() {
 		echo "old_src: "$old_src >> "log.txt"
 		echo "patch_src: "$patch_src >> "log.txt" 2>&1
 		echo "new_src: "$new_src >> "log.txt"
+		echo "old_class: "$old_class >> "log.txt"
+		echo "patch_class: "$patch_class >> "log.txt" 2>&1
+		echo "new_class: "$new_class >> "log.txt"
 
 		#eval AST Differ
 		echo "--------------------running Diff new-------------------------" >> "log.txt"
@@ -125,7 +141,7 @@ function getName() {
 		newjpf="_new.jpf"
 		patchjpf="_patch.jpf"
 
-		NewClassPath="classpath = $New_src"
+		NewClassPath="classpath = $New_class"
 		NewSourcePath="sourcepath = $New_src"
 		NewClass="rse.newClass = $new_class"
 		NewSrc="rse.newSrc = $new_src"
@@ -134,7 +150,7 @@ function getName() {
 		NewAST="rse.ASTResults = ./diffFiles/new/jdt/$AST"
 		NewJPF=$FileName$newjpf
 
-		PatchClassPath="classpath = $New_src"
+		PatchClassPath="classpath = $New_class"
 		PatchSourcePath="sourcepath = $New_src"
 
 		PatchClass="rse.newClass = $new_class"
@@ -144,7 +160,7 @@ function getName() {
 		PatchAST="rse.ASTResults = ./diffFiles/patch/jdt/$AST"
 		PatchJPF=$FileName$patchjpf
 
-		pAsoClassPath="classpath = $Old_src"
+		pAsoClassPath="classpath = $Old_class"
 		pAsoSourcePath="sourcepath = $Old_src"
 		pAsoClass="rse.newClass = $old_class"
 		oAsmClass="rse.oldClass = $patch_class"
@@ -192,5 +208,5 @@ function getName() {
 	done
 }
 
-INIT_PATH="/Users/barry/Documents/workspace/jdt_core/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT";
+INIT_PATH="../data/src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT";
 getName $INIT_PATH

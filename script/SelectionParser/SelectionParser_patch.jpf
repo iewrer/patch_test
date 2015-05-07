@@ -1,9 +1,9 @@
 target = org.eclipse.jdt
-classpath = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin
-sourcepath = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core
-rse.newClass = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
-rse.newSrc = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/codeassist/select/SelectionParser.java
-rse.oldClass = /Users/barry/Documents/workspace/jdt_core_patched_from_new/bin/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
+classpath = ../data/bin/new
+sourcepath = ../data/src/new_path_for_new_version/org.eclipse.jdt.core
+rse.newClass = ../data/bin/newxx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
+rse.newSrc = ../data/src/new_path_for_new_version/org.eclipse.jdt.corexx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.java
+rse.oldClass = ../data/bin/patchxx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
 
 rse.dotFile = ./dotFiles/patch/jdt/SelectionParser/SelectionParser
 rse.ASTResults = ./diffFiles/patch/jdt/SelectionParser.xml

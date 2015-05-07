@@ -1,0 +1,48 @@
+-------------------------------------------------------------
+Tips：
+1.本实验需要运行shell脚本，因而需要Unix环境
+-------------------------------------------------------------
+目录结构：
++/data：存放实验数据
+	|+/src：包括新版本、旧版本、应用于新版本的补丁后版本等三个版本的代码
+	|+/bin
+		|+/new：新版本的class文件
+		|+/old：旧版本的class文件
+		|+/patch：应用于新版本的补丁后版本的class文件
++/lib：存放依赖的jar包
++/bin：Eclipse编译代码后自动生成，存放class文件
++/src：源代码
+	|+/jpf_diff
+		|+xmlPreprocesser.java：对XML文件进行预处理
+		|+RunJpf.java：对单个文件进行影响分析，输出其影响集合，dot格式
+		|+RunAll.java：重复调用RunJpf类，对所有文件进行影响分析
+		|+Diff.java：对得到的所有Dot文件进行读取和分析，得到兼容性结果，对于不兼容的文件给出其缘由（追踪其影响来源），仍为dot文件。
+		|+Count.java：计算有多少文件不兼容以及有多少文件进行了本次实验
++/script：存放shell脚本程序、实验log、实验配置文件
+	|+all.sh：用于自动对比/data目录中的实验数据，生成(new,old)和(new,patch)的差异性文件，并自动为其生成配置文件
+	|+/Compiler：运行all.sh后自动生成的Compiler.java所对应的实验配置文件，jpf格式
+	|+/...：其他文件对应的配置文件
+	|+log.txt：all.sh的运行日志
+	|+run.txt：记录/src/jpf_diff/RunAll.java当前运行了多少文件
+	|+filename.uniq：记录所有文件名，非重复
+	|+filename.txt：记录所有文件名，带重复
+	|+console.txt：记录eclipse的console输出
+	|+error_count.txt：记录/src/jpf_diff/RunAll.java运行时发生的错误信息
++/dotFiles：存放运行/src/jpf_diff/RunJpf.java或者/src/jpf_diff/RunAll.java生成的影响集合文件，dot格式
+	|+/Compiler
+		|+/impacted：如果生成该文件夹，说明该文件不兼容，并在该文件夹中给出不兼容之处，dot格式
+	|+/...
++/diffFiles：存放运行/script/all.sh生成的差异性文件，XML格式
++/diffChanged：存放/src/jpf_diff/xmlPreprocesser.java的预处理结果
+-------------------------------------------------------------
+运行顺序：
+1.运行/script/all.sh（需要Unix环境，需要chmod +x），其运行日志输出至/script/log.txt
+2.在eclipse中打开本项目
+3.运行xmlPreprocesser.java，对所有实验数据的XML文件进行预处理
+4.运行RunAll.java，如果运行时出现内存不足的错误，则重复多次运行即可。它会对所有实验数据进行影响分析
+	4.1运行时输入0，清空输出结果
+	4.2运行时输入-1，备份输出结果
+	4.3运行时输入1，分析(new,old)，注意开始分析时需要手动清除/script/run.txt和/script/error_count.txt的内容
+	4.4运行时输入其他数字，分析(new,patch)，注意开始分析时需要手动清除/script/run.txt和/script/error_count.txt的内容
+5.运行Diff.java，对影响分析的结果进行兼容性分析，输出最后的兼容性分析结果
+6.运行Count.java，输出统计数据，并将Diff.java中有问题的文件结果挪至/dotFiles/impacted文件夹下，以供查看

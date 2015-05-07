@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/Users/barry/code/patch/tools-changedistiller/target/changedistiller-0.0.1-SNAPSHOT-javadoc.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/patch/tools-changedistiller/target/changedistiller-0.0.1-SNAPSHOT-jar-with-dependencies.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/Users/barry/code/patch/tools-changedistiller/target/changedistiller-0.0.1-SNAPSHOT-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/barry/code/patch/tools-changedistiller/target/changedistiller-0.0.1-SNAPSHOT-sources.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/patch/tools-changedistiller/target/changedistiller-0.0.1-SNAPSHOT.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/bcel-5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/jpf-guided-test.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/Documents/workspace/patch_test/tools.jar"/>
-	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.jdt.core_3.9.1.v20130905-0837.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/commons-lang-2.4.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-regression/lib/jSMTLIB.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf-annotations.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf-classes.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-core/build/jpf.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc-annotations.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc-classes.jar"/>
-	<classpathentry kind="lib" path="/Users/barry/code/jpf/jpf-symbc/build/jpf-symbc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/eclipse"/>
+	<classpathentry kind="lib" path="lib/astro.jar"/>
+	<classpathentry kind="lib" path="lib/bcel-5.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-annotations.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-classes.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-guided-test.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc-annotations.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc-classes.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc.jar"/>
+	<classpathentry kind="lib" path="lib/jpf.jar"/>
+	<classpathentry kind="lib" path="lib/jSMTLIB.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.core.resources_3.8.101.v20130717-0806.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.core.runtime-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jface_3.9.1.v20130725-1141.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.text_3.5.300.v20130515-1451.jar"/>
+	<classpathentry kind="lib" path="lib/tools.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

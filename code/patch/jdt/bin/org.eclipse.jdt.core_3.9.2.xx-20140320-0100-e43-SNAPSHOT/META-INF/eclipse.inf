@@ -1,3 +1,0 @@
-#Processed using Jarprocessor
-jarprocessor.exclude.children = true
-pack200.conditioned = true

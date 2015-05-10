@@ -7,9 +7,9 @@
 
 Now="."
 
-Old_src="../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555"
-New_src="../data/src/new_path_for_new_version/org.eclipse.jdt.core"
-Patch_src="../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT"
+Old_src="../data/src/jdt_core_old_version"
+New_src="../data/src/new_path_for_new_version"
+Patch_src="../data//src/jdt_core_patched__from_new_version"
 
 Old_class=$(cd "../data/bin/old";pwd)
 New_class=$(cd "../data/bin/new";pwd)
@@ -40,10 +40,10 @@ function getName() {
 
 	    FileName=$name
 
-	    if [ $FileName != "Compiler" ]
-	    then
-	    	continue
-	    fi
+	    # if [ $FileName != "Compiler" ]
+	    # then
+	    # 	continue
+	    # fi
 
 	    Target="org.eclipse.jdt"
 	    Dir=$dir 
@@ -208,5 +208,5 @@ function getName() {
 	done
 }
 
-INIT_PATH="../data/src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT";
+INIT_PATH="../data/src/jdt_core_patched__from_new_version";
 getName $INIT_PATH

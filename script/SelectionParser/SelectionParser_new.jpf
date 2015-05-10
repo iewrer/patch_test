@@ -1,9 +1,0 @@
-target = org.eclipse.jdt
-classpath = ../data/bin/new
-sourcepath = ../data/src/new_path_for_new_version/org.eclipse.jdt.core
-rse.newClass = ../data/bin/newxx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
-rse.newSrc = ../data/src/new_path_for_new_version/org.eclipse.jdt.corexx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.java
-rse.oldClass = ../data/bin/oldxx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/codeassist/select/SelectionParser.class
-
-rse.dotFile = ./dotFiles/new/jdt/SelectionParser/SelectionParser
-rse.ASTResults = ./diffFiles/new/jdt/SelectionParser.xml

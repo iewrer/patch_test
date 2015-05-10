@@ -1,9 +1,0 @@
-target = org.eclipse.jdt
-classpath = /Users/barry/Documents/workspace/patch_test/data/bin/new
-sourcepath = ../data/src/new_path_for_new_version/org.eclipse.jdt.core
-rse.newClass = /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/internal/compiler/Compiler.class
-rse.newSrc = ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
-rse.oldClass = /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/internal/compiler/Compiler.class
-
-rse.dotFile = ./dotFiles/new/jdt/Compiler/Compiler
-rse.ASTResults = ./diffFiles/new/jdt/Compiler.xml

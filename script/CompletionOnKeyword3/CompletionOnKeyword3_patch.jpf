@@ -1,9 +1,0 @@
-target = org.eclipse.jdt
-classpath = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin
-sourcepath = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core
-rse.newClass = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin/org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword3.class
-rse.newSrc = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword3.java
-rse.oldClass = /Users/barry/Documents/workspace/jdt_core_patched_from_new/bin/org/eclipse/jdt/internal/codeassist/complete/CompletionOnKeyword3.class
-
-rse.dotFile = ./dotFiles/patch/jdt/CompletionOnKeyword3/CompletionOnKeyword3
-rse.ASTResults = ./diffFiles/patch/jdt/CompletionOnKeyword3.xml

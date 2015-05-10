@@ -1,9 +1,0 @@
-target = org.eclipse.jdt
-classpath = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin
-sourcepath = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core
-rse.newClass = /Users/barry/code/patch/eclipse.jdt.core/org.eclipse.jdt.core/bin/org/eclipse/jdt/internal/core/search/indexing/IndexBinaryFolder.class
-rse.newSrc = /Users/barry/Documents/workspace/jdt_core/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/core/search/indexing/IndexBinaryFolder.java
-rse.oldClass = /Users/barry/Documents/workspace/jdt_core_patched_from_new/bin/org/eclipse/jdt/internal/core/search/indexing/IndexBinaryFolder.class
-
-rse.dotFile = ./dotFiles/patch/jdt/IndexBinaryFolder/IndexBinaryFolder
-rse.ASTResults = ./diffFiles/patch/jdt/IndexBinaryFolder.xml

@@ -1,20 +1,20 @@
 ------------------------src path-----------------------------
-old_src: ../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555/org/eclipse/jdt/internal/compiler/Compiler.java
-patch_src: ../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/compiler/Compiler.java
-new_src: ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
-old_class: ../data/bin/old/org/eclipse/jdt/internal/compiler/Compiler.class
-patch_class: ../data/bin/patch/org/eclipse/jdt/internal/compiler/Compiler.class
-new_class: ../data/bin/new/org/eclipse/jdt/internal/compiler/Compiler.class
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/BindingKey.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/BindingKey.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BindingKey.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/BindingKey.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/BindingKey.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/BindingKey.class
 --------------------running Diff new-------------------------
 ASTDiffer 3/27/2013
-../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555/org/eclipse/jdt/internal/compiler/Compiler.java is not the same as ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
---> Total time elapsed: 2712 ms
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/BindingKey.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BindingKey.java
+--> Total time elapsed: 1605 ms
 --> Done.
 --------------------Diff new done----------------------------
 --------------------running Diff patch-----------------------
 ASTDiffer 3/27/2013
-../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/compiler/Compiler.java is not the same as ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
---> Total time elapsed: 3201 ms
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/BindingKey.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BindingKey.java
+--> Total time elapsed: 1425 ms
 --> Done.
 --------------------Diff patch done--------------------------
 --------------------make jpf new-----------------------------
@@ -22,25 +22,1782 @@ ASTDiffer 3/27/2013
 --------------------make jpf patch---------------------------
 --------------------jpf patch done---------------------------
 ------------------------src path-----------------------------
-old_src: ../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555/org/eclipse/jdt/internal/compiler/Compiler.java
-patch_src: ../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/compiler/Compiler.java
-new_src: ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
-old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/internal/compiler/Compiler.class
-patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/internal/compiler/Compiler.class
-new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/internal/compiler/Compiler.class
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/BufferChangedEvent.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/BufferChangedEvent.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BufferChangedEvent.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/BufferChangedEvent.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/BufferChangedEvent.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/BufferChangedEvent.class
 --------------------running Diff new-------------------------
 ASTDiffer 3/27/2013
-../data/src/jdt_core_old_version/org.eclipse.jdt.core.source_3.9.2.v20140114-1555/org/eclipse/jdt/internal/compiler/Compiler.java is not the same as ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
---> Total time elapsed: 3045 ms
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/BufferChangedEvent.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BufferChangedEvent.java
+--> Total time elapsed: 1060 ms
 --> Done.
 --------------------Diff new done----------------------------
 --------------------running Diff patch-----------------------
 ASTDiffer 3/27/2013
-../data//src/jdt_core_patched__from_new_version/org.eclipse.jdt.core.source_3.9.2.xx-20140320-0100-e43-SNAPSHOT/org/eclipse/jdt/internal/compiler/Compiler.java is not the same as ../data/src/new_path_for_new_version/org.eclipse.jdt.core/org/eclipse/jdt/internal/compiler/Compiler.java
---> Total time elapsed: 3084 ms
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/BufferChangedEvent.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/BufferChangedEvent.java
+--> Total time elapsed: 1235 ms
 --> Done.
 --------------------Diff patch done--------------------------
 --------------------make jpf new-----------------------------
 --------------------jpf new done-----------------------------
 --------------------make jpf patch---------------------------
 --------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/ClasspathContainerInitializer.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/ClasspathContainerInitializer.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/ClasspathContainerInitializer.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java
+--> Total time elapsed: 1343 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathContainerInitializer.java
+--> Total time elapsed: 1344 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/ClasspathVariableInitializer.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/ClasspathVariableInitializer.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/ClasspathVariableInitializer.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java
+--> Total time elapsed: 1096 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/ClasspathVariableInitializer.java
+--> Total time elapsed: 1110 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/batch/BatchCompiler.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/batch/BatchCompiler.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/batch/BatchCompiler.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+--> Total time elapsed: 1278 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/batch/BatchCompiler.java
+--> Total time elapsed: 1097 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/BuildContext.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/BuildContext.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/BuildContext.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/BuildContext.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/BuildContext.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/BuildContext.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/BuildContext.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/BuildContext.java
+--> Total time elapsed: 1773 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/BuildContext.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/BuildContext.java
+--> Total time elapsed: 1513 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/CategorizedProblem.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/CategorizedProblem.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/CategorizedProblem.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java
+--> Total time elapsed: 1045 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CategorizedProblem.java
+--> Total time elapsed: 1509 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CharOperation.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CharOperation.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CharOperation.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/CharOperation.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/CharOperation.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/CharOperation.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CharOperation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CharOperation.java
+--> Total time elapsed: 3469 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CharOperation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CharOperation.java
+--> Total time elapsed: 3479 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/CompilationParticipant.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/CompilationParticipant.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/CompilationParticipant.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java
+--> Total time elapsed: 961 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationParticipant.java
+--> Total time elapsed: 956 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CompilationProgress.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CompilationProgress.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationProgress.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/CompilationProgress.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/CompilationProgress.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/CompilationProgress.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/CompilationProgress.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationProgress.java
+--> Total time elapsed: 949 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/CompilationProgress.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/CompilationProgress.java
+--> Total time elapsed: 908 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/InvalidInputException.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/InvalidInputException.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/InvalidInputException.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/InvalidInputException.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/InvalidInputException.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/InvalidInputException.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/InvalidInputException.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/InvalidInputException.java
+--> Total time elapsed: 951 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/InvalidInputException.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/InvalidInputException.java
+--> Total time elapsed: 878 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/IProblem.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/IProblem.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IProblem.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/IProblem.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/IProblem.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/IProblem.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/IProblem.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IProblem.java
+--> Total time elapsed: 1768 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/IProblem.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IProblem.java
+--> Total time elapsed: 1535 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/IScanner.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/IScanner.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IScanner.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/IScanner.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/IScanner.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/IScanner.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/IScanner.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IScanner.java
+--> Total time elapsed: 931 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/IScanner.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/IScanner.java
+--> Total time elapsed: 1229 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/ITerminalSymbols.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/ITerminalSymbols.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/ITerminalSymbols.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+--> Total time elapsed: 975 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ITerminalSymbols.java
+--> Total time elapsed: 1337 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/ReconcileContext.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/compiler/ReconcileContext.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/compiler/ReconcileContext.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/compiler/ReconcileContext.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/ReconcileContext.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/compiler/ReconcileContext.java is not the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java
+--> Total time elapsed: 1531 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/compiler/ReconcileContext.java
+--> Total time elapsed: 1278 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionContext.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionContext.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionContext.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CompletionContext.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CompletionContext.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CompletionContext.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionContext.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionContext.java
+--> Total time elapsed: 900 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionContext.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionContext.java
+--> Total time elapsed: 835 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionFlags.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionFlags.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionFlags.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CompletionFlags.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CompletionFlags.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CompletionFlags.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionFlags.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionFlags.java
+--> Total time elapsed: 773 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionFlags.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionFlags.java
+--> Total time elapsed: 785 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionProposal.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionProposal.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionProposal.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CompletionProposal.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CompletionProposal.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CompletionProposal.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionProposal.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionProposal.java
+--> Total time elapsed: 1016 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionProposal.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionProposal.java
+--> Total time elapsed: 1009 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionRequestor.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionRequestor.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestor.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CompletionRequestor.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CompletionRequestor.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CompletionRequestor.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionRequestor.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestor.java
+--> Total time elapsed: 1032 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionRequestor.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestor.java
+--> Total time elapsed: 1095 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CompletionRequestorAdapter.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CompletionRequestorAdapter.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CompletionRequestorAdapter.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java
+--> Total time elapsed: 924 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CompletionRequestorAdapter.java
+--> Total time elapsed: 843 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CorrectionEngine.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CorrectionEngine.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CorrectionEngine.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/CorrectionEngine.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/CorrectionEngine.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/CorrectionEngine.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/CorrectionEngine.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/CorrectionEngine.java is not the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CorrectionEngine.java
+--> Total time elapsed: 1947 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/CorrectionEngine.java is not the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/CorrectionEngine.java
+--> Total time elapsed: 2222 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+--> Total time elapsed: 1469 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AbstractTypeDeclaration.java
+--> Total time elapsed: 1050 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotatableType.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotatableType.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotatableType.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AnnotatableType.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AnnotatableType.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AnnotatableType.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+ASTDiffer: One of the source files does not exist.
+--> Total time elapsed: 0 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotatableType.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotatableType.java
+--> Total time elapsed: 1351 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/Annotation.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/Annotation.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Annotation.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/Annotation.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/Annotation.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/Annotation.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/Annotation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Annotation.java
+--> Total time elapsed: 1107 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/Annotation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Annotation.java
+--> Total time elapsed: 1165 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationBinding.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationBinding.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationBinding.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AnnotationBinding.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AnnotationBinding.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AnnotationBinding.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationBinding.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationBinding.java
+--> Total time elapsed: 1588 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationBinding.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationBinding.java
+--> Total time elapsed: 2176 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+--> Total time elapsed: 1463 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeDeclaration.java
+--> Total time elapsed: 1461 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+--> Total time elapsed: 1493 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnnotationTypeMemberDeclaration.java
+--> Total time elapsed: 1569 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+--> Total time elapsed: 1262 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AnonymousClassDeclaration.java
+--> Total time elapsed: 1305 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayAccess.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayAccess.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayAccess.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ArrayAccess.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ArrayAccess.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ArrayAccess.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayAccess.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayAccess.java
+--> Total time elapsed: 1297 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayAccess.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayAccess.java
+--> Total time elapsed: 1533 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayCreation.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayCreation.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayCreation.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ArrayCreation.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ArrayCreation.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ArrayCreation.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayCreation.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayCreation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayCreation.java
+--> Total time elapsed: 1519 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayCreation.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayCreation.java
+--> Total time elapsed: 1355 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayInitializer.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayInitializer.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayInitializer.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ArrayInitializer.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ArrayInitializer.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ArrayInitializer.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayInitializer.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayInitializer.java
+--> Total time elapsed: 1434 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayInitializer.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayInitializer.java
+--> Total time elapsed: 1257 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayType.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayType.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayType.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ArrayType.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ArrayType.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ArrayType.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ArrayType.java is not the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayType.java
+--> Total time elapsed: 1372 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ArrayType.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ArrayType.java
+--> Total time elapsed: 1522 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AssertStatement.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AssertStatement.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AssertStatement.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AssertStatement.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AssertStatement.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AssertStatement.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AssertStatement.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AssertStatement.java
+--> Total time elapsed: 1379 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AssertStatement.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AssertStatement.java
+--> Total time elapsed: 1345 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/Assignment.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/Assignment.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Assignment.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/Assignment.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/Assignment.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/Assignment.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/Assignment.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/Assignment.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Assignment.java
+--> Total time elapsed: 1521 ms
+--> Done.
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/Assignment.java is the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/Assignment.java
+--> Total time elapsed: 1948 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AST.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AST.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AST.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/AST.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/AST.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/AST.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/AST.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+java.lang.ClassCastException: com.sun.tools.javac.tree.JCTree$JCIdent cannot be cast to com.sun.source.tree.StatementTree
+	at cse.unl.edu.ast.ASTDiffer.refineAsserts(ASTDiffer.java:2025)
+	at cse.unl.edu.ast.ASTDiffer.splitBlocks(ASTDiffer.java:2012)
+	at cse.unl.edu.ast.ASTDiffer.splitBlocks(ASTDiffer.java:1763)
+	at cse.unl.edu.ast.ASTDiffer.matchBlocks(ASTDiffer.java:1136)
+	at cse.unl.edu.ast.ASTDiffer.compareMethods(ASTDiffer.java:811)
+	at cse.unl.edu.ast.ASTDiffer.compareClasses(ASTDiffer.java:986)
+	at cse.unl.edu.ast.ASTDiffer.compareFiles(ASTDiffer.java:482)
+	at cse.unl.edu.ast.ASTDiffer.sameAST(ASTDiffer.java:368)
+	at cse.unl.edu.ast.ASTDiffer.main(ASTDiffer.java:2153)
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/AST.java is not the same as ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/AST.java
+--> Total time elapsed: 2655 ms
+--> Done.
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ASTConverter.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ASTConverter.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ASTConverter.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ASTConverter.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
+注: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ASTConverter.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			         ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                           ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			         ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				     ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                              ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                           ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                             ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                              ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                               ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:688: 错误: 需要class, interface或enum
+		} else {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:691: 错误: 需要class, interface或enum
+			if (!methodDeclaration.isNative() && !methodDeclaration.isAbstract()) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:693: 错误: 需要class, interface或enum
+				if (start == -1) start = methodDeclaration.bodyStart; // use recovery position for body start
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:694: 错误: 需要class, interface或enum
+				end = methodDeclaration.bodyEnd;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:696: 错误: 需要class, interface或enum
+				CategorizedProblem[] problems = methodDeclaration.compilationResult().problems;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:697: 错误: 需要class, interface或enum
+				if (problems != null) {
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                          ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:700: 错误: 需要class, interface或enum
+						if (currentProblem.getSourceStart() == start && currentProblem.getID() == IProblem.ParsingErrorInsertToComplete) {
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:702: 错误: 需要class, interface或enum
+							break;
+							^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:703: 错误: 需要class, interface或enum
+						}
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:707: 错误: 需要class, interface或enum
+				methodDecl.setSourceRange(startPosition, end - startPosition + 1);
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:708: 错误: 需要class, interface或enum
+				if (start != -1 && end != -1) {
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:713: 错误: 需要class, interface或enum
+					block.setSourceRange(start, end - start + 1);
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:714: 错误: 需要class, interface或enum
+					methodDecl.setBody(block);
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:715: 错误: 需要class, interface或enum
+				}
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:720: 错误: 需要class, interface或enum
+		if (typeParameters != null) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:724: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:725: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                             ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:728: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:734: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:736: 错误: 需要class, interface或enum
+			recordNodes(methodName, methodDeclaration);
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:737: 错误: 需要class, interface或enum
+			methodDecl.resolveBinding();
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:738: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:740: 错误: 需要class, interface或enum
+		return methodDecl;
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:741: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:747: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:750: 错误: 需要class, interface或enum
+			if (cuScope!=null) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:752: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:755: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:759: 错误: 需要class, interface或enum
+	public ClassInstanceCreation convert(org.eclipse.jdt.internal.compiler.ast.AllocationExpression expression) {
+	       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:761: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:763: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:768: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:769: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:772: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:778: 错误: 需要class, interface或enum
+				break;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:779: 错误: 需要class, interface或enum
+			default :
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:781: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:783: 错误: 需要class, interface或enum
+		org.eclipse.jdt.internal.compiler.ast.Expression[] arguments = expression.arguments;
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:784: 错误: 需要class, interface或enum
+		if (arguments != null) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:788: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:791: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:793: 错误: 需要class, interface或enum
+	public Expression convert(org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression expression) {
+	       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:795: 错误: 需要class, interface或enum
+		infixExpression.setOperator(InfixExpression.Operator.CONDITIONAL_AND);
+		^
+100 个错误
+java.lang.NullPointerException
+	at cse.unl.edu.ast.ASTDiffer.compareGlobalVars(ASTDiffer.java:584)
+	at cse.unl.edu.ast.ASTDiffer.compareClasses(ASTDiffer.java:911)
+	at cse.unl.edu.ast.ASTDiffer.compareFiles(ASTDiffer.java:482)
+	at cse.unl.edu.ast.ASTDiffer.sameAST(ASTDiffer.java:368)
+	at cse.unl.edu.ast.ASTDiffer.main(ASTDiffer.java:2153)
+--------------------Diff new done----------------------------
+--------------------running Diff patch-----------------------
+ASTDiffer 3/27/2013
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			         ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                    ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                      ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                 ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                   ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                        ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                   ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                       ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                           ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			         ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			                 ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			                  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			                    ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				   ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				    ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				     ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                      ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                 ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                   ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                      ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						    ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                  ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                    ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                        ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                                                 ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                              ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                      ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                       ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                        ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                           ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                             ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                              ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                               ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:688: 错误: 需要class, interface或enum
+		} else {
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:691: 错误: 需要class, interface或enum
+			if (!methodDeclaration.isNative() && !methodDeclaration.isAbstract()) {
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:693: 错误: 需要class, interface或enum
+				if (start == -1) start = methodDeclaration.bodyStart; // use recovery position for body start
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:694: 错误: 需要class, interface或enum
+				end = methodDeclaration.bodyEnd;
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:696: 错误: 需要class, interface或enum
+				CategorizedProblem[] problems = methodDeclaration.compilationResult().problems;
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:697: 错误: 需要class, interface或enum
+				if (problems != null) {
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                          ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                                   ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:700: 错误: 需要class, interface或enum
+						if (currentProblem.getSourceStart() == start && currentProblem.getID() == IProblem.ParsingErrorInsertToComplete) {
+						^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:702: 错误: 需要class, interface或enum
+							break;
+							^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:703: 错误: 需要class, interface或enum
+						}
+						^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:707: 错误: 需要class, interface或enum
+				methodDecl.setSourceRange(startPosition, end - startPosition + 1);
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:708: 错误: 需要class, interface或enum
+				if (start != -1 && end != -1) {
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:713: 错误: 需要class, interface或enum
+					block.setSourceRange(start, end - start + 1);
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:714: 错误: 需要class, interface或enum
+					methodDecl.setBody(block);
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:715: 错误: 需要class, interface或enum
+				}
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:720: 错误: 需要class, interface或enum
+		if (typeParameters != null) {
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:724: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:725: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                             ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                                      ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:728: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:734: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:736: 错误: 需要class, interface或enum
+			recordNodes(methodName, methodDeclaration);
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:737: 错误: 需要class, interface或enum
+			methodDecl.resolveBinding();
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:738: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:740: 错误: 需要class, interface或enum
+		return methodDecl;
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:741: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:747: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:750: 错误: 需要class, interface或enum
+			if (cuScope!=null) {
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:752: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:755: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:759: 错误: 需要class, interface或enum
+	public ClassInstanceCreation convert(org.eclipse.jdt.internal.compiler.ast.AllocationExpression expression) {
+	       ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:761: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:763: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:768: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:769: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                       ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                                ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:772: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:778: 错误: 需要class, interface或enum
+				break;
+				^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:779: 错误: 需要class, interface或enum
+			default :
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:781: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:783: 错误: 需要class, interface或enum
+		org.eclipse.jdt.internal.compiler.ast.Expression[] arguments = expression.arguments;
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:784: 错误: 需要class, interface或enum
+		if (arguments != null) {
+		^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                            ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:788: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:791: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:793: 错误: 需要class, interface或enum
+	public Expression convert(org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression expression) {
+	       ^
+../data/src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:795: 错误: 需要class, interface或enum
+		infixExpression.setOperator(InfixExpression.Operator.CONDITIONAL_AND);
+		^
+100 个错误
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			         ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 非法的类型开始
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要<标识符>
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                           ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:665: 错误: 需要';'
+			if (block != null && (statements != null || explicitConstructorCall != null)) {
+			                                                                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			         ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 非法的类型开始
+			if (block != null) {
+			                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要<标识符>
+			if (block != null) {
+			                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:681: 错误: 需要';'
+			if (block != null) {
+			                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				     ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 非法的类型开始
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要<标识符>
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:682: 错误: 需要';'
+				if ((methodDeclaration.modifiers & (ClassFileConstants.AccAbstract | ClassFileConstants.AccNative)) != 0
+				                                                                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要<标识符>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                  ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                    ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 非法的类型开始
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要';'
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:683: 错误: 需要>
+						|| (isInterface && (this.ast.apiLevel < AST.JLS8 ||
+						                                                 ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                              ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                        ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                           ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 非法的类型开始
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                             ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要<标识符>
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                              ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:684: 错误: 需要';'
+							(methodDeclaration.modifiers & (ClassFileConstants.AccStatic | ExtraCompilerModifiers.AccDefaultMethod)) == 0))) {
+							                                                                                                               ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:688: 错误: 需要class, interface或enum
+		} else {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:691: 错误: 需要class, interface或enum
+			if (!methodDeclaration.isNative() && !methodDeclaration.isAbstract()) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:693: 错误: 需要class, interface或enum
+				if (start == -1) start = methodDeclaration.bodyStart; // use recovery position for body start
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:694: 错误: 需要class, interface或enum
+				end = methodDeclaration.bodyEnd;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:696: 错误: 需要class, interface或enum
+				CategorizedProblem[] problems = methodDeclaration.compilationResult().problems;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:697: 错误: 需要class, interface或enum
+				if (problems != null) {
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                          ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:698: 错误: 需要class, interface或enum
+					for (int i = 0, max = methodDeclaration.compilationResult().problemCount; i < max; i++) {
+					                                                                                   ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:700: 错误: 需要class, interface或enum
+						if (currentProblem.getSourceStart() == start && currentProblem.getID() == IProblem.ParsingErrorInsertToComplete) {
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:702: 错误: 需要class, interface或enum
+							break;
+							^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:703: 错误: 需要class, interface或enum
+						}
+						^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:707: 错误: 需要class, interface或enum
+				methodDecl.setSourceRange(startPosition, end - startPosition + 1);
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:708: 错误: 需要class, interface或enum
+				if (start != -1 && end != -1) {
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:713: 错误: 需要class, interface或enum
+					block.setSourceRange(start, end - start + 1);
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:714: 错误: 需要class, interface或enum
+					methodDecl.setBody(block);
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:715: 错误: 需要class, interface或enum
+				}
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:720: 错误: 需要class, interface或enum
+		if (typeParameters != null) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:724: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:725: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                             ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:726: 错误: 需要class, interface或enum
+					for (int i = 0, max = typeParameters.length; i < max; i++) {
+					                                                      ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:728: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:734: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:736: 错误: 需要class, interface或enum
+			recordNodes(methodName, methodDeclaration);
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:737: 错误: 需要class, interface或enum
+			methodDecl.resolveBinding();
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:738: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:740: 错误: 需要class, interface或enum
+		return methodDecl;
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:741: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:747: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:750: 错误: 需要class, interface或enum
+			if (cuScope!=null) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:752: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:755: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:759: 错误: 需要class, interface或enum
+	public ClassInstanceCreation convert(org.eclipse.jdt.internal.compiler.ast.AllocationExpression expression) {
+	       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:761: 错误: 需要class, interface或enum
+		if (this.resolveBindings) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:763: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:768: 错误: 需要class, interface或enum
+					break;
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:769: 错误: 需要class, interface或enum
+				default :
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:770: 错误: 需要class, interface或enum
+					for (int i = 0, max = expression.typeArguments.length; i < max; i++) {
+					                                                                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:772: 错误: 需要class, interface或enum
+					}
+					^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:778: 错误: 需要class, interface或enum
+				break;
+				^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:779: 错误: 需要class, interface或enum
+			default :
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:781: 错误: 需要class, interface或enum
+		}
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:783: 错误: 需要class, interface或enum
+		org.eclipse.jdt.internal.compiler.ast.Expression[] arguments = expression.arguments;
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:784: 错误: 需要class, interface或enum
+		if (arguments != null) {
+		^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:786: 错误: 需要class, interface或enum
+			for (int i = 0; i < length; i++) {
+			                            ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:788: 错误: 需要class, interface或enum
+			}
+			^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:791: 错误: 需要class, interface或enum
+	}
+	^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:793: 错误: 需要class, interface或enum
+	public Expression convert(org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression expression) {
+	       ^
+../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTConverter.java:795: 错误: 需要class, interface或enum
+		infixExpression.setOperator(InfixExpression.Operator.CONDITIONAL_AND);
+		^
+100 个错误
+java.lang.NullPointerException
+	at cse.unl.edu.ast.ASTDiffer.compareGlobalVars(ASTDiffer.java:584)
+	at cse.unl.edu.ast.ASTDiffer.compareClasses(ASTDiffer.java:911)
+	at cse.unl.edu.ast.ASTDiffer.compareFiles(ASTDiffer.java:482)
+	at cse.unl.edu.ast.ASTDiffer.sameAST(ASTDiffer.java:368)
+	at cse.unl.edu.ast.ASTDiffer.main(ASTDiffer.java:2153)
+--------------------Diff patch done--------------------------
+--------------------make jpf new-----------------------------
+--------------------jpf new done-----------------------------
+--------------------make jpf patch---------------------------
+--------------------jpf patch done---------------------------
+------------------------src path-----------------------------
+old_src: ../data/src/jdt_core_old_version/org/eclipse/jdt/core/dom/ASTMatcher.java
+patch_src: ../data//src/jdt_core_patched__from_new_version/org/eclipse/jdt/core/dom/ASTMatcher.java
+new_src: ../data/src/new_path_for_new_version/org/eclipse/jdt/core/dom/ASTMatcher.java
+old_class: /Users/barry/Documents/workspace/patch_test/data/bin/old/org/eclipse/jdt/core/dom/ASTMatcher.class
+patch_class: /Users/barry/Documents/workspace/patch_test/data/bin/patch/org/eclipse/jdt/core/dom/ASTMatcher.class
+new_class: /Users/barry/Documents/workspace/patch_test/data/bin/new/org/eclipse/jdt/core/dom/ASTMatcher.class
+--------------------running Diff new-------------------------
+ASTDiffer 3/27/2013
